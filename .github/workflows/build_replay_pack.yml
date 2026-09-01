@@ -1,0 +1,81 @@
+name: Build blind keirin replay pack
+
+on:
+  workflow_dispatch:
+    inputs:
+      replay_date:
+        description: 'Replay date (YYYY-MM-DD)'
+        required: true
+        default: '2026-08-04'
+      classes:
+        description: 'Player classes'
+        required: true
+        default: 'A1,A2'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_replay_pack.py'
+      - '.github/workflows/build_replay_pack.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-blind-replay-pack
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      REPLAY_DATE: ${{ github.event.inputs.replay_date || '2026-08-04' }}
+      CLASSES: ${{ github.event.inputs.classes || 'A1,A2' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build blind replay pack
+        run: |
+          python scripts/build_replay_pack.py \
+            --date "$REPLAY_DATE" \
+            --classes "$CLASSES" \
+            --seven-only
+
+      - name: Verify forbidden result columns absent
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import os, pandas as pd
+          d = os.environ['REPLAY_DATE']
+          p = Path('keirin_data/replay') / f'{d}_players.csv'
+          df = pd.read_csv(p, encoding='utf-8-sig')
+          forbidden = {'rank','agari','finish_type','margin','win_lose','ni_sha_tan','san_ren_tan','san_ren_fuku','wide'}
+          bad = sorted(forbidden & set(df.columns))
+          if bad:
+              raise SystemExit(f'Forbidden columns leaked into replay pack: {bad}')
+          print(f'players={len(df)} races={df.race_id.nunique()} columns={list(df.columns)}')
+          PY
+
+      - name: Commit replay pack
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add keirin_data/replay/
+          if git diff --cached --quiet; then
+            echo 'No replay pack changes.'
+            exit 0
+          fi
+          git commit -m "Add blind replay pack for $REPLAY_DATE"
+          git pull --rebase
+          git push
