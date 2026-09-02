@@ -107,7 +107,6 @@ def main():
             sout['bins']['200-plus'] = agg(s[s.effective_fair_odds >= 200])
             fout[f'line_span_{span}'] = sout
 
-        # Direct contrast that tests the current 3-line restriction.
         two = z[z.line_span == 2]
         three = z[z.line_span == 3]
         fout['two_vs_three'] = {
