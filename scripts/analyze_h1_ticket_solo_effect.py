@@ -109,8 +109,6 @@ def main():
     df['winner_is_solo'] = df.winner_is_solo.astype(int)
 
     views = {}
-
-    # Broad effect in the whole fixed base candidate.
     views['BASE_ANY_SOLO'] = summarize(df[df.solo_count >= 1])
     views['BASE_NO_SOLO'] = summarize(df[df.solo_count == 0])
 
@@ -128,7 +126,6 @@ def main():
         views[f'{name}_ANY_SOLO'] = summarize(z[z.solo_count >= 1])
         views[f'{name}_NO_SOLO'] = summarize(z[z.solo_count == 0])
 
-    # Distribution only; no optimization on solo count.
     solo_count_distribution = {
         str(k): summarize(g)
         for k, g in df.groupby('solo_count', sort=True)
