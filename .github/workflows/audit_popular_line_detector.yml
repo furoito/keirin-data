@@ -1,0 +1,29 @@
+name: Audit popular-line detector
+on:
+  push:
+    branches: [experiment/popular-head-skip-v01]
+    paths:
+      - 'scripts/audit_popular_line_detector.py'
+      - '.github/workflows/audit_popular_line_detector.yml'
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas
+      - run: python scripts/audit_popular_line_detector.py
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add keirin_data/strategy_context/popular_line_detector_audit.csv
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Add popular-line detector audit'
+          git push origin HEAD:experiment/popular-head-skip-v01
