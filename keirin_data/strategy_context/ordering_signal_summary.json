@@ -1,0 +1,279 @@
+{
+  "available_monthly_columns": [
+    "agari",
+    "age",
+    "banum",
+    "close_time",
+    "date",
+    "finish_type",
+    "gear",
+    "lineup",
+    "maku_4m",
+    "margin",
+    "mark",
+    "mark_num",
+    "ni_sha_tan",
+    "nige_4m",
+    "player_class",
+    "player_name",
+    "pref",
+    "race_id",
+    "race_no",
+    "race_score",
+    "rank",
+    "running_style",
+    "san_ren_fuku",
+    "san_ren_tan",
+    "term",
+    "top2_rate_4m",
+    "top3_rate_4m",
+    "venue_slug",
+    "wide",
+    "win_lose",
+    "win_rate_4m"
+  ],
+  "variants": {
+    "BASE": {
+      "exact_set_cases": 40,
+      "exact_order_accuracy_pct": {
+        "current_adjusted_score": 22.5,
+        "raw_race_score": 25.0,
+        "mark_num": 11.11111111111111,
+        "market_favorite_permutation": 37.5
+      },
+      "winner_accuracy_pct": {
+        "raw_score_highest": 40.0,
+        "market_first_mass": 52.5
+      },
+      "winner_score_rank_distribution": [
+        [
+          "1",
+          16
+        ],
+        [
+          "2",
+          12
+        ],
+        [
+          "3",
+          12
+        ]
+      ],
+      "actual_role_by_finish": {
+        "1": [
+          [
+            "popular_pos2",
+            16
+          ],
+          [
+            "other_pos2",
+            10
+          ],
+          [
+            "other_head",
+            8
+          ],
+          [
+            "solo",
+            3
+          ],
+          [
+            "popular_pos3plus",
+            2
+          ],
+          [
+            "other_pos3plus",
+            1
+          ]
+        ],
+        "2": [
+          [
+            "other_pos2",
+            16
+          ],
+          [
+            "popular_pos3plus",
+            7
+          ],
+          [
+            "popular_pos2",
+            7
+          ],
+          [
+            "solo",
+            5
+          ],
+          [
+            "other_head",
+            4
+          ],
+          [
+            "other_pos3plus",
+            1
+          ]
+        ],
+        "3": [
+          [
+            "popular_pos2",
+            16
+          ],
+          [
+            "other_pos2",
+            15
+          ],
+          [
+            "popular_pos3plus",
+            4
+          ],
+          [
+            "other_head",
+            2
+          ],
+          [
+            "solo",
+            2
+          ],
+          [
+            "other_pos3plus",
+            1
+          ]
+        ]
+      },
+      "score_gap_actual_winner_minus_second": {
+        "mean": 1.3407500000000003,
+        "median": 0.6749999999999972
+      },
+      "score_gap_actual_winner_minus_third": {
+        "mean": 0.6415,
+        "median": -0.14999999999999858
+      },
+      "market_favorite_perm_at_30x_diagnostic": {
+        "bets": 21,
+        "hits": 7,
+        "stake_yen": 2100,
+        "pay_yen": 41920,
+        "roi_pct": 1996.1904761904761
+      },
+      "mark_cases": 9
+    },
+    "OH_HIGH": {
+      "exact_set_cases": 52,
+      "exact_order_accuracy_pct": {
+        "current_adjusted_score": 17.307692307692307,
+        "raw_race_score": 17.307692307692307,
+        "mark_num": 20.0,
+        "market_favorite_permutation": 36.53846153846154
+      },
+      "winner_accuracy_pct": {
+        "raw_score_highest": 32.69230769230769,
+        "market_first_mass": 53.84615384615385
+      },
+      "winner_score_rank_distribution": [
+        [
+          "2",
+          18
+        ],
+        [
+          "3",
+          17
+        ],
+        [
+          "1",
+          17
+        ]
+      ],
+      "actual_role_by_finish": {
+        "1": [
+          [
+            "other_head",
+            19
+          ],
+          [
+            "popular_pos2",
+            16
+          ],
+          [
+            "other_pos2",
+            10
+          ],
+          [
+            "popular_pos3plus",
+            3
+          ],
+          [
+            "solo",
+            3
+          ],
+          [
+            "other_pos3plus",
+            1
+          ]
+        ],
+        "2": [
+          [
+            "other_pos2",
+            15
+          ],
+          [
+            "popular_pos2",
+            14
+          ],
+          [
+            "other_head",
+            10
+          ],
+          [
+            "popular_pos3plus",
+            7
+          ],
+          [
+            "solo",
+            6
+          ]
+        ],
+        "3": [
+          [
+            "popular_pos2",
+            20
+          ],
+          [
+            "other_pos2",
+            15
+          ],
+          [
+            "other_head",
+            10
+          ],
+          [
+            "popular_pos3plus",
+            4
+          ],
+          [
+            "solo",
+            2
+          ],
+          [
+            "other_pos3plus",
+            1
+          ]
+        ]
+      },
+      "score_gap_actual_winner_minus_second": {
+        "mean": 0.6526923076923073,
+        "median": 0.0899999999999963
+      },
+      "score_gap_actual_winner_minus_third": {
+        "mean": 0.46211538461538326,
+        "median": -0.509999999999998
+      },
+      "market_favorite_perm_at_30x_diagnostic": {
+        "bets": 31,
+        "hits": 12,
+        "stake_yen": 3100,
+        "pay_yen": 111940,
+        "roi_pct": 3610.967741935484
+      },
+      "mark_cases": 15
+    }
+  }
+}
