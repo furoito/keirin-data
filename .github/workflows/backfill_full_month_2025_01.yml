@@ -1,0 +1,104 @@
+name: Full-month A1/A2 context probe 2025-01
+
+on:
+  push:
+    branches: [experiment/popular-head-skip-v01]
+    paths:
+      - '.github/workflows/backfill_full_month_2025_01.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-strategy-context-backfill
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - name: Checkout experiment branch
+        uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Backfill January 2025 in resumable date chunks
+        shell: bash
+        run: |
+          set -euo pipefail
+          chunks=(
+            '2025-01-01 2025-01-05'
+            '2025-01-06 2025-01-10'
+            '2025-01-11 2025-01-15'
+            '2025-01-16 2025-01-20'
+            '2025-01-21 2025-01-25'
+            '2025-01-26 2025-01-31'
+          )
+          for chunk in "${chunks[@]}"; do
+            start="${chunk%% *}"
+            end="${chunk##* }"
+            echo "=== Backfill $start .. $end ==="
+            python scripts/backfill_strategy_context.py \
+              --start-date "$start" \
+              --end-date "$end" \
+              --classes 'A1,A2' \
+              --resume
+
+            git add keirin_data/strategy_context/2025_01_races.csv \
+                    keirin_data/strategy_context/2025_01_odds_3rentan.csv || true
+            if ! git diff --cached --quiet; then
+              git commit -m "Backfill 2025-01 strategy context through $end"
+              for i in 1 2 3 4 5; do
+                git pull --rebase origin experiment/popular-head-skip-v01 && \
+                git push origin HEAD:experiment/popular-head-skip-v01 && break
+                if [ "$i" -eq 5 ]; then exit 1; fi
+                sleep 10
+              done
+            else
+              echo "No changes for $start .. $end"
+            fi
+          done
+
+      - name: Report January coverage
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          from pathlib import Path
+
+          base = pd.read_csv('keirin_data/2025_01_keirin.csv', encoding='utf-8-sig', dtype={'race_id': str})
+          ok = base.groupby('race_id').player_class.apply(
+              lambda s: bool(len(s)) and set(s.dropna().astype(str)).issubset({'A1','A2'})
+          )
+          eligible = int(ok.sum())
+
+          p = Path('keirin_data/strategy_context/2025_01_races.csv')
+          ctx = pd.read_csv(p, encoding='utf-8-sig', dtype={'race_id': str}).drop_duplicates('race_id', keep='last')
+          full = int((ctx.context_quality.astype(str) == 'full').sum())
+          partial = int((ctx.context_quality.astype(str) != 'full').sum())
+          print(f'eligible_A1A2={eligible}')
+          print(f'context_rows={len(ctx)}')
+          print(f'context_full={full}')
+          print(f'context_partial={partial}')
+          print(f'full_coverage_pct={100*full/eligible:.2f}' if eligible else 'full_coverage_pct=NA')
+          print('\nline_quality:')
+          print(ctx.line_quality.fillna('NA').value_counts().to_string())
+          print('\nprice_quality:')
+          print(ctx.price_quality.fillna('NA').value_counts().to_string())
+          PY
