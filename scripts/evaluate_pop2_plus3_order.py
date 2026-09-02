@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Evaluate trifecta ordering with popular-line pos2 receiving +3 race-score points.
+"""Evaluate trifecta ordering with line-position score bonuses + canonical priority.
 
 Candidate SET selection stays frozen at v0.1b. Only the order inside each selected
-3-rider set changes:
-  effective_score = race_score + 3.0 for popular-line position 2
-                    race_score       for everybody else
-Then order descending by effective_score (raw score, frame number as deterministic
-tie-breakers). Same-set order ambiguity is therefore collapsed to one order.
-Third-slot A-B-CD can still produce two distinct rider sets, hence max two bets.
-30x minimum remains fixed.
+3-rider set changes.
+
+Ordering effective score:
+- popular-line position 2: race_score + 3.0
+- popular-line position 3: race_score + 1.0
+- everybody else:          race_score
+
+After that adjustment, use the SAME pairwise priority logic as candidate selection:
+- adjusted-score gap >= 3.0 -> higher adjusted score wins
+- adjusted-score gap < 3.0 -> positional priority wins
+    popular pos2 > popular pos3+ > other-line pos2+ > other head/solo
+- remaining ties -> adjusted score, raw score, then frame number
+
+Candidate membership is never changed here. Third-slot A-B-CD can still yield two
+sets, so max two bets. Trifecta minimum remains 30x.
 """
 from __future__ import annotations
 import json, math
@@ -20,7 +28,9 @@ import popular_head_skip_v01b as v01b  # noqa: F401
 
 DATA=Path('keirin_data'); CTX=DATA/'strategy_context'; MONTH='2026_08'
 OUT=CTX/'pop2_plus3_order_results.csv'; SUMMARY=CTX/'pop2_plus3_order_summary.json'
-BONUS=3.0
+POS2_BONUS=3.0
+POS3_BONUS=1.0
+BOUNDARY=3.0
 
 
 def parse_rank(v):
@@ -50,13 +60,51 @@ def unique_sets(orders):
     return out
 
 
+def effective_score(r, pop_line):
+    bonus=0.0
+    if r.line_idx==pop_line:
+        if r.line_pos==2: bonus=POS2_BONUS
+        elif r.line_pos==3: bonus=POS3_BONUS
+    return r.race_score+bonus
+
+
+def pair_winner_adjusted(a, b, pop_line):
+    ea, eb=effective_score(a,pop_line), effective_score(b,pop_line)
+    gap=abs(ea-eb)
+    if gap>=BOUNDARY and ea!=eb:
+        return a if ea>eb else b
+    ta,tb=base.position_tier(a,pop_line),base.position_tier(b,pop_line)
+    if gap<BOUNDARY and ta!=tb:
+        return a if ta>tb else b
+    if ea!=eb: return a if ea>eb else b
+    if a.race_score!=b.race_score: return a if a.race_score>b.race_score else b
+    return a if a.frame_no<b.frame_no else b
+
+
 def order_set(s, riders, pop_line):
-    by={r.frame_no:r for r in riders}
-    def key(fn):
-        r=by[fn]
-        eff=r.race_score + (BONUS if r.line_idx==pop_line and r.line_pos==2 else 0.0)
-        return (-eff,-r.race_score,r.frame_no)
-    return tuple(sorted(s,key=key))
+    xs=[r for r in riders if r.frame_no in s]
+    by={r.frame_no:r for r in xs}
+    adj={r.frame_no:set() for r in xs}; indeg={r.frame_no:0 for r in xs}
+    for i,a in enumerate(xs):
+        for b in xs[i+1:]:
+            w=pair_winner_adjusted(a,b,pop_line)
+            lo=b if w.frame_no==a.frame_no else a
+            if lo.frame_no not in adj[w.frame_no]:
+                adj[w.frame_no].add(lo.frame_no); indeg[lo.frame_no]+=1
+    out=[]
+    zeros=[fn for fn,v in indeg.items() if v==0]
+    while zeros:
+        # deterministic only; if multiple zero-indegree riders remain, prefer
+        # the same adjusted-score/position hierarchy rather than odds.
+        zeros.sort(key=lambda fn:(-effective_score(by[fn],pop_line),-base.position_tier(by[fn],pop_line),-by[fn].race_score,fn))
+        u=zeros.pop(0); out.append(u)
+        for v in adj[u]:
+            indeg[v]-=1
+            if indeg[v]==0: zeros.append(v)
+    if len(out)!=len(xs):
+        # fail closed on a true preference cycle
+        return None
+    return tuple(out)
 
 
 def main():
@@ -83,6 +131,7 @@ def main():
         lines=base.parse_true_line(cr.true_line); riders=base.make_riders(pre,lines); tri=base.odds_map(og)
         sets=unique_sets(d.candidate_orders)
         ordered=[order_set(s,riders,d.popular_line) for s in sets]
+        ordered=[o for o in ordered if o is not None]
         eligible=[(o,tri[o]) for o in ordered if o in tri and tri[o]>=base.TRIFECTA_MIN_ODDS][:2]
         aset=frozenset(act)
         set_match=int(aset in sets)
@@ -94,8 +143,7 @@ def main():
         eff=[]
         for fn in sorted(set().union(*sets)) if sets else []:
             r=next(x for x in riders if x.frame_no==fn)
-            e=r.race_score+(BONUS if r.line_idx==d.popular_line and r.line_pos==2 else 0.0)
-            eff.append(f'{fn}:{e:.2f}')
+            eff.append(f'{fn}:{effective_score(r,d.popular_line):.2f}[tier{base.position_tier(r,d.popular_line)}]')
         rows.append({'race_id':rid,'date':cr.date,'venue':cr.venue_slug,'race_no':cr.race_no,'line':cr.true_line,
           'target':target,'head_bust':hb,'result_source':source,'candidate_sets':'|'.join('-'.join(map(str,sorted(s))) for s in sets),
           'effective_scores':'|'.join(eff),'plus3_orders':'|'.join('-'.join(map(str,o)) for o in ordered),
@@ -108,7 +156,9 @@ def main():
         n=len(x); st=int(x.stake.sum()) if n else 0; py=int(x.pay.sum()) if n else 0
         return {'n':n,'set_match_n':int(x.set_match.sum()) if n else 0,'order_match_n':int(x.order_match.sum()) if n else 0,
                 'bet_hit_n':int(x.bet_hit.sum()) if n else 0,'stake_yen':st,'pay_yen':py,'roi_pct':py/st*100 if st else None}
-    summary={'bonus':BONUS,'all_bets':m(out),'head_bust_only':m(hb),'head_bust_and_set_exact':m(exact),
+    summary={'pos2_bonus':POS2_BONUS,'pos3_bonus':POS3_BONUS,'boundary':BOUNDARY,
+             'ordering_rule':'adjust scores, then same 3-point boundary + positional priority logic as candidate ranking',
+             'all_bets':m(out),'head_bust_only':m(hb),'head_bust_and_set_exact':m(exact),
              'exact_rows':exact[['date','venue','race_no','line','candidate_sets','effective_scores','plus3_orders','bets','bet_odds','actual','order_match','bet_hit','pay']].to_dict('records')}
     SUMMARY.write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(summary,ensure_ascii=False,indent=2))
