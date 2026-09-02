@@ -1,0 +1,73 @@
+{
+  "context_full_races": 80,
+  "bet_races": 25,
+  "scorable_bet_races": 25,
+  "head_bust_races": 6,
+  "head_bust_rate_pct": 24.0,
+  "all_bets": {
+    "A": {
+      "n": 25,
+      "exact_n": 2,
+      "exact_pct": 8.0,
+      "avg_overlap": 1.4,
+      "overlap_2plus_n": 9
+    },
+    "S0": {
+      "n": 25,
+      "exact_n": 0,
+      "exact_pct": 0.0,
+      "avg_overlap": 1.36,
+      "overlap_2plus_n": 10
+    },
+    "S1": {
+      "n": 25,
+      "exact_n": 0,
+      "exact_pct": 0.0,
+      "avg_overlap": 1.36,
+      "overlap_2plus_n": 10
+    },
+    "S3": {
+      "n": 25,
+      "exact_n": 0,
+      "exact_pct": 0.0,
+      "avg_overlap": 1.44,
+      "overlap_2plus_n": 12
+    }
+  },
+  "head_bust_only": {
+    "A": {
+      "n": 6,
+      "exact_n": 2,
+      "exact_pct": 33.33333333333333,
+      "avg_overlap": 1.8333333333333333,
+      "overlap_2plus_n": 3
+    },
+    "S0": {
+      "n": 6,
+      "exact_n": 0,
+      "exact_pct": 0.0,
+      "avg_overlap": 1.5,
+      "overlap_2plus_n": 3
+    },
+    "S1": {
+      "n": 6,
+      "exact_n": 0,
+      "exact_pct": 0.0,
+      "avg_overlap": 1.5,
+      "overlap_2plus_n": 3
+    },
+    "S3": {
+      "n": 6,
+      "exact_n": 0,
+      "exact_pct": 0.0,
+      "avg_overlap": 1.6666666666666667,
+      "overlap_2plus_n": 4
+    }
+  },
+  "changed_races": {
+    "S0": 3,
+    "S1": 3,
+    "S3": 6
+  },
+  "rule_note": "swap popular pos2 for best omitted other-line head only; max one rider per candidate set; no canonical rule change"
+}
