@@ -1,0 +1,62 @@
+{
+  "pos2_bonus": 3.0,
+  "pos3_bonus": 1.0,
+  "rule": "single-count bonuses then adjusted-score order only",
+  "all_bets": {
+    "n": 25,
+    "set_match_n": 2,
+    "order_match_n": 1,
+    "bet_hit_n": 1,
+    "stake_yen": 2500,
+    "pay_yen": 16650,
+    "roi_pct": 666.0
+  },
+  "head_bust_only": {
+    "n": 6,
+    "set_match_n": 2,
+    "order_match_n": 1,
+    "bet_hit_n": 1,
+    "stake_yen": 500,
+    "pay_yen": 16650,
+    "roi_pct": 3329.9999999999995
+  },
+  "head_bust_and_set_exact": {
+    "n": 2,
+    "set_match_n": 2,
+    "order_match_n": 1,
+    "bet_hit_n": 1,
+    "stake_yen": 200,
+    "pay_yen": 16650,
+    "roi_pct": 8325.0
+  },
+  "exact_rows": [
+    {
+      "date": "2026-07-02",
+      "venue": "hiratsuka",
+      "race_no": 10,
+      "line": "1-5/2-7-4/3/6",
+      "candidate_sets": "3-4-5",
+      "orders": "3-4-5",
+      "bets": "3-4-5",
+      "bet_odds": "166.50",
+      "actual": "3-4-5",
+      "order_match": 1,
+      "bet_hit": 1,
+      "pay": 16650
+    },
+    {
+      "date": "2026-07-02",
+      "venue": "nara",
+      "race_no": 2,
+      "line": "1-7/4-2-5/6-3",
+      "candidate_sets": "2-5-7",
+      "orders": "7-2-5",
+      "bets": "7-2-5",
+      "bet_odds": "139.40",
+      "actual": "2-5-7",
+      "order_match": 0,
+      "bet_hit": 0,
+      "pay": 0
+    }
+  ]
+}
