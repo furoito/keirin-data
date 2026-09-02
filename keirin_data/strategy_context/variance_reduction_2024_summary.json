@@ -1,0 +1,101 @@
+{
+  "scope": "2024 holdout; frozen OH_HIGH; selected set = set containing frozen MKT1 pick",
+  "important_note": "TRIO has no historical pre-race 15x filter because pre-race 3-ren-fuku odds are not stored; final payout is used only after the set is frozen for scoring.",
+  "products": {
+    "MKT1": {
+      "races": 441,
+      "bets": 441,
+      "hits": 8,
+      "hit_rate_pct": 1.8140589569160999,
+      "stake_yen": 44100,
+      "pay_yen": 43400,
+      "profit_yen": -700,
+      "roi_pct": 98.41269841269842,
+      "max_losing_streak_bets": 146,
+      "max_drawdown_yen": 16150,
+      "per_bet_return_mean": 0.9841269841269841,
+      "per_bet_return_std": 7.9466386388564105
+    },
+    "BOX6": {
+      "races": 441,
+      "bets": 441,
+      "hits": 35,
+      "hit_rate_pct": 7.936507936507937,
+      "stake_yen": 264600,
+      "pay_yen": 131390,
+      "profit_yen": -133210,
+      "roi_pct": 49.65608465608466,
+      "max_losing_streak_bets": 60,
+      "max_drawdown_yen": 150110,
+      "per_bet_return_mean": 0.49656084656084654,
+      "per_bet_return_std": 2.2365688094225282
+    },
+    "TRIO": {
+      "races": 441,
+      "bets": 441,
+      "hits": 35,
+      "hit_rate_pct": 7.936507936507937,
+      "stake_yen": 44100,
+      "pay_yen": 37270,
+      "profit_yen": -6830,
+      "roi_pct": 84.5124716553288,
+      "max_losing_streak_bets": 60,
+      "max_drawdown_yen": 19160,
+      "per_bet_return_mean": 0.8451247165532879,
+      "per_bet_return_std": 4.287484963700267
+    }
+  },
+  "diagnostics": {
+    "trio_payout_missing_on_hit": 0,
+    "months": {
+      "2024_01": {
+        "cases": 38,
+        "trio_payout_parsed": 38
+      },
+      "2024_02": {
+        "cases": 38,
+        "trio_payout_parsed": 38
+      },
+      "2024_03": {
+        "cases": 45,
+        "trio_payout_parsed": 45
+      },
+      "2024_04": {
+        "cases": 30,
+        "trio_payout_parsed": 30
+      },
+      "2024_05": {
+        "cases": 48,
+        "trio_payout_parsed": 48
+      },
+      "2024_06": {
+        "cases": 41,
+        "trio_payout_parsed": 41
+      },
+      "2024_07": {
+        "cases": 33,
+        "trio_payout_parsed": 33
+      },
+      "2024_08": {
+        "cases": 36,
+        "trio_payout_parsed": 36
+      },
+      "2024_09": {
+        "cases": 38,
+        "trio_payout_parsed": 38
+      },
+      "2024_10": {
+        "cases": 36,
+        "trio_payout_parsed": 36
+      },
+      "2024_11": {
+        "cases": 28,
+        "trio_payout_parsed": 28
+      },
+      "2024_12": {
+        "cases": 30,
+        "trio_payout_parsed": 30
+      }
+    }
+  }
+}
