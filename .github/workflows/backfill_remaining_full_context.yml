@@ -1,0 +1,166 @@
+name: Backfill remaining A1/A2 strategy context
+
+on:
+  push:
+    branches: [experiment/popular-head-skip-v01]
+    paths:
+      - '.github/workflows/backfill_remaining_full_context.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        month:
+          - '2025_02'
+          - '2025_03'
+          - '2025_04'
+          - '2025_05'
+          - '2025_06'
+          - '2025_07'
+          - '2025_08'
+          - '2025_09'
+          - '2025_10'
+          - '2025_11'
+          - '2025_12'
+          - '2026_01'
+          - '2026_02'
+          - '2026_03'
+          - '2026_04'
+          - '2026_05'
+          - '2026_06'
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout experiment branch
+        uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Backfill month in resumable 5-day chunks
+        shell: bash
+        env:
+          MONTH: ${{ matrix.month }}
+        run: |
+          set -euo pipefail
+          ym="${MONTH/_/-}"
+          first="${ym}-01"
+          next_month=$(python - "$first" <<'PY'
+          import sys
+          from datetime import date
+          y,m,d=map(int,sys.argv[1].split('-'))
+          if m==12:
+              print(f'{y+1:04d}-01-01')
+          else:
+              print(f'{y:04d}-{m+1:02d}-01')
+          PY
+          )
+          last=$(python - "$next_month" <<'PY'
+          import sys
+          from datetime import date,timedelta
+          y,m,d=map(int,sys.argv[1].split('-'))
+          print((date(y,m,d)-timedelta(days=1)).isoformat())
+          PY
+          )
+
+          mapfile -t chunks < <(python - "$first" "$last" <<'PY'
+          import sys
+          from datetime import date,timedelta
+          start=date.fromisoformat(sys.argv[1]); end=date.fromisoformat(sys.argv[2])
+          cur=start
+          while cur<=end:
+              hi=min(cur+timedelta(days=4),end)
+              print(cur.isoformat(),hi.isoformat())
+              cur=hi+timedelta(days=1)
+          PY
+          )
+
+          for chunk in "${chunks[@]}"; do
+            start="${chunk%% *}"
+            end="${chunk##* }"
+            echo "=== ${MONTH}: $start .. $end ==="
+
+            python scripts/backfill_strategy_context.py \
+              --start-date "$start" \
+              --end-date "$end" \
+              --classes 'A1,A2' \
+              --resume
+
+            races="keirin_data/strategy_context/${MONTH}_races.csv"
+            odds="keirin_data/strategy_context/${MONTH}_odds_3rentan.csv"
+            git add "$races" "$odds" || true
+
+            if ! git diff --cached --quiet; then
+              git commit -m "Backfill ${MONTH} strategy context through $end"
+              pushed=0
+              for i in 1 2 3 4 5 6 7 8; do
+                if git pull --rebase origin experiment/popular-head-skip-v01 && \
+                   git push origin HEAD:experiment/popular-head-skip-v01; then
+                  pushed=1
+                  break
+                fi
+                git rebase --abort >/dev/null 2>&1 || true
+                sleep $((i * 5))
+              done
+              if [ "$pushed" -ne 1 ]; then
+                echo "Failed to push ${MONTH} chunk through $end" >&2
+                exit 1
+              fi
+            else
+              echo "No changes for ${MONTH} $start .. $end"
+            fi
+          done
+
+      - name: Report month coverage
+        shell: bash
+        env:
+          MONTH: ${{ matrix.month }}
+        run: |
+          python - "$MONTH" <<'PY'
+          import sys
+          from pathlib import Path
+          import pandas as pd
+
+          month=sys.argv[1]
+          base=pd.read_csv(f'keirin_data/{month}_keirin.csv',encoding='utf-8-sig',dtype={'race_id':str})
+          ok=base.groupby('race_id').player_class.apply(
+              lambda s: bool(len(s)) and set(s.dropna().astype(str)).issubset({'A1','A2'})
+          )
+          eligible=int(ok.sum())
+
+          p=Path(f'keirin_data/strategy_context/{month}_races.csv')
+          ctx=pd.read_csv(p,encoding='utf-8-sig',dtype={'race_id':str}).drop_duplicates('race_id',keep='last')
+          full=int((ctx.context_quality.astype(str)=='full').sum())
+          partial=int((ctx.context_quality.astype(str)!='full').sum())
+          usable=int(ctx.price_usable.astype(str).str.lower().isin({'true','1'}).sum()) if 'price_usable' in ctx else 0
+
+          print(f'month={month}')
+          print(f'eligible_A1A2={eligible}')
+          print(f'context_rows={len(ctx)}')
+          print(f'context_full={full}')
+          print(f'context_partial={partial}')
+          print(f'price_usable={usable}')
+          print(f'full_coverage_pct={100*full/eligible:.2f}' if eligible else 'full_coverage_pct=NA')
+          PY
