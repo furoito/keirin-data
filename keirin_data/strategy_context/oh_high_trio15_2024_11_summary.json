@@ -1,0 +1,15 @@
+{
+  "month": "2024_11",
+  "rule": "frozen OH_HIGH selected set; one 3-ren-fuku ticket only if confirmed odds >=15x",
+  "candidate_cases": 28,
+  "trio_odds_found": 28,
+  "bets": 12,
+  "hits": 2,
+  "hit_rate_pct": 16.666666666666664,
+  "stake_yen": 1200,
+  "pay_yen": 8920,
+  "profit_yen": 7720,
+  "roi_pct": 743.3333333333334,
+  "max_losing_streak_bets": 5,
+  "max_drawdown_yen": 500
+}
