@@ -1,0 +1,88 @@
+{
+  "variants": {
+    "BASE": {
+      "head_bust_bet_races": 208,
+      "exact_candidate_set_bet_races": 29,
+      "exact_set_to_hit_pct": 10.344827586206897,
+      "causes": [
+        [
+          "order_model",
+          26
+        ],
+        [
+          "hit",
+          3
+        ]
+      ],
+      "order_model_permutations": [
+        [
+          "swap_2_3",
+          9
+        ],
+        [
+          "swap_1_3",
+          7
+        ],
+        [
+          "rotate_231",
+          4
+        ],
+        [
+          "rotate_312",
+          4
+        ],
+        [
+          "swap_1_2",
+          2
+        ]
+      ],
+      "predicted_position_accuracy_within_exact_set_pct": {
+        "first": 41.37931034482759,
+        "second": 34.48275862068966,
+        "third": 17.24137931034483
+      }
+    },
+    "OH_HIGH": {
+      "head_bust_bet_races": 209,
+      "exact_candidate_set_bet_races": 41,
+      "exact_set_to_hit_pct": 7.317073170731708,
+      "causes": [
+        [
+          "order_model",
+          38
+        ],
+        [
+          "hit",
+          3
+        ]
+      ],
+      "order_model_permutations": [
+        [
+          "swap_1_3",
+          11
+        ],
+        [
+          "swap_2_3",
+          11
+        ],
+        [
+          "rotate_312",
+          8
+        ],
+        [
+          "rotate_231",
+          4
+        ],
+        [
+          "swap_1_2",
+          4
+        ]
+      ],
+      "predicted_position_accuracy_within_exact_set_pct": {
+        "first": 34.146341463414636,
+        "second": 34.146341463414636,
+        "third": 17.073170731707318
+      }
+    }
+  }
+}
