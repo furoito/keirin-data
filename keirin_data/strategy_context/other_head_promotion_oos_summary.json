@@ -1,0 +1,516 @@
+{
+  "protocol": {
+    "train_months": [
+      "2025_05",
+      "2025_06",
+      "2025_07",
+      "2025_08",
+      "2025_09",
+      "2025_10",
+      "2025_11",
+      "2025_12"
+    ],
+    "oos_months": [
+      "2026_01",
+      "2026_02",
+      "2026_03",
+      "2026_04",
+      "2026_05",
+      "2026_06"
+    ],
+    "variants": [
+      "BASE",
+      "OH_EQ",
+      "OH_HIGH",
+      "OH_TOP"
+    ],
+    "selection_rule": "Choose highest TRAIN candidate-set exact count among variants; retain BASE unless an alternative strictly beats BASE. OOS not used for selection."
+  },
+  "splits": {
+    "TRAIN": {
+      "BASE": {
+        "scorable_prefilter_races": 339,
+        "head_bust_prefilter_races": 143,
+        "candidate_set_exact_head_bust_n": 20,
+        "candidate_set_exact_head_bust_pct": 13.986013986013987,
+        "bet_races": 246,
+        "head_bust_bet_races": 97,
+        "set_exact_head_bust_bets": 13,
+        "trifecta_hits": 1,
+        "stake_yen": 27500,
+        "pay_yen": 4640,
+        "profit_yen": -22860,
+        "roi_pct": 16.87272727272727,
+        "skip_reasons": [
+          [
+            "odds_too_low",
+            45
+          ],
+          [
+            "ranking_cycle",
+            34
+          ],
+          [
+            "cannot_compress_multiple_ambiguities",
+            8
+          ],
+          [
+            "cannot_compress_third_slot_too_wide",
+            6
+          ]
+        ]
+      },
+      "OH_EQ": {
+        "scorable_prefilter_races": 339,
+        "head_bust_prefilter_races": 143,
+        "candidate_set_exact_head_bust_n": 14,
+        "candidate_set_exact_head_bust_pct": 9.79020979020979,
+        "bet_races": 183,
+        "head_bust_bet_races": 73,
+        "set_exact_head_bust_bets": 10,
+        "trifecta_hits": 0,
+        "stake_yen": 21100,
+        "pay_yen": 0,
+        "profit_yen": -21100,
+        "roi_pct": 0.0,
+        "skip_reasons": [
+          [
+            "cannot_compress_multiple_ambiguities",
+            61
+          ],
+          [
+            "cannot_compress_third_slot_too_wide",
+            46
+          ],
+          [
+            "odds_too_low",
+            31
+          ],
+          [
+            "ranking_cycle",
+            18
+          ]
+        ],
+        "vs_base": {
+          "gain_exact_vs_base": 1,
+          "loss_exact_vs_base": 7,
+          "net_exact_vs_base": -6,
+          "changed_candidate_family_races": 59
+        }
+      },
+      "OH_HIGH": {
+        "scorable_prefilter_races": 339,
+        "head_bust_prefilter_races": 143,
+        "candidate_set_exact_head_bust_n": 23,
+        "candidate_set_exact_head_bust_pct": 16.083916083916083,
+        "bet_races": 251,
+        "head_bust_bet_races": 100,
+        "set_exact_head_bust_bets": 19,
+        "trifecta_hits": 0,
+        "stake_yen": 29700,
+        "pay_yen": 0,
+        "profit_yen": -29700,
+        "roi_pct": 0.0,
+        "skip_reasons": [
+          [
+            "odds_too_low",
+            46
+          ],
+          [
+            "ranking_cycle",
+            30
+          ],
+          [
+            "cannot_compress_third_slot_too_wide",
+            7
+          ],
+          [
+            "cannot_compress_multiple_ambiguities",
+            5
+          ]
+        ],
+        "vs_base": {
+          "gain_exact_vs_base": 11,
+          "loss_exact_vs_base": 8,
+          "net_exact_vs_base": 3,
+          "changed_candidate_family_races": 90
+        }
+      },
+      "OH_TOP": {
+        "scorable_prefilter_races": 339,
+        "head_bust_prefilter_races": 143,
+        "candidate_set_exact_head_bust_n": 21,
+        "candidate_set_exact_head_bust_pct": 14.685314685314685,
+        "bet_races": 229,
+        "head_bust_bet_races": 92,
+        "set_exact_head_bust_bets": 16,
+        "trifecta_hits": 0,
+        "stake_yen": 25200,
+        "pay_yen": 0,
+        "profit_yen": -25200,
+        "roi_pct": 0.0,
+        "skip_reasons": [
+          [
+            "cannot_compress_multiple_ambiguities",
+            46
+          ],
+          [
+            "odds_too_low",
+            42
+          ],
+          [
+            "ranking_cycle",
+            22
+          ]
+        ],
+        "vs_base": {
+          "gain_exact_vs_base": 11,
+          "loss_exact_vs_base": 10,
+          "net_exact_vs_base": 1,
+          "changed_candidate_family_races": 98
+        }
+      }
+    },
+    "OOS": {
+      "BASE": {
+        "scorable_prefilter_races": 253,
+        "head_bust_prefilter_races": 97,
+        "candidate_set_exact_head_bust_n": 11,
+        "candidate_set_exact_head_bust_pct": 11.34020618556701,
+        "bet_races": 205,
+        "head_bust_bet_races": 77,
+        "set_exact_head_bust_bets": 11,
+        "trifecta_hits": 2,
+        "stake_yen": 23200,
+        "pay_yen": 7760,
+        "profit_yen": -15440,
+        "roi_pct": 33.44827586206897,
+        "skip_reasons": [
+          [
+            "ranking_cycle",
+            23
+          ],
+          [
+            "odds_too_low",
+            17
+          ],
+          [
+            "cannot_compress_multiple_ambiguities",
+            5
+          ],
+          [
+            "cannot_compress_third_slot_too_wide",
+            3
+          ]
+        ]
+      },
+      "OH_EQ": {
+        "scorable_prefilter_races": 253,
+        "head_bust_prefilter_races": 97,
+        "candidate_set_exact_head_bust_n": 11,
+        "candidate_set_exact_head_bust_pct": 11.34020618556701,
+        "bet_races": 149,
+        "head_bust_bet_races": 55,
+        "set_exact_head_bust_bets": 11,
+        "trifecta_hits": 2,
+        "stake_yen": 18100,
+        "pay_yen": 7760,
+        "profit_yen": -10340,
+        "roi_pct": 42.87292817679558,
+        "skip_reasons": [
+          [
+            "cannot_compress_multiple_ambiguities",
+            46
+          ],
+          [
+            "cannot_compress_third_slot_too_wide",
+            36
+          ],
+          [
+            "odds_too_low",
+            12
+          ],
+          [
+            "ranking_cycle",
+            10
+          ]
+        ],
+        "vs_base": {
+          "gain_exact_vs_base": 2,
+          "loss_exact_vs_base": 2,
+          "net_exact_vs_base": 0,
+          "changed_candidate_family_races": 46
+        }
+      },
+      "OH_HIGH": {
+        "scorable_prefilter_races": 253,
+        "head_bust_prefilter_races": 97,
+        "candidate_set_exact_head_bust_n": 18,
+        "candidate_set_exact_head_bust_pct": 18.556701030927837,
+        "bet_races": 199,
+        "head_bust_bet_races": 75,
+        "set_exact_head_bust_bets": 16,
+        "trifecta_hits": 3,
+        "stake_yen": 23800,
+        "pay_yen": 13980,
+        "profit_yen": -9820,
+        "roi_pct": 58.739495798319325,
+        "skip_reasons": [
+          [
+            "ranking_cycle",
+            21
+          ],
+          [
+            "odds_too_low",
+            15
+          ],
+          [
+            "cannot_compress_multiple_ambiguities",
+            10
+          ],
+          [
+            "cannot_compress_third_slot_too_wide",
+            8
+          ]
+        ],
+        "vs_base": {
+          "gain_exact_vs_base": 10,
+          "loss_exact_vs_base": 3,
+          "net_exact_vs_base": 7,
+          "changed_candidate_family_races": 63
+        }
+      },
+      "OH_TOP": {
+        "scorable_prefilter_races": 253,
+        "head_bust_prefilter_races": 97,
+        "candidate_set_exact_head_bust_n": 16,
+        "candidate_set_exact_head_bust_pct": 16.49484536082474,
+        "bet_races": 163,
+        "head_bust_bet_races": 63,
+        "set_exact_head_bust_bets": 14,
+        "trifecta_hits": 2,
+        "stake_yen": 17700,
+        "pay_yen": 9570,
+        "profit_yen": -8130,
+        "roi_pct": 54.067796610169495,
+        "skip_reasons": [
+          [
+            "cannot_compress_multiple_ambiguities",
+            47
+          ],
+          [
+            "ranking_cycle",
+            29
+          ],
+          [
+            "odds_too_low",
+            13
+          ],
+          [
+            "cannot_compress_third_slot_too_wide",
+            1
+          ]
+        ],
+        "vs_base": {
+          "gain_exact_vs_base": 10,
+          "loss_exact_vs_base": 5,
+          "net_exact_vs_base": 5,
+          "changed_candidate_family_races": 72
+        }
+      }
+    },
+    "ALL": {
+      "BASE": {
+        "scorable_prefilter_races": 592,
+        "head_bust_prefilter_races": 240,
+        "candidate_set_exact_head_bust_n": 31,
+        "candidate_set_exact_head_bust_pct": 12.916666666666668,
+        "bet_races": 451,
+        "head_bust_bet_races": 174,
+        "set_exact_head_bust_bets": 24,
+        "trifecta_hits": 3,
+        "stake_yen": 50700,
+        "pay_yen": 12400,
+        "profit_yen": -38300,
+        "roi_pct": 24.45759368836292,
+        "skip_reasons": [
+          [
+            "odds_too_low",
+            62
+          ],
+          [
+            "ranking_cycle",
+            57
+          ],
+          [
+            "cannot_compress_multiple_ambiguities",
+            13
+          ],
+          [
+            "cannot_compress_third_slot_too_wide",
+            9
+          ]
+        ]
+      },
+      "OH_EQ": {
+        "scorable_prefilter_races": 592,
+        "head_bust_prefilter_races": 240,
+        "candidate_set_exact_head_bust_n": 25,
+        "candidate_set_exact_head_bust_pct": 10.416666666666668,
+        "bet_races": 332,
+        "head_bust_bet_races": 128,
+        "set_exact_head_bust_bets": 21,
+        "trifecta_hits": 2,
+        "stake_yen": 39200,
+        "pay_yen": 7760,
+        "profit_yen": -31440,
+        "roi_pct": 19.79591836734694,
+        "skip_reasons": [
+          [
+            "cannot_compress_multiple_ambiguities",
+            107
+          ],
+          [
+            "cannot_compress_third_slot_too_wide",
+            82
+          ],
+          [
+            "odds_too_low",
+            43
+          ],
+          [
+            "ranking_cycle",
+            28
+          ]
+        ],
+        "vs_base": {
+          "gain_exact_vs_base": 3,
+          "loss_exact_vs_base": 9,
+          "net_exact_vs_base": -6,
+          "changed_candidate_family_races": 105
+        }
+      },
+      "OH_HIGH": {
+        "scorable_prefilter_races": 592,
+        "head_bust_prefilter_races": 240,
+        "candidate_set_exact_head_bust_n": 41,
+        "candidate_set_exact_head_bust_pct": 17.083333333333332,
+        "bet_races": 450,
+        "head_bust_bet_races": 175,
+        "set_exact_head_bust_bets": 35,
+        "trifecta_hits": 3,
+        "stake_yen": 53500,
+        "pay_yen": 13980,
+        "profit_yen": -39520,
+        "roi_pct": 26.130841121495326,
+        "skip_reasons": [
+          [
+            "odds_too_low",
+            61
+          ],
+          [
+            "ranking_cycle",
+            51
+          ],
+          [
+            "cannot_compress_third_slot_too_wide",
+            15
+          ],
+          [
+            "cannot_compress_multiple_ambiguities",
+            15
+          ]
+        ],
+        "vs_base": {
+          "gain_exact_vs_base": 21,
+          "loss_exact_vs_base": 11,
+          "net_exact_vs_base": 10,
+          "changed_candidate_family_races": 153
+        }
+      },
+      "OH_TOP": {
+        "scorable_prefilter_races": 592,
+        "head_bust_prefilter_races": 240,
+        "candidate_set_exact_head_bust_n": 37,
+        "candidate_set_exact_head_bust_pct": 15.416666666666668,
+        "bet_races": 392,
+        "head_bust_bet_races": 155,
+        "set_exact_head_bust_bets": 30,
+        "trifecta_hits": 2,
+        "stake_yen": 42900,
+        "pay_yen": 9570,
+        "profit_yen": -33330,
+        "roi_pct": 22.307692307692307,
+        "skip_reasons": [
+          [
+            "cannot_compress_multiple_ambiguities",
+            93
+          ],
+          [
+            "odds_too_low",
+            55
+          ],
+          [
+            "ranking_cycle",
+            51
+          ],
+          [
+            "cannot_compress_third_slot_too_wide",
+            1
+          ]
+        ],
+        "vs_base": {
+          "gain_exact_vs_base": 21,
+          "loss_exact_vs_base": 15,
+          "net_exact_vs_base": 6,
+          "changed_candidate_family_races": 170
+        }
+      }
+    }
+  },
+  "selected_variant_from_train_only": "OH_HIGH",
+  "selected_oos": {
+    "scorable_prefilter_races": 253,
+    "head_bust_prefilter_races": 97,
+    "candidate_set_exact_head_bust_n": 18,
+    "candidate_set_exact_head_bust_pct": 18.556701030927837,
+    "bet_races": 199,
+    "head_bust_bet_races": 75,
+    "set_exact_head_bust_bets": 16,
+    "trifecta_hits": 3,
+    "stake_yen": 23800,
+    "pay_yen": 13980,
+    "profit_yen": -9820,
+    "roi_pct": 58.739495798319325,
+    "skip_reasons": [
+      [
+        "ranking_cycle",
+        21
+      ],
+      [
+        "odds_too_low",
+        15
+      ],
+      [
+        "cannot_compress_multiple_ambiguities",
+        10
+      ],
+      [
+        "cannot_compress_third_slot_too_wide",
+        8
+      ]
+    ],
+    "vs_base": {
+      "gain_exact_vs_base": 10,
+      "loss_exact_vs_base": 3,
+      "net_exact_vs_base": 7,
+      "changed_candidate_family_races": 63
+    }
+  },
+  "selected_oos_vs_base": {
+    "gain_exact_vs_base": 10,
+    "loss_exact_vs_base": 3,
+    "net_exact_vs_base": 7,
+    "changed_candidate_family_races": 63
+  }
+}
