@@ -1,0 +1,43 @@
+{
+  "head_bust_A_miss_races": 11,
+  "miss_role_race_counts": [
+    [
+      "other_head",
+      7
+    ],
+    [
+      "other_pos2",
+      3
+    ],
+    [
+      "solo",
+      2
+    ],
+    [
+      "other_pos3plus",
+      1
+    ]
+  ],
+  "extra_role_race_counts": [
+    [
+      "popular_pos2",
+      8
+    ],
+    [
+      "other_pos2",
+      3
+    ],
+    [
+      "solo",
+      1
+    ],
+    [
+      "other_head",
+      1
+    ]
+  ],
+  "overlap_distribution": {
+    "1": 2,
+    "2": 9
+  }
+}

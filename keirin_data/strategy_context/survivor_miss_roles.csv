@@ -1,0 +1,12 @@
+﻿race_id,date,venue,race_no,line,target,actual,A_candidates,A_overlap,miss_roles,extra_roles,detail
+4320260730030007,2026-08-01,gifu,7,4-1/2/3-5/6/7,3,4-1-5,1-5-7|1-5-2,2,other_head,solo,miss4:other_head:s81.17 ; extra7:solo:s89.08 ; miss4:other_head:s81.17 ; extra2:solo:s86.18
+1320260731020003,2026-08-01,iwakitaira,3,1-5-3/4-2-7/6,4,5-6-2,5-1-2,2,solo,other_head,miss6:solo:s85.55 ; extra1:other_head:s91.28
+7420260731020005,2026-08-01,kochi,5,4-1/3-2/7-5-6,3,5-6-7,2-1-5|2-1-6,1,other_head|other_pos2|other_pos3plus,other_pos2|popular_pos2,miss6:other_pos3plus:s82.04 ; miss7:other_head:s79.66 ; extra1:other_pos2:s94.50 ; extra2:popular_pos2:s93.20 ; miss5:other_pos2:s84.16 ; miss7:other_head:s79.66 ; extra1:other_pos2:s94.50 ; extra2:popular_pos2:s93.20
+2120260730030001,2026-08-01,yahiko,1,7-2-5/1-4/6-3,1,6-2-3,2-4-5|2-4-3,2,other_head,popular_pos2,miss6:other_head:s79.53 ; extra4:popular_pos2:s85.38
+2120260730030011,2026-08-01,yahiko,11,2-1-7/3-5/4/6,2,4-7-6,7-5-1,1,solo,other_pos2|popular_pos2,miss4:solo:s93.41 ; miss6:solo:s90.37 ; extra1:popular_pos2:s91.00 ; extra5:other_pos2:s95.80
+1320260731030002,2026-08-02,iwakitaira,2,2-7-1/3-5/4-6,2,4-1-5,7-1-3|7-1-4,2,other_pos2,popular_pos2,miss5:other_pos2:s81.73 ; extra7:popular_pos2:s90.53
+2720260731030004,2026-08-02,keiokaku,4,2-1/5-3/7-4/6,2,5-4-3,1-3-4|1-4-3,2,other_head,popular_pos2,miss5:other_head:s83.38 ; extra1:popular_pos2:s89.61 ; miss5:other_head:s83.38 ; extra1:popular_pos2:s89.61
+8520260731030003,2026-08-02,sasebo,3,5-1-6/2-7/3-4,5,4-2-7,2-1-4|2-1-7,2,other_pos2,popular_pos2,miss7:other_pos2:s86.16 ; extra1:popular_pos2:s87.00 ; miss4:other_pos2:s88.40 ; extra1:popular_pos2:s87.00
+7320260804020004,2026-08-05,komatsushima,4,5-3/2-7/4-1-6,2,4-5-1,1-5-7,2,other_head,popular_pos2,miss4:other_head:s87.23 ; extra7:popular_pos2:s87.91
+4220260804020002,2026-08-05,nagoya,2,2-7-4/5-1-3/6,2,3-5-1,3-7-1,2,other_head,popular_pos2,miss5:other_head:s84.00 ; extra7:popular_pos2:s82.66
+4220260804020004,2026-08-05,nagoya,4,1-5-4/2-7/6-3,1,2-6-5,2-5-3,2,other_head,other_pos2,miss6:other_head:s82.09 ; extra3:other_pos2:s92.67
