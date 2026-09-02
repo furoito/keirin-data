@@ -1,0 +1,54 @@
+name: Popular head skip v0.1 backtest
+
+on:
+  push:
+    branches:
+      - experiment/popular-head-skip-v01
+    paths:
+      - 'scripts/popular_head_skip_v01.py'
+      - '.github/workflows/popular_head_skip_v01.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: popular-head-skip-v01
+  cancel-in-progress: false
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout experiment branch
+        uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install pandas
+        run: pip install pandas
+
+      - name: Run August 2026 backtest
+        run: python scripts/popular_head_skip_v01.py --month 2026_08
+
+      - name: Show summary
+        run: cat keirin_data/strategy_context/popular_head_skip_v01_summary.json
+
+      - name: Commit experiment results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add keirin_data/strategy_context/popular_head_skip_v01_results.csv \
+                  keirin_data/strategy_context/popular_head_skip_v01_summary.json
+          if git diff --cached --quiet; then
+            echo 'No result changes.'
+            exit 0
+          fi
+          git commit -m 'Add popular head skip v0.1 August backtest results'
+          git push origin HEAD:experiment/popular-head-skip-v01
