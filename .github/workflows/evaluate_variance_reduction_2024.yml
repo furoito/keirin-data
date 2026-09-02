@@ -1,0 +1,36 @@
+name: Evaluate 2024 variance reduction
+
+on:
+  push:
+    branches:
+      - experiment/popular-head-skip-v01
+    paths:
+      - '.github/workflows/evaluate_variance_reduction_2024.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas
+      - name: Compare MKT1 BOX6 and TRIO
+        run: python scripts/evaluate_variance_reduction_2024.py
+      - name: Commit outputs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add keirin_data/strategy_context/variance_reduction_2024_cases.csv
+          git add keirin_data/strategy_context/variance_reduction_2024_summary.json
+          git commit -m 'Add 2024 variance reduction comparison' || exit 0
+          git pull --rebase origin experiment/popular-head-skip-v01
+          git push origin HEAD:experiment/popular-head-skip-v01
