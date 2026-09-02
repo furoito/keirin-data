@@ -1,0 +1,229 @@
+{
+  "scope_months": [
+    "2025_05",
+    "2025_06",
+    "2025_07",
+    "2025_08",
+    "2025_09",
+    "2025_10",
+    "2025_11",
+    "2025_12",
+    "2026_01",
+    "2026_02",
+    "2026_03",
+    "2026_04",
+    "2026_05",
+    "2026_06"
+  ],
+  "head_bust_races": 174,
+  "candidate_set_exact_races": 24,
+  "candidate_set_miss_races": 150,
+  "candidate_set_exact_given_bust_pct": 13.793103448275861,
+  "miss_overlap_distribution": {
+    "0": 6,
+    "1": 31,
+    "2": 113
+  },
+  "one_rider_replacement_misses": 113,
+  "one_rider_replacement_share_of_misses_pct": 75.33333333333333,
+  "missing_role_race_counts": [
+    [
+      "other_head",
+      82
+    ],
+    [
+      "other_pos2",
+      39
+    ],
+    [
+      "solo",
+      33
+    ],
+    [
+      "popular_pos3plus",
+      14
+    ],
+    [
+      "other_pos3plus",
+      12
+    ],
+    [
+      "popular_pos2",
+      4
+    ]
+  ],
+  "extra_role_race_counts": [
+    [
+      "other_pos2",
+      62
+    ],
+    [
+      "popular_pos2",
+      57
+    ],
+    [
+      "popular_pos3plus",
+      35
+    ],
+    [
+      "other_head",
+      19
+    ],
+    [
+      "other_pos3plus",
+      13
+    ],
+    [
+      "solo",
+      5
+    ]
+  ],
+  "replacement_role_pair_counts": [
+    [
+      "other_pos2->other_head",
+      28
+    ],
+    [
+      "popular_pos2->other_head",
+      12
+    ],
+    [
+      "popular_pos3plus->other_head",
+      8
+    ],
+    [
+      "popular_pos2->solo",
+      7
+    ],
+    [
+      "popular_pos2->other_pos2",
+      7
+    ],
+    [
+      "other_pos2->solo",
+      7
+    ],
+    [
+      "other_pos2->popular_pos3plus",
+      6
+    ],
+    [
+      "other_head->other_pos2",
+      6
+    ],
+    [
+      "other_pos3plus->other_head",
+      5
+    ],
+    [
+      "popular_pos2->other_pos3plus",
+      4
+    ],
+    [
+      "other_pos2->other_pos2",
+      3
+    ],
+    [
+      "other_pos3plus->solo",
+      3
+    ],
+    [
+      "popular_pos3plus->other_pos3plus",
+      3
+    ],
+    [
+      "other_head->other_head",
+      2
+    ],
+    [
+      "other_pos3plus->other_pos2",
+      2
+    ],
+    [
+      "popular_pos3plus->other_pos2",
+      2
+    ],
+    [
+      "popular_pos2->popular_pos3plus",
+      2
+    ],
+    [
+      "popular_pos3plus->solo",
+      2
+    ],
+    [
+      "solo->popular_pos3plus",
+      1
+    ],
+    [
+      "other_head->popular_pos2",
+      1
+    ],
+    [
+      "other_head->popular_pos3plus",
+      1
+    ],
+    [
+      "solo->other_pos2",
+      1
+    ],
+    [
+      "other_pos2->popular_pos2",
+      1
+    ],
+    [
+      "other_head->solo",
+      1
+    ]
+  ],
+  "one_replacement_score_gap_missing_minus_extra": {
+    "n": 113,
+    "mean": -3.321150442477876,
+    "median": -2.239999999999995,
+    "missing_score_ge_extra_n": 28,
+    "missing_within_1_below_or_better_n": 38,
+    "missing_within_3_below_or_better_n": 60,
+    "gap_buckets": [
+      [
+        "extra_+3_or_more",
+        53
+      ],
+      [
+        "extra_+1_to_3",
+        22
+      ],
+      [
+        "within_1",
+        21
+      ],
+      [
+        "missing_+1_to_3",
+        17
+      ]
+    ]
+  },
+  "hypothesis_counts": {
+    "miss_other_head_one_replace": 55,
+    "extra_popular_pos2_one_replace": 32,
+    "popular_pos2_to_other_head": 12,
+    "popular_pos2_to_other_head_missing_within3": 6,
+    "popular_pos2_to_other_head_missing_score_ge_extra": 4,
+    "popular_pos2_to_other_head_missing_within1": 4
+  },
+  "misses_by_month": {
+    "2025_05": 8,
+    "2025_06": 10,
+    "2025_07": 16,
+    "2025_08": 9,
+    "2025_09": 13,
+    "2025_10": 6,
+    "2025_11": 11,
+    "2025_12": 11,
+    "2026_01": 14,
+    "2026_02": 6,
+    "2026_03": 9,
+    "2026_04": 15,
+    "2026_05": 7,
+    "2026_06": 15
+  }
+}
