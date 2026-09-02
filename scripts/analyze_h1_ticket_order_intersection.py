@@ -83,7 +83,6 @@ def main():
         'views': {name: summarize(z) for name, z in views.items()},
     }
 
-    # Within the intersection, expose score-order distribution without optimizing on it.
     inter = views['WINNER_RYO_AND_LINE_POS_1_2_2']
     score_orders = {}
     for so, g in inter.groupby('score_order', sort=True):
