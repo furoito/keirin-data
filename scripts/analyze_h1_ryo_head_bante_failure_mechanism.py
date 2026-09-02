@@ -194,7 +194,6 @@ def main():
         'head_vs_best_other_head':by_category(df,'head_vs_best_other_head_bin'),
     }
 
-    # Also expose means by outcome; descriptive only.
     numeric_cols=[
         'head_score','own_bante_score','head_score_rank','own_bante_score_rank',
         'head_minus_own_bante_score','line_size','own_bante_minus_best_other_bante',
