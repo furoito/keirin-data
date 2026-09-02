@@ -1,0 +1,35 @@
+{
+  "universe": "v0.1b BET races only",
+  "all_bet_races": {
+    "n": 24,
+    "A_exact_pct": 4.166666666666666,
+    "A_rank_exact_pct": 4.166666666666666,
+    "A_avg_overlap_of_3": 1.7083333333333333,
+    "B_exact_pct": 4.166666666666666,
+    "B_avg_overlap_of_3": 1.5416666666666667,
+    "C_feasible_exact_pct": 4.166666666666666,
+    "C_avg_best_overlap_of_3": 1.6666666666666667,
+    "C_unique_rate_pct": 33.33333333333333,
+    "C_unique_exact_pct_all": 0.0,
+    "C_unique_exact_pct_when_unique": 0.0
+  },
+  "head_bust_only": {
+    "n": 9,
+    "A_exact_pct": 11.11111111111111,
+    "A_rank_exact_pct": 11.11111111111111,
+    "A_avg_overlap_of_3": 1.8888888888888888,
+    "B_exact_pct": 11.11111111111111,
+    "B_avg_overlap_of_3": 1.6666666666666667,
+    "C_feasible_exact_pct": 11.11111111111111,
+    "C_avg_best_overlap_of_3": 1.8888888888888888,
+    "C_unique_rate_pct": 33.33333333333333,
+    "C_unique_exact_pct_all": 0.0,
+    "C_unique_exact_pct_when_unique": 0.0
+  },
+  "head_bust_rate_pct": 37.5,
+  "definitions": {
+    "A": "v0.1b 3-point boundary + position, candidate-family scoring",
+    "B": "score-only top3 after target removal",
+    "C": "position-tier-only; all sets allowed by cutoff tie are scored"
+  }
+}
