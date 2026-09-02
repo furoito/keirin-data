@@ -1,0 +1,40 @@
+{
+  "month": "2025_05",
+  "context_full_races": 78,
+  "current_bet_races": 25,
+  "scorable_bet_races": 24,
+  "rule": "v0.1b candidate sets; single-count +3 popular pos2, +1 popular pos3; adjusted-score order; current-order >=30x; max2",
+  "all_bets": {
+    "n": 24,
+    "head_bust_n": 8,
+    "set_match_n": 0,
+    "order_match_n": 0,
+    "bet_hit_n": 0,
+    "stake_yen": 2500,
+    "pay_yen": 0,
+    "profit_yen": -2500,
+    "roi_pct": 0.0
+  },
+  "head_bust_only": {
+    "n": 8,
+    "head_bust_n": 8,
+    "set_match_n": 0,
+    "order_match_n": 0,
+    "bet_hit_n": 0,
+    "stake_yen": 800,
+    "pay_yen": 0,
+    "profit_yen": -800,
+    "roi_pct": 0.0
+  },
+  "head_bust_and_set_exact": {
+    "n": 0,
+    "head_bust_n": 0,
+    "set_match_n": 0,
+    "order_match_n": 0,
+    "bet_hit_n": 0,
+    "stake_yen": 0,
+    "pay_yen": 0,
+    "profit_yen": 0,
+    "roi_pct": null
+  }
+}
