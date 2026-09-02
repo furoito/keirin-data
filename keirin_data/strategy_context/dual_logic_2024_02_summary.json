@@ -1,0 +1,45 @@
+{
+  "month": "2024_02",
+  "context_full_races": 77,
+  "rules": {
+    "BASE": "current candidate tiers",
+    "OH_HIGH": "other-line head promoted to tier3 when within 3 points",
+    "shared": "v0.1b popular line; 3-point boundary; order +3 pop pos2/+1 pop pos3 once; >=30x; max2"
+  },
+  "variants": {
+    "BASE": {
+      "scorable_prefilter_races": 42,
+      "head_bust_prefilter_races": 20,
+      "candidate_set_exact_head_bust_n": 2,
+      "candidate_set_exact_head_bust_pct": 10.0,
+      "bet_races": 27,
+      "head_bust_bet_races": 12,
+      "set_exact_head_bust_bets": 1,
+      "trifecta_hits": 0,
+      "stake_yen": 3000,
+      "pay_yen": 0,
+      "profit_yen": -3000,
+      "roi_pct": 0.0
+    },
+    "OH_HIGH": {
+      "scorable_prefilter_races": 42,
+      "head_bust_prefilter_races": 20,
+      "candidate_set_exact_head_bust_n": 5,
+      "candidate_set_exact_head_bust_pct": 25.0,
+      "bet_races": 29,
+      "head_bust_bet_races": 12,
+      "set_exact_head_bust_bets": 4,
+      "trifecta_hits": 2,
+      "stake_yen": 3300,
+      "pay_yen": 16800,
+      "profit_yen": 13500,
+      "roi_pct": 509.09090909090907
+    }
+  },
+  "OH_HIGH_vs_BASE": {
+    "gain_exact": 3,
+    "loss_exact": 0,
+    "net_exact": 3,
+    "head_bust_compared": 20
+  }
+}
