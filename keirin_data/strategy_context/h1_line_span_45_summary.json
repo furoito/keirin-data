@@ -1,0 +1,466 @@
+{
+  "status": "exploratory_line_span_diagnostic_current_available_data",
+  "group_score_top_pct": 45,
+  "quality_gate": "context_quality=full AND price_usable=true",
+  "usable_races_by_month": {
+    "2025_01": 983,
+    "2025_02": 724,
+    "2025_03": 679,
+    "2025_04": 374,
+    "2025_05": 548,
+    "2025_06": 440,
+    "2025_07": 166,
+    "2025_08": 80,
+    "2025_09": 80,
+    "2025_10": 62,
+    "2025_11": 78,
+    "2025_12": 77,
+    "2026_01": 79,
+    "2026_02": 79,
+    "2026_03": 79,
+    "2026_04": 78,
+    "2026_05": 65,
+    "2026_06": 75
+  },
+  "skipped": {
+    "odds_board_incomplete": 1044,
+    "result_missing": 87,
+    "base_or_odds_missing": 97
+  },
+  "results": {
+    "ALL": {
+      "line_span_1": {
+        "all_odds": {
+          "groups": 2509,
+          "races": 2032,
+          "expected_hits": 354.8755008149902,
+          "actual_hits": 376,
+          "actual_over_market": 1.0595265075681368
+        },
+        "cuts": {
+          "50": {
+            "groups": 597,
+            "races": 528,
+            "expected_hits": 6.753798313703088,
+            "actual_hits": 7,
+            "actual_over_market": 1.0364538108574226
+          },
+          "100": {
+            "groups": 243,
+            "races": 229,
+            "expected_hits": 1.6148649220642424,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          },
+          "200": {
+            "groups": 52,
+            "races": 52,
+            "expected_hits": 0.18686696391424176,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "bins": {
+          "50-100": {
+            "groups": 354,
+            "races": 330,
+            "expected_hits": 5.138933391638846,
+            "actual_hits": 7,
+            "actual_over_market": 1.3621503659473673
+          },
+          "100-200": {
+            "groups": 191,
+            "races": 180,
+            "expected_hits": 1.4279979581500004,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          },
+          "200-plus": {
+            "groups": 52,
+            "races": 52,
+            "expected_hits": 0.18686696391424176,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        }
+      },
+      "line_span_2": {
+        "all_odds": {
+          "groups": 32407,
+          "races": 3383,
+          "expected_hits": 1728.1125193981668,
+          "actual_hits": 1704,
+          "actual_over_market": 0.9860469042799573
+        },
+        "cuts": {
+          "50": {
+            "groups": 12700,
+            "races": 3174,
+            "expected_hits": 133.68201288106758,
+            "actual_hits": 132,
+            "actual_over_market": 0.9874178070421186
+          },
+          "100": {
+            "groups": 6186,
+            "races": 2561,
+            "expected_hits": 38.42938368438813,
+            "actual_hits": 38,
+            "actual_over_market": 0.9888266830424719
+          },
+          "200": {
+            "groups": 1989,
+            "races": 1214,
+            "expected_hits": 6.975131274884636,
+            "actual_hits": 8,
+            "actual_over_market": 1.146931818875669
+          }
+        },
+        "bins": {
+          "50-100": {
+            "groups": 6514,
+            "races": 2883,
+            "expected_hits": 95.25262919667946,
+            "actual_hits": 94,
+            "actual_over_market": 0.9868494003027148
+          },
+          "100-200": {
+            "groups": 4197,
+            "races": 2324,
+            "expected_hits": 31.454252409503496,
+            "actual_hits": 30,
+            "actual_over_market": 0.9537661111581812
+          },
+          "200-plus": {
+            "groups": 1989,
+            "races": 1214,
+            "expected_hits": 6.975131274884636,
+            "actual_hits": 8,
+            "actual_over_market": 1.146931818875669
+          }
+        }
+      },
+      "line_span_3": {
+        "all_odds": {
+          "groups": 16856,
+          "races": 3139,
+          "expected_hits": 632.7881816115867,
+          "actual_hits": 645,
+          "actual_over_market": 1.0192984299379806
+        },
+        "cuts": {
+          "50": {
+            "groups": 9029,
+            "races": 2920,
+            "expected_hits": 90.64646206540905,
+            "actual_hits": 94,
+            "actual_over_market": 1.0369957950721904
+          },
+          "100": {
+            "groups": 4793,
+            "races": 2305,
+            "expected_hits": 29.43589930424623,
+            "actual_hits": 33,
+            "actual_over_market": 1.1210800682158752
+          },
+          "200": {
+            "groups": 1591,
+            "races": 1064,
+            "expected_hits": 5.5920307559194455,
+            "actual_hits": 9,
+            "actual_over_market": 1.609433208226376
+          }
+        },
+        "bins": {
+          "50-100": {
+            "groups": 4236,
+            "races": 2248,
+            "expected_hits": 61.21056276116282,
+            "actual_hits": 61,
+            "actual_over_market": 0.9965600257265332
+          },
+          "100-200": {
+            "groups": 3202,
+            "races": 1960,
+            "expected_hits": 23.843868548326785,
+            "actual_hits": 24,
+            "actual_over_market": 1.0065480755086686
+          },
+          "200-plus": {
+            "groups": 1591,
+            "races": 1064,
+            "expected_hits": 5.5920307559194455,
+            "actual_hits": 9,
+            "actual_over_market": 1.609433208226376
+          }
+        }
+      },
+      "two_vs_three": {
+        "50": {
+          "line_span_2": {
+            "groups": 12700,
+            "races": 3174,
+            "expected_hits": 133.68201288106758,
+            "actual_hits": 132,
+            "actual_over_market": 0.9874178070421186
+          },
+          "line_span_3": {
+            "groups": 9029,
+            "races": 2920,
+            "expected_hits": 90.64646206540905,
+            "actual_hits": 94,
+            "actual_over_market": 1.0369957950721904
+          }
+        },
+        "100": {
+          "line_span_2": {
+            "groups": 6186,
+            "races": 2561,
+            "expected_hits": 38.42938368438813,
+            "actual_hits": 38,
+            "actual_over_market": 0.9888266830424719
+          },
+          "line_span_3": {
+            "groups": 4793,
+            "races": 2305,
+            "expected_hits": 29.43589930424623,
+            "actual_hits": 33,
+            "actual_over_market": 1.1210800682158752
+          }
+        },
+        "200": {
+          "line_span_2": {
+            "groups": 1989,
+            "races": 1214,
+            "expected_hits": 6.975131274884636,
+            "actual_hits": 8,
+            "actual_over_market": 1.146931818875669
+          },
+          "line_span_3": {
+            "groups": 1591,
+            "races": 1064,
+            "expected_hits": 5.5920307559194455,
+            "actual_hits": 9,
+            "actual_over_market": 1.609433208226376
+          }
+        }
+      }
+    },
+    "NO_THIRD": {
+      "line_span_1": {
+        "all_odds": {
+          "groups": 0,
+          "races": 0,
+          "expected_hits": 0.0,
+          "actual_hits": 0,
+          "actual_over_market": null
+        },
+        "cuts": {
+          "50": {
+            "groups": 0,
+            "races": 0,
+            "expected_hits": 0.0,
+            "actual_hits": 0,
+            "actual_over_market": null
+          },
+          "100": {
+            "groups": 0,
+            "races": 0,
+            "expected_hits": 0.0,
+            "actual_hits": 0,
+            "actual_over_market": null
+          },
+          "200": {
+            "groups": 0,
+            "races": 0,
+            "expected_hits": 0.0,
+            "actual_hits": 0,
+            "actual_over_market": null
+          }
+        },
+        "bins": {
+          "50-100": {
+            "groups": 0,
+            "races": 0,
+            "expected_hits": 0.0,
+            "actual_hits": 0,
+            "actual_over_market": null
+          },
+          "100-200": {
+            "groups": 0,
+            "races": 0,
+            "expected_hits": 0.0,
+            "actual_hits": 0,
+            "actual_over_market": null
+          },
+          "200-plus": {
+            "groups": 0,
+            "races": 0,
+            "expected_hits": 0.0,
+            "actual_hits": 0,
+            "actual_over_market": null
+          }
+        }
+      },
+      "line_span_2": {
+        "all_odds": {
+          "groups": 17775,
+          "races": 3349,
+          "expected_hits": 1210.384493494102,
+          "actual_hits": 1179,
+          "actual_over_market": 0.9740706414674051
+        },
+        "cuts": {
+          "50": {
+            "groups": 4634,
+            "races": 2310,
+            "expected_hits": 52.208747423238876,
+            "actual_hits": 59,
+            "actual_over_market": 1.13007882609607
+          },
+          "100": {
+            "groups": 1942,
+            "races": 1255,
+            "expected_hits": 12.341536530368742,
+            "actual_hits": 13,
+            "actual_over_market": 1.0533534433099947
+          },
+          "200": {
+            "groups": 594,
+            "races": 452,
+            "expected_hits": 2.117073390848332,
+            "actual_hits": 2,
+            "actual_over_market": 0.9447003626069763
+          }
+        },
+        "bins": {
+          "50-100": {
+            "groups": 2692,
+            "races": 1823,
+            "expected_hits": 39.86721089287013,
+            "actual_hits": 46,
+            "actual_over_market": 1.153830402723925
+          },
+          "100-200": {
+            "groups": 1348,
+            "races": 1041,
+            "expected_hits": 10.22446313952041,
+            "actual_hits": 11,
+            "actual_over_market": 1.0758511082583813
+          },
+          "200-plus": {
+            "groups": 594,
+            "races": 452,
+            "expected_hits": 2.117073390848332,
+            "actual_hits": 2,
+            "actual_over_market": 0.9447003626069763
+          }
+        }
+      },
+      "line_span_3": {
+        "all_odds": {
+          "groups": 14552,
+          "races": 3079,
+          "expected_hits": 554.6359997048505,
+          "actual_hits": 568,
+          "actual_over_market": 1.0240950827249964
+        },
+        "cuts": {
+          "50": {
+            "groups": 7641,
+            "races": 2746,
+            "expected_hits": 78.40057962875017,
+            "actual_hits": 87,
+            "actual_over_market": 1.1096856733964293
+          },
+          "100": {
+            "groups": 3908,
+            "races": 2015,
+            "expected_hits": 24.407087436262678,
+            "actual_hits": 31,
+            "actual_over_market": 1.2701228723400213
+          },
+          "200": {
+            "groups": 1222,
+            "races": 857,
+            "expected_hits": 4.3770003912551445,
+            "actual_hits": 8,
+            "actual_over_market": 1.8277357287843257
+          }
+        },
+        "bins": {
+          "50-100": {
+            "groups": 3733,
+            "races": 2073,
+            "expected_hits": 53.99349219248749,
+            "actual_hits": 56,
+            "actual_over_market": 1.037162030571375
+          },
+          "100-200": {
+            "groups": 2686,
+            "races": 1693,
+            "expected_hits": 20.030087045007534,
+            "actual_hits": 23,
+            "actual_over_market": 1.1482725935398623
+          },
+          "200-plus": {
+            "groups": 1222,
+            "races": 857,
+            "expected_hits": 4.3770003912551445,
+            "actual_hits": 8,
+            "actual_over_market": 1.8277357287843257
+          }
+        }
+      },
+      "two_vs_three": {
+        "50": {
+          "line_span_2": {
+            "groups": 4634,
+            "races": 2310,
+            "expected_hits": 52.208747423238876,
+            "actual_hits": 59,
+            "actual_over_market": 1.13007882609607
+          },
+          "line_span_3": {
+            "groups": 7641,
+            "races": 2746,
+            "expected_hits": 78.40057962875017,
+            "actual_hits": 87,
+            "actual_over_market": 1.1096856733964293
+          }
+        },
+        "100": {
+          "line_span_2": {
+            "groups": 1942,
+            "races": 1255,
+            "expected_hits": 12.341536530368742,
+            "actual_hits": 13,
+            "actual_over_market": 1.0533534433099947
+          },
+          "line_span_3": {
+            "groups": 3908,
+            "races": 2015,
+            "expected_hits": 24.407087436262678,
+            "actual_hits": 31,
+            "actual_over_market": 1.2701228723400213
+          }
+        },
+        "200": {
+          "line_span_2": {
+            "groups": 594,
+            "races": 452,
+            "expected_hits": 2.117073390848332,
+            "actual_hits": 2,
+            "actual_over_market": 0.9447003626069763
+          },
+          "line_span_3": {
+            "groups": 1222,
+            "races": 857,
+            "expected_hits": 4.3770003912551445,
+            "actual_hits": 8,
+            "actual_over_market": 1.8277357287843257
+          }
+        }
+      }
+    }
+  }
+}
