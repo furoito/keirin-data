@@ -23,7 +23,7 @@ from __future__ import annotations
 
 import itertools
 import json
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 
 import pandas as pd
@@ -155,10 +155,7 @@ def main():
                 style[fn] = s
                 style_values[s] += 1
 
-            candidates = [
-                q for q in group_rows
-                if q['group_score_percentile'] <= PCT and q['line_span'] == 3
-            ]
+            candidates = [q for q in group_rows if q['group_score_percentile'] <= PCT and q['line_span'] == 3]
             for q in candidates:
                 trio = tuple(int(x) for x in q['trio'].split('-'))
                 if any(line_pos.get(fn, 99) >= 3 for fn in trio):
@@ -176,9 +173,6 @@ def main():
                     if od is None or od <= 0:
                         continue
                     p = (1.0 / float(od)) / z
-                    score_order = '-'.join(str(score_rank[fn]) for fn in perm)
-                    lp_order = '-'.join(str(line_pos.get(fn, 99)) for fn in perm)
-                    style_order = '-'.join(style.get(fn, 'UNKNOWN') for fn in perm)
                     winner_sr = score_rank[perm[0]]
                     winner_lp = line_pos.get(perm[0], 99)
                     winner_style = style.get(perm[0], 'UNKNOWN')
@@ -190,11 +184,11 @@ def main():
                         'odds': float(od),
                         'market_p': float(p),
                         'actual_hit': int(tuple(perm) == actual),
-                        'score_order': score_order,
+                        'score_order': '-'.join(str(score_rank[fn]) for fn in perm),
                         'winner_score_rank': int(winner_sr),
-                        'line_pos_order': lp_order,
+                        'line_pos_order': '-'.join(str(line_pos.get(fn, 99)) for fn in perm),
                         'winner_line_pos': int(winner_lp),
-                        'running_style_order': style_order,
+                        'running_style_order': '-'.join(style.get(fn, 'UNKNOWN') for fn in perm),
                         'winner_running_style': winner_style,
                         'escape_count': int(escape_count),
                         'winner_is_escape': int(winner_style == '逃'),
@@ -208,16 +202,7 @@ def main():
     df = df.sort_values(['month', 'race_id', 'trio', 'ticket'])
     df.to_csv(DETAIL, index=False, encoding='utf-8-sig')
 
-    views = [
-        'score_order',
-        'winner_score_rank',
-        'line_pos_order',
-        'winner_line_pos',
-        'winner_running_style',
-        'escape_count',
-        'winner_is_escape',
-        'winner_score_rank_x_line_pos',
-    ]
+    view_cols = ['score_order', 'winner_score_rank', 'line_pos_order', 'winner_line_pos', 'winner_running_style', 'escape_count', 'winner_is_escape', 'winner_score_rank_x_line_pos']
     payload = {
         'status': 'exploratory_ticket_order_pattern_current_available_data',
         'candidate': 'group_score_top45pct AND exactly_3_lines AND NO_THIRD',
@@ -227,11 +212,8 @@ def main():
         'style_values_seen': dict(style_values),
         'usable_races_by_month': usable_by_month,
         'skipped': dict(skipped),
-        'overall': {
-            'all_odds': agg(df),
-            'min_ticket_odds': {str(c): agg(df[df.odds >= c]) for c in ODDS_CUTS},
-        },
-        'views': {col: summarize_view(df, col) for col in views},
+        'overall': {'all_odds': agg(df), 'min_ticket_odds': {str(c): agg(df[df.odds >= c]) for c in ODDS_CUTS}},
+        'views': {col: summarize_view(df, col) for col in view_cols},
     }
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
     print(json.dumps(payload, ensure_ascii=False, indent=2))
