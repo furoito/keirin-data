@@ -1,0 +1,36 @@
+{
+  "races": 99,
+  "bets_races": 50,
+  "bet_rate_pct": 50.505050505050505,
+  "popular_head_bust_pct": 71.42857142857143,
+  "bet_head_bust_pct": 70.0,
+  "top3_set_match_pct": 2.0,
+  "candidate_order_match_pct": 0.0,
+  "trifecta_hit_races": 0,
+  "trifecta_hit_pct": 0.0,
+  "stake_yen": 5900,
+  "pay_yen": 0,
+  "roi_pct": 0.0,
+  "skip_reasons": [
+    [
+      "target_score_plus_3",
+      21
+    ],
+    [
+      "odds_board_incomplete",
+      15
+    ],
+    [
+      "popular_line_too_strong",
+      5
+    ],
+    [
+      "odds_too_low",
+      4
+    ],
+    [
+      "ranking_cycle",
+      4
+    ]
+  ]
+}
