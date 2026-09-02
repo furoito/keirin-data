@@ -1,0 +1,14 @@
+{
+  "month": "2024_06",
+  "rule": "frozen OH_HIGH candidate sets + MKT1 lowest odds among >=30x; 100 yen; 1 ticket",
+  "scorable_races": 50,
+  "bet_races": 41,
+  "head_bust_races": 12,
+  "head_bust_bet_races": 11,
+  "candidate_set_exact_head_bust": 3,
+  "hits": 1,
+  "stake_yen": 4100,
+  "pay_yen": 4240,
+  "profit_yen": 140,
+  "roi_pct": 103.41463414634147
+}
