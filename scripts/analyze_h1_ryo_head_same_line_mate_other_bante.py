@@ -141,7 +141,6 @@ def main():
                         continue
                     a,b2,c3=perm
                     pattern=None
-                    # Requested 2-line form: RYO head -> own mate -> other-line mate.
                     if (
                         q['line_span']==2 and
                         style.get(a)=='両' and line_pos.get(a)==1 and line_size.get(a,0)>=2 and
@@ -149,7 +148,6 @@ def main():
                         line_pos.get(c3)==2 and line_of.get(c3)!=line_of.get(a)
                     ):
                         pattern='RYO_HEAD_OWN_BANTE_OTHER_BANTE_2LINES'
-                    # Current 3-line control: RYO head -> other-line bante -> third-line bante.
                     elif (
                         q['line_span']==3 and
                         style.get(a)=='両' and line_pos.get(a)==1 and
@@ -188,3 +186,4 @@ def main():
 
 if __name__=='__main__':
     main()
+# trigger
