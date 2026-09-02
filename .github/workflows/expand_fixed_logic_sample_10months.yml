@@ -1,0 +1,81 @@
+name: Expand fixed popular-head-skip sample 10 months
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - experiment/popular-head-skip-v01
+    paths:
+      - '.github/workflows/expand_fixed_logic_sample_10months.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  month:
+    strategy:
+      fail-fast: false
+      max-parallel: 10
+      matrix:
+        include:
+          - month: '2025_05'
+            start: '2025-05-01'
+            end: '2025-05-31'
+          - month: '2025_06'
+            start: '2025-06-01'
+            end: '2025-06-30'
+          - month: '2025_07'
+            start: '2025-07-01'
+            end: '2025-07-31'
+          - month: '2025_08'
+            start: '2025-08-01'
+            end: '2025-08-31'
+          - month: '2025_09'
+            start: '2025-09-01'
+            end: '2025-09-30'
+          - month: '2025_10'
+            start: '2025-10-01'
+            end: '2025-10-31'
+          - month: '2025_11'
+            start: '2025-11-01'
+            end: '2025-11-30'
+          - month: '2025_12'
+            start: '2025-12-01'
+            end: '2025-12-31'
+          - month: '2026_01'
+            start: '2026-01-01'
+            end: '2026-01-31'
+          - month: '2026_02'
+            start: '2026-02-01'
+            end: '2026-02-28'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas requests beautifulsoup4 lxml html5lib tqdm
+      - name: Build strategy context
+        run: python scripts/backfill_strategy_context.py --start-date ${{ matrix.start }} --end-date ${{ matrix.end }} --classes A1,A2 --limit 80 --resume
+      - name: Evaluate frozen logic
+        run: python scripts/validate_fixed_logic_month.py --month ${{ matrix.month }}
+      - name: Commit month outputs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add keirin_data/strategy_context/${{ matrix.month }}_races.csv || true
+          git add keirin_data/strategy_context/${{ matrix.month }}_odds_3rentan.csv || true
+          git add keirin_data/strategy_context/fixed_logic_${{ matrix.month }}_results.csv || true
+          git add keirin_data/strategy_context/fixed_logic_${{ matrix.month }}_summary.json || true
+          git add keirin_data/strategy_context/fixed_logic_${{ matrix.month }}_result_repairs.csv || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Add fixed logic validation ${{ matrix.month }}"
+          for i in 1 2 3 4 5 6 7 8; do
+            git pull --rebase origin experiment/popular-head-skip-v01 && \
+            git push origin HEAD:experiment/popular-head-skip-v01 && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
