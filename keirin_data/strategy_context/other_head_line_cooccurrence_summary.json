@@ -1,0 +1,14 @@
+{
+  "scope": "2025-01..2026-06 scorable OH_HIGH experiment races; popular line inferred pre-race from stored target + true_line",
+  "all": {
+    "two_car": {"other_head_top3_events": 287, "follower_also_top3_n": 94, "follower_also_top3_pct": 32.75261324041812, "head_without_follower_n": 193, "head_without_follower_pct": 67.24738675958189, "both_line_members_top3_and_pop_head_bust_n": 68},
+    "three_plus": {"other_head_top3_events": 126, "follower_also_top3_n": 69, "follower_also_top3_pct": 54.76190476190476, "head_without_follower_n": 57, "head_without_follower_pct": 45.23809523809524, "both_line_members_top3_and_pop_head_bust_n": 47},
+    "all_nonpopular_lines": {"other_head_top3_events": 413, "follower_also_top3_n": 163, "follower_also_top3_pct": 39.46731234866828, "head_without_follower_n": 250, "head_without_follower_pct": 60.53268765133172, "both_line_members_top3_and_pop_head_bust_n": 115}
+  },
+  "popular_head_bust_only": {
+    "two_car": {"other_head_top3_events": 144, "follower_also_top3_n": 68, "follower_also_top3_pct": 47.22222222222222, "head_without_follower_n": 76, "head_without_follower_pct": 52.77777777777778, "both_line_members_top3_and_pop_head_bust_n": 68},
+    "three_plus": {"other_head_top3_events": 63, "follower_also_top3_n": 47, "follower_also_top3_pct": 74.60317460317461, "head_without_follower_n": 16, "head_without_follower_pct": 25.396825396825395, "both_line_members_top3_and_pop_head_bust_n": 47},
+    "all_nonpopular_lines": {"other_head_top3_events": 207, "follower_also_top3_n": 115, "follower_also_top3_pct": 55.55555555555556, "head_without_follower_n": 92, "head_without_follower_pct": 44.44444444444444, "both_line_members_top3_and_pop_head_bust_n": 115}
+  },
+  "source_note": "Copied exactly from successful analysis step of GitHub Actions run 33605518498 after workflow push failed with permissions 403."
+}
