@@ -1,0 +1,221 @@
+{
+  "status": "exploratory_outcome_conditioned_mechanism_diagnostic",
+  "cohort": "usable races where actual winner is running_style=両, line_pos=1, and belongs to a multi-rider line",
+  "label": "own bante fails = winner own line_pos=2 rider is not in actual top3",
+  "warning": "Outcome-conditioned descriptive analysis on the same discovery data. Do not use these bins as validated betting filters.",
+  "usable_races_by_month": {
+    "2025_01": 983,
+    "2025_02": 724,
+    "2025_03": 679,
+    "2025_04": 374,
+    "2025_05": 548,
+    "2025_06": 616,
+    "2025_07": 327,
+    "2025_08": 80,
+    "2025_09": 80,
+    "2025_10": 62,
+    "2025_11": 78,
+    "2025_12": 77,
+    "2026_01": 79,
+    "2026_02": 79,
+    "2026_03": 79,
+    "2026_04": 78,
+    "2026_05": 65,
+    "2026_06": 75
+  },
+  "skipped": {
+    "winner_solo": 90,
+    "result_missing": 109,
+    "base_missing": 97
+  },
+  "overall": {
+    "cases": 445,
+    "own_bante_failed": 228,
+    "own_bante_survived": 217,
+    "failure_rate_pct": 51.235955056179776
+  },
+  "feature_views": {
+    "head_score_rank": {
+      "1-2": {
+        "cases": 259,
+        "own_bante_failed": 121,
+        "own_bante_survived": 138,
+        "failure_rate_pct": 46.71814671814672
+      },
+      "3-4": {
+        "cases": 101,
+        "own_bante_failed": 58,
+        "own_bante_survived": 43,
+        "failure_rate_pct": 57.42574257425743
+      },
+      "5+": {
+        "cases": 85,
+        "own_bante_failed": 49,
+        "own_bante_survived": 36,
+        "failure_rate_pct": 57.64705882352941
+      }
+    },
+    "own_bante_score_rank": {
+      "1-2": {
+        "cases": 152,
+        "own_bante_failed": 48,
+        "own_bante_survived": 104,
+        "failure_rate_pct": 31.57894736842105
+      },
+      "3-4": {
+        "cases": 171,
+        "own_bante_failed": 97,
+        "own_bante_survived": 74,
+        "failure_rate_pct": 56.72514619883041
+      },
+      "5+": {
+        "cases": 122,
+        "own_bante_failed": 83,
+        "own_bante_survived": 39,
+        "failure_rate_pct": 68.0327868852459
+      }
+    },
+    "head_minus_own_bante_score": {
+      "0-2": {
+        "cases": 91,
+        "own_bante_failed": 50,
+        "own_bante_survived": 41,
+        "failure_rate_pct": 54.94505494505494
+      },
+      "2-4": {
+        "cases": 83,
+        "own_bante_failed": 45,
+        "own_bante_survived": 38,
+        "failure_rate_pct": 54.21686746987952
+      },
+      "4+": {
+        "cases": 115,
+        "own_bante_failed": 67,
+        "own_bante_survived": 48,
+        "failure_rate_pct": 58.26086956521739
+      },
+      "<=0": {
+        "cases": 156,
+        "own_bante_failed": 66,
+        "own_bante_survived": 90,
+        "failure_rate_pct": 42.30769230769231
+      }
+    },
+    "own_bante_vs_best_other_bante": {
+      "-2-0": {
+        "cases": 70,
+        "own_bante_failed": 41,
+        "own_bante_survived": 29,
+        "failure_rate_pct": 58.57142857142857
+      },
+      "0-2": {
+        "cases": 86,
+        "own_bante_failed": 47,
+        "own_bante_survived": 39,
+        "failure_rate_pct": 54.651162790697676
+      },
+      "2+": {
+        "cases": 121,
+        "own_bante_failed": 31,
+        "own_bante_survived": 90,
+        "failure_rate_pct": 25.619834710743802
+      },
+      "<-2": {
+        "cases": 167,
+        "own_bante_failed": 109,
+        "own_bante_survived": 58,
+        "failure_rate_pct": 65.26946107784431
+      },
+      "nan": {
+        "cases": 1,
+        "own_bante_failed": 0,
+        "own_bante_survived": 1,
+        "failure_rate_pct": 0.0
+      }
+    },
+    "other_bantes_above_own": {
+      "0": {
+        "cases": 208,
+        "own_bante_failed": 78,
+        "own_bante_survived": 130,
+        "failure_rate_pct": 37.5
+      },
+      "1": {
+        "cases": 154,
+        "own_bante_failed": 93,
+        "own_bante_survived": 61,
+        "failure_rate_pct": 60.38961038961039
+      },
+      "2+": {
+        "cases": 83,
+        "own_bante_failed": 57,
+        "own_bante_survived": 26,
+        "failure_rate_pct": 68.67469879518072
+      }
+    },
+    "line_size": {
+      "2": {
+        "cases": 236,
+        "own_bante_failed": 131,
+        "own_bante_survived": 105,
+        "failure_rate_pct": 55.50847457627118
+      },
+      "3+": {
+        "cases": 209,
+        "own_bante_failed": 97,
+        "own_bante_survived": 112,
+        "failure_rate_pct": 46.411483253588514
+      }
+    },
+    "head_vs_best_other_head": {
+      "0-2": {
+        "cases": 53,
+        "own_bante_failed": 29,
+        "own_bante_survived": 24,
+        "failure_rate_pct": 54.716981132075475
+      },
+      "2-4": {
+        "cases": 77,
+        "own_bante_failed": 36,
+        "own_bante_survived": 41,
+        "failure_rate_pct": 46.753246753246756
+      },
+      "4+": {
+        "cases": 119,
+        "own_bante_failed": 50,
+        "own_bante_survived": 69,
+        "failure_rate_pct": 42.016806722689076
+      },
+      "<0": {
+        "cases": 196,
+        "own_bante_failed": 113,
+        "own_bante_survived": 83,
+        "failure_rate_pct": 57.6530612244898
+      }
+    }
+  },
+  "numeric_means_by_outcome": {
+    "failed": {
+      "head_score": 86.94815789473684,
+      "own_bante_score": 84.93609649122807,
+      "head_score_rank": 2.8201754385964914,
+      "own_bante_score_rank": 3.973684210526316,
+      "head_minus_own_bante_score": 2.012061403508772,
+      "line_size": 2.456140350877193,
+      "own_bante_minus_best_other_bante": -2.3146929824561404,
+      "other_bantes_above_own": 0.9078947368421053,
+      "head_minus_best_other_head": -0.3396052631578947
+    },
+    "survived": {
+      "head_score": 87.80857142857143,
+      "own_bante_score": 86.87105990783408,
+      "head_score_rank": 2.47926267281106,
+      "own_bante_score_rank": 2.8847926267281108,
+      "head_minus_own_bante_score": 0.9375115207373266,
+      "line_size": 2.543778801843318,
+      "own_bante_minus_best_other_bante": 0.942592592592593,
+      "other_bantes_above_own": 0.5207373271889401,
+      "head_minus_best_other_head": 1.5056682027649761
+    }
+  }
+}
