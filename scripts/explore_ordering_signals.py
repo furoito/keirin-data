@@ -45,6 +45,14 @@ def parse_one(v):
     z=split_orders(v); return z[0] if z else None
 
 
+def numeric_flag(v):
+    try:
+        x=float(v)
+        return None if math.isnan(x) else int(x)
+    except Exception:
+        return None
+
+
 def parse_line(s):
     groups=[]
     for g in str(s or '').split('/'):
@@ -122,28 +130,29 @@ def main():
         if subset.empty:continue
         rb,cb,ob=month_data(month)
         for rr in subset.itertuples(index=False):
-            if int(float(getattr(rr,'head_bust',0) or 0))!=1 or int(float(getattr(rr,'set_match',0) or 0))!=1:continue
+            if numeric_flag(getattr(rr,'head_bust',None))!=1 or numeric_flag(getattr(rr,'set_match',None))!=1:continue
             rid=str(rr.race_id); full=rb.get(rid); cr=cb.get(rid); og=ob.get(rid)
             if full is None or cr is None or og is None:continue
             available_columns.update(full.columns)
             act=parse_one(rr.actual)
             if not act:continue
-            sets=split_orders(rr.candidate_sets)
-            # candidate_sets are sorted set encodings; find actual set explicitly.
-            cset=set(act)
             line=parse_line(cr.get('true_line',''))
-            target=int(float(rr.target)); pl=pop_line_index(line,target)
+            try: target=int(float(rr.target))
+            except Exception: continue
+            pl=pop_line_index(line,target)
             roles=role_map(line,pl,target)
             scores={int(float(r.banum)):float(r.race_score) for r in full.itertuples(index=False) if pd.notna(r.banum) and pd.notna(r.race_score)}
             marks={}
             if 'mark_num' in full.columns:
                 for r in full.itertuples(index=False):
-                    try:marks[int(float(r.banum))]=float(r.mark_num)
+                    try:
+                        val=float(r.mark_num)
+                        if not math.isnan(val): marks[int(float(r.banum))]=val
                     except Exception:pass
             om=odds_map(og); perms=list(itertools.permutations(act,3)); perm_odds={p:om.get(p) for p in perms if om.get(p) is not None}
             current=parse_one(rr.orders)
             raw=ranked_order(act,scores)
-            mark=ranked_order(act,marks) if all(f in marks and not math.isnan(marks[f]) for f in act) else None
+            mark=ranked_order(act,marks) if all(f in marks for f in act) else None
             fav=min(perm_odds,key=lambda p:perm_odds[p]) if perm_odds else None
             first_mass=defaultdict(float)
             for p,o in perm_odds.items():first_mass[p[0]]+=1.0/o
