@@ -1,0 +1,31 @@
+{
+  "n": 16,
+  "A": {
+    "exact_n": 5,
+    "exact_pct": 31.25,
+    "avg_overlap": 2.1875,
+    "overlap_2plus_n": 14,
+    "changed_n": 0
+  },
+  "S0": {
+    "exact_n": 5,
+    "exact_pct": 31.25,
+    "avg_overlap": 2.1875,
+    "overlap_2plus_n": 14,
+    "changed_n": 4
+  },
+  "S1": {
+    "exact_n": 6,
+    "exact_pct": 37.5,
+    "avg_overlap": 2.25,
+    "overlap_2plus_n": 14,
+    "changed_n": 5
+  },
+  "S3": {
+    "exact_n": 6,
+    "exact_pct": 37.5,
+    "avg_overlap": 2.25,
+    "overlap_2plus_n": 14,
+    "changed_n": 5
+  }
+}
