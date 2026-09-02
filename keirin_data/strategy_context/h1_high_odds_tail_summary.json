@@ -1,0 +1,1692 @@
+{
+  "status": "exploratory_high_odds_tail_current_available_data",
+  "quality_gate": "context_quality=full AND price_usable=true",
+  "score_percentiles_tested": [
+    40,
+    45,
+    50,
+    55,
+    60
+  ],
+  "non_overlapping_bins": [
+    [
+      100,
+      150
+    ],
+    [
+      150,
+      200
+    ],
+    [
+      200,
+      300
+    ],
+    [
+      300,
+      500
+    ],
+    [
+      500,
+      1000
+    ],
+    [
+      1000,
+      null
+    ]
+  ],
+  "cumulative_cuts": [
+    100,
+    150,
+    200,
+    300,
+    500,
+    1000
+  ],
+  "usable_races_by_month": {
+    "2025_01": 983,
+    "2025_02": 724,
+    "2025_03": 679,
+    "2025_04": 374,
+    "2025_05": 548,
+    "2025_06": 440,
+    "2025_07": 166,
+    "2025_08": 80,
+    "2025_09": 80,
+    "2025_10": 62,
+    "2025_11": 78,
+    "2025_12": 77,
+    "2026_01": 79,
+    "2026_02": 79,
+    "2026_03": 79,
+    "2026_04": 78,
+    "2026_05": 65,
+    "2026_06": 75
+  },
+  "skipped": {
+    "odds_board_incomplete": 1044,
+    "result_missing": 87,
+    "base_or_odds_missing": 97
+  },
+  "results": {
+    "40": {
+      "BASELINE": {
+        "bins": {
+          "100-150": {
+            "groups": 1868,
+            "races": 1361,
+            "expected_hits": 15.463650621853354,
+            "actual_hits": 15,
+            "actual_over_market": 0.9700167422821802
+          },
+          "150-200": {
+            "groups": 944,
+            "races": 790,
+            "expected_hits": 5.527685031990815,
+            "actual_hits": 4,
+            "actual_over_market": 0.7236302316160343
+          },
+          "200-300": {
+            "groups": 809,
+            "races": 671,
+            "expected_hits": 3.4095898675627634,
+            "actual_hits": 6,
+            "actual_over_market": 1.759742442069406
+          },
+          "300-500": {
+            "groups": 366,
+            "races": 309,
+            "expected_hits": 1.00589816853768,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          },
+          "500-1000": {
+            "groups": 92,
+            "races": 71,
+            "expected_hits": 0.14809660266783362,
+            "actual_hits": 1,
+            "actual_over_market": 6.752349358363767
+          },
+          "1000-plus": {
+            "groups": 16,
+            "races": 12,
+            "expected_hits": 0.011978968999628796,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "cumulative": {
+          "100": {
+            "groups": 4095,
+            "races": 2119,
+            "expected_hits": 25.56689926161208,
+            "actual_hits": 26,
+            "actual_over_market": 1.0169399008443003
+          },
+          "150": {
+            "groups": 2227,
+            "races": 1397,
+            "expected_hits": 10.103248639758721,
+            "actual_hits": 11,
+            "actual_over_market": 1.0887587143715682
+          },
+          "200": {
+            "groups": 1283,
+            "races": 893,
+            "expected_hits": 4.575563607767906,
+            "actual_hits": 7,
+            "actual_over_market": 1.5298661760741656
+          },
+          "300": {
+            "groups": 474,
+            "races": 351,
+            "expected_hits": 1.1659737402051427,
+            "actual_hits": 1,
+            "actual_over_market": 0.8576522485181004
+          },
+          "500": {
+            "groups": 108,
+            "races": 75,
+            "expected_hits": 0.16007557166746245,
+            "actual_hits": 1,
+            "actual_over_market": 6.247049375387386
+          },
+          "1000": {
+            "groups": 16,
+            "races": 12,
+            "expected_hits": 0.011978968999628796,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "200": {
+              "groups": 982,
+              "races": 697,
+              "expected_hits": 3.5250599156400377,
+              "actual_hits": 6,
+              "actual_over_market": 1.702098728415682
+            },
+            "300": {
+              "groups": 354,
+              "races": 269,
+              "expected_hits": 0.8793198336608461,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "500": {
+              "groups": 80,
+              "races": 57,
+              "expected_hits": 0.1198394322825271,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          },
+          "2025_H2": {
+            "200": {
+              "groups": 185,
+              "races": 119,
+              "expected_hits": 0.646098220366732,
+              "actual_hits": 1,
+              "actual_over_market": 1.5477522897871312
+            },
+            "300": {
+              "groups": 73,
+              "races": 51,
+              "expected_hits": 0.1747494645967486,
+              "actual_hits": 1,
+              "actual_over_market": 5.722478190749238
+            },
+            "500": {
+              "groups": 16,
+              "races": 10,
+              "expected_hits": 0.02268398863703247,
+              "actual_hits": 1,
+              "actual_over_market": 44.08395789651658
+            }
+          },
+          "2026_H1": {
+            "200": {
+              "groups": 116,
+              "races": 77,
+              "expected_hits": 0.4044054717611361,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "300": {
+              "groups": 47,
+              "races": 31,
+              "expected_hits": 0.11190444194754798,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "500": {
+              "groups": 12,
+              "races": 8,
+              "expected_hits": 0.01755215074790288,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          }
+        }
+      },
+      "NO_THIRD": {
+        "bins": {
+          "100-150": {
+            "groups": 1573,
+            "races": 1167,
+            "expected_hits": 13.02052804502825,
+            "actual_hits": 14,
+            "actual_over_market": 1.0752252098827706
+          },
+          "150-200": {
+            "groups": 770,
+            "races": 646,
+            "expected_hits": 4.511401495659101,
+            "actual_hits": 4,
+            "actual_over_market": 0.8866424333655131
+          },
+          "200-300": {
+            "groups": 647,
+            "races": 548,
+            "expected_hits": 2.7308338908480136,
+            "actual_hits": 5,
+            "actual_over_market": 1.830942561814822
+          },
+          "300-500": {
+            "groups": 279,
+            "races": 237,
+            "expected_hits": 0.7719669738407761,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          },
+          "500-1000": {
+            "groups": 58,
+            "races": 48,
+            "expected_hits": 0.09572299482220806,
+            "actual_hits": 1,
+            "actual_over_market": 10.446810631628887
+          },
+          "1000-plus": {
+            "groups": 11,
+            "races": 7,
+            "expected_hits": 0.0076232521774638505,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "cumulative": {
+          "100": {
+            "groups": 3338,
+            "races": 1828,
+            "expected_hits": 21.138076652375815,
+            "actual_hits": 24,
+            "actual_over_market": 1.1353918520918278
+          },
+          "150": {
+            "groups": 1765,
+            "races": 1160,
+            "expected_hits": 8.117548607347562,
+            "actual_hits": 10,
+            "actual_over_market": 1.23189899854108
+          },
+          "200": {
+            "groups": 995,
+            "races": 725,
+            "expected_hits": 3.6061471116884616,
+            "actual_hits": 6,
+            "actual_over_market": 1.663825632779217
+          },
+          "300": {
+            "groups": 348,
+            "races": 269,
+            "expected_hits": 0.8753132208404479,
+            "actual_hits": 1,
+            "actual_over_market": 1.142448184479416
+          },
+          "500": {
+            "groups": 69,
+            "races": 51,
+            "expected_hits": 0.1033462469996719,
+            "actual_hits": 1,
+            "actual_over_market": 9.67621010952797
+          },
+          "1000": {
+            "groups": 11,
+            "races": 7,
+            "expected_hits": 0.0076232521774638505,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "200": {
+              "groups": 773,
+              "races": 571,
+              "expected_hits": 2.8110240102755553,
+              "actual_hits": 5,
+              "actual_over_market": 1.7787112389373958
+            },
+            "300": {
+              "groups": 265,
+              "races": 207,
+              "expected_hits": 0.6713874879245483,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "500": {
+              "groups": 53,
+              "races": 39,
+              "expected_hits": 0.07912793642006707,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          },
+          "2025_H2": {
+            "200": {
+              "groups": 148,
+              "races": 101,
+              "expected_hits": 0.531563257591892,
+              "actual_hits": 1,
+              "actual_over_market": 1.881243644510416
+            },
+            "300": {
+              "groups": 55,
+              "races": 41,
+              "expected_hits": 0.13628814825728044,
+              "actual_hits": 1,
+              "actual_over_market": 7.33739516448805
+            },
+            "500": {
+              "groups": 9,
+              "races": 7,
+              "expected_hits": 0.01394945085748708,
+              "actual_hits": 1,
+              "actual_over_market": 71.6874097924271
+            }
+          },
+          "2026_H1": {
+            "200": {
+              "groups": 74,
+              "races": 53,
+              "expected_hits": 0.2635598438210143,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "300": {
+              "groups": 28,
+              "races": 21,
+              "expected_hits": 0.06763758465861916,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "500": {
+              "groups": 7,
+              "races": 5,
+              "expected_hits": 0.01026885972211774,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          }
+        }
+      }
+    },
+    "45": {
+      "BASELINE": {
+        "bins": {
+          "100-150": {
+            "groups": 2103,
+            "races": 1486,
+            "expected_hits": 17.41114557275791,
+            "actual_hits": 20,
+            "actual_over_market": 1.1486894941187962
+          },
+          "150-200": {
+            "groups": 1099,
+            "races": 898,
+            "expected_hits": 6.432722975568874,
+            "actual_hits": 4,
+            "actual_over_market": 0.6218206528078045
+          },
+          "200-300": {
+            "groups": 970,
+            "races": 789,
+            "expected_hits": 4.076865724741879,
+            "actual_hits": 6,
+            "actual_over_market": 1.471718816635758
+          },
+          "300-500": {
+            "groups": 470,
+            "races": 391,
+            "expected_hits": 1.2907514398345759,
+            "actual_hits": 2,
+            "actual_over_market": 1.5494850040657884
+          },
+          "500-1000": {
+            "groups": 127,
+            "races": 99,
+            "expected_hits": 0.20570837039821252,
+            "actual_hits": 1,
+            "actual_over_market": 4.861250896422878
+          },
+          "1000-plus": {
+            "groups": 24,
+            "races": 18,
+            "expected_hits": 0.01870522094477846,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "cumulative": {
+          "100": {
+            "groups": 4793,
+            "races": 2305,
+            "expected_hits": 29.43589930424623,
+            "actual_hits": 33,
+            "actual_over_market": 1.1210800682158752
+          },
+          "150": {
+            "groups": 2690,
+            "races": 1590,
+            "expected_hits": 12.024753731488317,
+            "actual_hits": 13,
+            "actual_over_market": 1.081103221761447
+          },
+          "200": {
+            "groups": 1591,
+            "races": 1064,
+            "expected_hits": 5.5920307559194455,
+            "actual_hits": 9,
+            "actual_over_market": 1.609433208226376
+          },
+          "300": {
+            "groups": 621,
+            "races": 452,
+            "expected_hits": 1.5151650311775668,
+            "actual_hits": 3,
+            "actual_over_market": 1.979982337414716
+          },
+          "500": {
+            "groups": 151,
+            "races": 106,
+            "expected_hits": 0.224413591342991,
+            "actual_hits": 1,
+            "actual_over_market": 4.456058093520781
+          },
+          "1000": {
+            "groups": 24,
+            "races": 18,
+            "expected_hits": 0.01870522094477846,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "200": {
+              "groups": 1217,
+              "races": 834,
+              "expected_hits": 4.3087840163866575,
+              "actual_hits": 7,
+              "actual_over_market": 1.62458827673386
+            },
+            "300": {
+              "groups": 462,
+              "races": 350,
+              "expected_hits": 1.1362958250283974,
+              "actual_hits": 1,
+              "actual_over_market": 0.8800525162318613
+            },
+            "500": {
+              "groups": 110,
+              "races": 77,
+              "expected_hits": 0.16368916087730906,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          },
+          "2025_H2": {
+            "200": {
+              "groups": 224,
+              "races": 135,
+              "expected_hits": 0.7661000621663157,
+              "actual_hits": 2,
+              "actual_over_market": 2.610625032903094
+            },
+            "300": {
+              "groups": 94,
+              "races": 63,
+              "expected_hits": 0.22196034507090667,
+              "actual_hits": 2,
+              "actual_over_market": 9.010618538014468
+            },
+            "500": {
+              "groups": 24,
+              "races": 17,
+              "expected_hits": 0.03601170997531851,
+              "actual_hits": 1,
+              "actual_over_market": 27.768745241072253
+            }
+          },
+          "2026_H1": {
+            "200": {
+              "groups": 150,
+              "races": 95,
+              "expected_hits": 0.5171466773664719,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "300": {
+              "groups": 65,
+              "races": 39,
+              "expected_hits": 0.15690886107826277,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "500": {
+              "groups": 17,
+              "races": 12,
+              "expected_hits": 0.024712720490363476,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          }
+        }
+      },
+      "NO_THIRD": {
+        "bins": {
+          "100-150": {
+            "groups": 1778,
+            "races": 1283,
+            "expected_hits": 14.7141126710548,
+            "actual_hits": 19,
+            "actual_over_market": 1.291277321627167
+          },
+          "150-200": {
+            "groups": 908,
+            "races": 747,
+            "expected_hits": 5.3159743739527325,
+            "actual_hits": 4,
+            "actual_over_market": 0.7524490749239203
+          },
+          "200-300": {
+            "groups": 770,
+            "races": 637,
+            "expected_hits": 3.2452257541623135,
+            "actual_hits": 5,
+            "actual_over_market": 1.5407248613095776
+          },
+          "300-500": {
+            "groups": 358,
+            "races": 299,
+            "expected_hits": 0.9878517277590438,
+            "actual_hits": 2,
+            "actual_over_market": 2.0245953353111297
+          },
+          "500-1000": {
+            "groups": 80,
+            "races": 66,
+            "expected_hits": 0.1338099837554027,
+            "actual_hits": 1,
+            "actual_over_market": 7.473283920487914
+          },
+          "1000-plus": {
+            "groups": 14,
+            "races": 9,
+            "expected_hits": 0.010112925578383718,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "cumulative": {
+          "100": {
+            "groups": 3908,
+            "races": 2015,
+            "expected_hits": 24.407087436262678,
+            "actual_hits": 31,
+            "actual_over_market": 1.2701228723400213
+          },
+          "150": {
+            "groups": 2130,
+            "races": 1326,
+            "expected_hits": 9.692974765207875,
+            "actual_hits": 12,
+            "actual_over_market": 1.2380100320773555
+          },
+          "200": {
+            "groups": 1222,
+            "races": 857,
+            "expected_hits": 4.3770003912551445,
+            "actual_hits": 8,
+            "actual_over_market": 1.8277357287843257
+          },
+          "300": {
+            "groups": 452,
+            "races": 342,
+            "expected_hits": 1.1317746370928303,
+            "actual_hits": 3,
+            "actual_over_market": 2.6507043908547443
+          },
+          "500": {
+            "groups": 94,
+            "races": 69,
+            "expected_hits": 0.1439229093337864,
+            "actual_hits": 1,
+            "actual_over_market": 6.948164156970988
+          },
+          "1000": {
+            "groups": 14,
+            "races": 9,
+            "expected_hits": 0.010112925578383718,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "200": {
+              "groups": 948,
+              "races": 680,
+              "expected_hits": 3.412658301097013,
+              "actual_hits": 6,
+              "actual_over_market": 1.7581601996517715
+            },
+            "300": {
+              "groups": 340,
+              "races": 264,
+              "expected_hits": 0.8553660870535547,
+              "actual_hits": 1,
+              "actual_over_market": 1.1690900716495085
+            },
+            "500": {
+              "groups": 70,
+              "races": 50,
+              "expected_hits": 0.1059692932950154,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          },
+          "2025_H2": {
+            "200": {
+              "groups": 179,
+              "races": 111,
+              "expected_hits": 0.6243894445638545,
+              "actual_hits": 2,
+              "actual_over_market": 3.203129100616091
+            },
+            "300": {
+              "groups": 74,
+              "races": 51,
+              "expected_hits": 0.18025836076542,
+              "actual_hits": 2,
+              "actual_over_market": 11.095185773949806
+            },
+            "500": {
+              "groups": 15,
+              "races": 12,
+              "expected_hits": 0.024036504229754525,
+              "actual_hits": 1,
+              "actual_over_market": 41.603387515981254
+            }
+          },
+          "2026_H1": {
+            "200": {
+              "groups": 95,
+              "races": 66,
+              "expected_hits": 0.3399526455942764,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "300": {
+              "groups": 38,
+              "races": 27,
+              "expected_hits": 0.09615018927385571,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "500": {
+              "groups": 9,
+              "races": 7,
+              "expected_hits": 0.013917111809016482,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          }
+        }
+      }
+    },
+    "50": {
+      "BASELINE": {
+        "bins": {
+          "100-150": {
+            "groups": 2529,
+            "races": 1680,
+            "expected_hits": 20.88838128093592,
+            "actual_hits": 26,
+            "actual_over_market": 1.244711098017407
+          },
+          "150-200": {
+            "groups": 1420,
+            "races": 1113,
+            "expected_hits": 8.288226522527069,
+            "actual_hits": 5,
+            "actual_over_market": 0.6032653652033038
+          },
+          "200-300": {
+            "groups": 1313,
+            "races": 1012,
+            "expected_hits": 5.507307204569803,
+            "actual_hits": 8,
+            "actual_over_market": 1.4526155347502376
+          },
+          "300-500": {
+            "groups": 738,
+            "races": 588,
+            "expected_hits": 2.0155093754016873,
+            "actual_hits": 2,
+            "actual_over_market": 0.9923049847393559
+          },
+          "500-1000": {
+            "groups": 213,
+            "races": 173,
+            "expected_hits": 0.3420270362447302,
+            "actual_hits": 1,
+            "actual_over_market": 2.923745476320975
+          },
+          "1000-plus": {
+            "groups": 33,
+            "races": 23,
+            "expected_hits": 0.025073835430797362,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "cumulative": {
+          "100": {
+            "groups": 6246,
+            "races": 2594,
+            "expected_hits": 37.06652525511001,
+            "actual_hits": 42,
+            "actual_over_market": 1.1330978480161116
+          },
+          "150": {
+            "groups": 3717,
+            "races": 1961,
+            "expected_hits": 16.178143974174088,
+            "actual_hits": 16,
+            "actual_over_market": 0.9889886024961536
+          },
+          "200": {
+            "groups": 2297,
+            "races": 1390,
+            "expected_hits": 7.889917451647018,
+            "actual_hits": 11,
+            "actual_over_market": 1.394184421752569
+          },
+          "300": {
+            "groups": 984,
+            "races": 680,
+            "expected_hits": 2.382610247077215,
+            "actual_hits": 3,
+            "actual_over_market": 1.2591232677187327
+          },
+          "500": {
+            "groups": 246,
+            "races": 182,
+            "expected_hits": 0.3671008716755276,
+            "actual_hits": 1,
+            "actual_over_market": 2.724046923222449
+          },
+          "1000": {
+            "groups": 33,
+            "races": 23,
+            "expected_hits": 0.025073835430797362,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "200": {
+              "groups": 1785,
+              "races": 1103,
+              "expected_hits": 6.179676727809749,
+              "actual_hits": 9,
+              "actual_over_market": 1.4563868623577423
+            },
+            "300": {
+              "groups": 746,
+              "races": 535,
+              "expected_hits": 1.8200809137916354,
+              "actual_hits": 1,
+              "actual_over_market": 0.5494261229940467
+            },
+            "500": {
+              "groups": 178,
+              "races": 134,
+              "expected_hits": 0.2665160557831907,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          },
+          "2025_H2": {
+            "200": {
+              "groups": 303,
+              "races": 165,
+              "expected_hits": 1.007949790011315,
+              "actual_hits": 2,
+              "actual_over_market": 1.9842258213849604
+            },
+            "300": {
+              "groups": 141,
+              "races": 89,
+              "expected_hits": 0.33130401144449906,
+              "actual_hits": 2,
+              "actual_over_market": 6.036751536088918
+            },
+            "500": {
+              "groups": 42,
+              "races": 32,
+              "expected_hits": 0.06378789748155866,
+              "actual_hits": 1,
+              "actual_over_market": 15.676955025663043
+            }
+          },
+          "2026_H1": {
+            "200": {
+              "groups": 209,
+              "races": 122,
+              "expected_hits": 0.7022909338259535,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "300": {
+              "groups": 97,
+              "races": 56,
+              "expected_hits": 0.23122532184108022,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "500": {
+              "groups": 26,
+              "races": 16,
+              "expected_hits": 0.036796918410778194,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          }
+        }
+      },
+      "NO_THIRD": {
+        "bins": {
+          "100-150": {
+            "groups": 2137,
+            "races": 1465,
+            "expected_hits": 17.643642149904665,
+            "actual_hits": 22,
+            "actual_over_market": 1.246908082417602
+          },
+          "150-200": {
+            "groups": 1169,
+            "races": 925,
+            "expected_hits": 6.829757146638098,
+            "actual_hits": 4,
+            "actual_over_market": 0.585672362006162
+          },
+          "200-300": {
+            "groups": 1031,
+            "races": 804,
+            "expected_hits": 4.336791203334938,
+            "actual_hits": 7,
+            "actual_over_market": 1.6140966147083788
+          },
+          "300-500": {
+            "groups": 533,
+            "races": 429,
+            "expected_hits": 1.4682618929317144,
+            "actual_hits": 2,
+            "actual_over_market": 1.3621548101385041
+          },
+          "500-1000": {
+            "groups": 131,
+            "races": 112,
+            "expected_hits": 0.21472209219874555,
+            "actual_hits": 1,
+            "actual_over_market": 4.657182639010455
+          },
+          "1000-plus": {
+            "groups": 16,
+            "races": 10,
+            "expected_hits": 0.011559528715087098,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "cumulative": {
+          "100": {
+            "groups": 5017,
+            "races": 2283,
+            "expected_hits": 30.504734013723244,
+            "actual_hits": 36,
+            "actual_over_market": 1.1801446943875855
+          },
+          "150": {
+            "groups": 2880,
+            "races": 1611,
+            "expected_hits": 12.861091863818583,
+            "actual_hits": 14,
+            "actual_over_market": 1.088554544842763
+          },
+          "200": {
+            "groups": 1711,
+            "races": 1083,
+            "expected_hits": 6.031334717180485,
+            "actual_hits": 10,
+            "actual_over_market": 1.6580077990887525
+          },
+          "300": {
+            "groups": 680,
+            "races": 492,
+            "expected_hits": 1.694543513845547,
+            "actual_hits": 3,
+            "actual_over_market": 1.770388293654312
+          },
+          "500": {
+            "groups": 147,
+            "races": 114,
+            "expected_hits": 0.22628162091383264,
+            "actual_hits": 1,
+            "actual_over_market": 4.419271861150389
+          },
+          "1000": {
+            "groups": 16,
+            "races": 10,
+            "expected_hits": 0.011559528715087098,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "200": {
+              "groups": 1355,
+              "races": 875,
+              "expected_hits": 4.792634406413998,
+              "actual_hits": 8,
+              "actual_over_market": 1.6692280949478588
+            },
+            "300": {
+              "groups": 529,
+              "races": 393,
+              "expected_hits": 1.3228875057200242,
+              "actual_hits": 1,
+              "actual_over_market": 0.7559221745432676
+            },
+            "500": {
+              "groups": 110,
+              "races": 84,
+              "expected_hits": 0.16742215403366478,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          },
+          "2025_H2": {
+            "200": {
+              "groups": 227,
+              "races": 126,
+              "expected_hits": 0.7824069283725749,
+              "actual_hits": 2,
+              "actual_over_market": 2.556214582813125
+            },
+            "300": {
+              "groups": 98,
+              "races": 64,
+              "expected_hits": 0.23870629110623806,
+              "actual_hits": 2,
+              "actual_over_market": 8.378497234955088
+            },
+            "500": {
+              "groups": 23,
+              "races": 19,
+              "expected_hits": 0.036692668795477924,
+              "actual_hits": 1,
+              "actual_over_market": 27.25340055186288
+            }
+          },
+          "2026_H1": {
+            "200": {
+              "groups": 129,
+              "races": 82,
+              "expected_hits": 0.4562933823939128,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "300": {
+              "groups": 53,
+              "races": 35,
+              "expected_hits": 0.13294971701928482,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            },
+            "500": {
+              "groups": 14,
+              "races": 11,
+              "expected_hits": 0.022166798084690003,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          }
+        }
+      }
+    },
+    "55": {
+      "BASELINE": {
+        "bins": {
+          "100-150": {
+            "groups": 2967,
+            "races": 1877,
+            "expected_hits": 24.478288785756547,
+            "actual_hits": 33,
+            "actual_over_market": 1.3481334536424816
+          },
+          "150-200": {
+            "groups": 1793,
+            "races": 1350,
+            "expected_hits": 10.440176613944061,
+            "actual_hits": 7,
+            "actual_over_market": 0.6704867416371761
+          },
+          "200-300": {
+            "groups": 1741,
+            "races": 1278,
+            "expected_hits": 7.275752858377503,
+            "actual_hits": 10,
+            "actual_over_market": 1.3744282130866667
+          },
+          "300-500": {
+            "groups": 1076,
+            "races": 820,
+            "expected_hits": 2.932092618108663,
+            "actual_hits": 3,
+            "actual_over_market": 1.0231600398541096
+          },
+          "500-1000": {
+            "groups": 365,
+            "races": 289,
+            "expected_hits": 0.5758047236839419,
+            "actual_hits": 1,
+            "actual_over_market": 1.73669988950785
+          },
+          "1000-plus": {
+            "groups": 51,
+            "races": 37,
+            "expected_hits": 0.040584546625571115,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "cumulative": {
+          "100": {
+            "groups": 7993,
+            "races": 2818,
+            "expected_hits": 45.74270014649629,
+            "actual_hits": 54,
+            "actual_over_market": 1.1805162315967084
+          },
+          "150": {
+            "groups": 5026,
+            "races": 2290,
+            "expected_hits": 21.264411360739743,
+            "actual_hits": 21,
+            "actual_over_market": 0.9875655452552088
+          },
+          "200": {
+            "groups": 3233,
+            "races": 1741,
+            "expected_hits": 10.824234746795678,
+            "actual_hits": 14,
+            "actual_over_market": 1.2933939744926957
+          },
+          "300": {
+            "groups": 1492,
+            "races": 965,
+            "expected_hits": 3.5484818884181752,
+            "actual_hits": 4,
+            "actual_over_market": 1.1272426141036611
+          },
+          "500": {
+            "groups": 416,
+            "races": 303,
+            "expected_hits": 0.6163892703095131,
+            "actual_hits": 1,
+            "actual_over_market": 1.6223514070870524
+          },
+          "1000": {
+            "groups": 51,
+            "races": 37,
+            "expected_hits": 0.040584546625571115,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "200": {
+              "groups": 2519,
+              "races": 1383,
+              "expected_hits": 8.482807381713705,
+              "actual_hits": 11,
+              "actual_over_market": 1.2967405134899772
+            },
+            "300": {
+              "groups": 1148,
+              "races": 764,
+              "expected_hits": 2.748813313305777,
+              "actual_hits": 1,
+              "actual_over_market": 0.3637933486277321
+            },
+            "500": {
+              "groups": 311,
+              "races": 230,
+              "expected_hits": 0.46572606626489066,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          },
+          "2025_H2": {
+            "200": {
+              "groups": 413,
+              "races": 204,
+              "expected_hits": 1.3466612871044168,
+              "actual_hits": 2,
+              "actual_over_market": 1.4851544476342586
+            },
+            "300": {
+              "groups": 196,
+              "races": 117,
+              "expected_hits": 0.44529299370679193,
+              "actual_hits": 2,
+              "actual_over_market": 4.491424810777333
+            },
+            "500": {
+              "groups": 67,
+              "races": 50,
+              "expected_hits": 0.09798189226991191,
+              "actual_hits": 1,
+              "actual_over_market": 10.205967417380426
+            }
+          },
+          "2026_H1": {
+            "200": {
+              "groups": 301,
+              "races": 154,
+              "expected_hits": 0.9947660779775566,
+              "actual_hits": 1,
+              "actual_over_market": 1.0052614600943013
+            },
+            "300": {
+              "groups": 148,
+              "races": 84,
+              "expected_hits": 0.35437558140560654,
+              "actual_hits": 1,
+              "actual_over_market": 2.821864858841482
+            },
+            "500": {
+              "groups": 38,
+              "races": 23,
+              "expected_hits": 0.052681311774710415,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          }
+        }
+      },
+      "NO_THIRD": {
+        "bins": {
+          "100-150": {
+            "groups": 2497,
+            "races": 1632,
+            "expected_hits": 20.60231754888082,
+            "actual_hits": 29,
+            "actual_over_market": 1.4076086309802252
+          },
+          "150-200": {
+            "groups": 1481,
+            "races": 1126,
+            "expected_hits": 8.632383892522618,
+            "actual_hits": 5,
+            "actual_over_market": 0.5792142775683327
+          },
+          "200-300": {
+            "groups": 1353,
+            "races": 1025,
+            "expected_hits": 5.662785183047537,
+            "actual_hits": 9,
+            "actual_over_market": 1.5893239296703248
+          },
+          "300-500": {
+            "groups": 768,
+            "races": 591,
+            "expected_hits": 2.1099777694006954,
+            "actual_hits": 3,
+            "actual_over_market": 1.4218159278768614
+          },
+          "500-1000": {
+            "groups": 213,
+            "races": 181,
+            "expected_hits": 0.3436099676161666,
+            "actual_hits": 1,
+            "actual_over_market": 2.910276459491598
+          },
+          "1000-plus": {
+            "groups": 22,
+            "races": 15,
+            "expected_hits": 0.016867456976610542,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "cumulative": {
+          "100": {
+            "groups": 6334,
+            "races": 2518,
+            "expected_hits": 37.36794181844445,
+            "actual_hits": 47,
+            "actual_over_market": 1.2577626091464653
+          },
+          "150": {
+            "groups": 3837,
+            "races": 1915,
+            "expected_hits": 16.765624269563627,
+            "actual_hits": 18,
+            "actual_over_market": 1.0736253962625932
+          },
+          "200": {
+            "groups": 2356,
+            "races": 1371,
+            "expected_hits": 8.133240377041009,
+            "actual_hits": 13,
+            "actual_over_market": 1.5983789236940749
+          },
+          "300": {
+            "groups": 1003,
+            "races": 685,
+            "expected_hits": 2.4704551939934722,
+            "actual_hits": 4,
+            "actual_over_market": 1.6191348095384923
+          },
+          "500": {
+            "groups": 235,
+            "races": 185,
+            "expected_hits": 0.3604774245927771,
+            "actual_hits": 1,
+            "actual_over_market": 2.7740988249948706
+          },
+          "1000": {
+            "groups": 22,
+            "races": 15,
+            "expected_hits": 0.016867456976610542,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "200": {
+              "groups": 1874,
+              "races": 1111,
+              "expected_hits": 6.484493538194624,
+              "actual_hits": 10,
+              "actual_over_market": 1.542140483462359
+            },
+            "300": {
+              "groups": 791,
+              "races": 550,
+              "expected_hits": 1.9532893366201662,
+              "actual_hits": 1,
+              "actual_over_market": 0.5119569237654926
+            },
+            "500": {
+              "groups": 181,
+              "races": 142,
+              "expected_hits": 0.27788544727201503,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          },
+          "2025_H2": {
+            "200": {
+              "groups": 305,
+              "races": 157,
+              "expected_hits": 1.0282414087102407,
+              "actual_hits": 2,
+              "actual_over_market": 1.9450685248211022
+            },
+            "300": {
+              "groups": 135,
+              "races": 86,
+              "expected_hits": 0.321144154896555,
+              "actual_hits": 2,
+              "actual_over_market": 6.22773284055015
+            },
+            "500": {
+              "groups": 37,
+              "races": 31,
+              "expected_hits": 0.05689388625873461,
+              "actual_hits": 1,
+              "actual_over_market": 17.57658099593215
+            }
+          },
+          "2026_H1": {
+            "200": {
+              "groups": 177,
+              "races": 103,
+              "expected_hits": 0.6205054301361453,
+              "actual_hits": 1,
+              "actual_over_market": 1.611589442143302
+            },
+            "300": {
+              "groups": 77,
+              "races": 49,
+              "expected_hits": 0.19602170247675105,
+              "actual_hits": 1,
+              "actual_over_market": 5.101475945596401
+            },
+            "500": {
+              "groups": 17,
+              "races": 12,
+              "expected_hits": 0.025698091062027452,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          }
+        }
+      }
+    },
+    "60": {
+      "BASELINE": {
+        "bins": {
+          "100-150": {
+            "groups": 3362,
+            "races": 2014,
+            "expected_hits": 27.743695324761525,
+            "actual_hits": 35,
+            "actual_over_market": 1.261547879267624
+          },
+          "150-200": {
+            "groups": 2097,
+            "races": 1516,
+            "expected_hits": 12.207332705867161,
+            "actual_hits": 7,
+            "actual_over_market": 0.5734258390971533
+          },
+          "200-300": {
+            "groups": 2198,
+            "races": 1509,
+            "expected_hits": 9.164347234857486,
+            "actual_hits": 12,
+            "actual_over_market": 1.3094222307898629
+          },
+          "300-500": {
+            "groups": 1453,
+            "races": 1038,
+            "expected_hits": 3.933047701857869,
+            "actual_hits": 6,
+            "actual_over_market": 1.5255345103406086
+          },
+          "500-1000": {
+            "groups": 571,
+            "races": 426,
+            "expected_hits": 0.8947101560010953,
+            "actual_hits": 2,
+            "actual_over_market": 2.2353607887262563
+          },
+          "1000-plus": {
+            "groups": 75,
+            "races": 56,
+            "expected_hits": 0.05857955967518406,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "cumulative": {
+          "100": {
+            "groups": 9756,
+            "races": 2975,
+            "expected_hits": 54.001712683020315,
+            "actual_hits": 62,
+            "actual_over_market": 1.148111734231988
+          },
+          "150": {
+            "groups": 6394,
+            "races": 2537,
+            "expected_hits": 26.258017358258797,
+            "actual_hits": 27,
+            "actual_over_market": 1.028257374942584
+          },
+          "200": {
+            "groups": 4297,
+            "races": 2049,
+            "expected_hits": 14.050684652391634,
+            "actual_hits": 20,
+            "actual_over_market": 1.4234181817322122
+          },
+          "300": {
+            "groups": 2099,
+            "races": 1225,
+            "expected_hits": 4.886337417534149,
+            "actual_hits": 8,
+            "actual_over_market": 1.6372180871694972
+          },
+          "500": {
+            "groups": 646,
+            "races": 442,
+            "expected_hits": 0.9532897156762794,
+            "actual_hits": 2,
+            "actual_over_market": 2.097998087161957
+          },
+          "1000": {
+            "groups": 75,
+            "races": 56,
+            "expected_hits": 0.05857955967518406,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "200": {
+              "groups": 3349,
+              "races": 1615,
+              "expected_hits": 10.991264488055034,
+              "actual_hits": 15,
+              "actual_over_market": 1.3647201390068937
+            },
+            "300": {
+              "groups": 1629,
+              "races": 964,
+              "expected_hits": 3.8097617478735053,
+              "actual_hits": 3,
+              "actual_over_market": 0.7874508167537012
+            },
+            "500": {
+              "groups": 494,
+              "races": 340,
+              "expected_hits": 0.7337241050642818,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          },
+          "2025_H2": {
+            "200": {
+              "groups": 549,
+              "races": 251,
+              "expected_hits": 1.7623114929241763,
+              "actual_hits": 4,
+              "actual_over_market": 2.269746305383767
+            },
+            "300": {
+              "groups": 270,
+              "races": 153,
+              "expected_hits": 0.6077121288211151,
+              "actual_hits": 4,
+              "actual_over_market": 6.582063793525884
+            },
+            "500": {
+              "groups": 93,
+              "races": 64,
+              "expected_hits": 0.1362143802649609,
+              "actual_hits": 2,
+              "actual_over_market": 14.682737579612729
+            }
+          },
+          "2026_H1": {
+            "200": {
+              "groups": 399,
+              "races": 183,
+              "expected_hits": 1.2971086714124223,
+              "actual_hits": 1,
+              "actual_over_market": 0.7709454281198348
+            },
+            "300": {
+              "groups": 200,
+              "races": 108,
+              "expected_hits": 0.46886354083952764,
+              "actual_hits": 1,
+              "actual_over_market": 2.132816721490951
+            },
+            "500": {
+              "groups": 59,
+              "races": 38,
+              "expected_hits": 0.08335123034703668,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          }
+        }
+      },
+      "NO_THIRD": {
+        "bins": {
+          "100-150": {
+            "groups": 2805,
+            "races": 1752,
+            "expected_hits": 23.150453839324648,
+            "actual_hits": 31,
+            "actual_over_market": 1.3390666211191797
+          },
+          "150-200": {
+            "groups": 1724,
+            "races": 1267,
+            "expected_hits": 10.042138569080372,
+            "actual_hits": 5,
+            "actual_over_market": 0.49790191258612404
+          },
+          "200-300": {
+            "groups": 1692,
+            "races": 1209,
+            "expected_hits": 7.062973352192937,
+            "actual_hits": 10,
+            "actual_over_market": 1.4158343096247368
+          },
+          "300-500": {
+            "groups": 1007,
+            "races": 749,
+            "expected_hits": 2.7527094533513163,
+            "actual_hits": 5,
+            "actual_over_market": 1.8163922072896923
+          },
+          "500-1000": {
+            "groups": 318,
+            "races": 257,
+            "expected_hits": 0.508405641628898,
+            "actual_hits": 1,
+            "actual_over_market": 1.9669333266957192
+          },
+          "1000-plus": {
+            "groups": 30,
+            "races": 23,
+            "expected_hits": 0.022551782149767916,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "cumulative": {
+          "100": {
+            "groups": 7576,
+            "races": 2682,
+            "expected_hits": 43.539232637727935,
+            "actual_hits": 52,
+            "actual_over_market": 1.194325137346141
+          },
+          "150": {
+            "groups": 4771,
+            "races": 2138,
+            "expected_hits": 20.38877879840329,
+            "actual_hits": 21,
+            "actual_over_market": 1.0299783134458538
+          },
+          "200": {
+            "groups": 3047,
+            "races": 1612,
+            "expected_hits": 10.346640229322919,
+            "actual_hits": 16,
+            "actual_over_market": 1.5463957038590328
+          },
+          "300": {
+            "groups": 1355,
+            "races": 869,
+            "expected_hits": 3.283666877129982,
+            "actual_hits": 6,
+            "actual_over_market": 1.8272255452551174
+          },
+          "500": {
+            "groups": 348,
+            "races": 266,
+            "expected_hits": 0.5309574237786658,
+            "actual_hits": 1,
+            "actual_over_market": 1.8833901838744391
+          },
+          "1000": {
+            "groups": 30,
+            "races": 23,
+            "expected_hits": 0.022551782149767916,
+            "actual_hits": 0,
+            "actual_over_market": 0.0
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "200": {
+              "groups": 2427,
+              "races": 1293,
+              "expected_hits": 8.244742605655626,
+              "actual_hits": 13,
+              "actual_over_market": 1.576762383228607
+            },
+            "300": {
+              "groups": 1080,
+              "races": 697,
+              "expected_hits": 2.620100172208244,
+              "actual_hits": 3,
+              "actual_over_market": 1.1449943906043765
+            },
+            "500": {
+              "groups": 274,
+              "races": 209,
+              "expected_hits": 0.4171195233830959,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          },
+          "2025_H2": {
+            "200": {
+              "groups": 392,
+              "races": 194,
+              "expected_hits": 1.3062287501880836,
+              "actual_hits": 2,
+              "actual_over_market": 1.531125386508313
+            },
+            "300": {
+              "groups": 177,
+              "races": 111,
+              "expected_hits": 0.4170643075962913,
+              "actual_hits": 2,
+              "actual_over_market": 4.795423543977669
+            },
+            "500": {
+              "groups": 50,
+              "races": 39,
+              "expected_hits": 0.07603721490824977,
+              "actual_hits": 1,
+              "actual_over_market": 13.151454865971209
+            }
+          },
+          "2026_H1": {
+            "200": {
+              "groups": 228,
+              "races": 125,
+              "expected_hits": 0.7956688734792102,
+              "actual_hits": 1,
+              "actual_over_market": 1.256804222625065
+            },
+            "300": {
+              "groups": 98,
+              "races": 61,
+              "expected_hits": 0.24650239732544676,
+              "actual_hits": 1,
+              "actual_over_market": 4.056755678038059
+            },
+            "500": {
+              "groups": 24,
+              "races": 18,
+              "expected_hits": 0.03780068548732016,
+              "actual_hits": 0,
+              "actual_over_market": 0.0
+            }
+          }
+        }
+      }
+    }
+  }
+}
