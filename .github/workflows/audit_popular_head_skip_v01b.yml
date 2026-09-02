@@ -1,0 +1,30 @@
+name: Audit popular head skip v0.1b
+on:
+  push:
+    branches: [experiment/popular-head-skip-v01]
+    paths:
+      - 'scripts/audit_popular_head_skip_v01b.py'
+      - '.github/workflows/audit_popular_head_skip_v01b.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas
+      - run: python scripts/audit_popular_head_skip_v01b.py
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add keirin_data/strategy_context/popular_head_skip_v01b_audit.csv
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Add popular head skip v0.1b audit'
+          git push origin HEAD:experiment/popular-head-skip-v01
