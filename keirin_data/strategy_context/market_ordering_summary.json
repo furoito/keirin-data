@@ -1,0 +1,66 @@
+{
+  "rules": {
+    "candidate_logic": "frozen BASE / OH_HIGH candidate families",
+    "MKT1": "lowest odds among >=30x, 1 ticket",
+    "MKT2": "two lowest odds among >=30x, max2",
+    "stake_yen": 100
+  },
+  "variants": {
+    "BASE": {
+      "MKT1": {
+        "scorable_races": 750,
+        "bet_races": 645,
+        "tickets": 645,
+        "head_bust_races": 304,
+        "head_bust_bet_races": 258,
+        "candidate_set_exact_head_bust": 40,
+        "trifecta_hits": 9,
+        "stake_yen": 64500,
+        "pay_yen": 50090,
+        "profit_yen": -14410,
+        "roi_pct": 77.65891472868218
+      },
+      "MKT2": {
+        "scorable_races": 750,
+        "bet_races": 645,
+        "tickets": 1287,
+        "head_bust_races": 304,
+        "head_bust_bet_races": 258,
+        "candidate_set_exact_head_bust": 40,
+        "trifecta_hits": 17,
+        "stake_yen": 128700,
+        "pay_yen": 106300,
+        "profit_yen": -22400,
+        "roi_pct": 82.59518259518259
+      }
+    },
+    "OH_HIGH": {
+      "MKT1": {
+        "scorable_races": 750,
+        "bet_races": 642,
+        "tickets": 642,
+        "head_bust_races": 304,
+        "head_bust_bet_races": 259,
+        "candidate_set_exact_head_bust": 52,
+        "trifecta_hits": 11,
+        "stake_yen": 64200,
+        "pay_yen": 105840,
+        "profit_yen": 41640,
+        "roi_pct": 164.85981308411215
+      },
+      "MKT2": {
+        "scorable_races": 750,
+        "bet_races": 642,
+        "tickets": 1281,
+        "head_bust_races": 304,
+        "head_bust_bet_races": 259,
+        "candidate_set_exact_head_bust": 52,
+        "trifecta_hits": 21,
+        "stake_yen": 128100,
+        "pay_yen": 174730,
+        "profit_yen": 46630,
+        "roi_pct": 136.40124902419984
+      }
+    }
+  }
+}
