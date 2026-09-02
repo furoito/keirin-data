@@ -194,22 +194,14 @@ def main():
     views = {
         'RYO_HEAD_OWN_BANTE_IN_TRIO': summarize(df[df.own_bante_in_trio == 1]),
         'RYO_HEAD_OWN_BANTE_EXCLUDED': summarize(df[df.own_bante_in_trio == 0]),
-        'RYO_HEAD_BANTE_BANTE_OWN_BANTE_IN_TRIO': summarize(
-            df[(df.both_second_third_are_bante == 1) & (df.own_bante_in_trio == 1)]
-        ),
-        'RYO_HEAD_BANTE_BANTE_OWN_BANTE_EXCLUDED': summarize(
-            df[(df.both_second_third_are_bante == 1) & (df.own_bante_in_trio == 0)]
-        ),
+        'RYO_HEAD_BANTE_BANTE_OWN_BANTE_IN_TRIO': summarize(df[(df.both_second_third_are_bante == 1) & (df.own_bante_in_trio == 1)]),
+        'RYO_HEAD_BANTE_BANTE_OWN_BANTE_EXCLUDED': summarize(df[(df.both_second_third_are_bante == 1) & (df.own_bante_in_trio == 0)]),
     }
 
-    # Keep line-span context visible so exclusion is not mistaken for a fully independent causal variable.
     span_diag = {}
     for own_label, own_value in [('IN', 1), ('OUT', 0)]:
         zdf = df[df.own_bante_in_trio == own_value]
-        span_diag[own_label] = {
-            str(span): summarize(g)
-            for span, g in zdf.groupby('line_span', sort=True)
-        }
+        span_diag[own_label] = {str(span): summarize(g) for span, g in zdf.groupby('line_span', sort=True)}
 
     payload = {
         'status': 'exploratory_same_data_own_bante_exclusion_diagnostic',
