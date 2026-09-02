@@ -1,0 +1,35 @@
+name: Backfill missing diagnostic results
+
+on:
+  push:
+    branches:
+      - experiment/popular-head-skip-v01
+    paths:
+      - 'scripts/backfill_missing_results_for_diagnostic.py'
+      - '.github/workflows/backfill_missing_results_for_diagnostic.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python scripts/backfill_missing_results_for_diagnostic.py
+      - name: Commit repair table
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add keirin_data/strategy_context/diagnostic_result_repairs.csv
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Add targeted diagnostic result repairs'
+          git push origin HEAD:experiment/popular-head-skip-v01
