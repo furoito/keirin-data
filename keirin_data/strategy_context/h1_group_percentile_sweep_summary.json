@@ -1,0 +1,1694 @@
+{
+  "status": "exploratory_percentile_sweep_current_available_data",
+  "score_percentiles_tested": [
+    40,
+    45,
+    50,
+    55,
+    60
+  ],
+  "effective_odds_cuts": [
+    30,
+    50,
+    100,
+    200
+  ],
+  "quality_gate": "context_quality=full AND price_usable=true",
+  "usable_races_by_month": {
+    "2025_01": 983,
+    "2025_02": 724,
+    "2025_03": 679,
+    "2025_04": 374,
+    "2025_05": 548,
+    "2025_06": 305,
+    "2025_07": 166,
+    "2025_08": 80,
+    "2025_09": 80,
+    "2025_10": 62,
+    "2025_11": 78,
+    "2025_12": 77,
+    "2026_01": 79,
+    "2026_02": 79,
+    "2026_03": 79,
+    "2026_04": 78,
+    "2026_05": 65,
+    "2026_06": 75
+  },
+  "skipped": {
+    "odds_board_incomplete": 1010,
+    "result_missing": 87,
+    "base_or_odds_missing": 97
+  },
+  "results": {
+    "40": {
+      "BASELINE": {
+        "odds": {
+          "30": {
+            "groups": 10359,
+            "races": 2922,
+            "expected_hits": 145.9392855794823,
+            "actual_hits": 138,
+            "actual_over_market": 0.9455987087509871
+          },
+          "50": {
+            "groups": 7821,
+            "races": 2744,
+            "expected_hits": 80.2798649418327,
+            "actual_hits": 78,
+            "actual_over_market": 0.9716010366548998
+          },
+          "100": {
+            "groups": 3998,
+            "races": 2062,
+            "expected_hits": 24.885679731047283,
+            "actual_hits": 26,
+            "actual_over_market": 1.0447775701124409
+          },
+          "200": {
+            "groups": 1266,
+            "races": 878,
+            "expected_hits": 4.509228721353361,
+            "actual_hits": 7,
+            "actual_over_market": 1.552371909380343
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 6056,
+              "races": 2179,
+              "expected_hits": 62.45951873775486,
+              "actual_hits": 55,
+              "actual_over_market": 0.880570345585359
+            },
+            "100": {
+              "groups": 3069,
+              "races": 1610,
+              "expected_hits": 19.141797491742814,
+              "actual_hits": 20,
+              "actual_over_market": 1.0448339560915
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 992,
+              "races": 324,
+              "expected_hits": 9.882267406159052,
+              "actual_hits": 14,
+              "actual_over_market": 1.4166789284890835
+            },
+            "100": {
+              "groups": 535,
+              "races": 252,
+              "expected_hits": 3.2332533442960694,
+              "actual_hits": 5,
+              "actual_over_market": 1.5464300095198942
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 773,
+              "races": 241,
+              "expected_hits": 7.938078797918797,
+              "actual_hits": 9,
+              "actual_over_market": 1.13377559345463
+            },
+            "100": {
+              "groups": 394,
+              "races": 200,
+              "expected_hits": 2.510628895008403,
+              "actual_hits": 1,
+              "actual_over_market": 0.3983065764869455
+            }
+          }
+        }
+      },
+      "NO_ESCAPE": {
+        "odds": {
+          "30": {
+            "groups": 4082,
+            "races": 1910,
+            "expected_hits": 54.301302411423265,
+            "actual_hits": 53,
+            "actual_over_market": 0.9760355211820939
+          },
+          "50": {
+            "groups": 3201,
+            "races": 1716,
+            "expected_hits": 31.614705304069275,
+            "actual_hits": 35,
+            "actual_over_market": 1.107079748597087
+          },
+          "100": {
+            "groups": 1741,
+            "races": 1181,
+            "expected_hits": 10.47956238009382,
+            "actual_hits": 16,
+            "actual_over_market": 1.526781312012836
+          },
+          "200": {
+            "groups": 632,
+            "races": 497,
+            "expected_hits": 2.192990921461111,
+            "actual_hits": 4,
+            "actual_over_market": 1.823992959047429
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 2460,
+              "races": 1341,
+              "expected_hits": 24.60618651451732,
+              "actual_hits": 30,
+              "actual_over_market": 1.2192055840225549
+            },
+            "100": {
+              "groups": 1307,
+              "races": 907,
+              "expected_hits": 7.9011170743334205,
+              "actual_hits": 11,
+              "actual_over_market": 1.3922082025253395
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 380,
+              "races": 202,
+              "expected_hits": 3.520717252409841,
+              "actual_hits": 4,
+              "actual_over_market": 1.136132132525582
+            },
+            "100": {
+              "groups": 228,
+              "races": 148,
+              "expected_hits": 1.3023546137279638,
+              "actual_hits": 4,
+              "actual_over_market": 3.07136010256844
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 361,
+              "races": 173,
+              "expected_hits": 3.487801537142116,
+              "actual_hits": 1,
+              "actual_over_market": 0.286713561351141
+            },
+            "100": {
+              "groups": 206,
+              "races": 126,
+              "expected_hits": 1.276090692032434,
+              "actual_hits": 1,
+              "actual_over_market": 0.7836433619050199
+            }
+          }
+        }
+      },
+      "NO_THIRD": {
+        "odds": {
+          "30": {
+            "groups": 8881,
+            "races": 2795,
+            "expected_hits": 127.69457797523648,
+            "actual_hits": 127,
+            "actual_over_market": 0.9945606306371819
+          },
+          "50": {
+            "groups": 6622,
+            "races": 2568,
+            "expected_hits": 69.39142205751054,
+            "actual_hits": 72,
+            "actual_over_market": 1.037592224876549
+          },
+          "100": {
+            "groups": 3258,
+            "races": 1782,
+            "expected_hits": 20.567856675288517,
+            "actual_hits": 24,
+            "actual_over_market": 1.166869274659769
+          },
+          "200": {
+            "groups": 982,
+            "races": 714,
+            "expected_hits": 3.554664136515634,
+            "actual_hits": 6,
+            "actual_over_market": 1.687923181930021
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 5115,
+              "races": 2025,
+              "expected_hits": 53.69491333026927,
+              "actual_hits": 49,
+              "actual_over_market": 0.9125631640116155
+            },
+            "100": {
+              "groups": 2499,
+              "races": 1393,
+              "expected_hits": 15.722652415062239,
+              "actual_hits": 18,
+              "actual_over_market": 1.144844999737835
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 858,
+              "races": 308,
+              "expected_hits": 8.680637956916216,
+              "actual_hits": 14,
+              "actual_over_market": 1.612784690420781
+            },
+            "100": {
+              "groups": 460,
+              "races": 228,
+              "expected_hits": 2.8544354755510115,
+              "actual_hits": 5,
+              "actual_over_market": 1.7516598440659499
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 649,
+              "races": 235,
+              "expected_hits": 7.015870770325043,
+              "actual_hits": 9,
+              "actual_over_market": 1.282805840447804
+            },
+            "100": {
+              "groups": 299,
+              "races": 161,
+              "expected_hits": 1.9907687846752684,
+              "actual_hits": 1,
+              "actual_over_market": 0.5023185051412782
+            }
+          }
+        }
+      },
+      "NO_ESCAPE_NO_THIRD": {
+        "odds": {
+          "30": {
+            "groups": 3417,
+            "races": 1739,
+            "expected_hits": 46.55923424334384,
+            "actual_hits": 48,
+            "actual_over_market": 1.030944790653685
+          },
+          "50": {
+            "groups": 2643,
+            "races": 1497,
+            "expected_hits": 26.684038563477717,
+            "actual_hits": 32,
+            "actual_over_market": 1.1992187735704372
+          },
+          "100": {
+            "groups": 1384,
+            "races": 960,
+            "expected_hits": 8.408604153125914,
+            "actual_hits": 15,
+            "actual_over_market": 1.7838870431810876
+          },
+          "200": {
+            "groups": 499,
+            "races": 399,
+            "expected_hits": 1.7632900081899439,
+            "actual_hits": 4,
+            "actual_over_market": 2.268486738665348
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 2039,
+              "races": 1166,
+              "expected_hits": 20.74888149532997,
+              "actual_hits": 27,
+              "actual_over_market": 1.3012749629938842
+            },
+            "100": {
+              "groups": 1048,
+              "races": 737,
+              "expected_hits": 6.35992345948352,
+              "actual_hits": 10,
+              "actual_over_market": 1.5723459666937698
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 318,
+              "races": 178,
+              "expected_hits": 3.0141915833529747,
+              "actual_hits": 4,
+              "actual_over_market": 1.3270556596639473
+            },
+            "100": {
+              "groups": 187,
+              "races": 129,
+              "expected_hits": 1.0949561120534448,
+              "actual_hits": 4,
+              "actual_over_market": 3.653114454513187
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 286,
+              "races": 153,
+              "expected_hits": 2.920965484794772,
+              "actual_hits": 1,
+              "actual_over_market": 0.3423525561002171
+            },
+            "100": {
+              "groups": 149,
+              "races": 94,
+              "expected_hits": 0.9537245815889484,
+              "actual_hits": 1,
+              "actual_over_market": 1.0485207357599557
+            }
+          }
+        }
+      }
+    },
+    "45": {
+      "BASELINE": {
+        "odds": {
+          "30": {
+            "groups": 11486,
+            "races": 2979,
+            "expected_hits": 157.58078020268363,
+            "actual_hits": 154,
+            "actual_over_market": 0.9772765422402532
+          },
+          "50": {
+            "groups": 8808,
+            "races": 2835,
+            "expected_hits": 88.38126108612508,
+            "actual_hits": 91,
+            "actual_over_market": 1.0296300243025842
+          },
+          "100": {
+            "groups": 4675,
+            "races": 2240,
+            "expected_hits": 28.634432961082005,
+            "actual_hits": 33,
+            "actual_over_market": 1.152458651611903
+          },
+          "200": {
+            "groups": 1564,
+            "races": 1042,
+            "expected_hits": 5.4878241430728085,
+            "actual_hits": 9,
+            "actual_over_market": 1.639994242774808
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 6837,
+              "races": 2261,
+              "expected_hits": 68.97372122249874,
+              "actual_hits": 66,
+              "actual_over_market": 0.9568861709968356
+            },
+            "100": {
+              "groups": 3600,
+              "races": 1758,
+              "expected_hits": 22.13095466492905,
+              "actual_hits": 26,
+              "actual_over_market": 1.1748250535799176
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 1101,
+              "races": 332,
+              "expected_hits": 10.701016030759014,
+              "actual_hits": 15,
+              "actual_over_market": 1.4017360554253897
+            },
+            "100": {
+              "groups": 611,
+              "races": 270,
+              "expected_hits": 3.6067334456275724,
+              "actual_hits": 6,
+              "actual_over_market": 1.6635551505126542
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 870,
+              "races": 242,
+              "expected_hits": 8.70652383286734,
+              "actual_hits": 10,
+              "actual_over_market": 1.148564018426017
+            },
+            "100": {
+              "groups": 464,
+              "races": 212,
+              "expected_hits": 2.896744850525385,
+              "actual_hits": 1,
+              "actual_over_market": 0.3452150781656276
+            }
+          }
+        }
+      },
+      "NO_ESCAPE": {
+        "odds": {
+          "30": {
+            "groups": 4523,
+            "races": 2014,
+            "expected_hits": 58.34351976387995,
+            "actual_hits": 57,
+            "actual_over_market": 0.976972253828407
+          },
+          "50": {
+            "groups": 3600,
+            "races": 1830,
+            "expected_hits": 34.62488240095152,
+            "actual_hits": 38,
+            "actual_over_market": 1.097476651616172
+          },
+          "100": {
+            "groups": 2030,
+            "races": 1315,
+            "expected_hits": 11.94344652828334,
+            "actual_hits": 19,
+            "actual_over_market": 1.5908305826970461
+          },
+          "200": {
+            "groups": 782,
+            "races": 593,
+            "expected_hits": 2.665665398457432,
+            "actual_hits": 5,
+            "actual_over_market": 1.8757042811499902
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 2772,
+              "races": 1433,
+              "expected_hits": 27.05581294777844,
+              "actual_hits": 32,
+              "actual_over_market": 1.1827402880765234
+            },
+            "100": {
+              "groups": 1526,
+              "races": 1012,
+              "expected_hits": 9.030730753865113,
+              "actual_hits": 13,
+              "actual_over_market": 1.4395291316193939
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 435,
+              "races": 217,
+              "expected_hits": 3.870293911263724,
+              "actual_hits": 5,
+              "actual_over_market": 1.2918915500056702
+            },
+            "100": {
+              "groups": 271,
+              "races": 165,
+              "expected_hits": 1.498682697162049,
+              "actual_hits": 5,
+              "actual_over_market": 3.3362632460280963
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 393,
+              "races": 180,
+              "expected_hits": 3.6987755419093618,
+              "actual_hits": 1,
+              "actual_over_market": 0.27035974166839694
+            },
+            "100": {
+              "groups": 233,
+              "races": 138,
+              "expected_hits": 1.4140330772561804,
+              "actual_hits": 1,
+              "actual_over_market": 0.7071970352634332
+            }
+          }
+        }
+      },
+      "NO_THIRD": {
+        "odds": {
+          "30": {
+            "groups": 9829,
+            "races": 2866,
+            "expected_hits": 137.63807981966062,
+            "actual_hits": 142,
+            "actual_over_market": 1.031691230988216
+          },
+          "50": {
+            "groups": 7455,
+            "races": 2672,
+            "expected_hits": 76.42715127207092,
+            "actual_hits": 84,
+            "actual_over_market": 1.0990858432099702
+          },
+          "100": {
+            "groups": 3814,
+            "races": 1964,
+            "expected_hits": 23.744821814816135,
+            "actual_hits": 31,
+            "actual_over_market": 1.3055478049810771
+          },
+          "200": {
+            "groups": 1205,
+            "races": 844,
+            "expected_hits": 4.309745308976503,
+            "actual_hits": 8,
+            "actual_over_market": 1.8562581838275436
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 5778,
+              "races": 2119,
+              "expected_hits": 59.357773985696525,
+              "actual_hits": 59,
+              "actual_over_market": 0.9939725841844619
+            },
+            "100": {
+              "groups": 2940,
+              "races": 1547,
+              "expected_hits": 18.2780220144792,
+              "actual_hits": 24,
+              "actual_over_market": 1.3130523631598678
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 952,
+              "races": 318,
+              "expected_hits": 9.404989066534984,
+              "actual_hits": 15,
+              "actual_over_market": 1.5948981858334417
+            },
+            "100": {
+              "groups": 523,
+              "races": 242,
+              "expected_hits": 3.1660302281359165,
+              "actual_hits": 6,
+              "actual_over_market": 1.8951177239810049
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 725,
+              "races": 235,
+              "expected_hits": 7.664388219839417,
+              "actual_hits": 10,
+              "actual_over_market": 1.3047355787791135
+            },
+            "100": {
+              "groups": 351,
+              "races": 175,
+              "expected_hits": 2.300769572201016,
+              "actual_hits": 1,
+              "actual_over_market": 0.4346371805688288
+            }
+          }
+        }
+      },
+      "NO_ESCAPE_NO_THIRD": {
+        "odds": {
+          "30": {
+            "groups": 3779,
+            "races": 1838,
+            "expected_hits": 49.94829232351045,
+            "actual_hits": 52,
+            "actual_over_market": 1.0410766330748773
+          },
+          "50": {
+            "groups": 2970,
+            "races": 1608,
+            "expected_hits": 29.220950101194035,
+            "actual_hits": 35,
+            "actual_over_market": 1.1977707733250542
+          },
+          "100": {
+            "groups": 1616,
+            "races": 1080,
+            "expected_hits": 9.62183958814457,
+            "actual_hits": 18,
+            "actual_over_market": 1.8707441373454692
+          },
+          "200": {
+            "groups": 611,
+            "races": 473,
+            "expected_hits": 2.1255358493233345,
+            "actual_hits": 5,
+            "actual_over_market": 2.3523479980785797
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 2299,
+              "races": 1258,
+              "expected_hits": 22.84115006877427,
+              "actual_hits": 29,
+              "actual_over_market": 1.2696383462602168
+            },
+            "100": {
+              "groups": 1227,
+              "races": 833,
+              "expected_hits": 7.310983707750525,
+              "actual_hits": 12,
+              "actual_over_market": 1.6413659884481142
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 365,
+              "races": 192,
+              "expected_hits": 3.331108283590603,
+              "actual_hits": 5,
+              "actual_over_market": 1.501001941194928
+            },
+            "100": {
+              "groups": 222,
+              "races": 144,
+              "expected_hits": 1.258624236871275,
+              "actual_hits": 5,
+              "actual_over_market": 3.972591543627943
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 306,
+              "races": 158,
+              "expected_hits": 3.048691748829158,
+              "actual_hits": 1,
+              "actual_over_market": 0.3280095471718475
+            },
+            "100": {
+              "groups": 167,
+              "races": 103,
+              "expected_hits": 1.0522316435227714,
+              "actual_hits": 1,
+              "actual_over_market": 0.950361078908533
+            }
+          }
+        }
+      }
+    },
+    "50": {
+      "BASELINE": {
+        "odds": {
+          "30": {
+            "groups": 13738,
+            "races": 3063,
+            "expected_hits": 179.60891506320687,
+            "actual_hits": 175,
+            "actual_over_market": 0.9743391631669012
+          },
+          "50": {
+            "groups": 10807,
+            "races": 2977,
+            "expected_hits": 104.05772937996937,
+            "actual_hits": 103,
+            "actual_over_market": 0.9898351675913757
+          },
+          "100": {
+            "groups": 6090,
+            "races": 2519,
+            "expected_hits": 36.10783092955468,
+            "actual_hits": 42,
+            "actual_over_market": 1.1631825816937265
+          },
+          "200": {
+            "groups": 2243,
+            "races": 1353,
+            "expected_hits": 7.69927541753548,
+            "actual_hits": 11,
+            "actual_over_market": 1.4287058721067383
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 8435,
+              "races": 2377,
+              "expected_hits": 81.65276294097245,
+              "actual_hits": 76,
+              "actual_over_market": 0.9307707083340353
+            },
+            "100": {
+              "groups": 4717,
+              "races": 1992,
+              "expected_hits": 28.01909243178763,
+              "actual_hits": 33,
+              "actual_over_market": 1.177768340653373
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 1325,
+              "races": 352,
+              "expected_hits": 12.39449388206257,
+              "actual_hits": 16,
+              "actual_over_market": 1.2908957922965578
+            },
+            "100": {
+              "groups": 781,
+              "races": 298,
+              "expected_hits": 4.508065230693092,
+              "actual_hits": 7,
+              "actual_over_market": 1.552772562459968
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 1047,
+              "races": 248,
+              "expected_hits": 10.01047255693435,
+              "actual_hits": 11,
+              "actual_over_market": 1.0988492238940504
+            },
+            "100": {
+              "groups": 592,
+              "races": 229,
+              "expected_hits": 3.5806732670739576,
+              "actual_hits": 2,
+              "actual_over_market": 0.5585541742640912
+            }
+          }
+        }
+      },
+      "NO_ESCAPE": {
+        "odds": {
+          "30": {
+            "groups": 5457,
+            "races": 2229,
+            "expected_hits": 66.57258674510531,
+            "actual_hits": 64,
+            "actual_over_market": 0.9613566653950928
+          },
+          "50": {
+            "groups": 4457,
+            "races": 2074,
+            "expected_hits": 40.9161111301775,
+            "actual_hits": 43,
+            "actual_over_market": 1.050930765712129
+          },
+          "100": {
+            "groups": 2659,
+            "races": 1573,
+            "expected_hits": 14.996207637675234,
+            "actual_hits": 23,
+            "actual_over_market": 1.533721095073177
+          },
+          "200": {
+            "groups": 1125,
+            "races": 796,
+            "expected_hits": 3.723529779967,
+            "actual_hits": 5,
+            "actual_over_market": 1.3428118735347707
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 3475,
+              "races": 1645,
+              "expected_hits": 32.324841910793836,
+              "actual_hits": 36,
+              "actual_over_market": 1.11369454178147
+            },
+            "100": {
+              "groups": 2036,
+              "races": 1235,
+              "expected_hits": 11.539539151816353,
+              "actual_hits": 16,
+              "actual_over_market": 1.3865371735821495
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 526,
+              "races": 239,
+              "expected_hits": 4.522002617214132,
+              "actual_hits": 6,
+              "actual_over_market": 1.3268457601416466
+            },
+            "100": {
+              "groups": 340,
+              "races": 186,
+              "expected_hits": 1.827023538512409,
+              "actual_hits": 6,
+              "actual_over_market": 3.284029939146429
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 456,
+              "races": 190,
+              "expected_hits": 4.069266602169527,
+              "actual_hits": 1,
+              "actual_over_market": 0.24574452788786327
+            },
+            "100": {
+              "groups": 283,
+              "races": 152,
+              "expected_hits": 1.6296449473464705,
+              "actual_hits": 1,
+              "actual_over_market": 0.6136305958106316
+            }
+          }
+        }
+      },
+      "NO_THIRD": {
+        "odds": {
+          "30": {
+            "groups": 11613,
+            "races": 2971,
+            "expected_hits": 155.67251563681612,
+            "actual_hits": 157,
+            "actual_over_market": 1.0085274164020122
+          },
+          "50": {
+            "groups": 9035,
+            "races": 2815,
+            "expected_hits": 89.37525426593007,
+            "actual_hits": 91,
+            "actual_over_market": 1.0181789215305124
+          },
+          "100": {
+            "groups": 4898,
+            "races": 2223,
+            "expected_hits": 29.73225485460665,
+            "actual_hits": 36,
+            "actual_over_market": 1.2108062498469483
+          },
+          "200": {
+            "groups": 1677,
+            "races": 1061,
+            "expected_hits": 5.908322329258665,
+            "actual_hits": 10,
+            "actual_over_market": 1.6925278349285202
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 7049,
+              "races": 2240,
+              "expected_hits": 69.80729019743441,
+              "actual_hits": 65,
+              "actual_over_market": 0.9311348401601314
+            },
+            "100": {
+              "groups": 3806,
+              "races": 1757,
+              "expected_hits": 23.01270077670286,
+              "actual_hits": 28,
+              "actual_over_market": 1.2167194225349718
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 1117,
+              "races": 335,
+              "expected_hits": 10.736161732220012,
+              "actual_hits": 15,
+              "actual_over_market": 1.3971473580715439
+            },
+            "100": {
+              "groups": 645,
+              "races": 267,
+              "expected_hits": 3.857145072402531,
+              "actual_hits": 6,
+              "actual_over_market": 1.5555546621591632
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 869,
+              "races": 240,
+              "expected_hits": 8.831802336275658,
+              "actual_hits": 11,
+              "actual_over_market": 1.245498889260543
+            },
+            "100": {
+              "groups": 447,
+              "races": 199,
+              "expected_hits": 2.862409005501264,
+              "actual_hits": 2,
+              "actual_over_market": 0.6987121673234677
+            }
+          }
+        }
+      },
+      "NO_ESCAPE_NO_THIRD": {
+        "odds": {
+          "30": {
+            "groups": 4487,
+            "races": 2049,
+            "expected_hits": 56.46334718269124,
+            "actual_hits": 56,
+            "actual_over_market": 0.9917938413889625
+          },
+          "50": {
+            "groups": 3620,
+            "races": 1836,
+            "expected_hits": 34.30229319201918,
+            "actual_hits": 37,
+            "actual_over_market": 1.0786450862885306
+          },
+          "100": {
+            "groups": 2074,
+            "races": 1303,
+            "expected_hits": 11.972707901696904,
+            "actual_hits": 19,
+            "actual_over_market": 1.5869425827474761
+          },
+          "200": {
+            "groups": 838,
+            "races": 609,
+            "expected_hits": 2.852470206133935,
+            "actual_hits": 5,
+            "actual_over_market": 1.7528666870027352
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 2842,
+              "races": 1452,
+              "expected_hits": 27.11324029799491,
+              "actual_hits": 31,
+              "actual_over_market": 1.1433528290712094
+            },
+            "100": {
+              "groups": 1608,
+              "races": 1023,
+              "expected_hits": 9.269171799222239,
+              "actual_hits": 13,
+              "actual_over_market": 1.402498549125048
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 431,
+              "races": 214,
+              "expected_hits": 3.857612023624248,
+              "actual_hits": 5,
+              "actual_over_market": 1.2961386394950294
+            },
+            "100": {
+              "groups": 270,
+              "races": 163,
+              "expected_hits": 1.5091889031684738,
+              "actual_hits": 5,
+              "actual_over_market": 3.3130378771688065
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 347,
+              "races": 170,
+              "expected_hits": 3.3314408704000122,
+              "actual_hits": 1,
+              "actual_over_market": 0.3001704184171602
+            },
+            "100": {
+              "groups": 196,
+              "races": 117,
+              "expected_hits": 1.1943471993061916,
+              "actual_hits": 1,
+              "actual_over_market": 0.8372774688808331
+            }
+          }
+        }
+      }
+    },
+    "55": {
+      "BASELINE": {
+        "odds": {
+          "30": {
+            "groups": 16142,
+            "races": 3118,
+            "expected_hits": 200.72826010026213,
+            "actual_hits": 195,
+            "actual_over_market": 0.9714626127013659
+          },
+          "50": {
+            "groups": 12979,
+            "races": 3056,
+            "expected_hits": 119.23677401673271,
+            "actual_hits": 120,
+            "actual_over_market": 1.0064009278141002
+          },
+          "100": {
+            "groups": 7774,
+            "races": 2733,
+            "expected_hits": 44.444720742960605,
+            "actual_hits": 54,
+            "actual_over_market": 1.214992446736271
+          },
+          "200": {
+            "groups": 3150,
+            "races": 1693,
+            "expected_hits": 10.539139288598314,
+            "actual_hits": 14,
+            "actual_over_market": 1.3283817223239276
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 10149,
+              "races": 2444,
+              "expected_hits": 93.78200984229399,
+              "actual_hits": 88,
+              "actual_over_market": 0.9383462792915491
+            },
+            "100": {
+              "groups": 6035,
+              "races": 2167,
+              "expected_hits": 34.56216713948916,
+              "actual_hits": 40,
+              "actual_over_market": 1.157334834895171
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 1577,
+              "races": 358,
+              "expected_hits": 14.098220956249406,
+              "actual_hits": 19,
+              "actual_over_market": 1.3476877727311936
+            },
+            "100": {
+              "groups": 980,
+              "races": 321,
+              "expected_hits": 5.4711709588896245,
+              "actual_hits": 10,
+              "actual_over_market": 1.8277622971645364
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 1253,
+              "races": 254,
+              "expected_hits": 11.35654321818931,
+              "actual_hits": 13,
+              "actual_over_market": 1.144714527144002
+            },
+            "100": {
+              "groups": 759,
+              "races": 245,
+              "expected_hits": 4.411382644581824,
+              "actual_hits": 4,
+              "actual_over_market": 0.9067451913093291
+            }
+          }
+        }
+      },
+      "NO_ESCAPE": {
+        "odds": {
+          "30": {
+            "groups": 6411,
+            "races": 2392,
+            "expected_hits": 74.07259263534739,
+            "actual_hits": 70,
+            "actual_over_market": 0.9450188998325414
+          },
+          "50": {
+            "groups": 5338,
+            "races": 2265,
+            "expected_hits": 46.54295312811057,
+            "actual_hits": 49,
+            "actual_over_market": 1.0527909534473747
+          },
+          "100": {
+            "groups": 3372,
+            "races": 1824,
+            "expected_hits": 18.25699478452691,
+            "actual_hits": 26,
+            "actual_over_market": 1.4241117066011
+          },
+          "200": {
+            "groups": 1558,
+            "races": 1046,
+            "expected_hits": 5.0250063734299815,
+            "actual_hits": 6,
+            "actual_over_market": 1.1940283363072641
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 4174,
+              "races": 1797,
+              "expected_hits": 36.81814817130103,
+              "actual_hits": 41,
+              "actual_over_market": 1.1135812645775225
+            },
+            "100": {
+              "groups": 2601,
+              "races": 1437,
+              "expected_hits": 14.129960823855784,
+              "actual_hits": 18,
+              "actual_over_market": 1.273888882240238
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 619,
+              "races": 260,
+              "expected_hits": 5.116438216612182,
+              "actual_hits": 7,
+              "actual_over_market": 1.3681392608772684
+            },
+            "100": {
+              "groups": 415,
+              "races": 210,
+              "expected_hits": 2.169229463506854,
+              "actual_hits": 7,
+              "actual_over_market": 3.2269522970075974
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 545,
+              "races": 208,
+              "expected_hits": 4.608366740197362,
+              "actual_hits": 1,
+              "actual_over_market": 0.2169966186235371
+            },
+            "100": {
+              "groups": 356,
+              "races": 177,
+              "expected_hits": 1.9578044971642719,
+              "actual_hits": 1,
+              "actual_over_market": 0.5107762299292
+            }
+          }
+        }
+      },
+      "NO_THIRD": {
+        "odds": {
+          "30": {
+            "groups": 13468,
+            "races": 3048,
+            "expected_hits": 172.56961722757944,
+            "actual_hits": 176,
+            "actual_over_market": 1.0198782545127667
+          },
+          "50": {
+            "groups": 10707,
+            "races": 2934,
+            "expected_hits": 101.59465561924634,
+            "actual_hits": 107,
+            "actual_over_market": 1.0532050071709644
+          },
+          "100": {
+            "groups": 6172,
+            "races": 2450,
+            "expected_hits": 36.36166979427979,
+            "actual_hits": 47,
+            "actual_over_market": 1.2925699030299695
+          },
+          "200": {
+            "groups": 2303,
+            "races": 1339,
+            "expected_hits": 7.950420037874983,
+            "actual_hits": 13,
+            "actual_over_market": 1.6351337335724825
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 8391,
+              "races": 2343,
+              "expected_hits": 79.6767613915382,
+              "actual_hits": 77,
+              "actual_over_market": 0.9664047415483623
+            },
+            "100": {
+              "groups": 4827,
+              "races": 1951,
+              "expected_hits": 28.333073078420504,
+              "actual_hits": 35,
+              "actual_over_market": 1.23530546450527
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 1299,
+              "races": 345,
+              "expected_hits": 11.968051774751164,
+              "actual_hits": 17,
+              "actual_over_market": 1.4204484004543387
+            },
+            "100": {
+              "groups": 788,
+              "races": 284,
+              "expected_hits": 4.551993226098794,
+              "actual_hits": 8,
+              "actual_over_market": 1.7574718596091277
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 1017,
+              "races": 246,
+              "expected_hits": 9.949842452956986,
+              "actual_hits": 13,
+              "actual_over_market": 1.3065533511172873
+            },
+            "100": {
+              "groups": 557,
+              "races": 215,
+              "expected_hits": 3.476603489760488,
+              "actual_hits": 4,
+              "actual_over_market": 1.1505482324288785
+            }
+          }
+        }
+      },
+      "NO_ESCAPE_NO_THIRD": {
+        "odds": {
+          "30": {
+            "groups": 5188,
+            "races": 2204,
+            "expected_hits": 62.27173640699085,
+            "actual_hits": 62,
+            "actual_over_market": 0.9956362802345056
+          },
+          "50": {
+            "groups": 4266,
+            "races": 2018,
+            "expected_hits": 38.70560842285995,
+            "actual_hits": 43,
+            "actual_over_market": 1.110950111679519
+          },
+          "100": {
+            "groups": 2584,
+            "races": 1514,
+            "expected_hits": 14.438010749373895,
+            "actual_hits": 22,
+            "actual_over_market": 1.5237556185469685
+          },
+          "200": {
+            "groups": 1126,
+            "races": 789,
+            "expected_hits": 3.751755447126578,
+            "actual_hits": 6,
+            "actual_over_market": 1.5992513596789268
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 3371,
+              "races": 1606,
+              "expected_hits": 30.731084215816225,
+              "actual_hits": 36,
+              "actual_over_market": 1.1714523232301726
+            },
+            "100": {
+              "groups": 2028,
+              "races": 1202,
+              "expected_hits": 11.313494944926017,
+              "actual_hits": 15,
+              "actual_over_market": 1.325850241063425
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 494,
+              "races": 229,
+              "expected_hits": 4.2410866090642125,
+              "actual_hits": 6,
+              "actual_over_market": 1.414731778213765
+            },
+            "100": {
+              "groups": 321,
+              "races": 179,
+              "expected_hits": 1.727596814447218,
+              "actual_hits": 6,
+              "actual_over_market": 3.473032567451121
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 401,
+              "races": 183,
+              "expected_hits": 3.7334375979795196,
+              "actual_hits": 1,
+              "actual_over_market": 0.26784966234367624
+            },
+            "100": {
+              "groups": 235,
+              "races": 133,
+              "expected_hits": 1.396918990000659,
+              "actual_hits": 1,
+              "actual_over_market": 0.7158611252034939
+            }
+          }
+        }
+      }
+    },
+    "60": {
+      "BASELINE": {
+        "odds": {
+          "30": {
+            "groups": 18531,
+            "races": 3168,
+            "expected_hits": 220.37710804235962,
+            "actual_hits": 207,
+            "actual_over_market": 0.9392990126733656
+          },
+          "50": {
+            "groups": 15177,
+            "races": 3123,
+            "expected_hits": 133.99486802176244,
+            "actual_hits": 128,
+            "actual_over_market": 0.9552604654919411
+          },
+          "100": {
+            "groups": 9488,
+            "races": 2886,
+            "expected_hits": 52.474843280080506,
+            "actual_hits": 60,
+            "actual_over_market": 1.1434050346707
+          },
+          "200": {
+            "groups": 4182,
+            "races": 1989,
+            "expected_hits": 13.66887136349001,
+            "actual_hits": 18,
+            "actual_over_market": 1.3168607357062831
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 11873,
+              "races": 2498,
+              "expected_hits": 105.42526670588666,
+              "actual_hits": 94,
+              "actual_over_market": 0.8916268645754472
+            },
+            "100": {
+              "groups": 7375,
+              "races": 2299,
+              "expected_hits": 40.87484569924859,
+              "actual_hits": 44,
+              "actual_over_market": 1.0764566629497725
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 1846,
+              "races": 366,
+              "expected_hits": 15.922026815492439,
+              "actual_hits": 21,
+              "actual_over_market": 1.3189275613809792
+            },
+            "100": {
+              "groups": 1189,
+              "races": 336,
+              "expected_hits": 6.41452489097703,
+              "actual_hits": 12,
+              "actual_over_market": 1.8707542965309496
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 1458,
+              "races": 259,
+              "expected_hits": 12.647574500383353,
+              "actual_hits": 13,
+              "actual_over_market": 1.027865066112555
+            },
+            "100": {
+              "groups": 924,
+              "races": 251,
+              "expected_hits": 5.185472689854885,
+              "actual_hits": 4,
+              "actual_over_market": 0.7713858001462042
+            }
+          }
+        }
+      },
+      "NO_ESCAPE": {
+        "odds": {
+          "30": {
+            "groups": 7419,
+            "races": 2538,
+            "expected_hits": 81.4091457987283,
+            "actual_hits": 76,
+            "actual_over_market": 0.9335560428050481
+          },
+          "50": {
+            "groups": 6287,
+            "races": 2430,
+            "expected_hits": 52.38055488420746,
+            "actual_hits": 52,
+            "actual_over_market": 0.9927348061690313
+          },
+          "100": {
+            "groups": 4144,
+            "races": 2035,
+            "expected_hits": 21.647607673808203,
+            "actual_hits": 28,
+            "actual_over_market": 1.2934454662109227
+          },
+          "200": {
+            "groups": 2058,
+            "races": 1264,
+            "expected_hits": 6.4662134741437125,
+            "actual_hits": 8,
+            "actual_over_market": 1.2372001066759397
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 4910,
+              "races": 1929,
+              "expected_hits": 41.41687686795143,
+              "actual_hits": 42,
+              "actual_over_market": 1.0140793603029927
+            },
+            "100": {
+              "groups": 3193,
+              "races": 1603,
+              "expected_hits": 16.73612593528582,
+              "actual_hits": 18,
+              "actual_over_market": 1.0755177195487922
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 730,
+              "races": 276,
+              "expected_hits": 5.754192817698197,
+              "actual_hits": 9,
+              "actual_over_market": 1.5640768888242083
+            },
+            "100": {
+              "groups": 511,
+              "races": 235,
+              "expected_hits": 2.59428051426095,
+              "actual_hits": 9,
+              "actual_over_market": 3.4691699492504147
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 647,
+              "races": 225,
+              "expected_hits": 5.209485198557834,
+              "actual_hits": 1,
+              "actual_over_market": 0.19195754702918336
+            },
+            "100": {
+              "groups": 440,
+              "races": 197,
+              "expected_hits": 2.317201224261436,
+              "actual_hits": 1,
+              "actual_over_market": 0.43155509738638737
+            }
+          }
+        }
+      },
+      "NO_THIRD": {
+        "odds": {
+          "30": {
+            "groups": 15232,
+            "races": 3107,
+            "expected_hits": 188.0380760057714,
+            "actual_hits": 185,
+            "actual_over_market": 0.9838432934950997
+          },
+          "50": {
+            "groups": 12319,
+            "races": 3022,
+            "expected_hits": 113.19492959803522,
+            "actual_hits": 112,
+            "actual_over_market": 0.9894436119861684
+          },
+          "100": {
+            "groups": 7385,
+            "races": 2611,
+            "expected_hits": 42.384178609543966,
+            "actual_hits": 51,
+            "actual_over_market": 1.2032791874965332
+          },
+          "200": {
+            "groups": 2978,
+            "races": 1574,
+            "expected_hits": 10.112388514714008,
+            "actual_hits": 15,
+            "actual_over_market": 1.4833290847334717
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 9664,
+              "races": 2410,
+              "expected_hits": 88.80456326300073,
+              "actual_hits": 82,
+              "actual_over_market": 0.9233759728894949
+            },
+            "100": {
+              "groups": 5788,
+              "races": 2083,
+              "expected_hits": 33.099292752169106,
+              "actual_hits": 39,
+              "actual_over_market": 1.1782729103009066
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 1494,
+              "races": 360,
+              "expected_hits": 13.39239581433732,
+              "actual_hits": 17,
+              "actual_over_market": 1.269377058121336
+            },
+            "100": {
+              "groups": 933,
+              "races": 302,
+              "expected_hits": 5.233753265455011,
+              "actual_hits": 8,
+              "actual_over_market": 1.5285397675896166
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 1161,
+              "races": 252,
+              "expected_hits": 10.997970520697173,
+              "actual_hits": 13,
+              "actual_over_market": 1.1820362652850533
+            },
+            "100": {
+              "groups": 664,
+              "races": 226,
+              "expected_hits": 4.051132591919847,
+              "actual_hits": 4,
+              "actual_over_market": 0.9873781983779466
+            }
+          }
+        }
+      },
+      "NO_ESCAPE_NO_THIRD": {
+        "odds": {
+          "30": {
+            "groups": 5868,
+            "races": 2337,
+            "expected_hits": 67.63200544979244,
+            "actual_hits": 66,
+            "actual_over_market": 0.9758693322941017
+          },
+          "50": {
+            "groups": 4903,
+            "races": 2163,
+            "expected_hits": 42.97823848327832,
+            "actual_hits": 44,
+            "actual_over_market": 1.023773927289254
+          },
+          "100": {
+            "groups": 3083,
+            "races": 1688,
+            "expected_hits": 16.801401030597233,
+            "actual_hits": 22,
+            "actual_over_market": 1.309414611313398
+          },
+          "200": {
+            "groups": 1420,
+            "races": 932,
+            "expected_hits": 4.645940184930835,
+            "actual_hits": 6,
+            "actual_over_market": 1.2914501179892663
+          }
+        },
+        "periods": {
+          "2025_H1": {
+            "50": {
+              "groups": 3871,
+              "races": 1724,
+              "expected_hits": 34.13300699723491,
+              "actual_hits": 37,
+              "actual_over_market": 1.0839947386703241
+            },
+            "100": {
+              "groups": 2416,
+              "races": 1340,
+              "expected_hits": 13.153092059928895,
+              "actual_hits": 15,
+              "actual_over_market": 1.1404162558625845
+            }
+          },
+          "2025_H2": {
+            "50": {
+              "groups": 572,
+              "races": 244,
+              "expected_hits": 4.68389188254911,
+              "actual_hits": 6,
+              "actual_over_market": 1.2809860155727217
+            },
+            "100": {
+              "groups": 389,
+              "races": 199,
+              "expected_hits": 2.034971709591927,
+              "actual_hits": 6,
+              "actual_over_market": 2.9484439374359557
+            }
+          },
+          "2026_H1": {
+            "50": {
+              "groups": 460,
+              "races": 195,
+              "expected_hits": 4.161339603494302,
+              "actual_hits": 1,
+              "actual_over_market": 0.24030723163288426
+            },
+            "100": {
+              "groups": 278,
+              "races": 149,
+              "expected_hits": 1.613337261076408,
+              "actual_hits": 1,
+              "actual_over_market": 0.6198332017279552
+            }
+          }
+        }
+      }
+    }
+  }
+}
