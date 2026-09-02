@@ -126,7 +126,6 @@ def main():
                 for i, fn in enumerate(group, 1):
                     pos[int(fn)] = i
 
-            # Keep only the fixed current candidate construction: top45 and 3 lines.
             candidates = [
                 q for q in group_rows
                 if q['group_score_percentile'] <= PCT and q['line_span'] == 3
