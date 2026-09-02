@@ -34,3 +34,5 @@ jobs:
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Add full 50 race reconstruction diagnostic'
           git push origin HEAD:experiment/popular-head-skip-v01
+
+# trigger after result repair table was committed
