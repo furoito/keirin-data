@@ -1,0 +1,37 @@
+name: Analyze fixed logic miss structure
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - experiment/popular-head-skip-v01
+    paths:
+      - 'scripts/analyze_fixed_logic_miss_structure.py'
+      - '.github/workflows/analyze_fixed_logic_miss_structure.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas
+      - run: python scripts/analyze_fixed_logic_miss_structure.py
+      - name: Commit analysis
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add keirin_data/strategy_context/fixed_logic_miss_structure.csv \
+                  keirin_data/strategy_context/fixed_logic_miss_structure_summary.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Add expanded fixed logic miss structure analysis'
+          git pull --rebase origin experiment/popular-head-skip-v01
+          git push origin HEAD:experiment/popular-head-skip-v01
