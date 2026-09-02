@@ -1,0 +1,9 @@
+{
+  "scope": "2025-01..2026-06; popular-head-bust races only; all non-popular line heads",
+  "by_style": {
+    "両": {"observations": 118, "top3_n": 41, "top3_pct": 34.74576271186441},
+    "追": {"observations": 158, "top3_n": 64, "top3_pct": 40.50632911392405},
+    "逃": {"observations": 193, "top3_n": 102, "top3_pct": 52.84974093264248}
+  },
+  "by_style_and_line_size": {
+    "
