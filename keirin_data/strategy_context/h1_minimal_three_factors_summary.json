@@ -1,0 +1,175 @@
+{
+  "status": "exploratory_minimal_three_factor_ticket_test",
+  "fixed_factors": [
+    "ticket 1st rider = running_style 両, line_pos=1, multi-rider line head",
+    "winner own bante excluded",
+    "ticket 2nd and 3rd riders = bantes from two other lines, each with race_score > own bante"
+  ],
+  "explicitly_removed_filters": [
+    "group_score_percentile",
+    "NO_THIRD",
+    "ticket score rank",
+    "ticket score order",
+    "score gaps"
+  ],
+  "warning": "Same discovery data. This isolates whether the three structural factors alone carry value; it is not OOS validation.",
+  "usable_races_by_month": {
+    "2025_01": 983,
+    "2025_02": 724,
+    "2025_03": 679,
+    "2025_04": 374,
+    "2025_05": 548,
+    "2025_06": 820,
+    "2025_07": 609,
+    "2025_08": 80,
+    "2025_09": 80,
+    "2025_10": 62,
+    "2025_11": 78,
+    "2025_12": 77,
+    "2026_01": 79,
+    "2026_02": 79,
+    "2026_03": 79,
+    "2026_04": 78,
+    "2026_05": 65,
+    "2026_06": 75
+  },
+  "skipped": {
+    "odds_board_incomplete": 1235,
+    "ordered_result_missing": 88,
+    "base_or_odds_missing": 97
+  },
+  "overall": {
+    "tickets": 1236,
+    "races": 618,
+    "stake_units": 1236.0,
+    "gross_return_units": 3417.0000000000005,
+    "gross_roi_pct": 276.4563106796117,
+    "net_roi_pct": 176.4563106796117,
+    "actual_hits": 7,
+    "normalized_market_expected_hits": 5.63116105477454,
+    "actual_over_normalized_market": 1.2430828974541317,
+    "avg_ticket_odds": 901.2554207119741,
+    "median_ticket_odds": 462.4
+  },
+  "ticket_odds_bins": {
+    "<50": {
+      "tickets": 74,
+      "races": 51,
+      "stake_units": 74.0,
+      "gross_return_units": 43.7,
+      "gross_roi_pct": 59.054054054054056,
+      "net_roi_pct": -40.94594594594594,
+      "actual_hits": 3,
+      "normalized_market_expected_hits": 2.449168582118407,
+      "actual_over_normalized_market": 1.2249054727809514,
+      "avg_ticket_odds": 29.466216216216218,
+      "median_ticket_odds": 31.7
+    },
+    "50-100": {
+      "tickets": 108,
+      "races": 89,
+      "stake_units": 108.0,
+      "gross_return_units": 51.9,
+      "gross_roi_pct": 48.05555555555556,
+      "net_roi_pct": -51.94444444444444,
+      "actual_hits": 1,
+      "normalized_market_expected_hits": 1.1318386422361084,
+      "actual_over_normalized_market": 0.8835181647662759,
+      "avg_ticket_odds": 74.20277777777777,
+      "median_ticket_odds": 75.2
+    },
+    "100-200": {
+      "tickets": 183,
+      "races": 142,
+      "stake_units": 183.0,
+      "gross_return_units": 0.0,
+      "gross_roi_pct": 0.0,
+      "net_roi_pct": -100.0,
+      "actual_hits": 0,
+      "normalized_market_expected_hits": 0.9722883213365877,
+      "actual_over_normalized_market": 0.0,
+      "avg_ticket_odds": 145.54371584699453,
+      "median_ticket_odds": 142.8
+    },
+    "200-500": {
+      "tickets": 275,
+      "races": 203,
+      "stake_units": 275.0,
+      "gross_return_units": 0.0,
+      "gross_roi_pct": 0.0,
+      "net_roi_pct": -100.0,
+      "actual_hits": 0,
+      "normalized_market_expected_hits": 0.6528687432191944,
+      "actual_over_normalized_market": 0.0,
+      "avg_ticket_odds": 335.21381818181817,
+      "median_ticket_odds": 334.8
+    },
+    "500-1000": {
+      "tickets": 261,
+      "races": 189,
+      "stake_units": 261.0,
+      "gross_return_units": 587.2,
+      "gross_roi_pct": 224.98084291187743,
+      "net_roi_pct": 124.9808429118774,
+      "actual_hits": 1,
+      "normalized_market_expected_hits": 0.28525854096890146,
+      "actual_over_normalized_market": 3.5055917926363467,
+      "avg_ticket_odds": 707.1816091954024,
+      "median_ticket_odds": 687.6
+    },
+    "1000+": {
+      "tickets": 335,
+      "races": 198,
+      "stake_units": 335.0,
+      "gross_return_units": 2734.2,
+      "gross_roi_pct": 816.179104477612,
+      "net_roi_pct": 716.1791044776119,
+      "actual_hits": 2,
+      "normalized_market_expected_hits": 0.13973822489534185,
+      "actual_over_normalized_market": 14.312476070866918,
+      "avg_ticket_odds": 2389.1480597014925,
+      "median_ticket_odds": 1810.3
+    }
+  },
+  "min_ticket_odds": {
+    "50": {
+      "tickets": 1162,
+      "races": 595,
+      "stake_units": 1162.0,
+      "gross_return_units": 3373.3,
+      "gross_roi_pct": 290.30120481927713,
+      "net_roi_pct": 190.30120481927713,
+      "actual_hits": 4,
+      "normalized_market_expected_hits": 3.181992472656134,
+      "actual_over_normalized_market": 1.2570739982489787,
+      "avg_ticket_odds": 956.773838209983,
+      "median_ticket_odds": 511.2
+    },
+    "100": {
+      "tickets": 1054,
+      "races": 554,
+      "stake_units": 1054.0,
+      "gross_return_units": 3321.3999999999996,
+      "gross_roi_pct": 315.12333965844397,
+      "net_roi_pct": 215.123339658444,
+      "actual_hits": 3,
+      "normalized_market_expected_hits": 2.0501538304200255,
+      "actual_over_normalized_market": 1.4633048288797796,
+      "avg_ticket_odds": 1047.208064516129,
+      "median_ticket_odds": 584.05
+    },
+    "200": {
+      "tickets": 871,
+      "races": 466,
+      "stake_units": 871.0,
+      "gross_return_units": 3321.3999999999996,
+      "gross_roi_pct": 381.3318025258323,
+      "net_roi_pct": 281.33180252583236,
+      "actual_hits": 3,
+      "normalized_market_expected_hits": 1.0778655090834377,
+      "actual_over_normalized_market": 2.7832785952591137,
+      "avg_ticket_odds": 1236.6507462686568,
+      "median_ticket_odds": 736.8
+    }
+  }
+}
