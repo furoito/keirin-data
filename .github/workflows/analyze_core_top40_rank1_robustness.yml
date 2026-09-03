@@ -37,3 +37,5 @@ jobs:
           fi
           git commit -m "Add TOP40 cheapest-order robustness results"
           git push origin HEAD:experiment/popular-head-skip-v01
+
+# retrigger latest backfill 2026-09-03
