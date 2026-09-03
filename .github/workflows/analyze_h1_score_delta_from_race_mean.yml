@@ -1,0 +1,36 @@
+name: Analyze H1 score delta from race mean
+
+on:
+  push:
+    branches:
+      - experiment/popular-head-skip-v01
+    paths:
+      - 'scripts/analyze_h1_score_delta_from_race_mean.py'
+      - '.github/workflows/analyze_h1_score_delta_from_race_mean.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - run: python scripts/analyze_h1_score_delta_from_race_mean.py
+      - name: Commit result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add keirin_data/strategy_context/h1_score_delta_from_race_mean_summary.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Add race-mean score delta results'
+          git pull --rebase origin experiment/popular-head-skip-v01
+          git push origin HEAD:experiment/popular-head-skip-v01
