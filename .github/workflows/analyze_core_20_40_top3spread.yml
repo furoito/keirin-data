@@ -31,3 +31,5 @@ jobs:
           git add keirin_data/strategy_context/core_20_40_top3spread_summary.json
           git diff --cached --quiet || git commit -m 'Add 20-40 top3-spread analysis results'
           git push
+
+# retrigger latest backfill 2026-09-03
