@@ -1,0 +1,994 @@
+{
+  "status": "exploratory_three_line_finish_structural_conditions",
+  "warning": "Same discovery data and exploratory feature search. Association only; do not freeze thresholds or infer causality from these cells.",
+  "coverage": {
+    "full_context_rows_seen": 6860,
+    "usable_races": 6371,
+    "skipped": {
+      "no_multi_rider_line": 215,
+      "ordered_result_missing": 121,
+      "base_missing": 153
+    }
+  },
+  "definitions": {
+    "outcome": "actual top3 riders occupy exactly three distinct true_line IDs",
+    "within_line_gap": "absolute race_score difference between line head and line_pos2 for each multi-rider line",
+    "large_gap": "absolute head-bante race_score gap >=2 points",
+    "top3_score_distinct_lines": "number of distinct true_line IDs represented among the three highest race_score riders",
+    "bante_stronger_count": "number of multi-rider lines with line_pos2 race_score > line head race_score",
+    "bante_stronger_by1_count": "same, requiring bante-head gap >=1 point",
+    "ryo_subset": "race contains at least one multi-rider line with running_style='両' at line_pos1"
+  },
+  "all_usable_races": {
+    "overall": {
+      "races": 6371,
+      "three_line_finishes": 1357,
+      "rate": 0.21299638989169675,
+      "wilson95": [
+        0.20311734450540417,
+        0.22322133017019755
+      ],
+      "rate_vs_baseline": 1.0
+    },
+    "feature_1_within_line_score_separation": {
+      "mean_abs_head_bante_gap_band": {
+        "2_TO_4": {
+          "races": 2550,
+          "three_line_finishes": 516,
+          "rate": 0.2023529411764706,
+          "wilson95": [
+            0.1872126555274214,
+            0.2183886613605197
+          ],
+          "rate_vs_baseline": 0.9500299102691925
+        },
+        "GE_4": {
+          "races": 2572,
+          "three_line_finishes": 639,
+          "rate": 0.2484447900466563,
+          "wilson95": [
+            0.23212851104324672,
+            0.26551137841158157
+          ],
+          "rate_vs_baseline": 1.1664272346258269
+        },
+        "LT_1": {
+          "races": 298,
+          "three_line_finishes": 39,
+          "rate": 0.13087248322147652,
+          "wilson95": [
+            0.09723398475586721,
+            0.17390656412847683
+          ],
+          "rate_vs_baseline": 0.6144352178364236
+        },
+        "1_TO_2": {
+          "races": 951,
+          "three_line_finishes": 163,
+          "rate": 0.17139852786540483,
+          "wilson95": [
+            0.14878065256889678,
+            0.19666042120692645
+          ],
+          "rate_vs_baseline": 0.804701563029104
+        }
+      },
+      "max_abs_head_bante_gap_band": {
+        "2_TO_4": {
+          "races": 1475,
+          "three_line_finishes": 254,
+          "rate": 0.17220338983050848,
+          "wilson95": [
+            0.1537931742796453,
+            0.19231658330644744
+          ],
+          "rate_vs_baseline": 0.8084803217466245
+        },
+        "GE_4": {
+          "races": 4356,
+          "three_line_finishes": 1018,
+          "rate": 0.2337006427915519,
+          "wilson95": [
+            0.22137157584836617,
+            0.24649898276879437
+          ],
+          "rate_vs_baseline": 1.0972047127671165
+        },
+        "1_TO_2": {
+          "races": 415,
+          "three_line_finishes": 64,
+          "rate": 0.15421686746987953,
+          "wilson95": [
+            0.12265570784659605,
+            0.19212081688405488
+          ],
+          "rate_vs_baseline": 0.7240351235450276
+        },
+        "LT_1": {
+          "races": 125,
+          "three_line_finishes": 21,
+          "rate": 0.168,
+          "wilson95": [
+            0.1125882142751522,
+            0.2432092071471766
+          ],
+          "rate_vs_baseline": 0.7887457627118645
+        }
+      },
+      "large_gap_count_band": {
+        "2_PLUS": {
+          "races": 3825,
+          "three_line_finishes": 900,
+          "rate": 0.23529411764705882,
+          "wilson95": [
+            0.22212115937202861,
+            0.24899823228235649
+          ],
+          "rate_vs_baseline": 1.1046859421734796
+        },
+        "1": {
+          "races": 2006,
+          "three_line_finishes": 372,
+          "rate": 0.18544366899302095,
+          "wilson95": [
+            0.169042675157169,
+            0.2030471011476256
+          ],
+          "rate_vs_baseline": 0.8706423103570644
+        },
+        "0": {
+          "races": 540,
+          "three_line_finishes": 85,
+          "rate": 0.1574074074074074,
+          "wilson95": [
+            0.12912393278016868,
+            0.1905307312788472
+          ],
+          "rate_vs_baseline": 0.7390144381669805
+        }
+      }
+    },
+    "feature_2_top_score_line_dispersion": {
+      "top3_score_distinct_lines": {
+        "1": {
+          "races": 446,
+          "three_line_finishes": 39,
+          "rate": 0.08744394618834081,
+          "wilson95": [
+            0.06462598216822255,
+            0.11730802417092182
+          ],
+          "rate_vs_baseline": 0.41054191685034586
+        },
+        "2": {
+          "races": 4568,
+          "three_line_finishes": 820,
+          "rate": 0.17950963222416813,
+          "wilson95": [
+            0.16865109582650237,
+            0.19090674834351898
+          ],
+          "rate_vs_baseline": 0.8427825106117725
+        },
+        "3": {
+          "races": 1357,
+          "three_line_finishes": 498,
+          "rate": 0.36698599852616065,
+          "wilson95": [
+            0.3417507211311504,
+            0.3929722345371442
+          ],
+          "rate_vs_baseline": 1.7229681625719746
+        }
+      },
+      "top4_score_distinct_lines": {
+        "1": {
+          "races": 13,
+          "three_line_finishes": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.22809537235419838
+          ],
+          "rate_vs_baseline": 0.0
+        },
+        "2": {
+          "races": 3357,
+          "three_line_finishes": 428,
+          "rate": 0.12749478701221328,
+          "wilson95": [
+            0.11663654642435242,
+            0.1392045782927918
+          ],
+          "rate_vs_baseline": 0.5985772203793742
+        },
+        "3": {
+          "races": 2852,
+          "three_line_finishes": 839,
+          "rate": 0.29417952314165496,
+          "wilson95": [
+            0.27774185454982847,
+            0.31117089956195
+          ],
+          "rate_vs_baseline": 1.3811479306820071
+        },
+        "4": {
+          "races": 149,
+          "three_line_finishes": 90,
+          "rate": 0.6040268456375839,
+          "wilson95": [
+            0.5238348624970076,
+            0.6789896868052051
+          ],
+          "rate_vs_baseline": 2.8358548515527247
+        }
+      }
+    },
+    "feature_3_bante_stronger_lines": {
+      "bante_stronger_count_band": {
+        "2_PLUS": {
+          "races": 2692,
+          "three_line_finishes": 659,
+          "rate": 0.24479940564635957,
+          "wilson95": [
+            0.2289282820103835,
+            0.2613978291545285
+          ],
+          "rate_vs_baseline": 1.1493124637973153
+        },
+        "0": {
+          "races": 962,
+          "three_line_finishes": 211,
+          "rate": 0.21933471933471935,
+          "wilson95": [
+            0.1943307085600903,
+            0.24657132037191734
+          ],
+          "rate_vs_baseline": 1.029757919588428
+        },
+        "1": {
+          "races": 2717,
+          "three_line_finishes": 487,
+          "rate": 0.17924181082075819,
+          "wilson95": [
+            0.16527558121595057,
+            0.19411377447422776
+          ],
+          "rate_vs_baseline": 0.8415251118194919
+        }
+      },
+      "bante_stronger_by1_count_band": {
+        "2_PLUS": {
+          "races": 2008,
+          "three_line_finishes": 520,
+          "rate": 0.2589641434262948,
+          "wilson95": [
+            0.2402767042665647,
+            0.278572061993862
+          ],
+          "rate_vs_baseline": 1.2158147072726044
+        },
+        "0": {
+          "races": 1519,
+          "three_line_finishes": 305,
+          "rate": 0.20078999341672152,
+          "wilson95": [
+            0.1814108821979776,
+            0.22167865497292397
+          ],
+          "rate_vs_baseline": 0.9426920029903705
+        },
+        "1": {
+          "races": 2844,
+          "three_line_finishes": 532,
+          "rate": 0.18706047819971872,
+          "wilson95": [
+            0.17315416402695166,
+            0.20181104181807208
+          ],
+          "rate_vs_baseline": 0.8782330925647811
+        }
+      }
+    },
+    "combined_grids": {
+      "top3_score_distinct_lines_x_bante_stronger_count": {
+        "1": {
+          "0": {
+            "races": 78,
+            "three_line_finishes": 8,
+            "rate": 0.10256410256410256,
+            "wilson95": [
+              0.052893347657463854,
+              0.18954439852402394
+            ],
+            "rate_vs_baseline": 0.4815297696653629
+          },
+          "1": {
+            "races": 193,
+            "three_line_finishes": 9,
+            "rate": 0.046632124352331605,
+            "wilson95": [
+              0.024724444791412097,
+              0.0862352023863191
+            ],
+            "rate_vs_baseline": 0.21893387195925176
+          },
+          "2_PLUS": {
+            "races": 175,
+            "three_line_finishes": 22,
+            "rate": 0.12571428571428572,
+            "wilson95": [
+              0.08450475362162202,
+              0.18300289888897292
+            ],
+            "rate_vs_baseline": 0.5902179176755449
+          }
+        },
+        "2": {
+          "0": {
+            "races": 657,
+            "three_line_finishes": 112,
+            "rate": 0.1704718417047184,
+            "wilson95": [
+              0.14365256280766533,
+              0.20112220242466292
+            ],
+            "rate_vs_baseline": 0.8003508500374068
+          },
+          "1": {
+            "races": 2021,
+            "three_line_finishes": 309,
+            "rate": 0.15289460663038099,
+            "wilson95": [
+              0.13786394198859597,
+              0.16924230384206096
+            ],
+            "rate_vs_baseline": 0.7178272209595853
+          },
+          "2_PLUS": {
+            "races": 1890,
+            "three_line_finishes": 399,
+            "rate": 0.2111111111111111,
+            "wilson95": [
+              0.19330799701325474,
+              0.23008618684836873
+            ],
+            "rate_vs_baseline": 0.9911487758945386
+          }
+        },
+        "3": {
+          "0": {
+            "races": 227,
+            "three_line_finishes": 91,
+            "rate": 0.4008810572687225,
+            "wilson95": [
+              0.3392888491656734,
+              0.46577216444127273
+            ],
+            "rate_vs_baseline": 1.882102590905697
+          },
+          "1": {
+            "races": 503,
+            "three_line_finishes": 169,
+            "rate": 0.3359840954274354,
+            "wilson95": [
+              0.29608770892674435,
+              0.37836670452254634
+            ],
+            "rate_vs_baseline": 1.5774168548033831
+          },
+          "2_PLUS": {
+            "races": 627,
+            "three_line_finishes": 238,
+            "rate": 0.379585326953748,
+            "wilson95": [
+              0.3424424947545357,
+              0.4181946702753563
+            ],
+            "rate_vs_baseline": 1.7821209417998
+          }
+        }
+      },
+      "large_gap_count_x_top3_score_distinct_lines": {
+        "0": {
+          "1": {
+            "races": 89,
+            "three_line_finishes": 7,
+            "rate": 0.07865168539325842,
+            "wilson95": [
+              0.03861982216517404,
+              0.15355142382043202
+            ],
+            "rate_vs_baseline": 0.3692629975242811
+          },
+          "2": {
+            "races": 416,
+            "three_line_finishes": 66,
+            "rate": 0.15865384615384615,
+            "wilson95": [
+              0.12669014757248157,
+              0.19686403214636625
+            ],
+            "rate_vs_baseline": 0.7448663624511082
+          },
+          "3": {
+            "races": 35,
+            "three_line_finishes": 12,
+            "rate": 0.34285714285714286,
+            "wilson95": [
+              0.20831694987048957,
+              0.5084805048600374
+            ],
+            "rate_vs_baseline": 1.609685230024213
+          }
+        },
+        "1": {
+          "1": {
+            "races": 192,
+            "three_line_finishes": 12,
+            "rate": 0.0625,
+            "wilson95": [
+              0.03611064877145607,
+              0.1060526040369538
+            ],
+            "rate_vs_baseline": 0.2934322033898305
+          },
+          "2": {
+            "races": 1580,
+            "three_line_finishes": 270,
+            "rate": 0.17088607594936708,
+            "wilson95": [
+              0.15312956795816265,
+              0.19023905381388687
+            ],
+            "rate_vs_baseline": 0.8022956447114353
+          },
+          "3": {
+            "races": 234,
+            "three_line_finishes": 90,
+            "rate": 0.38461538461538464,
+            "wilson95": [
+              0.3246221017980506,
+              0.4483359002771471
+            ],
+            "rate_vs_baseline": 1.8057366362451108
+          }
+        },
+        "2_PLUS": {
+          "1": {
+            "races": 165,
+            "three_line_finishes": 20,
+            "rate": 0.12121212121212122,
+            "wilson95": [
+              0.07985230358350204,
+              0.17980820353905713
+            ],
+            "rate_vs_baseline": 0.5690806368772471
+          },
+          "2": {
+            "races": 2572,
+            "three_line_finishes": 484,
+            "rate": 0.18818040435458788,
+            "wilson95": [
+              0.17354423221979032,
+              0.20374663538882226
+            ],
+            "rate_vs_baseline": 0.8834910509528956
+          },
+          "3": {
+            "races": 1088,
+            "three_line_finishes": 396,
+            "rate": 0.3639705882352941,
+            "wilson95": [
+              0.3359060868905175,
+              0.39299228236566397
+            ],
+            "rate_vs_baseline": 1.708811066799601
+          }
+        }
+      }
+    }
+  },
+  "ryo_head_present_subset": {
+    "overall": {
+      "races": 3128,
+      "three_line_finishes": 659,
+      "rate": 0.21067774936061381,
+      "wilson95": [
+        0.19674636022409672,
+        0.22531889314234863
+      ],
+      "rate_vs_baseline": 1.0
+    },
+    "feature_1_within_line_score_separation": {
+      "mean_abs_head_bante_gap_band": {
+        "2_TO_4": {
+          "races": 1281,
+          "three_line_finishes": 260,
+          "rate": 0.2029664324746292,
+          "wilson95": [
+            0.1818441329227658,
+            0.2258648923615738
+          ],
+          "rate_vs_baseline": 0.9633975732634903
+        },
+        "GE_4": {
+          "races": 1251,
+          "three_line_finishes": 311,
+          "rate": 0.24860111910471622,
+          "wilson95": [
+            0.2254449950478254,
+            0.2732964630235893
+          ],
+          "rate_vs_baseline": 1.1800065258870294
+        },
+        "LT_1": {
+          "races": 137,
+          "three_line_finishes": 15,
+          "rate": 0.10948905109489052,
+          "wilson95": [
+            0.06748288586903367,
+            0.17279763312060442
+          ],
+          "rate_vs_baseline": 0.519699168171195
+        },
+        "1_TO_2": {
+          "races": 459,
+          "three_line_finishes": 73,
+          "rate": 0.15904139433551198,
+          "wilson95": [
+            0.128433645974544,
+            0.19530887096092153
+          ],
+          "rate_vs_baseline": 0.7549036137807003
+        }
+      },
+      "max_abs_head_bante_gap_band": {
+        "2_TO_4": {
+          "races": 706,
+          "three_line_finishes": 117,
+          "rate": 0.16572237960339944,
+          "wilson95": [
+            0.1401181162713581,
+            0.19494467256015882
+          ],
+          "rate_vs_baseline": 0.7866154831554377
+        },
+        "GE_4": {
+          "races": 2176,
+          "three_line_finishes": 507,
+          "rate": 0.23299632352941177,
+          "wilson95": [
+            0.21571427410246255,
+            0.2512194355496843
+          ],
+          "rate_vs_baseline": 1.1059370257966616
+        },
+        "1_TO_2": {
+          "races": 189,
+          "three_line_finishes": 26,
+          "rate": 0.13756613756613756,
+          "wilson95": [
+            0.09563816040105562,
+            0.19393369392004278
+          ],
+          "rate_vs_baseline": 0.6529694663230323
+        },
+        "LT_1": {
+          "races": 57,
+          "three_line_finishes": 9,
+          "rate": 0.15789473684210525,
+          "wilson95": [
+            0.0853579597035527,
+            0.2736317694063802
+          ],
+          "rate_vs_baseline": 0.7494609056784601
+        }
+      },
+      "large_gap_count_band": {
+        "2_PLUS": {
+          "races": 1972,
+          "three_line_finishes": 458,
+          "rate": 0.23225152129817445,
+          "wilson95": [
+            0.21414561497541224,
+            0.25139854835523934
+          ],
+          "rate_vs_baseline": 1.1024017581497567
+        },
+        "1": {
+          "races": 910,
+          "three_line_finishes": 166,
+          "rate": 0.1824175824175824,
+          "wilson95": [
+            0.15867831944889604,
+            0.20882684851984018
+          ],
+          "rate_vs_baseline": 0.8658606946922576
+        },
+        "0": {
+          "races": 246,
+          "three_line_finishes": 35,
+          "rate": 0.14227642276422764,
+          "wilson95": [
+            0.1041120685313657,
+            0.19144119620396619
+          ],
+          "rate_vs_baseline": 0.6753272388566071
+        }
+      }
+    },
+    "feature_2_top_score_line_dispersion": {
+      "top3_score_distinct_lines": {
+        "1": {
+          "races": 202,
+          "three_line_finishes": 11,
+          "rate": 0.054455445544554455,
+          "wilson95": [
+            0.030675819667691263,
+            0.09486477341178304
+          ],
+          "rate_vs_baseline": 0.25847744106732373
+        },
+        "2": {
+          "races": 2268,
+          "three_line_finishes": 419,
+          "rate": 0.18474426807760141,
+          "wilson95": [
+            0.1693099546382919,
+            0.2012447139333836
+          ],
+          "rate_vs_baseline": 0.8769045076581748
+        },
+        "3": {
+          "races": 658,
+          "three_line_finishes": 229,
+          "rate": 0.34802431610942247,
+          "wilson95": [
+            0.31260530716947804,
+            0.3852075189469591
+          ],
+          "rate_vs_baseline": 1.6519272546134651
+        }
+      },
+      "top4_score_distinct_lines": {
+        "1": {
+          "races": 4,
+          "three_line_finishes": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.4898908364545973
+          ],
+          "rate_vs_baseline": 0.0
+        },
+        "2": {
+          "races": 1590,
+          "three_line_finishes": 194,
+          "rate": 0.1220125786163522,
+          "wilson95": [
+            0.10682941869068285,
+            0.13901778063529224
+          ],
+          "rate_vs_baseline": 0.5791431652685124
+        },
+        "3": {
+          "races": 1469,
+          "three_line_finishes": 428,
+          "rate": 0.291354663036079,
+          "wilson95": [
+            0.268686724508111,
+            0.3151109773227229
+          ],
+          "rate_vs_baseline": 1.3829398876735282
+        },
+        "4": {
+          "races": 65,
+          "three_line_finishes": 37,
+          "rate": 0.5692307692307692,
+          "wilson95": [
+            0.4483297467424586,
+            0.6824054258436073
+          ],
+          "rate_vs_baseline": 2.701902649702346
+        }
+      }
+    },
+    "feature_3_bante_stronger_lines": {
+      "bante_stronger_count_band": {
+        "2_PLUS": {
+          "races": 1379,
+          "three_line_finishes": 334,
+          "rate": 0.2422044960116026,
+          "wilson95": [
+            0.2203290208704657,
+            0.26551225510172677
+          ],
+          "rate_vs_baseline": 1.149644405954921
+        },
+        "0": {
+          "races": 442,
+          "three_line_finishes": 95,
+          "rate": 0.2149321266968326,
+          "wilson95": [
+            0.17917970929278204,
+            0.25559694726452603
+          ],
+          "rate_vs_baseline": 1.0201937667795027
+        },
+        "1": {
+          "races": 1307,
+          "three_line_finishes": 230,
+          "rate": 0.17597551644988524,
+          "wilson95": [
+            0.15628889285221342,
+            0.1975612662951725
+          ],
+          "rate_vs_baseline": 0.8352828762598498
+        }
+      },
+      "bante_stronger_by1_count_band": {
+        "2_PLUS": {
+          "races": 1034,
+          "three_line_finishes": 261,
+          "rate": 0.2524177949709865,
+          "wilson95": [
+            0.22688983936214904,
+            0.2797785485226548
+          ],
+          "rate_vs_baseline": 1.1981227051126642
+        },
+        "0": {
+          "races": 720,
+          "three_line_finishes": 147,
+          "rate": 0.20416666666666666,
+          "wilson95": [
+            0.17632973796614762,
+            0.23514359668637017
+          ],
+          "rate_vs_baseline": 0.9690945877592311
+        },
+        "1": {
+          "races": 1374,
+          "three_line_finishes": 251,
+          "rate": 0.1826783114992722,
+          "wilson95": [
+            0.16314110174095023,
+            0.20398492395844195
+          ],
+          "rate_vs_baseline": 0.8670982676323572
+        }
+      }
+    },
+    "combined_grids": {
+      "top3_score_distinct_lines_x_bante_stronger_count": {
+        "1": {
+          "0": {
+            "races": 30,
+            "three_line_finishes": 3,
+            "rate": 0.1,
+            "wilson95": [
+              0.03459988874733419,
+              0.25621082579184085
+            ],
+            "rate_vs_baseline": 0.47465857359635816
+          },
+          "1": {
+            "races": 85,
+            "three_line_finishes": 4,
+            "rate": 0.047058823529411764,
+            "wilson95": [
+              0.018450260833070706,
+              0.1148372715631877
+            ],
+            "rate_vs_baseline": 0.22336874051593322
+          },
+          "2_PLUS": {
+            "races": 87,
+            "three_line_finishes": 4,
+            "rate": 0.04597701149425287,
+            "wilson95": [
+              0.018022688467086906,
+              0.11233033507987294
+            ],
+            "rate_vs_baseline": 0.2182338269408543
+          }
+        },
+        "2": {
+          "0": {
+            "races": 313,
+            "three_line_finishes": 56,
+            "rate": 0.17891373801916932,
+            "wilson95": [
+              0.14042449473125337,
+              0.22518882889080064
+            ],
+            "rate_vs_baseline": 0.8492293968497141
+          },
+          "1": {
+            "races": 980,
+            "three_line_finishes": 146,
+            "rate": 0.1489795918367347,
+            "wilson95": [
+              0.12805856364677415,
+              0.1726417739617993
+            ],
+            "rate_vs_baseline": 0.7071444055619213
+          },
+          "2_PLUS": {
+            "races": 975,
+            "three_line_finishes": 217,
+            "rate": 0.22256410256410256,
+            "wilson95": [
+              0.1975715208018831,
+              0.2497342761432161
+            ],
+            "rate_vs_baseline": 1.0564195945683046
+          }
+        },
+        "3": {
+          "0": {
+            "races": 99,
+            "three_line_finishes": 36,
+            "rate": 0.36363636363636365,
+            "wilson95": [
+              0.27561895587854657,
+              0.46184101104904285
+            ],
+            "rate_vs_baseline": 1.7260311767140295
+          },
+          "1": {
+            "races": 242,
+            "three_line_finishes": 80,
+            "rate": 0.3305785123966942,
+            "wilson95": [
+              0.274362182793934,
+              0.39208951988731655
+            ],
+            "rate_vs_baseline": 1.5691192515582086
+          },
+          "2_PLUS": {
+            "races": 317,
+            "three_line_finishes": 113,
+            "rate": 0.35646687697160884,
+            "wilson95": [
+              0.3057492038226241,
+              0.41062161578876416
+            ],
+            "rate_vs_baseline": 1.6920005935769233
+          }
+        }
+      },
+      "large_gap_count_x_top3_score_distinct_lines": {
+        "0": {
+          "1": {
+            "races": 31,
+            "three_line_finishes": 1,
+            "rate": 0.03225806451612903,
+            "wilson95": [
+              0.005717221525416816,
+              0.16194105164724906
+            ],
+            "rate_vs_baseline": 0.153115668902051
+          },
+          "2": {
+            "races": 201,
+            "three_line_finishes": 30,
+            "rate": 0.14925373134328357,
+            "wilson95": [
+              0.10659209939251825,
+              0.20507068209829843
+            ],
+            "rate_vs_baseline": 0.7084456322333702
+          },
+          "3": {
+            "races": 14,
+            "three_line_finishes": 4,
+            "rate": 0.2857142857142857,
+            "wilson95": [
+              0.11721378644576919,
+              0.5464908432989318
+            ],
+            "rate_vs_baseline": 1.3561673531324516
+          }
+        },
+        "1": {
+          "1": {
+            "races": 87,
+            "three_line_finishes": 3,
+            "rate": 0.034482758620689655,
+            "wilson95": [
+              0.011795820527505975,
+              0.09654082386874399
+            ],
+            "rate_vs_baseline": 0.1636753702056407
+          },
+          "2": {
+            "races": 721,
+            "three_line_finishes": 125,
+            "rate": 0.17337031900138697,
+            "wilson95": [
+              0.1474876740191896,
+              0.20271505753219032
+            ],
+            "rate_vs_baseline": 0.8229170832114392
+          },
+          "3": {
+            "races": 102,
+            "three_line_finishes": 38,
+            "rate": 0.37254901960784315,
+            "wilson95": [
+              0.2849497607818802,
+              0.46939980800055153
+            ],
+            "rate_vs_baseline": 1.7683358624178047
+          }
+        },
+        "2_PLUS": {
+          "1": {
+            "races": 84,
+            "three_line_finishes": 7,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.040952550622407165,
+              0.16215722305647606
+            ],
+            "rate_vs_baseline": 0.3955488113302984
+          },
+          "2": {
+            "races": 1346,
+            "three_line_finishes": 264,
+            "rate": 0.1961367013372957,
+            "wilson95": [
+              0.17580130820625173,
+              0.21820159883539753
+            ],
+            "rate_vs_baseline": 0.9309796688665568
+          },
+          "3": {
+            "races": 542,
+            "three_line_finishes": 187,
+            "rate": 0.34501845018450183,
+            "wilson95": [
+              0.30621467304636046,
+              0.38600364916945523
+            ],
+            "rate_vs_baseline": 1.6376596542900177
+          }
+        }
+      }
+    }
+  },
+  "selected_combined_signatures": {
+    "top3_scores_on_3_lines_AND_2plus_bante_stronger": {
+      "races": 627,
+      "three_line_finishes": 238,
+      "rate": 0.379585326953748,
+      "wilson95": [
+        0.3424424947545357,
+        0.4181946702753563
+      ],
+      "rate_vs_baseline": 1.7821209417998
+    },
+    "top3_scores_on_3_lines_AND_2plus_large_gaps": {
+      "races": 1088,
+      "three_line_finishes": 396,
+      "rate": 0.3639705882352941,
+      "wilson95": [
+        0.3359060868905175,
+        0.39299228236566397
+      ],
+      "rate_vs_baseline": 1.708811066799601
+    },
+    "top3_scores_on_3_lines_AND_2plus_bante_stronger_AND_2plus_large_gaps": {
+      "races": 536,
+      "three_line_finishes": 210,
+      "rate": 0.3917910447761194,
+      "wilson95": [
+        0.35137552976275427,
+        0.4337465683928658
+      ],
+      "rate_vs_baseline": 1.8394257525929674
+    }
+  }
+}
