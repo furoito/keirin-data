@@ -1,0 +1,200 @@
+{
+  "count": 17,
+  "wins_count": 6,
+  "misses_count": 11,
+  "wins": [
+    {
+      "month": "2025_08",
+      "race_id": "8420250803020001",
+      "trio_key": "3-4-7",
+      "rank1_order": "3-4-7",
+      "rank1_posted_odds": 4.4,
+      "rank1_exact_hit": 1,
+      "winner_odds_rank": 1.0,
+      "effective_group_odds": 3.548207380197081
+    },
+    {
+      "month": "2025_06",
+      "race_id": "8120250610030009",
+      "trio_key": "2-4-5",
+      "rank1_order": "2-4-5",
+      "rank1_posted_odds": 12.7,
+      "rank1_exact_hit": 1,
+      "winner_odds_rank": 1.0,
+      "effective_group_odds": 9.313653513818366
+    },
+    {
+      "month": "2025_11",
+      "race_id": "8120251104020002",
+      "trio_key": "2-5-7",
+      "rank1_order": "5-2-7",
+      "rank1_posted_odds": 25.2,
+      "rank1_exact_hit": 1,
+      "winner_odds_rank": 1.0,
+      "effective_group_odds": 16.83507031999739
+    },
+    {
+      "month": "2025_11",
+      "race_id": "2620251104030007",
+      "trio_key": "3-4-7",
+      "rank1_order": "4-3-7",
+      "rank1_posted_odds": 35.2,
+      "rank1_exact_hit": 1,
+      "winner_odds_rank": 1.0,
+      "effective_group_odds": 17.30616470355086
+    },
+    {
+      "month": "2025_04",
+      "race_id": "3120250422030011",
+      "trio_key": "3-4-7",
+      "rank1_order": "3-7-4",
+      "rank1_posted_odds": 54.0,
+      "rank1_exact_hit": 1,
+      "winner_odds_rank": 1.0,
+      "effective_group_odds": 45.17012172123125
+    },
+    {
+      "month": "2025_09",
+      "race_id": "5320250919030001",
+      "trio_key": "2-3-5",
+      "rank1_order": "3-2-5",
+      "rank1_posted_odds": 75.3,
+      "rank1_exact_hit": 1,
+      "winner_odds_rank": 1.0,
+      "effective_group_odds": 30.98642997286337
+    }
+  ],
+  "misses": [
+    {
+      "month": "2025_07",
+      "race_id": "3820250729030011",
+      "trio_key": "1-4-7",
+      "rank1_order": "1-4-7",
+      "rank1_posted_odds": 16.7,
+      "rank1_exact_hit": 0,
+      "winner_odds_rank": 4.0,
+      "effective_group_odds": 7.588224611372199
+    },
+    {
+      "month": "2025_06",
+      "race_id": "8120250618030001",
+      "trio_key": "1-3-7",
+      "rank1_order": "3-1-7",
+      "rank1_posted_odds": 18.5,
+      "rank1_exact_hit": 0,
+      "winner_odds_rank": 2.0,
+      "effective_group_odds": 6.446700474986288
+    },
+    {
+      "month": "2025_09",
+      "race_id": "8120250924030002",
+      "trio_key": "1-6-7",
+      "rank1_order": "1-7-6",
+      "rank1_posted_odds": 18.9,
+      "rank1_exact_hit": 0,
+      "winner_odds_rank": 3.0,
+      "effective_group_odds": 7.850153815571721
+    },
+    {
+      "month": "2025_01",
+      "race_id": "3820250119020001",
+      "trio_key": "2-4-6",
+      "rank1_order": "2-6-4",
+      "rank1_posted_odds": 24.2,
+      "rank1_exact_hit": 0,
+      "winner_odds_rank": 4.0,
+      "effective_group_odds": 7.564949626524473
+    },
+    {
+      "month": "2025_06",
+      "race_id": "5120250602030008",
+      "trio_key": "1-5-7",
+      "rank1_order": "7-5-1",
+      "rank1_posted_odds": 25.5,
+      "rank1_exact_hit": 0,
+      "winner_odds_rank": 6.0,
+      "effective_group_odds": 8.061083017661646
+    },
+    {
+      "month": "2025_02",
+      "race_id": "4720250209020011",
+      "trio_key": "2-6-7",
+      "rank1_order": "2-7-6",
+      "rank1_posted_odds": 26.6,
+      "rank1_exact_hit": 0,
+      "winner_odds_rank": 6.0,
+      "effective_group_odds": 10.073980574191006
+    },
+    {
+      "month": "2025_11",
+      "race_id": "4820251112010009",
+      "trio_key": "1-4-7",
+      "rank1_order": "1-4-7",
+      "rank1_posted_odds": 61.6,
+      "rank1_exact_hit": 0,
+      "winner_odds_rank": 2.0,
+      "effective_group_odds": 32.16976759399761
+    },
+    {
+      "month": "2025_10",
+      "race_id": "7320251020010005",
+      "trio_key": "1-2-3",
+      "rank1_order": "2-3-1",
+      "rank1_posted_odds": 104.4,
+      "rank1_exact_hit": 0,
+      "winner_odds_rank": 6.0,
+      "effective_group_odds": 38.87785695980731
+    },
+    {
+      "month": "2025_05",
+      "race_id": "4420250530020008",
+      "trio_key": "1-3-5",
+      "rank1_order": "5-1-3",
+      "rank1_posted_odds": 105.6,
+      "rank1_exact_hit": 0,
+      "winner_odds_rank": 2.0,
+      "effective_group_odds": 58.34471735961979
+    },
+    {
+      "month": "2025_04",
+      "race_id": "7120250401010001",
+      "trio_key": "2-3-5",
+      "rank1_order": "2-5-3",
+      "rank1_posted_odds": 151.6,
+      "rank1_exact_hit": 0,
+      "winner_odds_rank": 4.0,
+      "effective_group_odds": 46.90198384852536
+    },
+    {
+      "month": "2025_07",
+      "race_id": "8620250728020002",
+      "trio_key": "2-3-7",
+      "rank1_order": "2-3-7",
+      "rank1_posted_odds": 176.8,
+      "rank1_exact_hit": 0,
+      "winner_odds_rank": 2.0,
+      "effective_group_odds": 60.26845504956913
+    }
+  ],
+  "winning_cheapest_odds": [
+    4.4,
+    12.7,
+    25.2,
+    35.2,
+    54.0,
+    75.3
+  ],
+  "miss_cheapest_odds": [
+    16.7,
+    18.5,
+    18.9,
+    24.2,
+    25.5,
+    26.6,
+    61.6,
+    104.4,
+    105.6,
+    151.6,
+    176.8
+  ]
+}
