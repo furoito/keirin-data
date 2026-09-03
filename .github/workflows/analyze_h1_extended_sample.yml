@@ -1,0 +1,42 @@
+name: Analyze H1 extended sample
+
+on:
+  push:
+    branches:
+      - experiment/popular-head-skip-v01
+    paths:
+      - 'scripts/analyze_h1_extended_sample.py'
+      - '.github/workflows/analyze_h1_extended_sample.yml'
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - run: python scripts/analyze_h1_extended_sample.py
+      - name: Commit result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add keirin_data/strategy_context/h1_canonical_three_line_ryo_bante_strong_extended_2024_2026_summary.json
+          git add keirin_data/strategy_context/h1_canonical_three_line_ryo_bante_strong_extended_2024_2026_tickets.csv
+          git add keirin_data/strategy_context/h1_cheapest_order_cumulative_extended_2024_2026_summary.json
+          git add keirin_data/strategy_context/h1_cheapest_order_cumulative_extended_2024_2026_tickets.csv
+          if git diff --cached --quiet; then
+            echo 'No result changes'
+          else
+            git commit -m 'Add extended 2024-2026 H1 results'
+            git fetch origin experiment/popular-head-skip-v01
+            git rebase origin/experiment/popular-head-skip-v01
+            git push origin HEAD:experiment/popular-head-skip-v01
+          fi
