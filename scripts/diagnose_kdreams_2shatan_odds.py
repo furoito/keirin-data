@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# trigger workflow after workflow file creation
 from __future__ import annotations
 
 from io import StringIO
@@ -41,7 +42,6 @@ def inspect_table(df, idx):
         'columns': [str(x) for x in df.columns],
         'head': df.head(10).astype(str).values.tolist(),
     }
-    # Candidate 2shatan matrix: find seven rider-number columns and seven rider-number rows.
     colmap = {}
     for c in df.columns:
         vals = c if isinstance(c, tuple) else (c,)
