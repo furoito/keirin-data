@@ -10,6 +10,8 @@ Also split the exact same candidate set into:
 - ANY_SOLO: at least one selected rider belongs to a one-rider line
 - NO_SOLO: all three selected riders belong to multi-rider lines
 
+And compare NO_SOLO score-quality cuts at top50% vs top40% without changing any other filter.
+
 This is same-data discovery. No score-order/rank/gap filters.
 """
 from __future__ import annotations
@@ -134,7 +136,6 @@ def main():
             if set(frames)-set(score):
                 skipped['score_missing']+=1; continue
 
-            # rank every unordered trio by score sum; lower percentile = stronger trio
             all_groups=list(itertools.combinations(frames,3))
             score_sums={g:float(sum(score[x] for x in g)) for g in all_groups}
             ordered=sorted(all_groups,key=lambda g:(-score_sums[g],g))
@@ -171,18 +172,20 @@ def main():
 
     any_solo=df[df.any_solo==1].copy()
     no_solo=df[df.any_solo==0].copy()
+    no_solo_top40=no_solo[no_solo.group_score_percentile<=0.40].copy()
 
     payload={
-        'status':'exploratory_three_lines_role_highscore_ticket_test_with_solo_split',
-        'hypothesis':'Exactly 3 lines + all three riders are either running_style=両 or line_pos=2 + trio score-sum top50% may be underpriced, especially at high quoted trifecta odds.',
+        'status':'exploratory_three_lines_role_highscore_ticket_test_with_solo_split_and_top40',
+        'hypothesis':'Exactly 3 lines + all three riders are either running_style=両 or line_pos=2 + high trio score-sum may be underpriced.',
         'fixed_filters':[
             'exactly 3 distinct lines',
             "each rider: running_style='両' OR line_pos=2",
-            'unordered trio race_score sum percentile <= 50% within race',
+            'base candidate generated at unordered trio race_score sum percentile <= 50% within race',
         ],
         'solo_definition':'selected rider belongs to a true_line group of size 1; NO_SOLO means all three riders belong to multi-rider lines',
+        'score_cut_comparison':'NO_SOLO top50% vs stricter top40%; all other filters identical',
         'explicitly_not_used':['score order','individual score rank','score gaps','own-bante exclusion','winner fixed as 両'],
-        'warning':'Same discovery data; solo exclusion is a diagnostic suggested after earlier solo results, not OOS validation.',
+        'warning':'Same discovery data; top40 is an exploratory tightening of the score threshold, not OOS validation.',
         'usable_races_by_month':usable_by_month,
         'skipped':dict(skipped),
         'overall':agg(df),
@@ -191,6 +194,10 @@ def main():
         'solo_split':{
             'ANY_SOLO':full_view(any_solo),
             'NO_SOLO':full_view(no_solo),
+        },
+        'no_solo_score_cut_views':{
+            'TOP50':full_view(no_solo),
+            'TOP40':full_view(no_solo_top40),
         },
         'role_pattern_views':role_views,
     }
