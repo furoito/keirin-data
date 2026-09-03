@@ -1,0 +1,298 @@
+{
+  "status": "exploratory_high_odds_filter_relaxation",
+  "fixed_conditions": [
+    "exactly 3 distinct true lines",
+    "each selected rider is running_style=両 OR line_pos=2",
+    "0.20 < group_score_percentile <= 0.40",
+    "bet cheapest posted 3rentan order within group"
+  ],
+  "changed_condition": "race top3 riders by race_score spread across 3 lines: required vs removed",
+  "variants": {
+    "TOP3_SPREAD_REQUIRED": {
+      "all_odds": {
+        "tickets": 467,
+        "races": 403,
+        "exact_wins": 6,
+        "group_hits": 17,
+        "gross_return_units": 206.8,
+        "posted_odds_roi": 0.4428265524625268,
+        "exact_expected_hits_normalized_market": 4.326060796532319,
+        "exact_actual_over_market": 1.3869430602569146,
+        "group_expected_hits_normalized_market": 11.943974369192981,
+        "group_actual_over_market": 1.4233118285859685,
+        "median_posted_odds": 189.8
+      },
+      "ge100": {
+        "tickets": 332,
+        "races": 293,
+        "exact_wins": 0,
+        "group_hits": 4,
+        "gross_return_units": 0.0,
+        "posted_odds_roi": 0.0,
+        "exact_expected_hits_normalized_market": 1.0687567665335735,
+        "exact_actual_over_market": 0.0,
+        "group_expected_hits_normalized_market": 3.5204101857674024,
+        "group_actual_over_market": 1.1362312312842184,
+        "median_posted_odds": 254.75
+      },
+      "100_to_200": {
+        "tickets": 113,
+        "races": 108,
+        "exact_wins": 0,
+        "group_hits": 4,
+        "gross_return_units": 0.0,
+        "posted_odds_roi": 0.0,
+        "exact_expected_hits_normalized_market": 0.58225091384873,
+        "exact_actual_over_market": 0.0,
+        "group_expected_hits_normalized_market": 1.8207384714034058,
+        "group_actual_over_market": 2.196910793518216,
+        "median_posted_odds": 148.4
+      },
+      "ge200": {
+        "tickets": 219,
+        "races": 200,
+        "exact_wins": 0,
+        "group_hits": 0,
+        "gross_return_units": 0.0,
+        "posted_odds_roi": 0.0,
+        "exact_expected_hits_normalized_market": 0.4865058526848437,
+        "exact_actual_over_market": 0.0,
+        "group_expected_hits_normalized_market": 1.6996717143639957,
+        "group_actual_over_market": 0.0,
+        "median_posted_odds": 331.6
+      },
+      "by_year_ge100": {
+        "2024": {
+          "tickets": 36,
+          "races": 33,
+          "exact_wins": 0,
+          "group_hits": 0,
+          "gross_return_units": 0.0,
+          "posted_odds_roi": 0.0,
+          "exact_expected_hits_normalized_market": 0.11275722189964729,
+          "exact_actual_over_market": 0.0,
+          "group_expected_hits_normalized_market": 0.3600656644136856,
+          "group_actual_over_market": 0.0,
+          "median_posted_odds": 275.0
+        },
+        "2025": {
+          "tickets": 270,
+          "races": 240,
+          "exact_wins": 0,
+          "group_hits": 4,
+          "gross_return_units": 0.0,
+          "posted_odds_roi": 0.0,
+          "exact_expected_hits_normalized_market": 0.8911713617049986,
+          "exact_actual_over_market": 0.0,
+          "group_expected_hits_normalized_market": 2.9270001553439497,
+          "group_actual_over_market": 1.3665868765661076,
+          "median_posted_odds": 245.2
+        },
+        "2026": {
+          "tickets": 26,
+          "races": 20,
+          "exact_wins": 0,
+          "group_hits": 0,
+          "gross_return_units": 0.0,
+          "posted_odds_roi": 0.0,
+          "exact_expected_hits_normalized_market": 0.0648281829289277,
+          "exact_actual_over_market": 0.0,
+          "group_expected_hits_normalized_market": 0.23334436600976632,
+          "group_actual_over_market": 0.0,
+          "median_posted_odds": 318.35
+        }
+      }
+    },
+    "TOP3_SPREAD_REMOVED_ALL": {
+      "all_odds": {
+        "tickets": 2269,
+        "races": 1785,
+        "exact_wins": 21,
+        "group_hits": 59,
+        "gross_return_units": 2398.2,
+        "posted_odds_roi": 1.056941383869546,
+        "exact_expected_hits_normalized_market": 18.01233539622616,
+        "exact_actual_over_market": 1.1658676977778129,
+        "group_expected_hits_normalized_market": 48.41209207254552,
+        "group_actual_over_market": 1.2187037881277367,
+        "median_posted_odds": 212.3
+      },
+      "ge100": {
+        "tickets": 1739,
+        "races": 1398,
+        "exact_wins": 6,
+        "group_hits": 25,
+        "gross_return_units": 1880.6,
+        "posted_odds_roi": 1.0814261069580218,
+        "exact_expected_hits_normalized_market": 5.313548927940757,
+        "exact_actual_over_market": 1.1291888117279978,
+        "group_expected_hits_normalized_market": 17.14941523194011,
+        "group_actual_over_market": 1.4577756536816768,
+        "median_posted_odds": 274.7
+      },
+      "100_to_200": {
+        "tickets": 543,
+        "races": 499,
+        "exact_wins": 1,
+        "group_hits": 13,
+        "gross_return_units": 167.3,
+        "posted_odds_roi": 0.30810313075506446,
+        "exact_expected_hits_normalized_market": 2.8264381827617693,
+        "exact_actual_over_market": 0.35380218329165086,
+        "group_expected_hits_normalized_market": 8.688651609009744,
+        "group_actual_over_market": 1.496204541855445,
+        "median_posted_odds": 147.7
+      },
+      "ge200": {
+        "tickets": 1196,
+        "races": 1004,
+        "exact_wins": 5,
+        "group_hits": 12,
+        "gross_return_units": 1713.3,
+        "posted_odds_roi": 1.43252508361204,
+        "exact_expected_hits_normalized_market": 2.4871107451789873,
+        "exact_actual_over_market": 2.010364841892141,
+        "group_expected_hits_normalized_market": 8.460763622930365,
+        "group_actual_over_market": 1.4183116955870976,
+        "median_posted_odds": 362.4
+      },
+      "by_year_ge100": {
+        "2024": {
+          "tickets": 147,
+          "races": 123,
+          "exact_wins": 0,
+          "group_hits": 0,
+          "gross_return_units": 0.0,
+          "posted_odds_roi": 0.0,
+          "exact_expected_hits_normalized_market": 0.4364291571752079,
+          "exact_actual_over_market": 0.0,
+          "group_expected_hits_normalized_market": 1.4005078352354619,
+          "group_actual_over_market": 0.0,
+          "median_posted_odds": 297.4
+        },
+        "2025": {
+          "tickets": 1473,
+          "races": 1200,
+          "exact_wins": 6,
+          "group_hits": 24,
+          "gross_return_units": 1880.6,
+          "posted_odds_roi": 1.276714188730482,
+          "exact_expected_hits_normalized_market": 4.5548633423054525,
+          "exact_actual_over_market": 1.3172733294261885,
+          "group_expected_hits_normalized_market": 14.615503263533132,
+          "group_actual_over_market": 1.642091932604329,
+          "median_posted_odds": 270.0
+        },
+        "2026": {
+          "tickets": 119,
+          "races": 75,
+          "exact_wins": 0,
+          "group_hits": 1,
+          "gross_return_units": 0.0,
+          "posted_odds_roi": 0.0,
+          "exact_expected_hits_normalized_market": 0.32225642846009733,
+          "exact_actual_over_market": 0.0,
+          "group_expected_hits_normalized_market": 1.1334041331715186,
+          "group_actual_over_market": 0.8822978236384017,
+          "median_posted_odds": 298.2
+        }
+      }
+    },
+    "TOP3_NOT_SPREAD_ONLY": {
+      "all_odds": {
+        "tickets": 1802,
+        "races": 1382,
+        "exact_wins": 15,
+        "group_hits": 42,
+        "gross_return_units": 2191.4,
+        "posted_odds_roi": 1.2160932297447282,
+        "exact_expected_hits_normalized_market": 13.68627459969384,
+        "exact_actual_over_market": 1.0959885314836184,
+        "group_expected_hits_normalized_market": 36.46811770335253,
+        "group_actual_over_market": 1.151690919220076,
+        "median_posted_odds": 219.6
+      },
+      "ge100": {
+        "tickets": 1407,
+        "races": 1105,
+        "exact_wins": 6,
+        "group_hits": 21,
+        "gross_return_units": 1880.6,
+        "posted_odds_roi": 1.336602700781805,
+        "exact_expected_hits_normalized_market": 4.244792161407183,
+        "exact_actual_over_market": 1.4134967677689434,
+        "group_expected_hits_normalized_market": 13.629005046172708,
+        "group_actual_over_market": 1.540831478809762,
+        "median_posted_odds": 280.9
+      },
+      "100_to_200": {
+        "tickets": 430,
+        "races": 391,
+        "exact_wins": 1,
+        "group_hits": 9,
+        "gross_return_units": 167.3,
+        "posted_odds_roi": 0.3890697674418605,
+        "exact_expected_hits_normalized_market": 2.24418726891304,
+        "exact_actual_over_market": 0.4455956122076856,
+        "group_expected_hits_normalized_market": 6.867913137606337,
+        "group_actual_over_market": 1.3104417338534884,
+        "median_posted_odds": 147.2
+      },
+      "ge200": {
+        "tickets": 977,
+        "races": 804,
+        "exact_wins": 5,
+        "group_hits": 12,
+        "gross_return_units": 1713.3,
+        "posted_odds_roi": 1.7536335721596725,
+        "exact_expected_hits_normalized_market": 2.000604892494144,
+        "exact_actual_over_market": 2.499244112997507,
+        "group_expected_hits_normalized_market": 6.761091908566371,
+        "group_actual_over_market": 1.7748612446453922,
+        "median_posted_odds": 373.5
+      },
+      "by_year_ge100": {
+        "2024": {
+          "tickets": 111,
+          "races": 90,
+          "exact_wins": 0,
+          "group_hits": 0,
+          "gross_return_units": 0.0,
+          "posted_odds_roi": 0.0,
+          "exact_expected_hits_normalized_market": 0.3236719352755606,
+          "exact_actual_over_market": 0.0,
+          "group_expected_hits_normalized_market": 1.0404421708217761,
+          "group_actual_over_market": 0.0,
+          "median_posted_odds": 300.2
+        },
+        "2025": {
+          "tickets": 1203,
+          "races": 960,
+          "exact_wins": 6,
+          "group_hits": 20,
+          "gross_return_units": 1880.6,
+          "posted_odds_roi": 1.5632585203657523,
+          "exact_expected_hits_normalized_market": 3.6636919806004533,
+          "exact_actual_over_market": 1.6376922600945951,
+          "group_expected_hits_normalized_market": 11.68850310818918,
+          "group_actual_over_market": 1.7110830886452546,
+          "median_posted_odds": 276.5
+        },
+        "2026": {
+          "tickets": 93,
+          "races": 55,
+          "exact_wins": 0,
+          "group_hits": 1,
+          "gross_return_units": 0.0,
+          "posted_odds_roi": 0.0,
+          "exact_expected_hits_normalized_market": 0.25742824553116966,
+          "exact_actual_over_market": 0.0,
+          "group_expected_hits_normalized_market": 0.9000597671617522,
+          "group_actual_over_market": 1.1110373293913574,
+          "median_posted_odds": 293.8
+        }
+      }
+    }
+  },
+  "warning": "Same-data exploratory sensitivity test; do not optimize odds cutoff from these outcomes."
+}
