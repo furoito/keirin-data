@@ -9,53 +9,53 @@
     "bet the single cheapest posted 3rentan permutation within every qualifying unordered trio"
   ],
   "candidate_exposure": {
-    "tickets": 451,
-    "races": 388,
+    "tickets": 467,
+    "races": 403,
     "wins": 6
   },
   "overall": {
-    "tickets": 451,
-    "races": 388,
+    "tickets": 467,
+    "races": 403,
     "wins": 6,
-    "hit_rate_pct": 1.3303769401330376,
+    "hit_rate_pct": 1.284796573875803,
     "posted_odds_gross_return_units": 206.8,
-    "posted_odds_return_ratio": 0.4585365853658537,
-    "profit_units": -244.2,
-    "median_ticket_posted_odds": 191.9,
+    "posted_odds_return_ratio": 0.4428265524625268,
+    "profit_units": -260.2,
+    "median_ticket_posted_odds": 189.8,
     "median_winner_posted_odds": 30.200000000000003,
     "rank1_normalized_market": {
       "actual_hits": 6,
-      "expected_hits": 4.167354103573852,
-      "actual_over_market": 1.4397624609952155
+      "expected_hits": 4.326060796532319,
+      "actual_over_market": 1.3869430602569146
     },
     "group_normalized_market": {
-      "actual_hits": 15,
-      "expected_hits": 11.464630869170826,
-      "actual_over_market": 1.3083718238444138
+      "actual_hits": 17,
+      "expected_hits": 11.943974369192981,
+      "actual_over_market": 1.4233118285859685
     },
     "rank1_conditional_on_group_hit": {
-      "group_hits": 15,
+      "group_hits": 17,
       "actual_rank1_wins": 6,
-      "expected_rank1_wins": 5.522726133641004,
-      "actual_over_market": 1.0864199771652159
+      "expected_rank1_wins": 6.1929844251779755,
+      "actual_over_market": 0.968838218873378
     },
     "race_bootstrap": {
       "bootstrap_reps": 5000,
       "posted_odds_return_ratio_ci95": [
-        0.08421732312180889,
-        0.9619409645232805
+        0.07553243697787908,
+        0.9686854869455931
       ],
-      "posted_odds_return_ratio_prob_gt_1_pct": 1.94,
+      "posted_odds_return_ratio_prob_gt_1_pct": 1.9,
       "rank1_market_ratio_ci95": [
-        0.4749115310635837,
-        2.626233326256988
+        0.44346131616941,
+        2.5961357630540625
       ],
-      "rank1_market_ratio_prob_gt_1_pct": 77.60000000000001,
+      "rank1_market_ratio_prob_gt_1_pct": 74.46000000000001,
       "group_market_ratio_ci95": [
-        0.7261102154003779,
-        1.9670401704703522
+        0.8200233181814089,
+        2.103387615732524
       ],
-      "group_market_ratio_prob_gt_1_pct": 83.5
+      "group_market_ratio_prob_gt_1_pct": 91.2
     }
   },
   "by_half_year": {
@@ -195,48 +195,48 @@
       }
     },
     "2025_H2": {
-      "tickets": 175,
-      "races": 152,
+      "tickets": 191,
+      "races": 167,
       "wins": 4,
-      "hit_rate_pct": 2.2857142857142856,
+      "hit_rate_pct": 2.094240837696335,
       "posted_odds_gross_return_units": 140.1,
-      "posted_odds_return_ratio": 0.8005714285714285,
-      "profit_units": -34.900000000000006,
-      "median_ticket_posted_odds": 196.7,
+      "posted_odds_return_ratio": 0.7335078534031413,
+      "profit_units": -50.900000000000006,
+      "median_ticket_posted_odds": 189.6,
       "median_winner_posted_odds": 30.200000000000003,
       "rank1_normalized_market": {
         "actual_hits": 4,
-        "expected_hits": 1.8225435915357278,
-        "actual_over_market": 2.194734885122547
+        "expected_hits": 1.981250284494195,
+        "actual_over_market": 2.018927154890571
       },
       "group_normalized_market": {
-        "actual_hits": 7,
-        "expected_hits": 4.791357775864766,
-        "actual_over_market": 1.4609637450287478
+        "actual_hits": 9,
+        "expected_hits": 5.270701275886921,
+        "actual_over_market": 1.707552663091409
       },
       "rank1_conditional_on_group_hit": {
-        "group_hits": 7,
+        "group_hits": 9,
         "actual_rank1_wins": 4,
-        "expected_rank1_wins": 2.686841837688595,
-        "actual_over_market": 1.4887366810697995
+        "expected_rank1_wins": 3.357100129225567,
+        "actual_over_market": 1.1915045265339583
       },
       "race_bootstrap": {
         "bootstrap_reps": 5000,
         "posted_odds_return_ratio_ci95": [
-          0.025283743842364537,
-          1.9316959064327468
+          0.0227979274611399,
+          1.7822849948175505
         ],
-        "posted_odds_return_ratio_prob_gt_1_pct": 30.7,
+        "posted_odds_return_ratio_prob_gt_1_pct": 25.96,
         "rank1_market_ratio_ci95": [
-          0.5074009358521164,
-          4.376249326697783
+          0.47376579199224683,
+          4.121850399605481
         ],
-        "rank1_market_ratio_prob_gt_1_pct": 89.1,
+        "rank1_market_ratio_prob_gt_1_pct": 86.52,
         "group_market_ratio_ci95": [
-          0.5391239648288366,
-          2.5437600874040163
+          0.7257619925567477,
+          2.884137475321629
         ],
-        "group_market_ratio_prob_gt_1_pct": 80.64
+        "group_market_ratio_prob_gt_1_pct": 91.16
       }
     },
     "2026_H1": {
@@ -332,24 +332,24 @@
   },
   "by_posted_odds_band": {
     "LT30": {
-      "tickets": 37,
-      "races": 37,
+      "tickets": 38,
+      "races": 38,
       "wins": 3,
-      "hit_rate_pct": 8.108108108108109,
+      "hit_rate_pct": 7.894736842105263,
       "posted_odds_gross_return_units": 42.3,
-      "posted_odds_return_ratio": 1.1432432432432431,
-      "profit_units": 5.299999999999997,
-      "median_ticket_posted_odds": 18.5,
+      "posted_odds_return_ratio": 1.1131578947368421,
+      "profit_units": 4.299999999999997,
+      "median_ticket_posted_odds": 18.35,
       "median_winner_posted_odds": 12.7,
       "rank1_normalized_market": {
         "actual_hits": 3,
-        "expected_hits": 1.989383154712982,
-        "actual_over_market": 1.508005128571034
+        "expected_hits": 2.033693365617528,
+        "actual_over_market": 1.4751486387865826
       },
       "group_normalized_market": {
         "actual_hits": 9,
-        "expected_hits": 4.823970012040101,
-        "actual_over_market": 1.865683239642242
+        "expected_hits": 4.932846732916806,
+        "actual_over_market": 1.8245042847050459
       },
       "rank1_conditional_on_group_hit": {
         "group_hits": 9,
@@ -361,40 +361,40 @@
         "bootstrap_reps": 5000,
         "posted_odds_return_ratio_ci95": [
           0.0,
-          2.72972972972973
+          2.7736842105263158
         ],
-        "posted_odds_return_ratio_prob_gt_1_pct": 55.779999999999994,
+        "posted_odds_return_ratio_prob_gt_1_pct": 49.64,
         "rank1_market_ratio_ci95": [
           0.0,
-          3.1500237578893318
+          3.201548520269274
         ],
-        "rank1_market_ratio_prob_gt_1_pct": 72.88,
+        "rank1_market_ratio_prob_gt_1_pct": 70.82000000000001,
         "group_market_ratio_ci95": [
-          0.8355816222595924,
-          3.118182467849133
+          0.8136890894793437,
+          3.030612731178496
         ],
-        "group_market_ratio_prob_gt_1_pct": 94.6
+        "group_market_ratio_prob_gt_1_pct": 94.26
       }
     },
     "30_TO_50": {
-      "tickets": 25,
-      "races": 25,
+      "tickets": 27,
+      "races": 27,
       "wins": 1,
-      "hit_rate_pct": 4.0,
+      "hit_rate_pct": 3.7037037037037037,
       "posted_odds_gross_return_units": 35.2,
-      "posted_odds_return_ratio": 1.4080000000000001,
-      "profit_units": 10.200000000000003,
-      "median_ticket_posted_odds": 39.6,
+      "posted_odds_return_ratio": 1.3037037037037038,
+      "profit_units": 8.200000000000003,
+      "median_ticket_posted_odds": 40.1,
       "median_winner_posted_odds": 35.2,
       "rank1_normalized_market": {
         "actual_hits": 1,
-        "expected_hits": 0.46941078024692623,
-        "actual_over_market": 2.130330282304053
+        "expected_hits": 0.5000099126503761,
+        "actual_over_market": 1.999960350184565
       },
       "group_normalized_market": {
         "actual_hits": 1,
-        "expected_hits": 1.2943080213509623,
-        "actual_over_market": 0.7726136155412435
+        "expected_hits": 1.3663411229295979,
+        "actual_over_market": 0.7318816532842699
       },
       "rank1_conditional_on_group_hit": {
         "group_hits": 1,
@@ -406,90 +406,90 @@
         "bootstrap_reps": 5000,
         "posted_odds_return_ratio_ci95": [
           0.0,
-          4.224
+          3.9111111111111114
         ],
-        "posted_odds_return_ratio_prob_gt_1_pct": 63.9,
+        "posted_odds_return_ratio_prob_gt_1_pct": 63.980000000000004,
         "rank1_market_ratio_ci95": [
           0.0,
-          6.484601745752503
+          6.073695514741821
         ],
-        "rank1_market_ratio_prob_gt_1_pct": 63.9,
+        "rank1_market_ratio_prob_gt_1_pct": 63.980000000000004,
         "group_market_ratio_ci95": [
           0.0,
-          2.4425437302683113
+          2.2843510846429638
         ],
-        "group_market_ratio_prob_gt_1_pct": 27.02
+        "group_market_ratio_prob_gt_1_pct": 26.619999999999997
       }
     },
     "50_TO_100": {
-      "tickets": 67,
-      "races": 66,
+      "tickets": 70,
+      "races": 69,
       "wins": 2,
-      "hit_rate_pct": 2.985074626865672,
+      "hit_rate_pct": 2.857142857142857,
       "posted_odds_gross_return_units": 129.3,
-      "posted_odds_return_ratio": 1.929850746268657,
-      "profit_units": 62.30000000000001,
-      "median_ticket_posted_odds": 76.6,
+      "posted_odds_return_ratio": 1.8471428571428572,
+      "profit_units": 59.30000000000001,
+      "median_ticket_posted_odds": 76.0,
       "median_winner_posted_odds": 64.65,
       "rank1_normalized_market": {
         "actual_hits": 2,
-        "expected_hits": 0.688419963429255,
-        "actual_over_market": 2.9052033732974807
+        "expected_hits": 0.7236007517308415,
+        "actual_over_market": 2.763955116431308
       },
       "group_normalized_market": {
-        "actual_hits": 2,
-        "expected_hits": 1.9985791654187584,
-        "actual_over_market": 1.0007109223421449
+        "actual_hits": 3,
+        "expected_hits": 2.124376327579175,
+        "actual_over_market": 1.4121791704479396
       },
       "rank1_conditional_on_group_hit": {
-        "group_hits": 2,
+        "group_hits": 3,
         "actual_rank1_wins": 2,
-        "expected_rank1_wins": 0.9339962210219528,
-        "actual_over_market": 2.141336287005161
+        "expected_rank1_wins": 1.3252071401527747,
+        "actual_over_market": 1.5091980260304307
       },
       "race_bootstrap": {
         "bootstrap_reps": 5000,
         "posted_odds_return_ratio_ci95": [
           0.0,
-          4.98358208955224
+          4.839130434782609
         ],
-        "posted_odds_return_ratio_prob_gt_1_pct": 73.1,
+        "posted_odds_return_ratio_prob_gt_1_pct": 73.74000000000001,
         "rank1_market_ratio_ci95": [
           0.0,
-          7.301137419027415
+          7.02041812883588
         ],
-        "rank1_market_ratio_prob_gt_1_pct": 87.28,
+        "rank1_market_ratio_prob_gt_1_pct": 86.76,
         "group_market_ratio_ci95": [
           0.0,
-          2.5514831924837518
+          3.2575576085429327
         ],
-        "group_market_ratio_prob_gt_1_pct": 45.86
+        "group_market_ratio_prob_gt_1_pct": 59.540000000000006
       }
     },
     "100_TO_200": {
-      "tickets": 106,
-      "races": 101,
+      "tickets": 113,
+      "races": 108,
       "wins": 0,
       "hit_rate_pct": 0.0,
       "posted_odds_gross_return_units": 0.0,
       "posted_odds_return_ratio": 0.0,
-      "profit_units": -106.0,
-      "median_ticket_posted_odds": 149.25,
+      "profit_units": -113.0,
+      "median_ticket_posted_odds": 148.4,
       "median_winner_posted_odds": null,
       "rank1_normalized_market": {
         "actual_hits": 0,
-        "expected_hits": 0.5433652705307795,
+        "expected_hits": 0.58225091384873,
         "actual_over_market": 0.0
       },
       "group_normalized_market": {
-        "actual_hits": 3,
-        "expected_hits": 1.6854819134945276,
-        "actual_over_market": 1.7799063733529292
+        "actual_hits": 4,
+        "expected_hits": 1.8207384714034058,
+        "actual_over_market": 2.196910793518216
       },
       "rank1_conditional_on_group_hit": {
-        "group_hits": 3,
+        "group_hits": 4,
         "actual_rank1_wins": 0,
-        "expected_rank1_wins": 0.9002593571202644,
+        "expected_rank1_wins": 1.1793067295264141,
         "actual_over_market": 0.0
       },
       "race_bootstrap": {
@@ -505,30 +505,30 @@
         ],
         "rank1_market_ratio_prob_gt_1_pct": 0.0,
         "group_market_ratio_ci95": [
-          0.0,
-          4.019751334547415
+          0.5351968766521509,
+          4.424282278072585
         ],
-        "group_market_ratio_prob_gt_1_pct": 80.72
+        "group_market_ratio_prob_gt_1_pct": 91.56
       }
     },
     "GE200": {
-      "tickets": 216,
-      "races": 197,
+      "tickets": 219,
+      "races": 200,
       "wins": 0,
       "hit_rate_pct": 0.0,
       "posted_odds_gross_return_units": 0.0,
       "posted_odds_return_ratio": 0.0,
-      "profit_units": -216.0,
-      "median_ticket_posted_odds": 335.25,
+      "profit_units": -219.0,
+      "median_ticket_posted_odds": 331.6,
       "median_winner_posted_odds": null,
       "rank1_normalized_market": {
         "actual_hits": 0,
-        "expected_hits": 0.47677493465390863,
+        "expected_hits": 0.4865058526848437,
         "actual_over_market": 0.0
       },
       "group_normalized_market": {
         "actual_hits": 0,
-        "expected_hits": 1.6622917568664755,
+        "expected_hits": 1.6996717143639957,
         "actual_over_market": 0.0
       },
       "rank1_conditional_on_group_hit": {
@@ -559,119 +559,119 @@
   },
   "by_cumulative_odds_threshold": {
     "GE30": {
-      "tickets": 414,
-      "races": 357,
+      "tickets": 429,
+      "races": 371,
       "wins": 3,
-      "hit_rate_pct": 0.7246376811594203,
+      "hit_rate_pct": 0.6993006993006993,
       "posted_odds_gross_return_units": 164.5,
-      "posted_odds_return_ratio": 0.3973429951690821,
-      "profit_units": -249.5,
-      "median_ticket_posted_odds": 207.89999999999998,
+      "posted_odds_return_ratio": 0.38344988344988346,
+      "profit_units": -264.5,
+      "median_ticket_posted_odds": 204.9,
       "median_winner_posted_odds": 54.0,
       "rank1_normalized_market": {
         "actual_hits": 3,
-        "expected_hits": 2.177970948860869,
-        "actual_over_market": 1.3774288410821418
+        "expected_hits": 2.2923674309147914,
+        "actual_over_market": 1.3086907271243253
       },
       "group_normalized_market": {
-        "actual_hits": 6,
-        "expected_hits": 6.640660857130724,
-        "actual_over_market": 0.9035245330375841
+        "actual_hits": 8,
+        "expected_hits": 7.011127636276175,
+        "actual_over_market": 1.1410432693604542
       },
       "rank1_conditional_on_group_hit": {
-        "group_hits": 6,
+        "group_hits": 8,
         "actual_rank1_wins": 3,
-        "expected_rank1_wins": 2.2026990290147097,
-        "actual_over_market": 1.3619654616826755
+        "expected_rank1_wins": 2.8729573205516816,
+        "actual_over_market": 1.0442201763804562
       },
       "race_bootstrap": {
         "bootstrap_reps": 5000,
         "posted_odds_return_ratio_ci95": [
           0.0,
-          0.923818313988855
+          0.9224610411540499
         ],
-        "posted_odds_return_ratio_prob_gt_1_pct": 1.7000000000000002,
+        "posted_odds_return_ratio_prob_gt_1_pct": 1.3599999999999999,
         "rank1_market_ratio_ci95": [
           0.0,
-          3.1457762951267347
+          2.9726308427623915
         ],
-        "rank1_market_ratio_prob_gt_1_pct": 58.160000000000004,
+        "rank1_market_ratio_prob_gt_1_pct": 57.46,
         "group_market_ratio_ci95": [
-          0.2913771986803615,
-          1.6859361623976894
+          0.4248020143211826,
+          1.985028973644658
         ],
-        "group_market_ratio_prob_gt_1_pct": 38.12
+        "group_market_ratio_prob_gt_1_pct": 61.18
       }
     },
     "GE50": {
-      "tickets": 389,
-      "races": 335,
+      "tickets": 402,
+      "races": 348,
       "wins": 2,
-      "hit_rate_pct": 0.5141388174807198,
+      "hit_rate_pct": 0.4975124378109453,
       "posted_odds_gross_return_units": 129.3,
-      "posted_odds_return_ratio": 0.3323907455012854,
-      "profit_units": -259.7,
-      "median_ticket_posted_odds": 218.6,
+      "posted_odds_return_ratio": 0.32164179104477614,
+      "profit_units": -272.7,
+      "median_ticket_posted_odds": 213.95,
       "median_winner_posted_odds": 64.65,
       "rank1_normalized_market": {
         "actual_hits": 2,
-        "expected_hits": 1.708560168613943,
-        "actual_over_market": 1.1705762762937904
+        "expected_hits": 1.792357518264415,
+        "actual_over_market": 1.1158488078520465
       },
       "group_normalized_market": {
-        "actual_hits": 5,
-        "expected_hits": 5.346352835779761,
-        "actual_over_market": 0.9352169887737598
+        "actual_hits": 7,
+        "expected_hits": 5.644786513346577,
+        "actual_over_market": 1.2400823279054303
       },
       "rank1_conditional_on_group_hit": {
-        "group_hits": 5,
+        "group_hits": 7,
         "actual_rank1_wins": 2,
-        "expected_rank1_wins": 1.8342555781422174,
-        "actual_over_market": 1.0903605930563138
+        "expected_rank1_wins": 2.5045138696791893,
+        "actual_over_market": 0.7985581650047664
       },
       "race_bootstrap": {
         "bootstrap_reps": 5000,
         "posted_odds_return_ratio_ci95": [
           0.0,
-          0.8928289881329214
+          0.8411110316006405
         ],
-        "posted_odds_return_ratio_prob_gt_1_pct": 1.28,
+        "posted_odds_return_ratio_prob_gt_1_pct": 0.8200000000000001,
         "rank1_market_ratio_ci95": [
           0.0,
-          2.9984574439693166
+          2.823996923986855
         ],
-        "rank1_market_ratio_prob_gt_1_pct": 59.56,
+        "rank1_market_ratio_prob_gt_1_pct": 59.78,
         "group_market_ratio_ci95": [
-          0.18817620606709798,
-          1.8081564253718605
+          0.503806877490488,
+          2.2530344556964383
         ],
-        "group_market_ratio_prob_gt_1_pct": 40.68
+        "group_market_ratio_prob_gt_1_pct": 69.78
       }
     },
     "GE100": {
-      "tickets": 322,
-      "races": 283,
+      "tickets": 332,
+      "races": 293,
       "wins": 0,
       "hit_rate_pct": 0.0,
       "posted_odds_gross_return_units": 0.0,
       "posted_odds_return_ratio": 0.0,
-      "profit_units": -322.0,
-      "median_ticket_posted_odds": 259.35,
+      "profit_units": -332.0,
+      "median_ticket_posted_odds": 254.75,
       "median_winner_posted_odds": null,
       "rank1_normalized_market": {
         "actual_hits": 0,
-        "expected_hits": 1.020140205184688,
+        "expected_hits": 1.0687567665335735,
         "actual_over_market": 0.0
       },
       "group_normalized_market": {
-        "actual_hits": 3,
-        "expected_hits": 3.3477736703610033,
-        "actual_over_market": 0.8961179265372795
+        "actual_hits": 4,
+        "expected_hits": 3.5204101857674024,
+        "actual_over_market": 1.1362312312842184
       },
       "rank1_conditional_on_group_hit": {
-        "group_hits": 3,
+        "group_hits": 4,
         "actual_rank1_wins": 0,
-        "expected_rank1_wins": 0.9002593571202644,
+        "expected_rank1_wins": 1.1793067295264141,
         "actual_over_market": 0.0
       },
       "race_bootstrap": {
@@ -687,30 +687,30 @@
         ],
         "rank1_market_ratio_prob_gt_1_pct": 0.0,
         "group_market_ratio_ci95": [
-          0.0,
-          2.0502917221148396
+          0.27658348066407484,
+          2.312251293981858
         ],
-        "group_market_ratio_prob_gt_1_pct": 35.160000000000004
+        "group_market_ratio_prob_gt_1_pct": 56.92
       }
     },
     "GE200": {
-      "tickets": 216,
-      "races": 197,
+      "tickets": 219,
+      "races": 200,
       "wins": 0,
       "hit_rate_pct": 0.0,
       "posted_odds_gross_return_units": 0.0,
       "posted_odds_return_ratio": 0.0,
-      "profit_units": -216.0,
-      "median_ticket_posted_odds": 335.25,
+      "profit_units": -219.0,
+      "median_ticket_posted_odds": 331.6,
       "median_winner_posted_odds": null,
       "rank1_normalized_market": {
         "actual_hits": 0,
-        "expected_hits": 0.47677493465390863,
+        "expected_hits": 0.4865058526848437,
         "actual_over_market": 0.0
       },
       "group_normalized_market": {
         "actual_hits": 0,
-        "expected_hits": 1.6622917568664755,
+        "expected_hits": 1.6996717143639957,
         "actual_over_market": 0.0
       },
       "rank1_conditional_on_group_hit": {
