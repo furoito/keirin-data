@@ -33,6 +33,7 @@ CTX=ROOT/'keirin_data'/'strategy_context'
 OUT=CTX/'h1_other_bante_strength_filter_summary.json'
 PCT=0.45
 CUTS=[50,100,200]
+# Explicit trigger marker: compare >=1 versus >=2 stronger other-line bantes.
 
 
 def actual_ordered_top3(pre):
