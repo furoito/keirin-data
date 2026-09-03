@@ -1,0 +1,34 @@
+name: Diagnose 2022 vs 2025 semantic parity
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - experiment/popular-head-skip-v01
+    paths:
+      - 'scripts/diagnose_semantic_parity_2022_2025.py'
+      - '.github/workflows/diagnose_semantic_parity_2022_2025.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - run: python scripts/diagnose_semantic_parity_2022_2025.py
+      - name: Commit result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add keirin_data/strategy_context/semantic_parity_2022_2025_summary.json
+          git diff --cached --quiet || git commit -m 'Add 2022 vs 2025 semantic parity results'
+          git pull --rebase origin experiment/popular-head-skip-v01
+          git push
