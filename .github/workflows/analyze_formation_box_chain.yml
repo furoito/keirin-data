@@ -1,0 +1,36 @@
+name: Analyze formation-to-box mechanism chain
+
+on:
+  push:
+    branches: [experiment/popular-head-skip-v01]
+    paths:
+      - 'scripts/analyze_formation_box_chain.py'
+      - '.github/workflows/analyze_formation_box_chain.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python scripts/analyze_formation_box_chain.py
+      - name: Commit results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add keirin_data/strategy_context/formation_box_chain_summary.json keirin_data/strategy_context/formation_box_chain_groups.csv
+          if ! git diff --cached --quiet; then
+            git commit -m 'Add formation-to-box mechanism results'
+            git pull --rebase origin experiment/popular-head-skip-v01
+            git push origin HEAD:experiment/popular-head-skip-v01
+          fi
