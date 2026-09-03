@@ -1,0 +1,42 @@
+name: Analyze H1 three-line role composition
+
+on:
+  push:
+    branches:
+      - experiment/popular-head-skip-v01
+    paths:
+      - 'scripts/analyze_h1_three_line_role_composition.py'
+      - '.github/workflows/analyze_h1_three_line_role_composition.yml'
+      - 'scripts/analyze_h1_three_line_role_composition.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - run: python scripts/analyze_h1_three_line_role_composition.py
+      - name: Commit result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add keirin_data/strategy_context/h1_three_line_role_composition_summary.json
+          git add keirin_data/strategy_context/h1_three_line_role_composition_races.csv
+          if git diff --cached --quiet; then
+            echo 'No result changes'
+          else
+            git commit -m 'Add three-line role composition results'
+            git fetch origin experiment/popular-head-skip-v01
+            git rebase origin/experiment/popular-head-skip-v01
+            git push origin HEAD:experiment/popular-head-skip-v01
+          fi
