@@ -1,0 +1,4039 @@
+{
+  "status": "exploratory_three_line_role_composition",
+  "warning": "Same discovery data. This is an association/composition diagnostic, not OOS and not a causal or betting rule.",
+  "coverage": {
+    "full_context_rows_seen": 6860,
+    "usable_races": 6371,
+    "skipped": {
+      "no_multi_rider_line": 215,
+      "ordered_result_missing": 121,
+      "base_missing": 153
+    }
+  },
+  "definitions": {
+    "three_line_finish": "actual top3 riders occupy exactly three distinct true_line IDs",
+    "role_taxonomy": {
+      "RYO_HEAD": "multi-rider line_pos1 with running_style='両'",
+      "ESCAPE_HEAD": "multi-rider line_pos1 with running_style='逃'",
+      "OTHER_HEAD": "multi-rider line_pos1 with other/unknown style",
+      "BANTE": "multi-rider line_pos2",
+      "THIRD_PLUS": "line_pos>=3",
+      "SOLO": "single-rider line"
+    },
+    "top3_score_3lines": "the three highest race_score riders are on three distinct true_line IDs",
+    "bante2plus": "at least two multi-rider lines have bante race_score > line-head race_score",
+    "gap2plus": "at least two multi-rider lines have absolute head-bante race_score gap >=2 points"
+  },
+  "subsets": {
+    "ALL_USABLE": {
+      "races": 6371,
+      "three_line_finishes": 1357,
+      "three_line_finish_rate": 0.21299638989169675,
+      "winner_role_distribution_within_three_line": {
+        "BANTE": {
+          "count": 521,
+          "share": 0.38393515106853354,
+          "incidence_all_races": 0.08177680113012085
+        },
+        "ESCAPE_HEAD": {
+          "count": 269,
+          "share": 0.1982313927781872,
+          "incidence_all_races": 0.042222571024956836
+        },
+        "SOLO": {
+          "count": 210,
+          "share": 0.15475313190862197,
+          "incidence_all_races": 0.03296185842097002
+        },
+        "OTHER_HEAD": {
+          "count": 154,
+          "share": 0.11348563006632277,
+          "incidence_all_races": 0.02417202950871135
+        },
+        "RYO_HEAD": {
+          "count": 134,
+          "share": 0.09874723655121592,
+          "incidence_all_races": 0.021032804897190394
+        },
+        "THIRD_PLUS": {
+          "count": 69,
+          "share": 0.05084745762711865,
+          "incidence_all_races": 0.010830324909747292
+        }
+      },
+      "second_third_pair_distribution_within_three_line": {
+        "BANTE>BANTE": {
+          "count": 232,
+          "share": 0.1709653647752395,
+          "incidence_all_races": 0.03641500549364307
+        },
+        "BANTE>OTHER_HEAD": {
+          "count": 100,
+          "share": 0.07369196757553427,
+          "incidence_all_races": 0.01569612305760477
+        },
+        "ESCAPE_HEAD>BANTE": {
+          "count": 93,
+          "share": 0.06853352984524687,
+          "incidence_all_races": 0.014597394443572437
+        },
+        "BANTE>SOLO": {
+          "count": 83,
+          "share": 0.061164333087693444,
+          "incidence_all_races": 0.01302778213781196
+        },
+        "SOLO>BANTE": {
+          "count": 78,
+          "share": 0.05747973470891673,
+          "incidence_all_races": 0.012242975984931723
+        },
+        "OTHER_HEAD>BANTE": {
+          "count": 70,
+          "share": 0.051584377302873984,
+          "incidence_all_races": 0.01098728614032334
+        },
+        "BANTE>ESCAPE_HEAD": {
+          "count": 56,
+          "share": 0.04126750184229919,
+          "incidence_all_races": 0.008789828912258673
+        },
+        "RYO_HEAD>BANTE": {
+          "count": 47,
+          "share": 0.034635224760501106,
+          "incidence_all_races": 0.007377177837074243
+        },
+        "SOLO>OTHER_HEAD": {
+          "count": 41,
+          "share": 0.03021370670596905,
+          "incidence_all_races": 0.0064354104536179565
+        },
+        "BANTE>THIRD_PLUS": {
+          "count": 41,
+          "share": 0.03021370670596905,
+          "incidence_all_races": 0.0064354104536179565
+        },
+        "SOLO>SOLO": {
+          "count": 39,
+          "share": 0.028739867354458364,
+          "incidence_all_races": 0.006121487992465861
+        },
+        "BANTE>RYO_HEAD": {
+          "count": 37,
+          "share": 0.027266028002947678,
+          "incidence_all_races": 0.005807565531313765
+        },
+        "OTHER_HEAD>OTHER_HEAD": {
+          "count": 34,
+          "share": 0.025055268975681652,
+          "incidence_all_races": 0.005336681839585623
+        },
+        "ESCAPE_HEAD>OTHER_HEAD": {
+          "count": 32,
+          "share": 0.023581429624170966,
+          "incidence_all_races": 0.005022759378433527
+        },
+        "THIRD_PLUS>BANTE": {
+          "count": 29,
+          "share": 0.021370670596904937,
+          "incidence_all_races": 0.004551875686705384
+        },
+        "THIRD_PLUS>SOLO": {
+          "count": 28,
+          "share": 0.020633750921149593,
+          "incidence_all_races": 0.004394914456129336
+        },
+        "OTHER_HEAD>SOLO": {
+          "count": 27,
+          "share": 0.01989683124539425,
+          "incidence_all_races": 0.004237953225553289
+        },
+        "ESCAPE_HEAD>ESCAPE_HEAD": {
+          "count": 24,
+          "share": 0.017686072218128224,
+          "incidence_all_races": 0.003767069533825145
+        },
+        "OTHER_HEAD>ESCAPE_HEAD": {
+          "count": 23,
+          "share": 0.01694915254237288,
+          "incidence_all_races": 0.0036101083032490976
+        },
+        "SOLO>ESCAPE_HEAD": {
+          "count": 23,
+          "share": 0.01694915254237288,
+          "incidence_all_races": 0.0036101083032490976
+        },
+        "SOLO>RYO_HEAD": {
+          "count": 23,
+          "share": 0.01694915254237288,
+          "incidence_all_races": 0.0036101083032490976
+        },
+        "ESCAPE_HEAD>RYO_HEAD": {
+          "count": 22,
+          "share": 0.016212232866617538,
+          "incidence_all_races": 0.0034531470726730496
+        },
+        "ESCAPE_HEAD>SOLO": {
+          "count": 20,
+          "share": 0.014738393515106854,
+          "incidence_all_races": 0.0031392246115209545
+        },
+        "OTHER_HEAD>THIRD_PLUS": {
+          "count": 20,
+          "share": 0.014738393515106854,
+          "incidence_all_races": 0.0031392246115209545
+        },
+        "SOLO>THIRD_PLUS": {
+          "count": 19,
+          "share": 0.01400147383935151,
+          "incidence_all_races": 0.0029822633809449065
+        },
+        "THIRD_PLUS>OTHER_HEAD": {
+          "count": 17,
+          "share": 0.012527634487840826,
+          "incidence_all_races": 0.0026683409197928113
+        },
+        "RYO_HEAD>SOLO": {
+          "count": 15,
+          "share": 0.01105379513633014,
+          "incidence_all_races": 0.0023544184586407157
+        },
+        "RYO_HEAD>OTHER_HEAD": {
+          "count": 15,
+          "share": 0.01105379513633014,
+          "incidence_all_races": 0.0023544184586407157
+        },
+        "OTHER_HEAD>RYO_HEAD": {
+          "count": 13,
+          "share": 0.009579955784819455,
+          "incidence_all_races": 0.00204049599748862
+        },
+        "ESCAPE_HEAD>THIRD_PLUS": {
+          "count": 12,
+          "share": 0.008843036109064112,
+          "incidence_all_races": 0.0018835347669125726
+        },
+        "RYO_HEAD>RYO_HEAD": {
+          "count": 9,
+          "share": 0.006632277081798084,
+          "incidence_all_races": 0.0014126510751844294
+        },
+        "THIRD_PLUS>RYO_HEAD": {
+          "count": 9,
+          "share": 0.006632277081798084,
+          "incidence_all_races": 0.0014126510751844294
+        },
+        "RYO_HEAD>ESCAPE_HEAD": {
+          "count": 8,
+          "share": 0.0058953574060427415,
+          "incidence_all_races": 0.0012556898446083817
+        },
+        "THIRD_PLUS>ESCAPE_HEAD": {
+          "count": 8,
+          "share": 0.0058953574060427415,
+          "incidence_all_races": 0.0012556898446083817
+        },
+        "RYO_HEAD>THIRD_PLUS": {
+          "count": 6,
+          "share": 0.004421518054532056,
+          "incidence_all_races": 0.0009417673834562863
+        },
+        "THIRD_PLUS>THIRD_PLUS": {
+          "count": 4,
+          "share": 0.0029476787030213707,
+          "incidence_all_races": 0.0006278449223041908
+        }
+      },
+      "ordered_exact_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 88
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 43
+        },
+        {
+          "pattern": "BANTE>BANTE>OTHER_HEAD",
+          "count": 41
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>BANTE",
+          "count": 38
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 33
+        },
+        {
+          "pattern": "BANTE>ESCAPE_HEAD>BANTE",
+          "count": 33
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 29
+        },
+        {
+          "pattern": "BANTE>BANTE>ESCAPE_HEAD",
+          "count": 28
+        },
+        {
+          "pattern": "OTHER_HEAD>BANTE>BANTE",
+          "count": 27
+        },
+        {
+          "pattern": "RYO_HEAD>BANTE>BANTE",
+          "count": 25
+        },
+        {
+          "pattern": "ESCAPE_HEAD>ESCAPE_HEAD>BANTE",
+          "count": 25
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>OTHER_HEAD",
+          "count": 23
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>BANTE",
+          "count": 23
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>BANTE",
+          "count": 22
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>SOLO",
+          "count": 17
+        },
+        {
+          "pattern": "BANTE>BANTE>RYO_HEAD",
+          "count": 17
+        },
+        {
+          "pattern": "BANTE>BANTE>THIRD_PLUS",
+          "count": 17
+        },
+        {
+          "pattern": "SOLO>BANTE>SOLO",
+          "count": 16
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>SOLO",
+          "count": 14
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>SOLO",
+          "count": 14
+        }
+      ],
+      "ordered_coarse_role_patterns_top20": [
+        {
+          "pattern": "HEAD>HEAD>BANTE",
+          "count": 96
+        },
+        {
+          "pattern": "HEAD>BANTE>BANTE",
+          "count": 90
+        },
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 88
+        },
+        {
+          "pattern": "HEAD>HEAD>HEAD",
+          "count": 87
+        },
+        {
+          "pattern": "BANTE>BANTE>HEAD",
+          "count": 86
+        },
+        {
+          "pattern": "BANTE>HEAD>BANTE",
+          "count": 78
+        },
+        {
+          "pattern": "HEAD>BANTE>HEAD",
+          "count": 71
+        },
+        {
+          "pattern": "BANTE>HEAD>HEAD",
+          "count": 65
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 43
+        },
+        {
+          "pattern": "HEAD>SOLO>HEAD",
+          "count": 40
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 33
+        },
+        {
+          "pattern": "HEAD>BANTE>SOLO",
+          "count": 31
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 29
+        },
+        {
+          "pattern": "HEAD>SOLO>BANTE",
+          "count": 29
+        },
+        {
+          "pattern": "SOLO>BANTE>HEAD",
+          "count": 28
+        },
+        {
+          "pattern": "BANTE>SOLO>HEAD",
+          "count": 27
+        },
+        {
+          "pattern": "HEAD>HEAD>SOLO",
+          "count": 26
+        },
+        {
+          "pattern": "BANTE>HEAD>SOLO",
+          "count": 26
+        },
+        {
+          "pattern": "SOLO>HEAD>BANTE",
+          "count": 23
+        },
+        {
+          "pattern": "SOLO>HEAD>HEAD",
+          "count": 19
+        }
+      ],
+      "target_patterns": {
+        "RYO_HEAD>BANTE>BANTE": {
+          "count": 25,
+          "share_within_three_line": 0.018422991893883568,
+          "incidence_all_races": 0.003924030764401193
+        },
+        "ESCAPE_HEAD>BANTE>BANTE": {
+          "count": 38,
+          "share_within_three_line": 0.02800294767870302,
+          "incidence_all_races": 0.005964526761889813
+        },
+        "OTHER_HEAD>BANTE>BANTE": {
+          "count": 27,
+          "share_within_three_line": 0.01989683124539425,
+          "incidence_all_races": 0.004237953225553289
+        },
+        "BANTE>BANTE>BANTE": {
+          "count": 88,
+          "share_within_three_line": 0.06484893146647015,
+          "incidence_all_races": 0.013812588290692198
+        }
+      },
+      "head_any_bante_bante": {
+        "count": 90,
+        "share_within_three_line": 0.06632277081798084,
+        "incidence_all_races": 0.014126510751844295,
+        "winner_head_style_split": {
+          "ESCAPE_HEAD": 38,
+          "OTHER_HEAD": 27,
+          "RYO_HEAD": 25
+        }
+      }
+    },
+    "TOP3_SCORE_3LINES": {
+      "races": 1357,
+      "three_line_finishes": 498,
+      "three_line_finish_rate": 0.36698599852616065,
+      "winner_role_distribution_within_three_line": {
+        "BANTE": {
+          "count": 182,
+          "share": 0.3654618473895582,
+          "incidence_all_races": 0.13411938098747236
+        },
+        "SOLO": {
+          "count": 111,
+          "share": 0.22289156626506024,
+          "incidence_all_races": 0.08179808400884303
+        },
+        "ESCAPE_HEAD": {
+          "count": 90,
+          "share": 0.18072289156626506,
+          "incidence_all_races": 0.06632277081798084
+        },
+        "OTHER_HEAD": {
+          "count": 51,
+          "share": 0.10240963855421686,
+          "incidence_all_races": 0.03758290346352248
+        },
+        "RYO_HEAD": {
+          "count": 49,
+          "share": 0.09839357429718876,
+          "incidence_all_races": 0.03610906411201179
+        },
+        "THIRD_PLUS": {
+          "count": 15,
+          "share": 0.030120481927710843,
+          "incidence_all_races": 0.01105379513633014
+        }
+      },
+      "second_third_pair_distribution_within_three_line": {
+        "BANTE>BANTE": {
+          "count": 91,
+          "share": 0.1827309236947791,
+          "incidence_all_races": 0.06705969049373618
+        },
+        "SOLO>BANTE": {
+          "count": 37,
+          "share": 0.07429718875502007,
+          "incidence_all_races": 0.027266028002947678
+        },
+        "BANTE>OTHER_HEAD": {
+          "count": 34,
+          "share": 0.06827309236947791,
+          "incidence_all_races": 0.025055268975681652
+        },
+        "BANTE>SOLO": {
+          "count": 29,
+          "share": 0.05823293172690763,
+          "incidence_all_races": 0.021370670596904937
+        },
+        "ESCAPE_HEAD>BANTE": {
+          "count": 28,
+          "share": 0.05622489959839357,
+          "incidence_all_races": 0.020633750921149593
+        },
+        "SOLO>SOLO": {
+          "count": 26,
+          "share": 0.05220883534136546,
+          "incidence_all_races": 0.01915991156963891
+        },
+        "OTHER_HEAD>BANTE": {
+          "count": 25,
+          "share": 0.050200803212851405,
+          "incidence_all_races": 0.018422991893883568
+        },
+        "SOLO>OTHER_HEAD": {
+          "count": 22,
+          "share": 0.04417670682730924,
+          "incidence_all_races": 0.016212232866617538
+        },
+        "BANTE>ESCAPE_HEAD": {
+          "count": 18,
+          "share": 0.03614457831325301,
+          "incidence_all_races": 0.013264554163596167
+        },
+        "RYO_HEAD>BANTE": {
+          "count": 18,
+          "share": 0.03614457831325301,
+          "incidence_all_races": 0.013264554163596167
+        },
+        "BANTE>RYO_HEAD": {
+          "count": 14,
+          "share": 0.028112449799196786,
+          "incidence_all_races": 0.010316875460574797
+        },
+        "ESCAPE_HEAD>OTHER_HEAD": {
+          "count": 14,
+          "share": 0.028112449799196786,
+          "incidence_all_races": 0.010316875460574797
+        },
+        "OTHER_HEAD>SOLO": {
+          "count": 13,
+          "share": 0.02610441767068273,
+          "incidence_all_races": 0.009579955784819455
+        },
+        "OTHER_HEAD>OTHER_HEAD": {
+          "count": 13,
+          "share": 0.02610441767068273,
+          "incidence_all_races": 0.009579955784819455
+        },
+        "OTHER_HEAD>ESCAPE_HEAD": {
+          "count": 11,
+          "share": 0.02208835341365462,
+          "incidence_all_races": 0.008106116433308769
+        },
+        "SOLO>ESCAPE_HEAD": {
+          "count": 11,
+          "share": 0.02208835341365462,
+          "incidence_all_races": 0.008106116433308769
+        },
+        "SOLO>RYO_HEAD": {
+          "count": 10,
+          "share": 0.020080321285140562,
+          "incidence_all_races": 0.007369196757553427
+        },
+        "THIRD_PLUS>BANTE": {
+          "count": 9,
+          "share": 0.018072289156626505,
+          "incidence_all_races": 0.006632277081798084
+        },
+        "RYO_HEAD>OTHER_HEAD": {
+          "count": 8,
+          "share": 0.01606425702811245,
+          "incidence_all_races": 0.0058953574060427415
+        },
+        "ESCAPE_HEAD>SOLO": {
+          "count": 7,
+          "share": 0.014056224899598393,
+          "incidence_all_races": 0.005158437730287398
+        },
+        "OTHER_HEAD>THIRD_PLUS": {
+          "count": 7,
+          "share": 0.014056224899598393,
+          "incidence_all_races": 0.005158437730287398
+        },
+        "BANTE>THIRD_PLUS": {
+          "count": 7,
+          "share": 0.014056224899598393,
+          "incidence_all_races": 0.005158437730287398
+        },
+        "THIRD_PLUS>SOLO": {
+          "count": 6,
+          "share": 0.012048192771084338,
+          "incidence_all_races": 0.004421518054532056
+        },
+        "ESCAPE_HEAD>ESCAPE_HEAD": {
+          "count": 5,
+          "share": 0.010040160642570281,
+          "incidence_all_races": 0.0036845983787767134
+        },
+        "SOLO>THIRD_PLUS": {
+          "count": 5,
+          "share": 0.010040160642570281,
+          "incidence_all_races": 0.0036845983787767134
+        },
+        "THIRD_PLUS>OTHER_HEAD": {
+          "count": 5,
+          "share": 0.010040160642570281,
+          "incidence_all_races": 0.0036845983787767134
+        },
+        "RYO_HEAD>SOLO": {
+          "count": 4,
+          "share": 0.008032128514056224,
+          "incidence_all_races": 0.0029476787030213707
+        },
+        "ESCAPE_HEAD>THIRD_PLUS": {
+          "count": 3,
+          "share": 0.006024096385542169,
+          "incidence_all_races": 0.002210759027266028
+        },
+        "THIRD_PLUS>RYO_HEAD": {
+          "count": 3,
+          "share": 0.006024096385542169,
+          "incidence_all_races": 0.002210759027266028
+        },
+        "OTHER_HEAD>RYO_HEAD": {
+          "count": 3,
+          "share": 0.006024096385542169,
+          "incidence_all_races": 0.002210759027266028
+        },
+        "THIRD_PLUS>ESCAPE_HEAD": {
+          "count": 3,
+          "share": 0.006024096385542169,
+          "incidence_all_races": 0.002210759027266028
+        },
+        "RYO_HEAD>ESCAPE_HEAD": {
+          "count": 3,
+          "share": 0.006024096385542169,
+          "incidence_all_races": 0.002210759027266028
+        },
+        "RYO_HEAD>THIRD_PLUS": {
+          "count": 2,
+          "share": 0.004016064257028112,
+          "incidence_all_races": 0.0014738393515106854
+        },
+        "RYO_HEAD>RYO_HEAD": {
+          "count": 2,
+          "share": 0.004016064257028112,
+          "incidence_all_races": 0.0014738393515106854
+        },
+        "ESCAPE_HEAD>RYO_HEAD": {
+          "count": 2,
+          "share": 0.004016064257028112,
+          "incidence_all_races": 0.0014738393515106854
+        }
+      },
+      "ordered_exact_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 39
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 21
+        },
+        {
+          "pattern": "BANTE>BANTE>OTHER_HEAD",
+          "count": 17
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>BANTE",
+          "count": 14
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 11
+        },
+        {
+          "pattern": "SOLO>BANTE>SOLO",
+          "count": 11
+        },
+        {
+          "pattern": "BANTE>ESCAPE_HEAD>BANTE",
+          "count": 9
+        },
+        {
+          "pattern": "ESCAPE_HEAD>SOLO>BANTE",
+          "count": 9
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 9
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>BANTE>RYO_HEAD",
+          "count": 8
+        },
+        {
+          "pattern": "SOLO>SOLO>SOLO",
+          "count": 7
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "OTHER_HEAD>BANTE>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>SOLO",
+          "count": 7
+        },
+        {
+          "pattern": "SOLO>SOLO>OTHER_HEAD",
+          "count": 7
+        },
+        {
+          "pattern": "RYO_HEAD>OTHER_HEAD>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "RYO_HEAD>BANTE>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "BANTE>SOLO>OTHER_HEAD",
+          "count": 7
+        },
+        {
+          "pattern": "ESCAPE_HEAD>ESCAPE_HEAD>BANTE",
+          "count": 7
+        }
+      ],
+      "ordered_coarse_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 39
+        },
+        {
+          "pattern": "HEAD>HEAD>BANTE",
+          "count": 33
+        },
+        {
+          "pattern": "BANTE>BANTE>HEAD",
+          "count": 31
+        },
+        {
+          "pattern": "HEAD>BANTE>BANTE",
+          "count": 28
+        },
+        {
+          "pattern": "HEAD>HEAD>HEAD",
+          "count": 26
+        },
+        {
+          "pattern": "BANTE>HEAD>BANTE",
+          "count": 24
+        },
+        {
+          "pattern": "HEAD>BANTE>HEAD",
+          "count": 21
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 21
+        },
+        {
+          "pattern": "BANTE>HEAD>HEAD",
+          "count": 19
+        },
+        {
+          "pattern": "HEAD>SOLO>BANTE",
+          "count": 18
+        },
+        {
+          "pattern": "SOLO>SOLO>HEAD",
+          "count": 16
+        },
+        {
+          "pattern": "SOLO>HEAD>HEAD",
+          "count": 14
+        },
+        {
+          "pattern": "HEAD>SOLO>HEAD",
+          "count": 14
+        },
+        {
+          "pattern": "SOLO>BANTE>HEAD",
+          "count": 13
+        },
+        {
+          "pattern": "HEAD>SOLO>SOLO",
+          "count": 12
+        },
+        {
+          "pattern": "BANTE>SOLO>HEAD",
+          "count": 12
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 11
+        },
+        {
+          "pattern": "SOLO>HEAD>BANTE",
+          "count": 11
+        },
+        {
+          "pattern": "BANTE>HEAD>SOLO",
+          "count": 11
+        },
+        {
+          "pattern": "SOLO>BANTE>SOLO",
+          "count": 11
+        }
+      ],
+      "target_patterns": {
+        "RYO_HEAD>BANTE>BANTE": {
+          "count": 7,
+          "share_within_three_line": 0.014056224899598393,
+          "incidence_all_races": 0.005158437730287398
+        },
+        "ESCAPE_HEAD>BANTE>BANTE": {
+          "count": 14,
+          "share_within_three_line": 0.028112449799196786,
+          "incidence_all_races": 0.010316875460574797
+        },
+        "OTHER_HEAD>BANTE>BANTE": {
+          "count": 7,
+          "share_within_three_line": 0.014056224899598393,
+          "incidence_all_races": 0.005158437730287398
+        },
+        "BANTE>BANTE>BANTE": {
+          "count": 39,
+          "share_within_three_line": 0.0783132530120482,
+          "incidence_all_races": 0.028739867354458364
+        }
+      },
+      "head_any_bante_bante": {
+        "count": 28,
+        "share_within_three_line": 0.05622489959839357,
+        "incidence_all_races": 0.020633750921149593,
+        "winner_head_style_split": {
+          "ESCAPE_HEAD": 14,
+          "OTHER_HEAD": 7,
+          "RYO_HEAD": 7
+        }
+      }
+    },
+    "TOP3_SCORE_3LINES_BANTE2PLUS": {
+      "races": 627,
+      "three_line_finishes": 238,
+      "three_line_finish_rate": 0.379585326953748,
+      "winner_role_distribution_within_three_line": {
+        "BANTE": {
+          "count": 128,
+          "share": 0.5378151260504201,
+          "incidence_all_races": 0.20414673046251994
+        },
+        "SOLO": {
+          "count": 40,
+          "share": 0.16806722689075632,
+          "incidence_all_races": 0.06379585326953748
+        },
+        "ESCAPE_HEAD": {
+          "count": 35,
+          "share": 0.14705882352941177,
+          "incidence_all_races": 0.05582137161084529
+        },
+        "OTHER_HEAD": {
+          "count": 18,
+          "share": 0.07563025210084033,
+          "incidence_all_races": 0.028708133971291867
+        },
+        "RYO_HEAD": {
+          "count": 12,
+          "share": 0.05042016806722689,
+          "incidence_all_races": 0.019138755980861243
+        },
+        "THIRD_PLUS": {
+          "count": 5,
+          "share": 0.02100840336134454,
+          "incidence_all_races": 0.007974481658692184
+        }
+      },
+      "second_third_pair_distribution_within_three_line": {
+        "BANTE>BANTE": {
+          "count": 71,
+          "share": 0.29831932773109243,
+          "incidence_all_races": 0.11323763955342903
+        },
+        "BANTE>OTHER_HEAD": {
+          "count": 21,
+          "share": 0.08823529411764706,
+          "incidence_all_races": 0.03349282296650718
+        },
+        "SOLO>BANTE": {
+          "count": 17,
+          "share": 0.07142857142857142,
+          "incidence_all_races": 0.02711323763955343
+        },
+        "ESCAPE_HEAD>BANTE": {
+          "count": 16,
+          "share": 0.06722689075630252,
+          "incidence_all_races": 0.025518341307814992
+        },
+        "BANTE>SOLO": {
+          "count": 13,
+          "share": 0.0546218487394958,
+          "incidence_all_races": 0.02073365231259968
+        },
+        "BANTE>ESCAPE_HEAD": {
+          "count": 10,
+          "share": 0.04201680672268908,
+          "incidence_all_races": 0.01594896331738437
+        },
+        "OTHER_HEAD>BANTE": {
+          "count": 9,
+          "share": 0.037815126050420166,
+          "incidence_all_races": 0.014354066985645933
+        },
+        "BANTE>RYO_HEAD": {
+          "count": 8,
+          "share": 0.03361344537815126,
+          "incidence_all_races": 0.012759170653907496
+        },
+        "RYO_HEAD>BANTE": {
+          "count": 8,
+          "share": 0.03361344537815126,
+          "incidence_all_races": 0.012759170653907496
+        },
+        "THIRD_PLUS>BANTE": {
+          "count": 6,
+          "share": 0.025210084033613446,
+          "incidence_all_races": 0.009569377990430622
+        },
+        "OTHER_HEAD>SOLO": {
+          "count": 5,
+          "share": 0.02100840336134454,
+          "incidence_all_races": 0.007974481658692184
+        },
+        "RYO_HEAD>OTHER_HEAD": {
+          "count": 5,
+          "share": 0.02100840336134454,
+          "incidence_all_races": 0.007974481658692184
+        },
+        "BANTE>THIRD_PLUS": {
+          "count": 5,
+          "share": 0.02100840336134454,
+          "incidence_all_races": 0.007974481658692184
+        },
+        "SOLO>SOLO": {
+          "count": 4,
+          "share": 0.01680672268907563,
+          "incidence_all_races": 0.006379585326953748
+        },
+        "OTHER_HEAD>OTHER_HEAD": {
+          "count": 4,
+          "share": 0.01680672268907563,
+          "incidence_all_races": 0.006379585326953748
+        },
+        "SOLO>RYO_HEAD": {
+          "count": 4,
+          "share": 0.01680672268907563,
+          "incidence_all_races": 0.006379585326953748
+        },
+        "SOLO>ESCAPE_HEAD": {
+          "count": 4,
+          "share": 0.01680672268907563,
+          "incidence_all_races": 0.006379585326953748
+        },
+        "SOLO>OTHER_HEAD": {
+          "count": 3,
+          "share": 0.012605042016806723,
+          "incidence_all_races": 0.004784688995215311
+        },
+        "OTHER_HEAD>THIRD_PLUS": {
+          "count": 3,
+          "share": 0.012605042016806723,
+          "incidence_all_races": 0.004784688995215311
+        },
+        "THIRD_PLUS>RYO_HEAD": {
+          "count": 3,
+          "share": 0.012605042016806723,
+          "incidence_all_races": 0.004784688995215311
+        },
+        "SOLO>THIRD_PLUS": {
+          "count": 2,
+          "share": 0.008403361344537815,
+          "incidence_all_races": 0.003189792663476874
+        },
+        "THIRD_PLUS>ESCAPE_HEAD": {
+          "count": 2,
+          "share": 0.008403361344537815,
+          "incidence_all_races": 0.003189792663476874
+        },
+        "ESCAPE_HEAD>SOLO": {
+          "count": 2,
+          "share": 0.008403361344537815,
+          "incidence_all_races": 0.003189792663476874
+        },
+        "OTHER_HEAD>RYO_HEAD": {
+          "count": 2,
+          "share": 0.008403361344537815,
+          "incidence_all_races": 0.003189792663476874
+        },
+        "OTHER_HEAD>ESCAPE_HEAD": {
+          "count": 2,
+          "share": 0.008403361344537815,
+          "incidence_all_races": 0.003189792663476874
+        },
+        "THIRD_PLUS>OTHER_HEAD": {
+          "count": 2,
+          "share": 0.008403361344537815,
+          "incidence_all_races": 0.003189792663476874
+        },
+        "RYO_HEAD>THIRD_PLUS": {
+          "count": 1,
+          "share": 0.004201680672268907,
+          "incidence_all_races": 0.001594896331738437
+        },
+        "ESCAPE_HEAD>OTHER_HEAD": {
+          "count": 1,
+          "share": 0.004201680672268907,
+          "incidence_all_races": 0.001594896331738437
+        },
+        "RYO_HEAD>SOLO": {
+          "count": 1,
+          "share": 0.004201680672268907,
+          "incidence_all_races": 0.001594896331738437
+        },
+        "ESCAPE_HEAD>ESCAPE_HEAD": {
+          "count": 1,
+          "share": 0.004201680672268907,
+          "incidence_all_races": 0.001594896331738437
+        },
+        "RYO_HEAD>RYO_HEAD": {
+          "count": 1,
+          "share": 0.004201680672268907,
+          "incidence_all_races": 0.001594896331738437
+        },
+        "THIRD_PLUS>SOLO": {
+          "count": 1,
+          "share": 0.004201680672268907,
+          "incidence_all_races": 0.001594896331738437
+        },
+        "ESCAPE_HEAD>THIRD_PLUS": {
+          "count": 1,
+          "share": 0.004201680672268907,
+          "incidence_all_races": 0.001594896331738437
+        }
+      },
+      "ordered_exact_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 37
+        },
+        {
+          "pattern": "BANTE>BANTE>OTHER_HEAD",
+          "count": 15
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 13
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>BANTE",
+          "count": 9
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>ESCAPE_HEAD>BANTE",
+          "count": 6
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 6
+        },
+        {
+          "pattern": "SOLO>SOLO>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "RYO_HEAD>BANTE>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "ESCAPE_HEAD>ESCAPE_HEAD>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "BANTE>BANTE>ESCAPE_HEAD",
+          "count": 5
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "SOLO>ESCAPE_HEAD>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "SOLO>BANTE>SOLO",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>OTHER_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>SOLO",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>ESCAPE_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>BANTE>RYO_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>BANTE",
+          "count": 4
+        }
+      ],
+      "ordered_coarse_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 37
+        },
+        {
+          "pattern": "BANTE>BANTE>HEAD",
+          "count": 24
+        },
+        {
+          "pattern": "HEAD>BANTE>BANTE",
+          "count": 18
+        },
+        {
+          "pattern": "BANTE>HEAD>BANTE",
+          "count": 14
+        },
+        {
+          "pattern": "HEAD>HEAD>BANTE",
+          "count": 14
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 13
+        },
+        {
+          "pattern": "BANTE>HEAD>HEAD",
+          "count": 12
+        },
+        {
+          "pattern": "HEAD>BANTE>HEAD",
+          "count": 11
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>HEAD>SOLO",
+          "count": 6
+        },
+        {
+          "pattern": "BANTE>SOLO>HEAD",
+          "count": 6
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 6
+        },
+        {
+          "pattern": "SOLO>SOLO>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "SOLO>HEAD>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "SOLO>SOLO>HEAD",
+          "count": 5
+        },
+        {
+          "pattern": "SOLO>BANTE>HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "SOLO>BANTE>SOLO",
+          "count": 4
+        },
+        {
+          "pattern": "HEAD>SOLO>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "HEAD>HEAD>THIRD_PLUS",
+          "count": 3
+        }
+      ],
+      "target_patterns": {
+        "RYO_HEAD>BANTE>BANTE": {
+          "count": 5,
+          "share_within_three_line": 0.02100840336134454,
+          "incidence_all_races": 0.007974481658692184
+        },
+        "ESCAPE_HEAD>BANTE>BANTE": {
+          "count": 9,
+          "share_within_three_line": 0.037815126050420166,
+          "incidence_all_races": 0.014354066985645933
+        },
+        "OTHER_HEAD>BANTE>BANTE": {
+          "count": 4,
+          "share_within_three_line": 0.01680672268907563,
+          "incidence_all_races": 0.006379585326953748
+        },
+        "BANTE>BANTE>BANTE": {
+          "count": 37,
+          "share_within_three_line": 0.15546218487394958,
+          "incidence_all_races": 0.05901116427432217
+        }
+      },
+      "head_any_bante_bante": {
+        "count": 18,
+        "share_within_three_line": 0.07563025210084033,
+        "incidence_all_races": 0.028708133971291867,
+        "winner_head_style_split": {
+          "ESCAPE_HEAD": 9,
+          "RYO_HEAD": 5,
+          "OTHER_HEAD": 4
+        }
+      }
+    },
+    "TOP3_SCORE_3LINES_GAP2PLUS": {
+      "races": 1088,
+      "three_line_finishes": 396,
+      "three_line_finish_rate": 0.3639705882352941,
+      "winner_role_distribution_within_three_line": {
+        "BANTE": {
+          "count": 160,
+          "share": 0.40404040404040403,
+          "incidence_all_races": 0.14705882352941177
+        },
+        "ESCAPE_HEAD": {
+          "count": 75,
+          "share": 0.1893939393939394,
+          "incidence_all_races": 0.06893382352941177
+        },
+        "SOLO": {
+          "count": 66,
+          "share": 0.16666666666666666,
+          "incidence_all_races": 0.06066176470588235
+        },
+        "RYO_HEAD": {
+          "count": 42,
+          "share": 0.10606060606060606,
+          "incidence_all_races": 0.03860294117647059
+        },
+        "OTHER_HEAD": {
+          "count": 41,
+          "share": 0.10353535353535354,
+          "incidence_all_races": 0.03768382352941176
+        },
+        "THIRD_PLUS": {
+          "count": 12,
+          "share": 0.030303030303030304,
+          "incidence_all_races": 0.011029411764705883
+        }
+      },
+      "second_third_pair_distribution_within_three_line": {
+        "BANTE>BANTE": {
+          "count": 79,
+          "share": 0.1994949494949495,
+          "incidence_all_races": 0.07261029411764706
+        },
+        "BANTE>OTHER_HEAD": {
+          "count": 29,
+          "share": 0.07323232323232323,
+          "incidence_all_races": 0.02665441176470588
+        },
+        "SOLO>BANTE": {
+          "count": 28,
+          "share": 0.0707070707070707,
+          "incidence_all_races": 0.025735294117647058
+        },
+        "ESCAPE_HEAD>BANTE": {
+          "count": 26,
+          "share": 0.06565656565656566,
+          "incidence_all_races": 0.02389705882352941
+        },
+        "OTHER_HEAD>BANTE": {
+          "count": 23,
+          "share": 0.05808080808080808,
+          "incidence_all_races": 0.021139705882352942
+        },
+        "BANTE>SOLO": {
+          "count": 21,
+          "share": 0.05303030303030303,
+          "incidence_all_races": 0.019301470588235295
+        },
+        "BANTE>ESCAPE_HEAD": {
+          "count": 17,
+          "share": 0.04292929292929293,
+          "incidence_all_races": 0.015625
+        },
+        "RYO_HEAD>BANTE": {
+          "count": 16,
+          "share": 0.04040404040404041,
+          "incidence_all_races": 0.014705882352941176
+        },
+        "BANTE>RYO_HEAD": {
+          "count": 14,
+          "share": 0.03535353535353535,
+          "incidence_all_races": 0.012867647058823529
+        },
+        "SOLO>OTHER_HEAD": {
+          "count": 12,
+          "share": 0.030303030303030304,
+          "incidence_all_races": 0.011029411764705883
+        },
+        "OTHER_HEAD>OTHER_HEAD": {
+          "count": 12,
+          "share": 0.030303030303030304,
+          "incidence_all_races": 0.011029411764705883
+        },
+        "ESCAPE_HEAD>OTHER_HEAD": {
+          "count": 11,
+          "share": 0.027777777777777776,
+          "incidence_all_races": 0.01011029411764706
+        },
+        "SOLO>SOLO": {
+          "count": 10,
+          "share": 0.025252525252525252,
+          "incidence_all_races": 0.009191176470588236
+        },
+        "OTHER_HEAD>ESCAPE_HEAD": {
+          "count": 10,
+          "share": 0.025252525252525252,
+          "incidence_all_races": 0.009191176470588236
+        },
+        "OTHER_HEAD>SOLO": {
+          "count": 9,
+          "share": 0.022727272727272728,
+          "incidence_all_races": 0.008272058823529412
+        },
+        "THIRD_PLUS>BANTE": {
+          "count": 9,
+          "share": 0.022727272727272728,
+          "incidence_all_races": 0.008272058823529412
+        },
+        "RYO_HEAD>OTHER_HEAD": {
+          "count": 7,
+          "share": 0.017676767676767676,
+          "incidence_all_races": 0.006433823529411764
+        },
+        "ESCAPE_HEAD>SOLO": {
+          "count": 6,
+          "share": 0.015151515151515152,
+          "incidence_all_races": 0.0055147058823529415
+        },
+        "SOLO>RYO_HEAD": {
+          "count": 6,
+          "share": 0.015151515151515152,
+          "incidence_all_races": 0.0055147058823529415
+        },
+        "BANTE>THIRD_PLUS": {
+          "count": 6,
+          "share": 0.015151515151515152,
+          "incidence_all_races": 0.0055147058823529415
+        },
+        "OTHER_HEAD>THIRD_PLUS": {
+          "count": 5,
+          "share": 0.012626262626262626,
+          "incidence_all_races": 0.004595588235294118
+        },
+        "ESCAPE_HEAD>ESCAPE_HEAD": {
+          "count": 5,
+          "share": 0.012626262626262626,
+          "incidence_all_races": 0.004595588235294118
+        },
+        "THIRD_PLUS>OTHER_HEAD": {
+          "count": 5,
+          "share": 0.012626262626262626,
+          "incidence_all_races": 0.004595588235294118
+        },
+        "SOLO>ESCAPE_HEAD": {
+          "count": 5,
+          "share": 0.012626262626262626,
+          "incidence_all_races": 0.004595588235294118
+        },
+        "THIRD_PLUS>SOLO": {
+          "count": 4,
+          "share": 0.010101010101010102,
+          "incidence_all_races": 0.003676470588235294
+        },
+        "ESCAPE_HEAD>THIRD_PLUS": {
+          "count": 3,
+          "share": 0.007575757575757576,
+          "incidence_all_races": 0.0027573529411764708
+        },
+        "OTHER_HEAD>RYO_HEAD": {
+          "count": 3,
+          "share": 0.007575757575757576,
+          "incidence_all_races": 0.0027573529411764708
+        },
+        "THIRD_PLUS>ESCAPE_HEAD": {
+          "count": 3,
+          "share": 0.007575757575757576,
+          "incidence_all_races": 0.0027573529411764708
+        },
+        "RYO_HEAD>ESCAPE_HEAD": {
+          "count": 3,
+          "share": 0.007575757575757576,
+          "incidence_all_races": 0.0027573529411764708
+        },
+        "RYO_HEAD>RYO_HEAD": {
+          "count": 2,
+          "share": 0.005050505050505051,
+          "incidence_all_races": 0.001838235294117647
+        },
+        "THIRD_PLUS>RYO_HEAD": {
+          "count": 2,
+          "share": 0.005050505050505051,
+          "incidence_all_races": 0.001838235294117647
+        },
+        "SOLO>THIRD_PLUS": {
+          "count": 2,
+          "share": 0.005050505050505051,
+          "incidence_all_races": 0.001838235294117647
+        },
+        "ESCAPE_HEAD>RYO_HEAD": {
+          "count": 2,
+          "share": 0.005050505050505051,
+          "incidence_all_races": 0.001838235294117647
+        },
+        "RYO_HEAD>SOLO": {
+          "count": 1,
+          "share": 0.0025252525252525255,
+          "incidence_all_races": 0.0009191176470588235
+        }
+      },
+      "ordered_exact_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 35
+        },
+        {
+          "pattern": "BANTE>BANTE>OTHER_HEAD",
+          "count": 16
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>BANTE",
+          "count": 14
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 13
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 10
+        },
+        {
+          "pattern": "SOLO>BANTE>SOLO",
+          "count": 9
+        },
+        {
+          "pattern": "BANTE>ESCAPE_HEAD>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>BANTE>RYO_HEAD",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "OTHER_HEAD>BANTE>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "RYO_HEAD>OTHER_HEAD>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "RYO_HEAD>BANTE>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>ESCAPE_HEAD",
+          "count": 6
+        },
+        {
+          "pattern": "SOLO>ESCAPE_HEAD>BANTE",
+          "count": 6
+        },
+        {
+          "pattern": "BANTE>SOLO>OTHER_HEAD",
+          "count": 6
+        },
+        {
+          "pattern": "ESCAPE_HEAD>ESCAPE_HEAD>BANTE",
+          "count": 6
+        },
+        {
+          "pattern": "BANTE>BANTE>ESCAPE_HEAD",
+          "count": 6
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>ESCAPE_HEAD",
+          "count": 5
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>SOLO",
+          "count": 5
+        }
+      ],
+      "ordered_coarse_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 35
+        },
+        {
+          "pattern": "HEAD>HEAD>BANTE",
+          "count": 31
+        },
+        {
+          "pattern": "BANTE>BANTE>HEAD",
+          "count": 30
+        },
+        {
+          "pattern": "HEAD>BANTE>BANTE",
+          "count": 28
+        },
+        {
+          "pattern": "HEAD>HEAD>HEAD",
+          "count": 26
+        },
+        {
+          "pattern": "BANTE>HEAD>BANTE",
+          "count": 23
+        },
+        {
+          "pattern": "HEAD>BANTE>HEAD",
+          "count": 20
+        },
+        {
+          "pattern": "BANTE>HEAD>HEAD",
+          "count": 19
+        },
+        {
+          "pattern": "HEAD>SOLO>BANTE",
+          "count": 13
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 13
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 10
+        },
+        {
+          "pattern": "BANTE>SOLO>HEAD",
+          "count": 10
+        },
+        {
+          "pattern": "SOLO>BANTE>HEAD",
+          "count": 9
+        },
+        {
+          "pattern": "SOLO>HEAD>BANTE",
+          "count": 9
+        },
+        {
+          "pattern": "SOLO>BANTE>SOLO",
+          "count": 9
+        },
+        {
+          "pattern": "BANTE>HEAD>SOLO",
+          "count": 8
+        },
+        {
+          "pattern": "SOLO>HEAD>HEAD",
+          "count": 8
+        },
+        {
+          "pattern": "SOLO>SOLO>HEAD",
+          "count": 7
+        },
+        {
+          "pattern": "HEAD>HEAD>SOLO",
+          "count": 6
+        },
+        {
+          "pattern": "HEAD>BANTE>SOLO",
+          "count": 6
+        }
+      ],
+      "target_patterns": {
+        "RYO_HEAD>BANTE>BANTE": {
+          "count": 7,
+          "share_within_three_line": 0.017676767676767676,
+          "incidence_all_races": 0.006433823529411764
+        },
+        "ESCAPE_HEAD>BANTE>BANTE": {
+          "count": 14,
+          "share_within_three_line": 0.03535353535353535,
+          "incidence_all_races": 0.012867647058823529
+        },
+        "OTHER_HEAD>BANTE>BANTE": {
+          "count": 7,
+          "share_within_three_line": 0.017676767676767676,
+          "incidence_all_races": 0.006433823529411764
+        },
+        "BANTE>BANTE>BANTE": {
+          "count": 35,
+          "share_within_three_line": 0.08838383838383838,
+          "incidence_all_races": 0.03216911764705882
+        }
+      },
+      "head_any_bante_bante": {
+        "count": 28,
+        "share_within_three_line": 0.0707070707070707,
+        "incidence_all_races": 0.025735294117647058,
+        "winner_head_style_split": {
+          "ESCAPE_HEAD": 14,
+          "OTHER_HEAD": 7,
+          "RYO_HEAD": 7
+        }
+      }
+    },
+    "TOP3_SCORE_3LINES_BOTH": {
+      "races": 536,
+      "three_line_finishes": 210,
+      "three_line_finish_rate": 0.3917910447761194,
+      "winner_role_distribution_within_three_line": {
+        "BANTE": {
+          "count": 117,
+          "share": 0.5571428571428572,
+          "incidence_all_races": 0.21828358208955223
+        },
+        "ESCAPE_HEAD": {
+          "count": 30,
+          "share": 0.14285714285714285,
+          "incidence_all_races": 0.055970149253731345
+        },
+        "SOLO": {
+          "count": 29,
+          "share": 0.1380952380952381,
+          "incidence_all_races": 0.054104477611940295
+        },
+        "OTHER_HEAD": {
+          "count": 18,
+          "share": 0.08571428571428572,
+          "incidence_all_races": 0.033582089552238806
+        },
+        "RYO_HEAD": {
+          "count": 12,
+          "share": 0.05714285714285714,
+          "incidence_all_races": 0.022388059701492536
+        },
+        "THIRD_PLUS": {
+          "count": 4,
+          "share": 0.01904761904761905,
+          "incidence_all_races": 0.007462686567164179
+        }
+      },
+      "second_third_pair_distribution_within_three_line": {
+        "BANTE>BANTE": {
+          "count": 64,
+          "share": 0.3047619047619048,
+          "incidence_all_races": 0.11940298507462686
+        },
+        "BANTE>OTHER_HEAD": {
+          "count": 20,
+          "share": 0.09523809523809523,
+          "incidence_all_races": 0.03731343283582089
+        },
+        "ESCAPE_HEAD>BANTE": {
+          "count": 15,
+          "share": 0.07142857142857142,
+          "incidence_all_races": 0.027985074626865673
+        },
+        "SOLO>BANTE": {
+          "count": 13,
+          "share": 0.06190476190476191,
+          "incidence_all_races": 0.024253731343283583
+        },
+        "BANTE>SOLO": {
+          "count": 10,
+          "share": 0.047619047619047616,
+          "incidence_all_races": 0.018656716417910446
+        },
+        "BANTE>ESCAPE_HEAD": {
+          "count": 10,
+          "share": 0.047619047619047616,
+          "incidence_all_races": 0.018656716417910446
+        },
+        "OTHER_HEAD>BANTE": {
+          "count": 9,
+          "share": 0.04285714285714286,
+          "incidence_all_races": 0.016791044776119403
+        },
+        "BANTE>RYO_HEAD": {
+          "count": 8,
+          "share": 0.0380952380952381,
+          "incidence_all_races": 0.014925373134328358
+        },
+        "RYO_HEAD>BANTE": {
+          "count": 7,
+          "share": 0.03333333333333333,
+          "incidence_all_races": 0.013059701492537313
+        },
+        "THIRD_PLUS>BANTE": {
+          "count": 6,
+          "share": 0.02857142857142857,
+          "incidence_all_races": 0.011194029850746268
+        },
+        "BANTE>THIRD_PLUS": {
+          "count": 5,
+          "share": 0.023809523809523808,
+          "incidence_all_races": 0.009328358208955223
+        },
+        "OTHER_HEAD>OTHER_HEAD": {
+          "count": 4,
+          "share": 0.01904761904761905,
+          "incidence_all_races": 0.007462686567164179
+        },
+        "OTHER_HEAD>SOLO": {
+          "count": 4,
+          "share": 0.01904761904761905,
+          "incidence_all_races": 0.007462686567164179
+        },
+        "RYO_HEAD>OTHER_HEAD": {
+          "count": 4,
+          "share": 0.01904761904761905,
+          "incidence_all_races": 0.007462686567164179
+        },
+        "SOLO>SOLO": {
+          "count": 3,
+          "share": 0.014285714285714285,
+          "incidence_all_races": 0.005597014925373134
+        },
+        "OTHER_HEAD>THIRD_PLUS": {
+          "count": 3,
+          "share": 0.014285714285714285,
+          "incidence_all_races": 0.005597014925373134
+        },
+        "SOLO>RYO_HEAD": {
+          "count": 3,
+          "share": 0.014285714285714285,
+          "incidence_all_races": 0.005597014925373134
+        },
+        "SOLO>ESCAPE_HEAD": {
+          "count": 3,
+          "share": 0.014285714285714285,
+          "incidence_all_races": 0.005597014925373134
+        },
+        "THIRD_PLUS>ESCAPE_HEAD": {
+          "count": 2,
+          "share": 0.009523809523809525,
+          "incidence_all_races": 0.0037313432835820895
+        },
+        "ESCAPE_HEAD>SOLO": {
+          "count": 2,
+          "share": 0.009523809523809525,
+          "incidence_all_races": 0.0037313432835820895
+        },
+        "OTHER_HEAD>RYO_HEAD": {
+          "count": 2,
+          "share": 0.009523809523809525,
+          "incidence_all_races": 0.0037313432835820895
+        },
+        "THIRD_PLUS>RYO_HEAD": {
+          "count": 2,
+          "share": 0.009523809523809525,
+          "incidence_all_races": 0.0037313432835820895
+        },
+        "SOLO>OTHER_HEAD": {
+          "count": 2,
+          "share": 0.009523809523809525,
+          "incidence_all_races": 0.0037313432835820895
+        },
+        "OTHER_HEAD>ESCAPE_HEAD": {
+          "count": 2,
+          "share": 0.009523809523809525,
+          "incidence_all_races": 0.0037313432835820895
+        },
+        "THIRD_PLUS>OTHER_HEAD": {
+          "count": 2,
+          "share": 0.009523809523809525,
+          "incidence_all_races": 0.0037313432835820895
+        },
+        "ESCAPE_HEAD>OTHER_HEAD": {
+          "count": 1,
+          "share": 0.004761904761904762,
+          "incidence_all_races": 0.0018656716417910447
+        },
+        "ESCAPE_HEAD>ESCAPE_HEAD": {
+          "count": 1,
+          "share": 0.004761904761904762,
+          "incidence_all_races": 0.0018656716417910447
+        },
+        "RYO_HEAD>RYO_HEAD": {
+          "count": 1,
+          "share": 0.004761904761904762,
+          "incidence_all_races": 0.0018656716417910447
+        },
+        "THIRD_PLUS>SOLO": {
+          "count": 1,
+          "share": 0.004761904761904762,
+          "incidence_all_races": 0.0018656716417910447
+        },
+        "ESCAPE_HEAD>THIRD_PLUS": {
+          "count": 1,
+          "share": 0.004761904761904762,
+          "incidence_all_races": 0.0018656716417910447
+        }
+      },
+      "ordered_exact_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 34
+        },
+        {
+          "pattern": "BANTE>BANTE>OTHER_HEAD",
+          "count": 14
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 9
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>BANTE",
+          "count": 9
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>ESCAPE_HEAD>BANTE",
+          "count": 6
+        },
+        {
+          "pattern": "RYO_HEAD>BANTE>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "BANTE>BANTE>ESCAPE_HEAD",
+          "count": 5
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "SOLO>ESCAPE_HEAD>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>OTHER_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "ESCAPE_HEAD>ESCAPE_HEAD>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>ESCAPE_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>BANTE>RYO_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "OTHER_HEAD>BANTE>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "SOLO>SOLO>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "SOLO>BANTE>SOLO",
+          "count": 3
+        }
+      ],
+      "ordered_coarse_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 34
+        },
+        {
+          "pattern": "BANTE>BANTE>HEAD",
+          "count": 23
+        },
+        {
+          "pattern": "HEAD>BANTE>BANTE",
+          "count": 18
+        },
+        {
+          "pattern": "BANTE>HEAD>BANTE",
+          "count": 14
+        },
+        {
+          "pattern": "BANTE>HEAD>HEAD",
+          "count": 12
+        },
+        {
+          "pattern": "HEAD>HEAD>BANTE",
+          "count": 12
+        },
+        {
+          "pattern": "HEAD>BANTE>HEAD",
+          "count": 11
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 9
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>SOLO>HEAD",
+          "count": 6
+        },
+        {
+          "pattern": "SOLO>HEAD>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "BANTE>HEAD>SOLO",
+          "count": 5
+        },
+        {
+          "pattern": "SOLO>BANTE>HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 4
+        },
+        {
+          "pattern": "SOLO>SOLO>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "SOLO>BANTE>SOLO",
+          "count": 3
+        },
+        {
+          "pattern": "HEAD>HEAD>THIRD_PLUS",
+          "count": 3
+        },
+        {
+          "pattern": "THIRD_PLUS>BANTE>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "HEAD>THIRD_PLUS>HEAD",
+          "count": 3
+        }
+      ],
+      "target_patterns": {
+        "RYO_HEAD>BANTE>BANTE": {
+          "count": 5,
+          "share_within_three_line": 0.023809523809523808,
+          "incidence_all_races": 0.009328358208955223
+        },
+        "ESCAPE_HEAD>BANTE>BANTE": {
+          "count": 9,
+          "share_within_three_line": 0.04285714285714286,
+          "incidence_all_races": 0.016791044776119403
+        },
+        "OTHER_HEAD>BANTE>BANTE": {
+          "count": 4,
+          "share_within_three_line": 0.01904761904761905,
+          "incidence_all_races": 0.007462686567164179
+        },
+        "BANTE>BANTE>BANTE": {
+          "count": 34,
+          "share_within_three_line": 0.1619047619047619,
+          "incidence_all_races": 0.06343283582089553
+        }
+      },
+      "head_any_bante_bante": {
+        "count": 18,
+        "share_within_three_line": 0.08571428571428572,
+        "incidence_all_races": 0.033582089552238806,
+        "winner_head_style_split": {
+          "ESCAPE_HEAD": 9,
+          "RYO_HEAD": 5,
+          "OTHER_HEAD": 4
+        }
+      }
+    },
+    "ALL_USABLE_RYO_HEAD_PRESENT": {
+      "races": 3128,
+      "three_line_finishes": 659,
+      "three_line_finish_rate": 0.21067774936061381,
+      "winner_role_distribution_within_three_line": {
+        "BANTE": {
+          "count": 259,
+          "share": 0.3930197268588771,
+          "incidence_all_races": 0.0828005115089514
+        },
+        "RYO_HEAD": {
+          "count": 134,
+          "share": 0.20333839150227617,
+          "incidence_all_races": 0.04283887468030691
+        },
+        "ESCAPE_HEAD": {
+          "count": 107,
+          "share": 0.16236722306525037,
+          "incidence_all_races": 0.03420716112531969
+        },
+        "SOLO": {
+          "count": 73,
+          "share": 0.11077389984825493,
+          "incidence_all_races": 0.023337595907928388
+        },
+        "OTHER_HEAD": {
+          "count": 55,
+          "share": 0.0834597875569044,
+          "incidence_all_races": 0.01758312020460358
+        },
+        "THIRD_PLUS": {
+          "count": 31,
+          "share": 0.04704097116843703,
+          "incidence_all_races": 0.009910485933503837
+        }
+      },
+      "second_third_pair_distribution_within_three_line": {
+        "BANTE>BANTE": {
+          "count": 122,
+          "share": 0.18512898330804248,
+          "incidence_all_races": 0.03900255754475703
+        },
+        "RYO_HEAD>BANTE": {
+          "count": 47,
+          "share": 0.07132018209408195,
+          "incidence_all_races": 0.015025575447570333
+        },
+        "BANTE>OTHER_HEAD": {
+          "count": 41,
+          "share": 0.0622154779969651,
+          "incidence_all_races": 0.013107416879795396
+        },
+        "BANTE>RYO_HEAD": {
+          "count": 37,
+          "share": 0.05614567526555387,
+          "incidence_all_races": 0.011828644501278773
+        },
+        "BANTE>SOLO": {
+          "count": 34,
+          "share": 0.051593323216995446,
+          "incidence_all_races": 0.010869565217391304
+        },
+        "OTHER_HEAD>BANTE": {
+          "count": 31,
+          "share": 0.04704097116843703,
+          "incidence_all_races": 0.009910485933503837
+        },
+        "SOLO>BANTE": {
+          "count": 31,
+          "share": 0.04704097116843703,
+          "incidence_all_races": 0.009910485933503837
+        },
+        "ESCAPE_HEAD>BANTE": {
+          "count": 28,
+          "share": 0.042488619119878605,
+          "incidence_all_races": 0.008951406649616368
+        },
+        "BANTE>ESCAPE_HEAD": {
+          "count": 23,
+          "share": 0.03490136570561457,
+          "incidence_all_races": 0.007352941176470588
+        },
+        "SOLO>RYO_HEAD": {
+          "count": 23,
+          "share": 0.03490136570561457,
+          "incidence_all_races": 0.007352941176470588
+        },
+        "ESCAPE_HEAD>RYO_HEAD": {
+          "count": 22,
+          "share": 0.03338391502276176,
+          "incidence_all_races": 0.007033248081841432
+        },
+        "BANTE>THIRD_PLUS": {
+          "count": 22,
+          "share": 0.03338391502276176,
+          "incidence_all_races": 0.007033248081841432
+        },
+        "RYO_HEAD>SOLO": {
+          "count": 15,
+          "share": 0.02276176024279211,
+          "incidence_all_races": 0.00479539641943734
+        },
+        "RYO_HEAD>OTHER_HEAD": {
+          "count": 15,
+          "share": 0.02276176024279211,
+          "incidence_all_races": 0.00479539641943734
+        },
+        "THIRD_PLUS>SOLO": {
+          "count": 13,
+          "share": 0.019726858877086494,
+          "incidence_all_races": 0.0041560102301790285
+        },
+        "THIRD_PLUS>BANTE": {
+          "count": 13,
+          "share": 0.019726858877086494,
+          "incidence_all_races": 0.0041560102301790285
+        },
+        "OTHER_HEAD>RYO_HEAD": {
+          "count": 13,
+          "share": 0.019726858877086494,
+          "incidence_all_races": 0.0041560102301790285
+        },
+        "SOLO>SOLO": {
+          "count": 12,
+          "share": 0.018209408194233688,
+          "incidence_all_races": 0.0038363171355498722
+        },
+        "SOLO>OTHER_HEAD": {
+          "count": 10,
+          "share": 0.015174506828528073,
+          "incidence_all_races": 0.00319693094629156
+        },
+        "OTHER_HEAD>SOLO": {
+          "count": 9,
+          "share": 0.013657056145675266,
+          "incidence_all_races": 0.002877237851662404
+        },
+        "ESCAPE_HEAD>ESCAPE_HEAD": {
+          "count": 9,
+          "share": 0.013657056145675266,
+          "incidence_all_races": 0.002877237851662404
+        },
+        "RYO_HEAD>RYO_HEAD": {
+          "count": 9,
+          "share": 0.013657056145675266,
+          "incidence_all_races": 0.002877237851662404
+        },
+        "ESCAPE_HEAD>OTHER_HEAD": {
+          "count": 9,
+          "share": 0.013657056145675266,
+          "incidence_all_races": 0.002877237851662404
+        },
+        "THIRD_PLUS>RYO_HEAD": {
+          "count": 9,
+          "share": 0.013657056145675266,
+          "incidence_all_races": 0.002877237851662404
+        },
+        "RYO_HEAD>ESCAPE_HEAD": {
+          "count": 8,
+          "share": 0.012139605462822459,
+          "incidence_all_races": 0.0025575447570332483
+        },
+        "ESCAPE_HEAD>SOLO": {
+          "count": 7,
+          "share": 0.010622154779969651,
+          "incidence_all_races": 0.002237851662404092
+        },
+        "OTHER_HEAD>OTHER_HEAD": {
+          "count": 7,
+          "share": 0.010622154779969651,
+          "incidence_all_races": 0.002237851662404092
+        },
+        "RYO_HEAD>THIRD_PLUS": {
+          "count": 6,
+          "share": 0.009104704097116844,
+          "incidence_all_races": 0.0019181585677749361
+        },
+        "THIRD_PLUS>OTHER_HEAD": {
+          "count": 6,
+          "share": 0.009104704097116844,
+          "incidence_all_races": 0.0019181585677749361
+        },
+        "SOLO>THIRD_PLUS": {
+          "count": 6,
+          "share": 0.009104704097116844,
+          "incidence_all_races": 0.0019181585677749361
+        },
+        "SOLO>ESCAPE_HEAD": {
+          "count": 5,
+          "share": 0.007587253414264037,
+          "incidence_all_races": 0.00159846547314578
+        },
+        "ESCAPE_HEAD>THIRD_PLUS": {
+          "count": 4,
+          "share": 0.006069802731411229,
+          "incidence_all_races": 0.0012787723785166241
+        },
+        "OTHER_HEAD>ESCAPE_HEAD": {
+          "count": 4,
+          "share": 0.006069802731411229,
+          "incidence_all_races": 0.0012787723785166241
+        },
+        "THIRD_PLUS>THIRD_PLUS": {
+          "count": 3,
+          "share": 0.004552352048558422,
+          "incidence_all_races": 0.0009590792838874681
+        },
+        "THIRD_PLUS>ESCAPE_HEAD": {
+          "count": 3,
+          "share": 0.004552352048558422,
+          "incidence_all_races": 0.0009590792838874681
+        },
+        "OTHER_HEAD>THIRD_PLUS": {
+          "count": 3,
+          "share": 0.004552352048558422,
+          "incidence_all_races": 0.0009590792838874681
+        }
+      },
+      "ordered_exact_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 43
+        },
+        {
+          "pattern": "RYO_HEAD>BANTE>BANTE",
+          "count": 25
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>BANTE",
+          "count": 22
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>BANTE",
+          "count": 18
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 17
+        },
+        {
+          "pattern": "BANTE>BANTE>RYO_HEAD",
+          "count": 17
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 16
+        },
+        {
+          "pattern": "BANTE>BANTE>OTHER_HEAD",
+          "count": 16
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 15
+        },
+        {
+          "pattern": "BANTE>BANTE>ESCAPE_HEAD",
+          "count": 15
+        },
+        {
+          "pattern": "OTHER_HEAD>BANTE>BANTE",
+          "count": 14
+        },
+        {
+          "pattern": "RYO_HEAD>OTHER_HEAD>BANTE",
+          "count": 13
+        },
+        {
+          "pattern": "BANTE>ESCAPE_HEAD>BANTE",
+          "count": 11
+        },
+        {
+          "pattern": "BANTE>ESCAPE_HEAD>RYO_HEAD",
+          "count": 10
+        },
+        {
+          "pattern": "ESCAPE_HEAD>RYO_HEAD>BANTE",
+          "count": 10
+        },
+        {
+          "pattern": "BANTE>BANTE>THIRD_PLUS",
+          "count": 9
+        },
+        {
+          "pattern": "RYO_HEAD>SOLO>OTHER_HEAD",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "RYO_HEAD>BANTE>OTHER_HEAD",
+          "count": 8
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>OTHER_HEAD",
+          "count": 8
+        }
+      ],
+      "ordered_coarse_role_patterns_top20": [
+        {
+          "pattern": "HEAD>BANTE>BANTE",
+          "count": 57
+        },
+        {
+          "pattern": "HEAD>HEAD>HEAD",
+          "count": 54
+        },
+        {
+          "pattern": "HEAD>HEAD>BANTE",
+          "count": 52
+        },
+        {
+          "pattern": "BANTE>BANTE>HEAD",
+          "count": 48
+        },
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 43
+        },
+        {
+          "pattern": "BANTE>HEAD>BANTE",
+          "count": 40
+        },
+        {
+          "pattern": "BANTE>HEAD>HEAD",
+          "count": 33
+        },
+        {
+          "pattern": "HEAD>BANTE>HEAD",
+          "count": 33
+        },
+        {
+          "pattern": "HEAD>SOLO>HEAD",
+          "count": 23
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 17
+        },
+        {
+          "pattern": "SOLO>BANTE>HEAD",
+          "count": 16
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 16
+        },
+        {
+          "pattern": "HEAD>HEAD>SOLO",
+          "count": 15
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 15
+        },
+        {
+          "pattern": "BANTE>HEAD>SOLO",
+          "count": 14
+        },
+        {
+          "pattern": "HEAD>BANTE>SOLO",
+          "count": 11
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>HEAD",
+          "count": 9
+        },
+        {
+          "pattern": "BANTE>BANTE>THIRD_PLUS",
+          "count": 9
+        },
+        {
+          "pattern": "HEAD>SOLO>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "HEAD>SOLO>SOLO",
+          "count": 8
+        }
+      ],
+      "target_patterns": {
+        "RYO_HEAD>BANTE>BANTE": {
+          "count": 25,
+          "share_within_three_line": 0.03793626707132018,
+          "incidence_all_races": 0.0079923273657289
+        },
+        "ESCAPE_HEAD>BANTE>BANTE": {
+          "count": 18,
+          "share_within_three_line": 0.027314112291350532,
+          "incidence_all_races": 0.005754475703324808
+        },
+        "OTHER_HEAD>BANTE>BANTE": {
+          "count": 14,
+          "share_within_three_line": 0.021244309559939303,
+          "incidence_all_races": 0.004475703324808184
+        },
+        "BANTE>BANTE>BANTE": {
+          "count": 43,
+          "share_within_three_line": 0.06525037936267071,
+          "incidence_all_races": 0.013746803069053709
+        }
+      },
+      "head_any_bante_bante": {
+        "count": 57,
+        "share_within_three_line": 0.08649468892261002,
+        "incidence_all_races": 0.018222506393861894,
+        "winner_head_style_split": {
+          "RYO_HEAD": 25,
+          "ESCAPE_HEAD": 18,
+          "OTHER_HEAD": 14
+        }
+      }
+    },
+    "TOP3_SCORE_3LINES_RYO_HEAD_PRESENT": {
+      "races": 658,
+      "three_line_finishes": 229,
+      "three_line_finish_rate": 0.34802431610942247,
+      "winner_role_distribution_within_three_line": {
+        "BANTE": {
+          "count": 86,
+          "share": 0.37554585152838427,
+          "incidence_all_races": 0.13069908814589665
+        },
+        "RYO_HEAD": {
+          "count": 49,
+          "share": 0.21397379912663755,
+          "incidence_all_races": 0.07446808510638298
+        },
+        "SOLO": {
+          "count": 40,
+          "share": 0.17467248908296942,
+          "incidence_all_races": 0.060790273556231005
+        },
+        "ESCAPE_HEAD": {
+          "count": 29,
+          "share": 0.12663755458515283,
+          "incidence_all_races": 0.044072948328267476
+        },
+        "OTHER_HEAD": {
+          "count": 19,
+          "share": 0.08296943231441048,
+          "incidence_all_races": 0.028875379939209727
+        },
+        "THIRD_PLUS": {
+          "count": 6,
+          "share": 0.026200873362445413,
+          "incidence_all_races": 0.00911854103343465
+        }
+      },
+      "second_third_pair_distribution_within_three_line": {
+        "BANTE>BANTE": {
+          "count": 44,
+          "share": 0.19213973799126638,
+          "incidence_all_races": 0.0668693009118541
+        },
+        "RYO_HEAD>BANTE": {
+          "count": 18,
+          "share": 0.07860262008733625,
+          "incidence_all_races": 0.02735562310030395
+        },
+        "SOLO>BANTE": {
+          "count": 17,
+          "share": 0.07423580786026202,
+          "incidence_all_races": 0.025835866261398176
+        },
+        "BANTE>RYO_HEAD": {
+          "count": 14,
+          "share": 0.0611353711790393,
+          "incidence_all_races": 0.02127659574468085
+        },
+        "BANTE>SOLO": {
+          "count": 12,
+          "share": 0.05240174672489083,
+          "incidence_all_races": 0.0182370820668693
+        },
+        "OTHER_HEAD>BANTE": {
+          "count": 11,
+          "share": 0.048034934497816595,
+          "incidence_all_races": 0.016717325227963525
+        },
+        "BANTE>OTHER_HEAD": {
+          "count": 10,
+          "share": 0.043668122270742356,
+          "incidence_all_races": 0.015197568389057751
+        },
+        "SOLO>RYO_HEAD": {
+          "count": 10,
+          "share": 0.043668122270742356,
+          "incidence_all_races": 0.015197568389057751
+        },
+        "SOLO>SOLO": {
+          "count": 9,
+          "share": 0.039301310043668124,
+          "incidence_all_races": 0.013677811550151976
+        },
+        "RYO_HEAD>OTHER_HEAD": {
+          "count": 8,
+          "share": 0.034934497816593885,
+          "incidence_all_races": 0.0121580547112462
+        },
+        "BANTE>ESCAPE_HEAD": {
+          "count": 6,
+          "share": 0.026200873362445413,
+          "incidence_all_races": 0.00911854103343465
+        },
+        "ESCAPE_HEAD>BANTE": {
+          "count": 6,
+          "share": 0.026200873362445413,
+          "incidence_all_races": 0.00911854103343465
+        },
+        "OTHER_HEAD>SOLO": {
+          "count": 5,
+          "share": 0.021834061135371178,
+          "incidence_all_races": 0.007598784194528876
+        },
+        "THIRD_PLUS>BANTE": {
+          "count": 5,
+          "share": 0.021834061135371178,
+          "incidence_all_races": 0.007598784194528876
+        },
+        "SOLO>OTHER_HEAD": {
+          "count": 5,
+          "share": 0.021834061135371178,
+          "incidence_all_races": 0.007598784194528876
+        },
+        "OTHER_HEAD>OTHER_HEAD": {
+          "count": 4,
+          "share": 0.017467248908296942,
+          "incidence_all_races": 0.0060790273556231
+        },
+        "ESCAPE_HEAD>OTHER_HEAD": {
+          "count": 4,
+          "share": 0.017467248908296942,
+          "incidence_all_races": 0.0060790273556231
+        },
+        "RYO_HEAD>SOLO": {
+          "count": 4,
+          "share": 0.017467248908296942,
+          "incidence_all_races": 0.0060790273556231
+        },
+        "BANTE>THIRD_PLUS": {
+          "count": 4,
+          "share": 0.017467248908296942,
+          "incidence_all_races": 0.0060790273556231
+        },
+        "THIRD_PLUS>SOLO": {
+          "count": 3,
+          "share": 0.013100436681222707,
+          "incidence_all_races": 0.004559270516717325
+        },
+        "ESCAPE_HEAD>SOLO": {
+          "count": 3,
+          "share": 0.013100436681222707,
+          "incidence_all_races": 0.004559270516717325
+        },
+        "THIRD_PLUS>RYO_HEAD": {
+          "count": 3,
+          "share": 0.013100436681222707,
+          "incidence_all_races": 0.004559270516717325
+        },
+        "OTHER_HEAD>RYO_HEAD": {
+          "count": 3,
+          "share": 0.013100436681222707,
+          "incidence_all_races": 0.004559270516717325
+        },
+        "RYO_HEAD>ESCAPE_HEAD": {
+          "count": 3,
+          "share": 0.013100436681222707,
+          "incidence_all_races": 0.004559270516717325
+        },
+        "ESCAPE_HEAD>ESCAPE_HEAD": {
+          "count": 2,
+          "share": 0.008733624454148471,
+          "incidence_all_races": 0.00303951367781155
+        },
+        "RYO_HEAD>THIRD_PLUS": {
+          "count": 2,
+          "share": 0.008733624454148471,
+          "incidence_all_races": 0.00303951367781155
+        },
+        "RYO_HEAD>RYO_HEAD": {
+          "count": 2,
+          "share": 0.008733624454148471,
+          "incidence_all_races": 0.00303951367781155
+        },
+        "OTHER_HEAD>ESCAPE_HEAD": {
+          "count": 2,
+          "share": 0.008733624454148471,
+          "incidence_all_races": 0.00303951367781155
+        },
+        "SOLO>ESCAPE_HEAD": {
+          "count": 2,
+          "share": 0.008733624454148471,
+          "incidence_all_races": 0.00303951367781155
+        },
+        "THIRD_PLUS>OTHER_HEAD": {
+          "count": 2,
+          "share": 0.008733624454148471,
+          "incidence_all_races": 0.00303951367781155
+        },
+        "SOLO>THIRD_PLUS": {
+          "count": 2,
+          "share": 0.008733624454148471,
+          "incidence_all_races": 0.00303951367781155
+        },
+        "ESCAPE_HEAD>RYO_HEAD": {
+          "count": 2,
+          "share": 0.008733624454148471,
+          "incidence_all_races": 0.00303951367781155
+        },
+        "OTHER_HEAD>THIRD_PLUS": {
+          "count": 1,
+          "share": 0.004366812227074236,
+          "incidence_all_races": 0.001519756838905775
+        },
+        "THIRD_PLUS>ESCAPE_HEAD": {
+          "count": 1,
+          "share": 0.004366812227074236,
+          "incidence_all_races": 0.001519756838905775
+        }
+      },
+      "ordered_exact_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 19
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>BANTE>RYO_HEAD",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "RYO_HEAD>OTHER_HEAD>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "RYO_HEAD>BANTE>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "SOLO>SOLO>RYO_HEAD",
+          "count": 6
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 6
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>SOLO",
+          "count": 4
+        },
+        {
+          "pattern": "RYO_HEAD>OTHER_HEAD>OTHER_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>OTHER_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>BANTE>OTHER_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "ESCAPE_HEAD>RYO_HEAD>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "SOLO>SOLO>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "SOLO>BANTE>OTHER_HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "SOLO>BANTE>RYO_HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "RYO_HEAD>SOLO>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "OTHER_HEAD>SOLO>SOLO",
+          "count": 3
+        }
+      ],
+      "ordered_coarse_role_patterns_top20": [
+        {
+          "pattern": "HEAD>HEAD>BANTE",
+          "count": 20
+        },
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 19
+        },
+        {
+          "pattern": "HEAD>HEAD>HEAD",
+          "count": 17
+        },
+        {
+          "pattern": "HEAD>BANTE>BANTE",
+          "count": 15
+        },
+        {
+          "pattern": "BANTE>BANTE>HEAD",
+          "count": 15
+        },
+        {
+          "pattern": "BANTE>HEAD>BANTE",
+          "count": 10
+        },
+        {
+          "pattern": "SOLO>BANTE>HEAD",
+          "count": 9
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>HEAD>HEAD",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "HEAD>SOLO>HEAD",
+          "count": 7
+        },
+        {
+          "pattern": "HEAD>HEAD>SOLO",
+          "count": 6
+        },
+        {
+          "pattern": "BANTE>HEAD>SOLO",
+          "count": 6
+        },
+        {
+          "pattern": "HEAD>SOLO>SOLO",
+          "count": 6
+        },
+        {
+          "pattern": "SOLO>SOLO>HEAD",
+          "count": 6
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 6
+        },
+        {
+          "pattern": "HEAD>BANTE>HEAD",
+          "count": 6
+        },
+        {
+          "pattern": "HEAD>SOLO>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "SOLO>HEAD>HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>SOLO>HEAD",
+          "count": 4
+        }
+      ],
+      "target_patterns": {
+        "RYO_HEAD>BANTE>BANTE": {
+          "count": 7,
+          "share_within_three_line": 0.03056768558951965,
+          "incidence_all_races": 0.010638297872340425
+        },
+        "ESCAPE_HEAD>BANTE>BANTE": {
+          "count": 5,
+          "share_within_three_line": 0.021834061135371178,
+          "incidence_all_races": 0.007598784194528876
+        },
+        "OTHER_HEAD>BANTE>BANTE": {
+          "count": 3,
+          "share_within_three_line": 0.013100436681222707,
+          "incidence_all_races": 0.004559270516717325
+        },
+        "BANTE>BANTE>BANTE": {
+          "count": 19,
+          "share_within_three_line": 0.08296943231441048,
+          "incidence_all_races": 0.028875379939209727
+        }
+      },
+      "head_any_bante_bante": {
+        "count": 15,
+        "share_within_three_line": 0.06550218340611354,
+        "incidence_all_races": 0.022796352583586626,
+        "winner_head_style_split": {
+          "RYO_HEAD": 7,
+          "ESCAPE_HEAD": 5,
+          "OTHER_HEAD": 3
+        }
+      }
+    },
+    "TOP3_SCORE_3LINES_BANTE2PLUS_RYO_HEAD_PRESENT": {
+      "races": 317,
+      "three_line_finishes": 113,
+      "three_line_finish_rate": 0.35646687697160884,
+      "winner_role_distribution_within_three_line": {
+        "BANTE": {
+          "count": 62,
+          "share": 0.5486725663716814,
+          "incidence_all_races": 0.19558359621451105
+        },
+        "SOLO": {
+          "count": 18,
+          "share": 0.1592920353982301,
+          "incidence_all_races": 0.056782334384858045
+        },
+        "RYO_HEAD": {
+          "count": 12,
+          "share": 0.10619469026548672,
+          "incidence_all_races": 0.03785488958990536
+        },
+        "ESCAPE_HEAD": {
+          "count": 12,
+          "share": 0.10619469026548672,
+          "incidence_all_races": 0.03785488958990536
+        },
+        "OTHER_HEAD": {
+          "count": 7,
+          "share": 0.061946902654867256,
+          "incidence_all_races": 0.022082018927444796
+        },
+        "THIRD_PLUS": {
+          "count": 2,
+          "share": 0.017699115044247787,
+          "incidence_all_races": 0.006309148264984227
+        }
+      },
+      "second_third_pair_distribution_within_three_line": {
+        "BANTE>BANTE": {
+          "count": 35,
+          "share": 0.30973451327433627,
+          "incidence_all_races": 0.11041009463722397
+        },
+        "SOLO>BANTE": {
+          "count": 10,
+          "share": 0.08849557522123894,
+          "incidence_all_races": 0.031545741324921134
+        },
+        "BANTE>RYO_HEAD": {
+          "count": 8,
+          "share": 0.07079646017699115,
+          "incidence_all_races": 0.025236593059936908
+        },
+        "RYO_HEAD>BANTE": {
+          "count": 8,
+          "share": 0.07079646017699115,
+          "incidence_all_races": 0.025236593059936908
+        },
+        "BANTE>SOLO": {
+          "count": 6,
+          "share": 0.05309734513274336,
+          "incidence_all_races": 0.01892744479495268
+        },
+        "RYO_HEAD>OTHER_HEAD": {
+          "count": 5,
+          "share": 0.04424778761061947,
+          "incidence_all_races": 0.015772870662460567
+        },
+        "THIRD_PLUS>BANTE": {
+          "count": 4,
+          "share": 0.035398230088495575,
+          "incidence_all_races": 0.012618296529968454
+        },
+        "BANTE>OTHER_HEAD": {
+          "count": 4,
+          "share": 0.035398230088495575,
+          "incidence_all_races": 0.012618296529968454
+        },
+        "SOLO>RYO_HEAD": {
+          "count": 4,
+          "share": 0.035398230088495575,
+          "incidence_all_races": 0.012618296529968454
+        },
+        "BANTE>ESCAPE_HEAD": {
+          "count": 4,
+          "share": 0.035398230088495575,
+          "incidence_all_races": 0.012618296529968454
+        },
+        "THIRD_PLUS>RYO_HEAD": {
+          "count": 3,
+          "share": 0.02654867256637168,
+          "incidence_all_races": 0.00946372239747634
+        },
+        "OTHER_HEAD>SOLO": {
+          "count": 3,
+          "share": 0.02654867256637168,
+          "incidence_all_races": 0.00946372239747634
+        },
+        "BANTE>THIRD_PLUS": {
+          "count": 3,
+          "share": 0.02654867256637168,
+          "incidence_all_races": 0.00946372239747634
+        },
+        "ESCAPE_HEAD>BANTE": {
+          "count": 2,
+          "share": 0.017699115044247787,
+          "incidence_all_races": 0.006309148264984227
+        },
+        "OTHER_HEAD>RYO_HEAD": {
+          "count": 2,
+          "share": 0.017699115044247787,
+          "incidence_all_races": 0.006309148264984227
+        },
+        "THIRD_PLUS>OTHER_HEAD": {
+          "count": 2,
+          "share": 0.017699115044247787,
+          "incidence_all_races": 0.006309148264984227
+        },
+        "OTHER_HEAD>BANTE": {
+          "count": 2,
+          "share": 0.017699115044247787,
+          "incidence_all_races": 0.006309148264984227
+        },
+        "RYO_HEAD>THIRD_PLUS": {
+          "count": 1,
+          "share": 0.008849557522123894,
+          "incidence_all_races": 0.0031545741324921135
+        },
+        "RYO_HEAD>SOLO": {
+          "count": 1,
+          "share": 0.008849557522123894,
+          "incidence_all_races": 0.0031545741324921135
+        },
+        "RYO_HEAD>RYO_HEAD": {
+          "count": 1,
+          "share": 0.008849557522123894,
+          "incidence_all_races": 0.0031545741324921135
+        },
+        "SOLO>OTHER_HEAD": {
+          "count": 1,
+          "share": 0.008849557522123894,
+          "incidence_all_races": 0.0031545741324921135
+        },
+        "THIRD_PLUS>SOLO": {
+          "count": 1,
+          "share": 0.008849557522123894,
+          "incidence_all_races": 0.0031545741324921135
+        },
+        "SOLO>SOLO": {
+          "count": 1,
+          "share": 0.008849557522123894,
+          "incidence_all_races": 0.0031545741324921135
+        },
+        "OTHER_HEAD>ESCAPE_HEAD": {
+          "count": 1,
+          "share": 0.008849557522123894,
+          "incidence_all_races": 0.0031545741324921135
+        },
+        "SOLO>ESCAPE_HEAD": {
+          "count": 1,
+          "share": 0.008849557522123894,
+          "incidence_all_races": 0.0031545741324921135
+        }
+      },
+      "ordered_exact_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 18
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 6
+        },
+        {
+          "pattern": "RYO_HEAD>BANTE>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>BANTE>RYO_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>BANTE>OTHER_HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "SOLO>SOLO>RYO_HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>SOLO",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>OTHER_HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "ESCAPE_HEAD>RYO_HEAD>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>BANTE>ESCAPE_HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "SOLO>SOLO>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "SOLO>BANTE>RYO_HEAD",
+          "count": 2
+        },
+        {
+          "pattern": "THIRD_PLUS>BANTE>BANTE",
+          "count": 2
+        },
+        {
+          "pattern": "RYO_HEAD>THIRD_PLUS>BANTE",
+          "count": 1
+        },
+        {
+          "pattern": "SOLO>BANTE>SOLO",
+          "count": 1
+        }
+      ],
+      "ordered_coarse_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 18
+        },
+        {
+          "pattern": "HEAD>BANTE>BANTE",
+          "count": 10
+        },
+        {
+          "pattern": "BANTE>BANTE>HEAD",
+          "count": 10
+        },
+        {
+          "pattern": "HEAD>HEAD>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 6
+        },
+        {
+          "pattern": "BANTE>HEAD>HEAD",
+          "count": 6
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "BANTE>HEAD>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 4
+        },
+        {
+          "pattern": "SOLO>BANTE>HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "SOLO>SOLO>HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>HEAD>SOLO",
+          "count": 3
+        },
+        {
+          "pattern": "HEAD>BANTE>HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>SOLO>HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "HEAD>THIRD_PLUS>HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "SOLO>SOLO>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "THIRD_PLUS>BANTE>BANTE",
+          "count": 2
+        },
+        {
+          "pattern": "HEAD>BANTE>THIRD_PLUS",
+          "count": 2
+        },
+        {
+          "pattern": "HEAD>HEAD>HEAD",
+          "count": 2
+        }
+      ],
+      "target_patterns": {
+        "RYO_HEAD>BANTE>BANTE": {
+          "count": 5,
+          "share_within_three_line": 0.04424778761061947,
+          "incidence_all_races": 0.015772870662460567
+        },
+        "ESCAPE_HEAD>BANTE>BANTE": {
+          "count": 4,
+          "share_within_three_line": 0.035398230088495575,
+          "incidence_all_races": 0.012618296529968454
+        },
+        "OTHER_HEAD>BANTE>BANTE": {
+          "count": 1,
+          "share_within_three_line": 0.008849557522123894,
+          "incidence_all_races": 0.0031545741324921135
+        },
+        "BANTE>BANTE>BANTE": {
+          "count": 18,
+          "share_within_three_line": 0.1592920353982301,
+          "incidence_all_races": 0.056782334384858045
+        }
+      },
+      "head_any_bante_bante": {
+        "count": 10,
+        "share_within_three_line": 0.08849557522123894,
+        "incidence_all_races": 0.031545741324921134,
+        "winner_head_style_split": {
+          "RYO_HEAD": 5,
+          "ESCAPE_HEAD": 4,
+          "OTHER_HEAD": 1
+        }
+      }
+    },
+    "TOP3_SCORE_3LINES_GAP2PLUS_RYO_HEAD_PRESENT": {
+      "races": 542,
+      "three_line_finishes": 187,
+      "three_line_finish_rate": 0.34501845018450183,
+      "winner_role_distribution_within_three_line": {
+        "BANTE": {
+          "count": 74,
+          "share": 0.39572192513368987,
+          "incidence_all_races": 0.13653136531365315
+        },
+        "RYO_HEAD": {
+          "count": 42,
+          "share": 0.22459893048128343,
+          "incidence_all_races": 0.07749077490774908
+        },
+        "SOLO": {
+          "count": 30,
+          "share": 0.16042780748663102,
+          "incidence_all_races": 0.055350553505535055
+        },
+        "ESCAPE_HEAD": {
+          "count": 22,
+          "share": 0.11764705882352941,
+          "incidence_all_races": 0.04059040590405904
+        },
+        "OTHER_HEAD": {
+          "count": 14,
+          "share": 0.0748663101604278,
+          "incidence_all_races": 0.025830258302583026
+        },
+        "THIRD_PLUS": {
+          "count": 5,
+          "share": 0.026737967914438502,
+          "incidence_all_races": 0.00922509225092251
+        }
+      },
+      "second_third_pair_distribution_within_three_line": {
+        "BANTE>BANTE": {
+          "count": 40,
+          "share": 0.21390374331550802,
+          "incidence_all_races": 0.07380073800738007
+        },
+        "RYO_HEAD>BANTE": {
+          "count": 16,
+          "share": 0.0855614973262032,
+          "incidence_all_races": 0.02952029520295203
+        },
+        "BANTE>RYO_HEAD": {
+          "count": 14,
+          "share": 0.0748663101604278,
+          "incidence_all_races": 0.025830258302583026
+        },
+        "SOLO>BANTE": {
+          "count": 14,
+          "share": 0.0748663101604278,
+          "incidence_all_races": 0.025830258302583026
+        },
+        "OTHER_HEAD>BANTE": {
+          "count": 10,
+          "share": 0.053475935828877004,
+          "incidence_all_races": 0.01845018450184502
+        },
+        "BANTE>OTHER_HEAD": {
+          "count": 8,
+          "share": 0.0427807486631016,
+          "incidence_all_races": 0.014760147601476014
+        },
+        "BANTE>SOLO": {
+          "count": 7,
+          "share": 0.0374331550802139,
+          "incidence_all_races": 0.012915129151291513
+        },
+        "RYO_HEAD>OTHER_HEAD": {
+          "count": 7,
+          "share": 0.0374331550802139,
+          "incidence_all_races": 0.012915129151291513
+        },
+        "BANTE>ESCAPE_HEAD": {
+          "count": 6,
+          "share": 0.03208556149732621,
+          "incidence_all_races": 0.01107011070110701
+        },
+        "ESCAPE_HEAD>BANTE": {
+          "count": 6,
+          "share": 0.03208556149732621,
+          "incidence_all_races": 0.01107011070110701
+        },
+        "SOLO>RYO_HEAD": {
+          "count": 6,
+          "share": 0.03208556149732621,
+          "incidence_all_races": 0.01107011070110701
+        },
+        "THIRD_PLUS>BANTE": {
+          "count": 5,
+          "share": 0.026737967914438502,
+          "incidence_all_races": 0.00922509225092251
+        },
+        "OTHER_HEAD>SOLO": {
+          "count": 4,
+          "share": 0.0213903743315508,
+          "incidence_all_races": 0.007380073800738007
+        },
+        "OTHER_HEAD>OTHER_HEAD": {
+          "count": 4,
+          "share": 0.0213903743315508,
+          "incidence_all_races": 0.007380073800738007
+        },
+        "ESCAPE_HEAD>OTHER_HEAD": {
+          "count": 4,
+          "share": 0.0213903743315508,
+          "incidence_all_races": 0.007380073800738007
+        },
+        "ESCAPE_HEAD>SOLO": {
+          "count": 3,
+          "share": 0.016042780748663103,
+          "incidence_all_races": 0.005535055350553505
+        },
+        "OTHER_HEAD>RYO_HEAD": {
+          "count": 3,
+          "share": 0.016042780748663103,
+          "incidence_all_races": 0.005535055350553505
+        },
+        "BANTE>THIRD_PLUS": {
+          "count": 3,
+          "share": 0.016042780748663103,
+          "incidence_all_races": 0.005535055350553505
+        },
+        "SOLO>SOLO": {
+          "count": 3,
+          "share": 0.016042780748663103,
+          "incidence_all_races": 0.005535055350553505
+        },
+        "RYO_HEAD>ESCAPE_HEAD": {
+          "count": 3,
+          "share": 0.016042780748663103,
+          "incidence_all_races": 0.005535055350553505
+        },
+        "ESCAPE_HEAD>ESCAPE_HEAD": {
+          "count": 2,
+          "share": 0.0106951871657754,
+          "incidence_all_races": 0.0036900369003690036
+        },
+        "RYO_HEAD>RYO_HEAD": {
+          "count": 2,
+          "share": 0.0106951871657754,
+          "incidence_all_races": 0.0036900369003690036
+        },
+        "THIRD_PLUS>RYO_HEAD": {
+          "count": 2,
+          "share": 0.0106951871657754,
+          "incidence_all_races": 0.0036900369003690036
+        },
+        "THIRD_PLUS>SOLO": {
+          "count": 2,
+          "share": 0.0106951871657754,
+          "incidence_all_races": 0.0036900369003690036
+        },
+        "OTHER_HEAD>ESCAPE_HEAD": {
+          "count": 2,
+          "share": 0.0106951871657754,
+          "incidence_all_races": 0.0036900369003690036
+        },
+        "SOLO>ESCAPE_HEAD": {
+          "count": 2,
+          "share": 0.0106951871657754,
+          "incidence_all_races": 0.0036900369003690036
+        },
+        "THIRD_PLUS>OTHER_HEAD": {
+          "count": 2,
+          "share": 0.0106951871657754,
+          "incidence_all_races": 0.0036900369003690036
+        },
+        "ESCAPE_HEAD>RYO_HEAD": {
+          "count": 2,
+          "share": 0.0106951871657754,
+          "incidence_all_races": 0.0036900369003690036
+        },
+        "OTHER_HEAD>THIRD_PLUS": {
+          "count": 1,
+          "share": 0.0053475935828877,
+          "incidence_all_races": 0.0018450184501845018
+        },
+        "SOLO>OTHER_HEAD": {
+          "count": 1,
+          "share": 0.0053475935828877,
+          "incidence_all_races": 0.0018450184501845018
+        },
+        "SOLO>THIRD_PLUS": {
+          "count": 1,
+          "share": 0.0053475935828877,
+          "incidence_all_races": 0.0018450184501845018
+        },
+        "THIRD_PLUS>ESCAPE_HEAD": {
+          "count": 1,
+          "share": 0.0053475935828877,
+          "incidence_all_races": 0.0018450184501845018
+        },
+        "RYO_HEAD>SOLO": {
+          "count": 1,
+          "share": 0.0053475935828877,
+          "incidence_all_races": 0.0018450184501845018
+        }
+      },
+      "ordered_exact_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 17
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>BANTE",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>BANTE>RYO_HEAD",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "RYO_HEAD>OTHER_HEAD>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "RYO_HEAD>BANTE>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 6
+        },
+        {
+          "pattern": "SOLO>SOLO>RYO_HEAD",
+          "count": 5
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "RYO_HEAD>OTHER_HEAD>OTHER_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>OTHER_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "SOLO>BANTE>RYO_HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "RYO_HEAD>SOLO>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "SOLO>BANTE>ESCAPE_HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "OTHER_HEAD>RYO_HEAD>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "OTHER_HEAD>BANTE>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>SOLO",
+          "count": 3
+        },
+        {
+          "pattern": "RYO_HEAD>ESCAPE_HEAD>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "RYO_HEAD>ESCAPE_HEAD>OTHER_HEAD",
+          "count": 3
+        }
+      ],
+      "ordered_coarse_role_patterns_top20": [
+        {
+          "pattern": "HEAD>HEAD>BANTE",
+          "count": 19
+        },
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 17
+        },
+        {
+          "pattern": "HEAD>HEAD>HEAD",
+          "count": 17
+        },
+        {
+          "pattern": "HEAD>BANTE>BANTE",
+          "count": 15
+        },
+        {
+          "pattern": "BANTE>BANTE>HEAD",
+          "count": 14
+        },
+        {
+          "pattern": "BANTE>HEAD>BANTE",
+          "count": 10
+        },
+        {
+          "pattern": "SOLO>BANTE>HEAD",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>HEAD>HEAD",
+          "count": 8
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 7
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 6
+        },
+        {
+          "pattern": "HEAD>BANTE>HEAD",
+          "count": 6
+        },
+        {
+          "pattern": "SOLO>SOLO>HEAD",
+          "count": 5
+        },
+        {
+          "pattern": "HEAD>HEAD>SOLO",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>HEAD>SOLO",
+          "count": 4
+        },
+        {
+          "pattern": "HEAD>SOLO>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "HEAD>THIRD_PLUS>HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "SOLO>HEAD>HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>SOLO>HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 3
+        }
+      ],
+      "target_patterns": {
+        "RYO_HEAD>BANTE>BANTE": {
+          "count": 7,
+          "share_within_three_line": 0.0374331550802139,
+          "incidence_all_races": 0.012915129151291513
+        },
+        "ESCAPE_HEAD>BANTE>BANTE": {
+          "count": 5,
+          "share_within_three_line": 0.026737967914438502,
+          "incidence_all_races": 0.00922509225092251
+        },
+        "OTHER_HEAD>BANTE>BANTE": {
+          "count": 3,
+          "share_within_three_line": 0.016042780748663103,
+          "incidence_all_races": 0.005535055350553505
+        },
+        "BANTE>BANTE>BANTE": {
+          "count": 17,
+          "share_within_three_line": 0.09090909090909091,
+          "incidence_all_races": 0.03136531365313653
+        }
+      },
+      "head_any_bante_bante": {
+        "count": 15,
+        "share_within_three_line": 0.08021390374331551,
+        "incidence_all_races": 0.027675276752767528,
+        "winner_head_style_split": {
+          "RYO_HEAD": 7,
+          "ESCAPE_HEAD": 5,
+          "OTHER_HEAD": 3
+        }
+      }
+    },
+    "TOP3_SCORE_3LINES_BOTH_RYO_HEAD_PRESENT": {
+      "races": 272,
+      "three_line_finishes": 99,
+      "three_line_finish_rate": 0.3639705882352941,
+      "winner_role_distribution_within_three_line": {
+        "BANTE": {
+          "count": 55,
+          "share": 0.5555555555555556,
+          "incidence_all_races": 0.20220588235294118
+        },
+        "SOLO": {
+          "count": 14,
+          "share": 0.1414141414141414,
+          "incidence_all_races": 0.051470588235294115
+        },
+        "RYO_HEAD": {
+          "count": 12,
+          "share": 0.12121212121212122,
+          "incidence_all_races": 0.04411764705882353
+        },
+        "ESCAPE_HEAD": {
+          "count": 9,
+          "share": 0.09090909090909091,
+          "incidence_all_races": 0.03308823529411765
+        },
+        "OTHER_HEAD": {
+          "count": 7,
+          "share": 0.0707070707070707,
+          "incidence_all_races": 0.025735294117647058
+        },
+        "THIRD_PLUS": {
+          "count": 2,
+          "share": 0.020202020202020204,
+          "incidence_all_races": 0.007352941176470588
+        }
+      },
+      "second_third_pair_distribution_within_three_line": {
+        "BANTE>BANTE": {
+          "count": 33,
+          "share": 0.3333333333333333,
+          "incidence_all_races": 0.1213235294117647
+        },
+        "BANTE>RYO_HEAD": {
+          "count": 8,
+          "share": 0.08080808080808081,
+          "incidence_all_races": 0.029411764705882353
+        },
+        "SOLO>BANTE": {
+          "count": 8,
+          "share": 0.08080808080808081,
+          "incidence_all_races": 0.029411764705882353
+        },
+        "RYO_HEAD>BANTE": {
+          "count": 7,
+          "share": 0.0707070707070707,
+          "incidence_all_races": 0.025735294117647058
+        },
+        "THIRD_PLUS>BANTE": {
+          "count": 4,
+          "share": 0.04040404040404041,
+          "incidence_all_races": 0.014705882352941176
+        },
+        "BANTE>SOLO": {
+          "count": 4,
+          "share": 0.04040404040404041,
+          "incidence_all_races": 0.014705882352941176
+        },
+        "RYO_HEAD>OTHER_HEAD": {
+          "count": 4,
+          "share": 0.04040404040404041,
+          "incidence_all_races": 0.014705882352941176
+        },
+        "BANTE>ESCAPE_HEAD": {
+          "count": 4,
+          "share": 0.04040404040404041,
+          "incidence_all_races": 0.014705882352941176
+        },
+        "SOLO>RYO_HEAD": {
+          "count": 3,
+          "share": 0.030303030303030304,
+          "incidence_all_races": 0.011029411764705883
+        },
+        "BANTE>THIRD_PLUS": {
+          "count": 3,
+          "share": 0.030303030303030304,
+          "incidence_all_races": 0.011029411764705883
+        },
+        "BANTE>OTHER_HEAD": {
+          "count": 3,
+          "share": 0.030303030303030304,
+          "incidence_all_races": 0.011029411764705883
+        },
+        "OTHER_HEAD>SOLO": {
+          "count": 2,
+          "share": 0.020202020202020204,
+          "incidence_all_races": 0.007352941176470588
+        },
+        "ESCAPE_HEAD>BANTE": {
+          "count": 2,
+          "share": 0.020202020202020204,
+          "incidence_all_races": 0.007352941176470588
+        },
+        "OTHER_HEAD>RYO_HEAD": {
+          "count": 2,
+          "share": 0.020202020202020204,
+          "incidence_all_races": 0.007352941176470588
+        },
+        "THIRD_PLUS>RYO_HEAD": {
+          "count": 2,
+          "share": 0.020202020202020204,
+          "incidence_all_races": 0.007352941176470588
+        },
+        "THIRD_PLUS>OTHER_HEAD": {
+          "count": 2,
+          "share": 0.020202020202020204,
+          "incidence_all_races": 0.007352941176470588
+        },
+        "OTHER_HEAD>BANTE": {
+          "count": 2,
+          "share": 0.020202020202020204,
+          "incidence_all_races": 0.007352941176470588
+        },
+        "RYO_HEAD>RYO_HEAD": {
+          "count": 1,
+          "share": 0.010101010101010102,
+          "incidence_all_races": 0.003676470588235294
+        },
+        "SOLO>OTHER_HEAD": {
+          "count": 1,
+          "share": 0.010101010101010102,
+          "incidence_all_races": 0.003676470588235294
+        },
+        "THIRD_PLUS>SOLO": {
+          "count": 1,
+          "share": 0.010101010101010102,
+          "incidence_all_races": 0.003676470588235294
+        },
+        "SOLO>SOLO": {
+          "count": 1,
+          "share": 0.010101010101010102,
+          "incidence_all_races": 0.003676470588235294
+        },
+        "OTHER_HEAD>ESCAPE_HEAD": {
+          "count": 1,
+          "share": 0.010101010101010102,
+          "incidence_all_races": 0.003676470588235294
+        },
+        "SOLO>ESCAPE_HEAD": {
+          "count": 1,
+          "share": 0.010101010101010102,
+          "incidence_all_races": 0.003676470588235294
+        }
+      },
+      "ordered_exact_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 17
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 6
+        },
+        {
+          "pattern": "RYO_HEAD>BANTE>BANTE",
+          "count": 5
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "ESCAPE_HEAD>BANTE>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>BANTE>RYO_HEAD",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>RYO_HEAD>OTHER_HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>BANTE>ESCAPE_HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "SOLO>BANTE>RYO_HEAD",
+          "count": 2
+        },
+        {
+          "pattern": "SOLO>SOLO>RYO_HEAD",
+          "count": 2
+        },
+        {
+          "pattern": "BANTE>OTHER_HEAD>SOLO",
+          "count": 2
+        },
+        {
+          "pattern": "THIRD_PLUS>BANTE>BANTE",
+          "count": 2
+        },
+        {
+          "pattern": "ESCAPE_HEAD>RYO_HEAD>BANTE",
+          "count": 2
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 2
+        },
+        {
+          "pattern": "SOLO>SOLO>BANTE",
+          "count": 2
+        },
+        {
+          "pattern": "BANTE>BANTE>OTHER_HEAD",
+          "count": 2
+        },
+        {
+          "pattern": "RYO_HEAD>THIRD_PLUS>BANTE",
+          "count": 1
+        },
+        {
+          "pattern": "SOLO>BANTE>SOLO",
+          "count": 1
+        }
+      ],
+      "ordered_coarse_role_patterns_top20": [
+        {
+          "pattern": "BANTE>BANTE>BANTE",
+          "count": 17
+        },
+        {
+          "pattern": "HEAD>BANTE>BANTE",
+          "count": 10
+        },
+        {
+          "pattern": "BANTE>BANTE>HEAD",
+          "count": 9
+        },
+        {
+          "pattern": "BANTE>SOLO>BANTE",
+          "count": 6
+        },
+        {
+          "pattern": "BANTE>HEAD>HEAD",
+          "count": 6
+        },
+        {
+          "pattern": "HEAD>HEAD>BANTE",
+          "count": 6
+        },
+        {
+          "pattern": "SOLO>BANTE>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "BANTE>HEAD>BANTE",
+          "count": 4
+        },
+        {
+          "pattern": "SOLO>BANTE>HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "HEAD>BANTE>HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>SOLO>HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "BANTE>THIRD_PLUS>BANTE",
+          "count": 3
+        },
+        {
+          "pattern": "HEAD>THIRD_PLUS>HEAD",
+          "count": 3
+        },
+        {
+          "pattern": "SOLO>SOLO>HEAD",
+          "count": 2
+        },
+        {
+          "pattern": "BANTE>HEAD>SOLO",
+          "count": 2
+        },
+        {
+          "pattern": "THIRD_PLUS>BANTE>BANTE",
+          "count": 2
+        },
+        {
+          "pattern": "HEAD>BANTE>THIRD_PLUS",
+          "count": 2
+        },
+        {
+          "pattern": "HEAD>HEAD>HEAD",
+          "count": 2
+        },
+        {
+          "pattern": "BANTE>BANTE>SOLO",
+          "count": 2
+        },
+        {
+          "pattern": "SOLO>SOLO>BANTE",
+          "count": 2
+        }
+      ],
+      "target_patterns": {
+        "RYO_HEAD>BANTE>BANTE": {
+          "count": 5,
+          "share_within_three_line": 0.050505050505050504,
+          "incidence_all_races": 0.01838235294117647
+        },
+        "ESCAPE_HEAD>BANTE>BANTE": {
+          "count": 4,
+          "share_within_three_line": 0.04040404040404041,
+          "incidence_all_races": 0.014705882352941176
+        },
+        "OTHER_HEAD>BANTE>BANTE": {
+          "count": 1,
+          "share_within_three_line": 0.010101010101010102,
+          "incidence_all_races": 0.003676470588235294
+        },
+        "BANTE>BANTE>BANTE": {
+          "count": 17,
+          "share_within_three_line": 0.1717171717171717,
+          "incidence_all_races": 0.0625
+        }
+      },
+      "head_any_bante_bante": {
+        "count": 10,
+        "share_within_three_line": 0.10101010101010101,
+        "incidence_all_races": 0.03676470588235294,
+        "winner_head_style_split": {
+          "RYO_HEAD": 5,
+          "ESCAPE_HEAD": 4,
+          "OTHER_HEAD": 1
+        }
+      }
+    }
+  },
+  "target_pattern_incidence_enrichment_vs_all_usable": {
+    "TOP3_SCORE_3LINES": {
+      "RYO_HEAD>BANTE>BANTE": 1.3145762711864406,
+      "ESCAPE_HEAD>BANTE>BANTE": 1.7297056199821588,
+      "OTHER_HEAD>BANTE>BANTE": 1.217200251098556,
+      "BANTE>BANTE>BANTE": 2.0807010785824347,
+      "HEAD_ANY>BANTE>BANTE": 1.4606403013182672
+    },
+    "TOP3_SCORE_3LINES_BANTE2PLUS": {
+      "RYO_HEAD>BANTE>BANTE": 2.0322169059011164,
+      "ESCAPE_HEAD>BANTE>BANTE": 2.4065726517250066,
+      "OTHER_HEAD>BANTE>BANTE": 1.505345856223049,
+      "BANTE>BANTE>BANTE": 4.272274177178484,
+      "HEAD_ANY>BANTE>BANTE": 2.0322169059011164
+    },
+    "TOP3_SCORE_3LINES_GAP2PLUS": {
+      "RYO_HEAD>BANTE>BANTE": 1.6395955882352942,
+      "ESCAPE_HEAD>BANTE>BANTE": 2.1573626160990713,
+      "OTHER_HEAD>BANTE>BANTE": 1.5181440631808276,
+      "BANTE>BANTE>BANTE": 2.3289710060160425,
+      "HEAD_ANY>BANTE>BANTE": 1.8217728758169933
+    },
+    "TOP3_SCORE_3LINES_BOTH": {
+      "RYO_HEAD>BANTE>BANTE": 2.377238805970149,
+      "ESCAPE_HEAD>BANTE>BANTE": 2.8151512175962297,
+      "OTHER_HEAD>BANTE>BANTE": 1.760917634051962,
+      "BANTE>BANTE>BANTE": 4.59239314789688,
+      "HEAD_ANY>BANTE>BANTE": 2.377238805970149
+    },
+    "ALL_USABLE_RYO_HEAD_PRESENT": {
+      "RYO_HEAD>BANTE>BANTE": 2.0367647058823533,
+      "ESCAPE_HEAD>BANTE>BANTE": 0.9647832817337462,
+      "OTHER_HEAD>BANTE>BANTE": 1.0561002178649237,
+      "BANTE>BANTE>BANTE": 0.9952372994652408,
+      "HEAD_ANY>BANTE>BANTE": 1.289950980392157
+    },
+    "TOP3_SCORE_3LINES_RYO_HEAD_PRESENT": {
+      "RYO_HEAD>BANTE>BANTE": 2.7110638297872343,
+      "ESCAPE_HEAD>BANTE>BANTE": 1.2739961606143018,
+      "OTHER_HEAD>BANTE>BANTE": 1.075818980074299,
+      "BANTE>BANTE>BANTE": 2.0905118817352863,
+      "HEAD_ANY>BANTE>BANTE": 1.6137284701114487
+    },
+    "TOP3_SCORE_3LINES_BANTE2PLUS_RYO_HEAD_PRESENT": {
+      "RYO_HEAD>BANTE>BANTE": 4.019558359621451,
+      "ESCAPE_HEAD>BANTE>BANTE": 2.115557031379711,
+      "OTHER_HEAD>BANTE>BANTE": 0.7443626591891576,
+      "BANTE>BANTE>BANTE": 4.110911958703757,
+      "HEAD_ANY>BANTE>BANTE": 2.2330879775674726
+    },
+    "TOP3_SCORE_3LINES_GAP2PLUS_RYO_HEAD_PRESENT": {
+      "RYO_HEAD>BANTE>BANTE": 3.2912915129151292,
+      "ESCAPE_HEAD>BANTE>BANTE": 1.546659545542824,
+      "OTHER_HEAD>BANTE>BANTE": 1.3060680606806065,
+      "BANTE>BANTE>BANTE": 2.270777423683328,
+      "HEAD_ANY>BANTE>BANTE": 1.95910209102091
+    },
+    "TOP3_SCORE_3LINES_BOTH_RYO_HEAD_PRESENT": {
+      "RYO_HEAD>BANTE>BANTE": 4.684558823529412,
+      "ESCAPE_HEAD>BANTE>BANTE": 2.4655572755417956,
+      "OTHER_HEAD>BANTE>BANTE": 0.8675108932461872,
+      "BANTE>BANTE>BANTE": 4.524857954545455,
+      "HEAD_ANY>BANTE>BANTE": 2.602532679738562
+    }
+  }
+}
