@@ -6,6 +6,10 @@
 - trio group race_score sum is in top 50% of all unordered trios in the race
 Then expand to all six exact trifecta orders and evaluate by quoted odds bin.
 
+Also split the exact same candidate set into:
+- ANY_SOLO: at least one selected rider belongs to a one-rider line
+- NO_SOLO: all three selected riders belong to multi-rider lines
+
 This is same-data discovery. No score-order/rank/gap filters.
 """
 from __future__ import annotations
@@ -66,6 +70,14 @@ def odds_slices(df):
     return {name:agg(df[(df.odds>=lo)&(df.odds<hi)]) for name,lo,hi in ODDS_BINS}
 
 
+def full_view(df):
+    return {
+        'all_odds':agg(df),
+        'ticket_odds_bins':odds_slices(df),
+        'min_ticket_odds':{str(c):agg(df[df.odds>=c]) for c in [50,100,200,500]},
+    }
+
+
 def main():
     rows=[]; skipped=Counter(); usable_by_month={}
     for month in h1.MONTHS:
@@ -99,10 +111,13 @@ def main():
             if actual is None:
                 skipped['ordered_result_missing']+=1; continue
 
-            line_of={}; pos_of={}
+            line_of={}; pos_of={}; line_size_of={}
             for li,g in enumerate(lines,1):
-                for pos,fn in enumerate(g,1):
-                    line_of[int(fn)]=li; pos_of[int(fn)]=pos
+                g2=[int(x) for x in g]
+                for pos,fn in enumerate(g2,1):
+                    line_of[fn]=li
+                    pos_of[fn]=pos
+                    line_size_of[fn]=len(g2)
 
             score={}; style={}
             for r in pre.itertuples(index=False):
@@ -134,6 +149,7 @@ def main():
                 pct=rank_of[trio_u]/n_groups
                 if pct>0.50:
                     continue
+                any_solo=int(any(line_size_of.get(x,0)==1 for x in trio_u))
                 for perm in itertools.permutations(trio_u):
                     od=tri.get(tuple(perm))
                     if od is None or od<=0: continue
@@ -143,6 +159,7 @@ def main():
                         'odds':float(od),'market_p':float(p),'actual_hit':int(tuple(perm)==actual),
                         'group_score_percentile':float(pct),
                         'role_pattern':'-'.join('両' if style.get(x)=='両' else '番手' for x in perm),
+                        'any_solo':any_solo,
                     })
 
     df=pd.DataFrame(rows)
@@ -152,21 +169,29 @@ def main():
     for pat,zdf in df.groupby('role_pattern',sort=False):
         role_views[str(pat)]={'all_odds':agg(zdf),'ticket_odds_bins':odds_slices(zdf)}
 
+    any_solo=df[df.any_solo==1].copy()
+    no_solo=df[df.any_solo==0].copy()
+
     payload={
-        'status':'exploratory_three_lines_role_highscore_ticket_test',
+        'status':'exploratory_three_lines_role_highscore_ticket_test_with_solo_split',
         'hypothesis':'Exactly 3 lines + all three riders are either running_style=両 or line_pos=2 + trio score-sum top50% may be underpriced, especially at high quoted trifecta odds.',
         'fixed_filters':[
             'exactly 3 distinct lines',
             "each rider: running_style='両' OR line_pos=2",
             'unordered trio race_score sum percentile <= 50% within race',
         ],
+        'solo_definition':'selected rider belongs to a true_line group of size 1; NO_SOLO means all three riders belong to multi-rider lines',
         'explicitly_not_used':['score order','individual score rank','score gaps','own-bante exclusion','winner fixed as 両'],
-        'warning':'Same discovery data; this is a higher-level mechanism test, not OOS validation.',
+        'warning':'Same discovery data; solo exclusion is a diagnostic suggested after earlier solo results, not OOS validation.',
         'usable_races_by_month':usable_by_month,
         'skipped':dict(skipped),
         'overall':agg(df),
         'ticket_odds_bins':odds_slices(df),
         'min_ticket_odds':{str(c):agg(df[df.odds>=c]) for c in [50,100,200,500]},
+        'solo_split':{
+            'ANY_SOLO':full_view(any_solo),
+            'NO_SOLO':full_view(no_solo),
+        },
         'role_pattern_views':role_views,
     }
     OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
