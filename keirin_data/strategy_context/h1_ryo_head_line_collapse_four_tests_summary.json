@@ -1,0 +1,282 @@
+{
+  "status": "exploratory_ryo_head_line_collapse_four_tests",
+  "warning": "Same discovery data. Tests are diagnostic and partially post-hoc; no causal claim and no production threshold should be frozen from these results.",
+  "usable_context_rows": 6712,
+  "skipped": {
+    "odds_board_incomplete": 1449,
+    "ordered_result_missing": 120,
+    "base_or_odds_missing": 153
+  },
+  "definitions": {
+    "ryo_head": "running_style='両' AND line_pos=1 AND multi-rider line",
+    "head_delta": "ryo-head race_score minus race mean race_score",
+    "own_bante_delta": "own-bante race_score minus race mean race_score",
+    "test_1_causal_note": "winning method is an outcome diagnostic only; it is not treated as causing bante loss",
+    "test_4_other_line_pair": "A ryo head fixed 1st; another line head+bante occupy 2nd/3rd in either order",
+    "test_4_cross_bantes": "A ryo head fixed 1st; bantes from two different other lines occupy 2nd/3rd in either order",
+    "test_4_match": "same race/head; nearest trio_mean_delta within 0.5 points; descriptive reused nearest match"
+  },
+  "kimarite_columns_seen": [],
+  "test_1_head_strength_to_winning_method": {
+    "LE_0": {
+      "winner_cases": 99,
+      "kimarite_known": 0,
+      "kimarite_counts": {}
+    },
+    "0_TO_+2": {
+      "winner_cases": 77,
+      "kimarite_known": 0,
+      "kimarite_counts": {}
+    },
+    "+2_TO_+4": {
+      "winner_cases": 104,
+      "kimarite_known": 0,
+      "kimarite_counts": {}
+    },
+    "GE_+4": {
+      "winner_cases": 179,
+      "kimarite_known": 0,
+      "kimarite_counts": {}
+    }
+  },
+  "test_2_head_strength_to_own_bante_accompaniment": {
+    "LE_0": {
+      "ryo_head_wins": 99,
+      "own_bante_top3": 40,
+      "own_bante_top3_rate": 0.40404040404040403,
+      "three_distinct_lines_rate": 0.1919191919191919,
+      "avg_own_bante_delta": 0.9384439634439617
+    },
+    "0_TO_+2": {
+      "ryo_head_wins": 77,
+      "own_bante_top3": 31,
+      "own_bante_top3_rate": 0.4025974025974026,
+      "three_distinct_lines_rate": 0.23376623376623376,
+      "avg_own_bante_delta": 0.5239876314162032
+    },
+    "+2_TO_+4": {
+      "ryo_head_wins": 104,
+      "own_bante_top3": 47,
+      "own_bante_top3_rate": 0.4519230769230769,
+      "three_distinct_lines_rate": 0.2692307692307692,
+      "avg_own_bante_delta": 1.0783937728937734
+    },
+    "GE_+4": {
+      "ryo_head_wins": 179,
+      "own_bante_top3": 102,
+      "own_bante_top3_rate": 0.5698324022346368,
+      "three_distinct_lines_rate": 0.21787709497206703,
+      "avg_own_bante_delta": 1.8792197392923657
+    }
+  },
+  "test_3_head_and_bante_strength_to_three_line_finish": {
+    "LE_0": {
+      "LT_-3": {
+        "ryo_head_wins": 10,
+        "own_bante_top3_rate": 0.2,
+        "three_distinct_lines_rate": 0.2,
+        "avg_head_delta": -2.0101428571428586,
+        "avg_own_bante_delta": -4.351142857142861
+      },
+      "-3_TO_-1": {
+        "ryo_head_wins": 14,
+        "own_bante_top3_rate": 0.21428571428571427,
+        "three_distinct_lines_rate": 0.42857142857142855,
+        "avg_head_delta": -3.286020408163265,
+        "avg_own_bante_delta": -2.0745918367346934
+      },
+      "-1_TO_+1": {
+        "ryo_head_wins": 34,
+        "own_bante_top3_rate": 0.35294117647058826,
+        "three_distinct_lines_rate": 0.20588235294117646,
+        "avg_head_delta": -1.7630462184873954,
+        "avg_own_bante_delta": -0.01628151260504375
+      },
+      "GE_+1": {
+        "ryo_head_wins": 41,
+        "own_bante_top3_rate": 0.5609756097560976,
+        "three_distinct_lines_rate": 0.0975609756097561,
+        "avg_head_delta": -3.53987224157956,
+        "avg_own_bante_delta": 4.049152148664342
+      }
+    },
+    "0_TO_+2": {
+      "LT_-3": {
+        "ryo_head_wins": 10,
+        "own_bante_top3_rate": 0.4,
+        "three_distinct_lines_rate": 0.4,
+        "avg_head_delta": 0.8487857142857195,
+        "avg_own_bante_delta": -4.29321428571428
+      },
+      "-3_TO_-1": {
+        "ryo_head_wins": 12,
+        "own_bante_top3_rate": 0.08333333333333333,
+        "three_distinct_lines_rate": 0.25,
+        "avg_head_delta": 1.050984126984125,
+        "avg_own_bante_delta": -1.8298492063492067
+      },
+      "-1_TO_+1": {
+        "ryo_head_wins": 27,
+        "own_bante_top3_rate": 0.37037037037037035,
+        "three_distinct_lines_rate": 0.14814814814814814,
+        "avg_head_delta": 1.1204850088183411,
+        "avg_own_bante_delta": 0.04974426807760061
+      },
+      "GE_+1": {
+        "ryo_head_wins": 28,
+        "own_bante_top3_rate": 0.5714285714285714,
+        "three_distinct_lines_rate": 0.25,
+        "avg_head_delta": 0.8740816326530622,
+        "avg_own_bante_delta": 3.7105102040816322
+      }
+    },
+    "+2_TO_+4": {
+      "LT_-3": {
+        "ryo_head_wins": 11,
+        "own_bante_top3_rate": 0.18181818181818182,
+        "three_distinct_lines_rate": 0.45454545454545453,
+        "avg_head_delta": 3.0835151515151513,
+        "avg_own_bante_delta": -4.770121212121208
+      },
+      "-3_TO_-1": {
+        "ryo_head_wins": 15,
+        "own_bante_top3_rate": 0.3333333333333333,
+        "three_distinct_lines_rate": 0.4666666666666667,
+        "avg_head_delta": 3.0285714285714276,
+        "avg_own_bante_delta": -1.8887619047619049
+      },
+      "-1_TO_+1": {
+        "ryo_head_wins": 24,
+        "own_bante_top3_rate": 0.2916666666666667,
+        "three_distinct_lines_rate": 0.2916666666666667,
+        "avg_head_delta": 2.75761904761905,
+        "avg_own_bante_delta": 0.052202380952381944
+      },
+      "GE_+1": {
+        "ryo_head_wins": 54,
+        "own_bante_top3_rate": 0.6111111111111112,
+        "three_distinct_lines_rate": 0.16666666666666666,
+        "avg_head_delta": 3.0746825396825384,
+        "avg_own_bante_delta": 3.55005291005291
+      }
+    },
+    "GE_+4": {
+      "LT_-3": {
+        "ryo_head_wins": 10,
+        "own_bante_top3_rate": 0.1,
+        "three_distinct_lines_rate": 0.5,
+        "avg_head_delta": 6.85985714285714,
+        "avg_own_bante_delta": -8.322142857142858
+      },
+      "-3_TO_-1": {
+        "ryo_head_wins": 30,
+        "own_bante_top3_rate": 0.43333333333333335,
+        "three_distinct_lines_rate": 0.26666666666666666,
+        "avg_head_delta": 6.045857142857144,
+        "avg_own_bante_delta": -2.016809523809522
+      },
+      "-1_TO_+1": {
+        "ryo_head_wins": 33,
+        "own_bante_top3_rate": 0.30303030303030304,
+        "three_distinct_lines_rate": 0.48484848484848486,
+        "avg_head_delta": 6.664922077922078,
+        "avg_own_bante_delta": 0.101588744588746
+      },
+      "GE_+1": {
+        "ryo_head_wins": 106,
+        "own_bante_top3_rate": 0.7358490566037735,
+        "three_distinct_lines_rate": 0.09433962264150944,
+        "avg_head_delta": 6.788430368373766,
+        "avg_own_bante_delta": 4.497675651392633
+      }
+    }
+  },
+  "test_4_market_pair_vs_cross_bantes": {
+    "all_head_strengths": {
+      "OTHER_LINE_PAIR": {
+        "tickets": 10090,
+        "races": 2370,
+        "actual_hits": 67,
+        "normalized_market_expected_hits": 57.353649509321194,
+        "actual_over_normalized_market": 1.1681907005605818,
+        "gross_roi_pct": 78.5579781962339,
+        "avg_odds": 681.7321308225968,
+        "median_odds": 324.4,
+        "avg_market_p": 0.005684207087147789,
+        "median_market_p": 0.0022911343637261805
+      },
+      "OTHER_LINE_ESCAPE_PAIR": {
+        "tickets": 4736,
+        "races": 1561,
+        "actual_hits": 32,
+        "normalized_market_expected_hits": 29.01869053468903,
+        "actual_over_normalized_market": 1.102737560185464,
+        "gross_roi_pct": 65.96494932432434,
+        "avg_odds": 590.8150971283783,
+        "median_odds": 279.95000000000005,
+        "avg_market_p": 0.00612725729195292,
+        "median_market_p": 0.0026723615680399977
+      },
+      "CROSS_BANTES": {
+        "tickets": 4170,
+        "races": 1597,
+        "actual_hits": 16,
+        "normalized_market_expected_hits": 15.891277599907095,
+        "actual_over_normalized_market": 1.0068416399757274,
+        "gross_roi_pct": 131.841726618705,
+        "avg_odds": 993.2343165467626,
+        "median_odds": 556.4,
+        "avg_market_p": 0.003810857937627601,
+        "median_market_p": 0.0013430087112336082
+      }
+    },
+    "head_delta_0_to_4_posthoc_context": {
+      "OTHER_LINE_PAIR": {
+        "tickets": 3424,
+        "races": 941,
+        "actual_hits": 24,
+        "normalized_market_expected_hits": 24.453602894692075,
+        "actual_over_normalized_market": 0.9814504677840117,
+        "gross_roi_pct": 35.47313084112149,
+        "avg_odds": 426.64471378504675,
+        "median_odds": 199.5,
+        "avg_market_p": 0.007141823275318948,
+        "median_market_p": 0.003742766697214667
+      },
+      "OTHER_LINE_ESCAPE_PAIR": {
+        "tickets": 1556,
+        "races": 582,
+        "actual_hits": 11,
+        "normalized_market_expected_hits": 12.095314386473884,
+        "actual_over_normalized_market": 0.9094430825461827,
+        "gross_roi_pct": 45.89331619537275,
+        "avg_odds": 342.45771208226216,
+        "median_odds": 157.2,
+        "avg_market_p": 0.007773338294649026,
+        "median_market_p": 0.004758401461899327
+      },
+      "CROSS_BANTES": {
+        "tickets": 1366,
+        "races": 615,
+        "actual_hits": 9,
+        "normalized_market_expected_hits": 7.116557415408091,
+        "actual_over_normalized_market": 1.264656416670518,
+        "gross_roi_pct": 145.69546120058564,
+        "avg_odds": 601.4971449487555,
+        "median_odds": 358.6,
+        "avg_market_p": 0.005209778488585719,
+        "median_market_p": 0.002083406585355429
+      }
+    },
+    "matched_price_comparison": {
+      "matched_cross_tickets": 1474,
+      "unique_races": 676,
+      "median_score_delta_abs_diff": 0.22333333333333383,
+      "median_cross_over_pair_market_p": 0.6813447660087535,
+      "mean_cross_over_pair_market_p": 1.3002980645001554,
+      "median_cross_over_pair_odds": 1.4676859553421462,
+      "mean_cross_over_pair_odds": 2.2863105889374786,
+      "share_cross_lower_market_p_than_pair": 0.6601085481682497
+    }
+  }
+}
