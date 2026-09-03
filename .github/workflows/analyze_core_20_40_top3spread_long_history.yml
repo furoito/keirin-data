@@ -31,4 +31,6 @@ jobs:
           git add keirin_data/strategy_context/core_20_40_top3spread_long_history_summary.json
           git add keirin_data/strategy_context/core_20_40_top3spread_long_history_tickets.csv
           git diff --cached --quiet || git commit -m 'Add long-history 20-40 top3-spread results'
+          git pull --rebase origin experiment/popular-head-skip-v01
           git push
+# retrigger latest backfill 2026-09-03
