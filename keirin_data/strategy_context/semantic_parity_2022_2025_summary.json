@@ -1,0 +1,719 @@
+{
+  "status": "semantic_parity_probe_2022_vs_2025",
+  "scope": {
+    "2022": "2022-01..08 only; chosen because these were bulk-complete before the active September backfill",
+    "2025": "2025-01..12"
+  },
+  "definition_invariants": [
+    "race_score is consumed directly from the monthly base CSV, not recomputed by year",
+    "role_ok is running_style == '両' OR true-line position == 2",
+    "single-rider lines are excluded from the current 3-line selector",
+    "3rentan raw market weight is 1/posted_odds and normalized by the full race board",
+    "unordered group market probability sums the six exact-order normalized probabilities"
+  ],
+  "by_year": {
+    "2022": {
+      "months_requested": [
+        "2022_01",
+        "2022_02",
+        "2022_03",
+        "2022_04",
+        "2022_05",
+        "2022_06",
+        "2022_07",
+        "2022_08"
+      ],
+      "month_rows": {
+        "2022_01": {
+          "status": "loaded",
+          "base_rows": 14925,
+          "context_rows": 953,
+          "usable_context_races": 893,
+          "complete_board_races": 637
+        },
+        "2022_02": {
+          "status": "loaded",
+          "base_rows": 14931,
+          "context_rows": 949,
+          "usable_context_races": 889,
+          "complete_board_races": 684
+        },
+        "2022_03": {
+          "status": "loaded",
+          "base_rows": 14697,
+          "context_rows": 906,
+          "usable_context_races": 857,
+          "complete_board_races": 669
+        },
+        "2022_04": {
+          "status": "loaded",
+          "base_rows": 15231,
+          "context_rows": 1010,
+          "usable_context_races": 931,
+          "complete_board_races": 701
+        },
+        "2022_05": {
+          "status": "loaded",
+          "base_rows": 16550,
+          "context_rows": 1051,
+          "usable_context_races": 1033,
+          "complete_board_races": 805
+        },
+        "2022_06": {
+          "status": "loaded",
+          "base_rows": 16309,
+          "context_rows": 1095,
+          "usable_context_races": 1023,
+          "complete_board_races": 764
+        },
+        "2022_07": {
+          "status": "loaded",
+          "base_rows": 15683,
+          "context_rows": 1042,
+          "usable_context_races": 975,
+          "complete_board_races": 773
+        },
+        "2022_08": {
+          "status": "loaded",
+          "base_rows": 15613,
+          "context_rows": 990,
+          "usable_context_races": 895,
+          "complete_board_races": 679
+        }
+      },
+      "schema_signatures": {
+        "base": [
+          {
+            "months": 3,
+            "columns": [
+              "race_id",
+              "venue_slug",
+              "date",
+              "race_no",
+              "lineup",
+              "ni_sha_tan",
+              "san_ren_tan",
+              "san_ren_fuku",
+              "banum",
+              "player_name",
+              "pref",
+              "age",
+              "term",
+              "player_class",
+              "running_style",
+              "gear",
+              "race_score",
+              "rank",
+              "agari",
+              "finish_type",
+              "margin",
+              "win_lose",
+              "wide"
+            ]
+          },
+          {
+            "months": 5,
+            "columns": [
+              "race_id",
+              "venue_slug",
+              "date",
+              "race_no",
+              "lineup",
+              "ni_sha_tan",
+              "san_ren_tan",
+              "san_ren_fuku",
+              "banum",
+              "player_name",
+              "pref",
+              "age",
+              "term",
+              "player_class",
+              "running_style",
+              "gear",
+              "race_score",
+              "rank",
+              "agari",
+              "finish_type",
+              "margin",
+              "win_lose"
+            ]
+          }
+        ],
+        "context": [
+          {
+            "months": 8,
+            "columns": [
+              "race_id",
+              "date",
+              "venue_slug",
+              "race_no",
+              "classes",
+              "n_players",
+              "expected_3rentan",
+              "true_line",
+              "n_lines",
+              "line_quality",
+              "line_source_url",
+              "parsed_3rentan",
+              "odds_quality",
+              "odds_snapshot_at",
+              "odds_snapshot_kind",
+              "bet_close_time",
+              "price_quality",
+              "price_usable",
+              "odds_source_url",
+              "context_quality",
+              "enriched_at"
+            ]
+          }
+        ],
+        "odds": [
+          {
+            "months": 8,
+            "columns": [
+              "race_id",
+              "date",
+              "venue_slug",
+              "race_no",
+              "b1",
+              "b2",
+              "b3",
+              "odds_decimal",
+              "snapshot_at",
+              "snapshot_kind",
+              "source_url"
+            ]
+          }
+        ]
+      },
+      "base_race_score_all_rows": {
+        "n": 123939,
+        "missing_or_nonfinite": 0,
+        "mean": 85.00009674113879,
+        "std": 15.82410926434078,
+        "min": 0.0,
+        "p05": 52.54,
+        "p25": 77.0,
+        "p50": 86.0,
+        "p75": 96.16,
+        "p95": 107.31,
+        "max": 121.64
+      },
+      "race_score_on_usable_full_board_races": {
+        "n": 38976,
+        "missing_or_nonfinite": 0,
+        "mean": 85.28537946428571,
+        "std": 6.462580839973359,
+        "min": 0.0,
+        "p05": 78.0,
+        "p25": 81.92,
+        "p50": 85.08,
+        "p75": 88.9,
+        "p95": 94.12,
+        "max": 105.7
+      },
+      "running_style_all_rows": {
+        "両": {
+          "n": 31493,
+          "pct": 25.410080765537884
+        },
+        "追": {
+          "n": 59373,
+          "pct": 47.905017791010096
+        },
+        "逃": {
+          "n": 33073,
+          "pct": 26.68490144345202
+        }
+      },
+      "running_style_on_usable_full_board_races": {
+        "両": {
+          "n": 7808,
+          "pct": 20.032840722495894
+        },
+        "追": {
+          "n": 20725,
+          "pct": 53.17374794745484
+        },
+        "逃": {
+          "n": 10443,
+          "pct": 26.79341133004926
+        }
+      },
+      "context": {
+        "raw_rows": 7996,
+        "context_full_rows": 7496,
+        "price_usable_rows_after_full_filter": 7496,
+        "usable_races": 7496,
+        "line_source_domains": {
+          "sp.oddspark.com": {
+            "n": 7496,
+            "pct": 100.0
+          }
+        },
+        "odds_source_domains": {
+          "keirin.kdreams.jp": {
+            "n": 7496,
+            "pct": 100.0
+          }
+        },
+        "n_lines": {
+          "2": {
+            "n": 688,
+            "pct": 9.178228388473853
+          },
+          "3": {
+            "n": 5645,
+            "pct": 75.3068303094984
+          },
+          "4": {
+            "n": 965,
+            "pct": 12.873532550693703
+          },
+          "5": {
+            "n": 64,
+            "pct": 0.8537886872998933
+          },
+          "6": {
+            "n": 59,
+            "pct": 0.7870864461045891
+          },
+          "7": {
+            "n": 75,
+            "pct": 1.0005336179295625
+          }
+        },
+        "line_sizes": {
+          "1": {
+            "n": 4399,
+            "pct": 19.28117466579005
+          },
+          "2": {
+            "n": 10078,
+            "pct": 44.17269340346263
+          },
+          "3": {
+            "n": 7721,
+            "pct": 33.84177076484769
+          },
+          "4": {
+            "n": 603,
+            "pct": 2.6429980276134124
+          },
+          "5": {
+            "n": 14,
+            "pct": 0.06136313828621521
+          }
+        },
+        "role_semantics_multirider_lines": {
+          "eligible_multirider_riders": 35429,
+          "line_pos2": 14242,
+          "role_ok": 18638,
+          "style_ryo": 7063,
+          "ryo_bante": 2667,
+          "ryo_line_head": 3260,
+          "style_ryo_pct": 19.935645939766857,
+          "line_pos2_pct": 40.19870727370233,
+          "role_ok_pct": 52.60662169409241
+        }
+      },
+      "odds": {
+        "complete_board_races": 5712,
+        "overround_sum_inverse_odds": {
+          "n": 5712,
+          "missing_or_nonfinite": 0,
+          "mean": 1.4182157554718908,
+          "std": 0.9025430295096023,
+          "min": 1.3340200697217235,
+          "p05": 1.3344817684663248,
+          "p25": 1.3351525515531726,
+          "p50": 1.3361832470516053,
+          "p75": 1.338091449023893,
+          "p95": 1.344146835452145,
+          "max": 15.254367027163758
+        },
+        "parsed_over_expected_ratio": {
+          "n": 7496,
+          "missing_or_nonfinite": 0,
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "p05": 1.0,
+          "p25": 1.0,
+          "p50": 1.0,
+          "p75": 1.0,
+          "p95": 1.0,
+          "max": 1.0
+        }
+      },
+      "skipped": {
+        "odds_board_incomplete": 1615,
+        "base_or_odds_missing": 169
+      }
+    },
+    "2025": {
+      "months_requested": [
+        "2025_01",
+        "2025_02",
+        "2025_03",
+        "2025_04",
+        "2025_05",
+        "2025_06",
+        "2025_07",
+        "2025_08",
+        "2025_09",
+        "2025_10",
+        "2025_11",
+        "2025_12"
+      ],
+      "month_rows": {
+        "2025_01": {
+          "status": "loaded",
+          "base_rows": 16589,
+          "context_rows": 1037,
+          "usable_context_races": 983,
+          "complete_board_races": 789
+        },
+        "2025_02": {
+          "status": "loaded",
+          "base_rows": 15192,
+          "context_rows": 894,
+          "usable_context_races": 724,
+          "complete_board_races": 572
+        },
+        "2025_03": {
+          "status": "loaded",
+          "base_rows": 16601,
+          "context_rows": 971,
+          "usable_context_races": 679,
+          "complete_board_races": 508
+        },
+        "2025_04": {
+          "status": "loaded",
+          "base_rows": 15423,
+          "context_rows": 975,
+          "usable_context_races": 374,
+          "complete_board_races": 273
+        },
+        "2025_05": {
+          "status": "loaded",
+          "base_rows": 16518,
+          "context_rows": 1026,
+          "usable_context_races": 548,
+          "complete_board_races": 380
+        },
+        "2025_06": {
+          "status": "loaded",
+          "base_rows": 16377,
+          "context_rows": 1012,
+          "usable_context_races": 972,
+          "complete_board_races": 729
+        },
+        "2025_07": {
+          "status": "loaded",
+          "base_rows": 17227,
+          "context_rows": 1032,
+          "usable_context_races": 997,
+          "complete_board_races": 729
+        },
+        "2025_08": {
+          "status": "loaded",
+          "base_rows": 16405,
+          "context_rows": 987,
+          "usable_context_races": 960,
+          "complete_board_races": 735
+        },
+        "2025_09": {
+          "status": "loaded",
+          "base_rows": 16636,
+          "context_rows": 1017,
+          "usable_context_races": 971,
+          "complete_board_races": 684
+        },
+        "2025_10": {
+          "status": "loaded",
+          "base_rows": 16429,
+          "context_rows": 987,
+          "usable_context_races": 940,
+          "complete_board_races": 698
+        },
+        "2025_11": {
+          "status": "loaded",
+          "base_rows": 15796,
+          "context_rows": 966,
+          "usable_context_races": 958,
+          "complete_board_races": 681
+        },
+        "2025_12": {
+          "status": "loaded",
+          "base_rows": 15898,
+          "context_rows": 957,
+          "usable_context_races": 913,
+          "complete_board_races": 664
+        }
+      },
+      "schema_signatures": {
+        "base": [
+          {
+            "months": 12,
+            "columns": [
+              "race_id",
+              "venue_slug",
+              "date",
+              "race_no",
+              "lineup",
+              "ni_sha_tan",
+              "san_ren_tan",
+              "san_ren_fuku",
+              "banum",
+              "player_name",
+              "pref",
+              "age",
+              "term",
+              "player_class",
+              "running_style",
+              "gear",
+              "race_score",
+              "rank",
+              "agari",
+              "finish_type",
+              "margin",
+              "win_lose"
+            ]
+          }
+        ],
+        "context": [
+          {
+            "months": 12,
+            "columns": [
+              "race_id",
+              "date",
+              "venue_slug",
+              "race_no",
+              "classes",
+              "n_players",
+              "expected_3rentan",
+              "true_line",
+              "n_lines",
+              "line_quality",
+              "line_source_url",
+              "parsed_3rentan",
+              "odds_quality",
+              "odds_snapshot_at",
+              "odds_snapshot_kind",
+              "bet_close_time",
+              "price_quality",
+              "price_usable",
+              "odds_source_url",
+              "context_quality",
+              "enriched_at"
+            ]
+          }
+        ],
+        "odds": [
+          {
+            "months": 12,
+            "columns": [
+              "race_id",
+              "date",
+              "venue_slug",
+              "race_no",
+              "b1",
+              "b2",
+              "b3",
+              "odds_decimal",
+              "snapshot_at",
+              "snapshot_kind",
+              "source_url"
+            ]
+          }
+        ]
+      },
+      "base_race_score_all_rows": {
+        "n": 195091,
+        "missing_or_nonfinite": 0,
+        "mean": 84.45638963355562,
+        "std": 16.06793739716207,
+        "min": 0.0,
+        "p05": 51.614999999999995,
+        "p25": 75.45,
+        "p50": 85.47,
+        "p75": 95.89,
+        "p95": 107.33,
+        "max": 122.16
+      },
+      "race_score_on_usable_full_board_races": {
+        "n": 51796,
+        "missing_or_nonfinite": 0,
+        "mean": 85.03511661132134,
+        "std": 6.462472069910721,
+        "min": 0.0,
+        "p05": 77.73,
+        "p25": 81.6,
+        "p50": 84.83,
+        "p75": 88.66,
+        "p95": 93.66,
+        "max": 104.8
+      },
+      "running_style_all_rows": {
+        "両": {
+          "n": 47568,
+          "pct": 24.382467668933984
+        },
+        "追": {
+          "n": 95117,
+          "pct": 48.75519629301198
+        },
+        "逃": {
+          "n": 52406,
+          "pct": 26.862336038054035
+        }
+      },
+      "running_style_on_usable_full_board_races": {
+        "両": {
+          "n": 10504,
+          "pct": 20.279558267047648
+        },
+        "追": {
+          "n": 27414,
+          "pct": 52.92686693953201
+        },
+        "逃": {
+          "n": 13878,
+          "pct": 26.79357479342034
+        }
+      },
+      "context": {
+        "raw_rows": 11861,
+        "context_full_rows": 10019,
+        "price_usable_rows_after_full_filter": 10019,
+        "usable_races": 10019,
+        "line_source_domains": {
+          "sp.oddspark.com": {
+            "n": 10019,
+            "pct": 100.0
+          }
+        },
+        "odds_source_domains": {
+          "keirin.kdreams.jp": {
+            "n": 10019,
+            "pct": 100.0
+          }
+        },
+        "n_lines": {
+          "2": {
+            "n": 587,
+            "pct": 5.858868150514024
+          },
+          "3": {
+            "n": 7247,
+            "pct": 72.33256812057091
+          },
+          "4": {
+            "n": 1712,
+            "pct": 17.087533685996608
+          },
+          "5": {
+            "n": 154,
+            "pct": 1.5370795488571714
+          },
+          "6": {
+            "n": 41,
+            "pct": 0.40922247729314304
+          },
+          "7": {
+            "n": 278,
+            "pct": 2.7747280167681407
+          }
+        },
+        "line_sizes": {
+          "1": {
+            "n": 7273,
+            "pct": 22.998355679230965
+          },
+          "2": {
+            "n": 13685,
+            "pct": 43.27409562357703
+          },
+          "3": {
+            "n": 9890,
+            "pct": 31.273716164938023
+          },
+          "4": {
+            "n": 760,
+            "pct": 2.4032380470528714
+          },
+          "5": {
+            "n": 16,
+            "pct": 0.05059448520111308
+          }
+        },
+        "role_semantics_multirider_lines": {
+          "eligible_multirider_riders": 46086,
+          "line_pos2": 18657,
+          "role_ok": 24440,
+          "style_ryo": 9193,
+          "ryo_bante": 3410,
+          "ryo_line_head": 4329,
+          "style_ryo_pct": 19.947489476196676,
+          "line_pos2_pct": 40.48301002473636,
+          "role_ok_pct": 53.031289328646444
+        }
+      },
+      "odds": {
+        "complete_board_races": 7442,
+        "overround_sum_inverse_odds": {
+          "n": 7442,
+          "missing_or_nonfinite": 0,
+          "mean": 1.3941980292510296,
+          "std": 0.7755657703292687,
+          "min": 1.3339693732245426,
+          "p05": 1.3344826511556838,
+          "p25": 1.3351640559375493,
+          "p50": 1.3361737988817244,
+          "p75": 1.3382193817926529,
+          "p95": 1.345126632766419,
+          "max": 17.41949096361114
+        },
+        "parsed_over_expected_ratio": {
+          "n": 10019,
+          "missing_or_nonfinite": 0,
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "p05": 1.0,
+          "p25": 1.0,
+          "p50": 1.0,
+          "p75": 1.0,
+          "p95": 1.0,
+          "max": 1.0
+        }
+      },
+      "skipped": {
+        "odds_board_incomplete": 2237,
+        "base_or_odds_missing": 340
+      }
+    }
+  },
+  "comparison": {
+    "verdict": "PARITY_NEEDS_REVIEW",
+    "red_flags": [
+      "SCHEMA_MISMATCH_BASE"
+    ],
+    "diagnostic_notes": [
+      {
+        "metric": "race_score_median_2025_minus_2022",
+        "value": -0.25
+      },
+      {
+        "metric": "overround_median_ratio_2025_over_2022",
+        "value": 0.9999929289864232
+      },
+      {
+        "metric": "role_ok_pct_2025_minus_2022",
+        "value": 0.42466763455403367
+      }
+    ],
+    "interpretation_guardrail": "Different natural race mixes are allowed. Red flags identify possible semantic/pipeline shifts, not proof of a bug."
+  }
+}
