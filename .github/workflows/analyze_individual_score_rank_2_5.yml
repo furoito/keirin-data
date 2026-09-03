@@ -1,0 +1,36 @@
+name: Analyze individual score rank 2-5
+
+on:
+  push:
+    branches:
+      - experiment/popular-head-skip-v01
+    paths:
+      - scripts/analyze_individual_score_rank_2_5.py
+      - .github/workflows/analyze_individual_score_rank_2_5.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy
+      - run: python scripts/analyze_individual_score_rank_2_5.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add keirin_data/strategy_context/individual_score_rank_2_5_summary.json keirin_data/strategy_context/individual_score_rank_2_5_tickets.csv
+          if ! git diff --cached --quiet; then
+            git commit -m 'Add individual score-rank 2-5 results'
+            git pull --rebase origin experiment/popular-head-skip-v01
+            git push origin HEAD:experiment/popular-head-skip-v01
+          fi
