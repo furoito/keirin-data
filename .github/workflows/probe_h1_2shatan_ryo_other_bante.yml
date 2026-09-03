@@ -1,0 +1,31 @@
+name: Probe H1 2shatan RYO other-bante
+on:
+  push:
+    branches: [experiment/popular-head-skip-v01]
+    paths:
+      - 'scripts/probe_h1_2shatan_ryo_other_bante.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy requests lxml
+      - run: python scripts/probe_h1_2shatan_ryo_other_bante.py
+      - name: Commit probe results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add keirin_data/strategy_context/h1_2shatan_ryo_other_bante_probe_summary.json keirin_data/strategy_context/h1_2shatan_ryo_other_bante_probe_tickets.csv
+          git diff --cached --quiet && exit 0
+          git commit -m 'Add 2shatan RYO other-bante probe results'
+          git pull --rebase origin experiment/popular-head-skip-v01
+          git push origin HEAD:experiment/popular-head-skip-v01
