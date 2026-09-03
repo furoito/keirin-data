@@ -1,0 +1,767 @@
+{
+  "status": "exploratory_formation_demand_two_layer_mechanism_test",
+  "source": "keirin_data/strategy_context/h1_canonical_three_line_ryo_bante_strong_extended_2024_2026_tickets.csv",
+  "hypothesis": {
+    "layer_1_group_selection": "formation-style demand underweights some canonical cross-line unordered trios, producing group calibration > 1, potentially stronger at higher effective group odds",
+    "layer_2_ordering": "conditional on the trio hitting, relative market weights across its six exact orders are substantially better calibrated than the group-selection layer"
+  },
+  "predeclared_interpretation": {
+    "supports_mechanism": "group calibration > 1 (especially rising in higher effective-group-odds bands) while within-six rank calibration is materially closer to 1 and actual winners are concentrated toward low odds ranks",
+    "weakens_mechanism": "no group-level underpricing, or order-rank conditional calibration is equally/more distorted with no useful concentration toward low odds ranks"
+  },
+  "warning": "Mechanism diagnostic on previously explored historical data; not fresh OOS and does not identify bettor behavior directly.",
+  "variants": {
+    "STRUCTURAL_ONLY": {
+      "group_level_all": {
+        "candidate_trios": 1907,
+        "races": 894,
+        "actual_group_hits": 61,
+        "market_expected_group_hits": 58.37970705540873,
+        "group_calibration_ratio": 1.0448836261220757,
+        "mean_group_market_p": 0.030613375487891312,
+        "median_effective_group_odds": 87.0523403625604
+      },
+      "group_level_by_effective_odds": {
+        "LT_5": {
+          "candidate_trios": 43,
+          "races": 42,
+          "actual_group_hits": 19,
+          "market_expected_group_hits": 13.09645422613319,
+          "group_calibration_ratio": 1.450774360138383,
+          "mean_group_market_p": 0.30456870293333,
+          "median_effective_group_odds": 3.8555382919860577
+        },
+        "5_TO_10": {
+          "candidate_trios": 101,
+          "races": 98,
+          "actual_group_hits": 18,
+          "market_expected_group_hits": 13.979150120113664,
+          "group_calibration_ratio": 1.2876319265003817,
+          "mean_group_market_p": 0.13840742693181846,
+          "median_effective_group_odds": 7.5649496265244895
+        },
+        "10_TO_20": {
+          "candidate_trios": 153,
+          "races": 142,
+          "actual_group_hits": 11,
+          "market_expected_group_hits": 10.913797513147195,
+          "group_calibration_ratio": 1.0078984869152063,
+          "mean_group_market_p": 0.07133200988985094,
+          "median_effective_group_odds": 14.560248099144989
+        },
+        "20_TO_30": {
+          "candidate_trios": 124,
+          "races": 114,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 5.058044307175196,
+          "group_calibration_ratio": 0.3954097430824909,
+          "mean_group_market_p": 0.040790679896574165,
+          "median_effective_group_odds": 24.82036239335583
+        },
+        "30_TO_50": {
+          "candidate_trios": 214,
+          "races": 193,
+          "actual_group_hits": 6,
+          "market_expected_group_hits": 5.3855242096716704,
+          "group_calibration_ratio": 1.1140976748790423,
+          "mean_group_market_p": 0.025166000979774162,
+          "median_effective_group_odds": 40.73174908184282
+        },
+        "50_TO_100": {
+          "candidate_trios": 392,
+          "races": 313,
+          "actual_group_hits": 3,
+          "market_expected_group_hits": 5.592324082786966,
+          "group_calibration_ratio": 0.5364495969097938,
+          "mean_group_market_p": 0.014266132864252466,
+          "median_effective_group_odds": 71.71613018537253
+        },
+        "100_TO_200": {
+          "candidate_trios": 401,
+          "races": 315,
+          "actual_group_hits": 0,
+          "market_expected_group_hits": 2.8931643465377697,
+          "group_calibration_ratio": 0.0,
+          "mean_group_market_p": 0.007214873682139076,
+          "median_effective_group_odds": 140.84290602974002
+        },
+        "GE_200": {
+          "candidate_trios": 479,
+          "races": 332,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 1.4612482498430697,
+          "group_calibration_ratio": 1.3686928283505486,
+          "mean_group_market_p": 0.003050622651029373,
+          "median_effective_group_odds": 326.1941180762688
+        }
+      },
+      "group_level_by_period": {
+        "2024_H1": {
+          "candidate_trios": 127,
+          "races": 61,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 3.3416278950059173,
+          "group_calibration_ratio": 0.598510684863809,
+          "mean_group_market_p": 0.026312030669337932,
+          "median_effective_group_odds": 105.77323804483905
+        },
+        "2024_H2": {
+          "candidate_trios": 81,
+          "races": 32,
+          "actual_group_hits": 1,
+          "market_expected_group_hits": 2.1594610716333635,
+          "group_calibration_ratio": 0.4630785028431304,
+          "mean_group_market_p": 0.026660013230041524,
+          "median_effective_group_odds": 79.66834041736153
+        },
+        "2025_H1": {
+          "candidate_trios": 964,
+          "races": 455,
+          "actual_group_hits": 31,
+          "market_expected_group_hits": 31.93250646527844,
+          "group_calibration_ratio": 0.9707975800054283,
+          "mean_group_market_p": 0.033125006706720375,
+          "median_effective_group_odds": 82.07836204878294
+        },
+        "2025_H2": {
+          "candidate_trios": 616,
+          "races": 303,
+          "actual_group_hits": 25,
+          "market_expected_group_hits": 19.386598229527255,
+          "group_calibration_ratio": 1.289550632040391,
+          "mean_group_market_p": 0.03147175037260918,
+          "median_effective_group_odds": 90.91261951194764
+        },
+        "2026_H1": {
+          "candidate_trios": 119,
+          "races": 43,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 1.5595133939637449,
+          "group_calibration_ratio": 1.282451313173201,
+          "mean_group_market_p": 0.013105154571123906,
+          "median_effective_group_odds": 141.4691722467833
+        }
+      },
+      "within_six_order_conditional_on_group_hit": {
+        "group_hits": 61,
+        "actual_winner_mean_odds_rank": 2.2131147540983607,
+        "actual_winner_median_odds_rank": 2.0,
+        "uniform_random_expected_mean_rank": 3.5,
+        "ranks": {
+          "RANK_1": {
+            "actual_winning_orders": 28,
+            "conditional_market_expected_wins": 24.024804922013285,
+            "actual_over_conditional_market": 1.165462116795144,
+            "actual_share_of_group_hits_pct": 45.90163934426229,
+            "market_expected_share_pct": 39.38492610166112,
+            "median_exact_odds": 16.7
+          },
+          "RANK_2": {
+            "actual_winning_orders": 11,
+            "conditional_market_expected_wins": 14.492407830321227,
+            "actual_over_conditional_market": 0.7590181099503451,
+            "actual_share_of_group_hits_pct": 18.0327868852459,
+            "market_expected_share_pct": 23.75804562347742,
+            "median_exact_odds": 27.3
+          },
+          "RANK_3": {
+            "actual_winning_orders": 10,
+            "conditional_market_expected_wins": 8.855926661738886,
+            "actual_over_conditional_market": 1.129187309466322,
+            "actual_share_of_group_hits_pct": 16.39344262295082,
+            "market_expected_share_pct": 14.517912560227682,
+            "median_exact_odds": 42.8
+          },
+          "RANK_4": {
+            "actual_winning_orders": 8,
+            "conditional_market_expected_wins": 5.796160236851456,
+            "actual_over_conditional_market": 1.3802240920008961,
+            "actual_share_of_group_hits_pct": 13.114754098360656,
+            "market_expected_share_pct": 9.501902027625338,
+            "median_exact_odds": 62.8
+          },
+          "RANK_5": {
+            "actual_winning_orders": 1,
+            "conditional_market_expected_wins": 4.332199166664,
+            "actual_over_conditional_market": 0.23082964599017908,
+            "actual_share_of_group_hits_pct": 1.639344262295082,
+            "market_expected_share_pct": 7.101965846990164,
+            "median_exact_odds": 99.0
+          },
+          "RANK_6": {
+            "actual_winning_orders": 3,
+            "conditional_market_expected_wins": 3.4985011824111467,
+            "actual_over_conditional_market": 0.8575100717651944,
+            "actual_share_of_group_hits_pct": 4.918032786885246,
+            "market_expected_share_pct": 5.735247840018273,
+            "median_exact_odds": 117.5
+          }
+        }
+      }
+    },
+    "TOP50_SCORE_SUM": {
+      "group_level_all": {
+        "candidate_trios": 1078,
+        "races": 657,
+        "actual_group_hits": 59,
+        "market_expected_group_hits": 49.5395365732348,
+        "group_calibration_ratio": 1.19096794360964,
+        "mean_group_market_p": 0.0459550432033718,
+        "median_effective_group_odds": 48.15445145373424
+      },
+      "group_level_by_effective_odds": {
+        "LT_5": {
+          "candidate_trios": 41,
+          "races": 40,
+          "actual_group_hits": 19,
+          "market_expected_group_hits": 12.604802693078323,
+          "group_calibration_ratio": 1.5073619526336157,
+          "mean_group_market_p": 0.30743421202630056,
+          "median_effective_group_odds": 3.8555382919860577
+        },
+        "5_TO_10": {
+          "candidate_trios": 93,
+          "races": 91,
+          "actual_group_hits": 18,
+          "market_expected_group_hits": 13.012512490933439,
+          "group_calibration_ratio": 1.383283974754424,
+          "mean_group_market_p": 0.1399194891498219,
+          "median_effective_group_odds": 7.434194698623191
+        },
+        "10_TO_20": {
+          "candidate_trios": 138,
+          "races": 129,
+          "actual_group_hits": 10,
+          "market_expected_group_hits": 9.874567434082303,
+          "group_calibration_ratio": 1.0127025884176721,
+          "mean_group_market_p": 0.07155483647885727,
+          "median_effective_group_odds": 14.336816202357582
+        },
+        "20_TO_30": {
+          "candidate_trios": 112,
+          "races": 106,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 4.580775456909765,
+          "group_calibration_ratio": 0.4366072990945553,
+          "mean_group_market_p": 0.04089978086526576,
+          "median_effective_group_odds": 24.795891224030168
+        },
+        "30_TO_50": {
+          "candidate_trios": 167,
+          "races": 155,
+          "actual_group_hits": 6,
+          "market_expected_group_hits": 4.198410147828907,
+          "group_calibration_ratio": 1.4291123993930739,
+          "mean_group_market_p": 0.0251401805259216,
+          "median_effective_group_odds": 41.03778245520838
+        },
+        "50_TO_100": {
+          "candidate_trios": 249,
+          "races": 215,
+          "actual_group_hits": 3,
+          "market_expected_group_hits": 3.575488792971858,
+          "group_calibration_ratio": 0.8390461203226075,
+          "mean_group_market_p": 0.014359392742858867,
+          "median_effective_group_odds": 70.70768369032277
+        },
+        "100_TO_200": {
+          "candidate_trios": 184,
+          "races": 167,
+          "actual_group_hits": 0,
+          "market_expected_group_hits": 1.3706459507038034,
+          "group_calibration_ratio": 0.0,
+          "mean_group_market_p": 0.007449162775564149,
+          "median_effective_group_odds": 133.46876155669128
+        },
+        "GE_200": {
+          "candidate_trios": 94,
+          "races": 80,
+          "actual_group_hits": 1,
+          "market_expected_group_hits": 0.3223336067263987,
+          "group_calibration_ratio": 3.1023758588374997,
+          "mean_group_market_p": 0.003429080922621263,
+          "median_effective_group_odds": 282.2122908037842
+        }
+      },
+      "group_level_by_period": {
+        "2024_H1": {
+          "candidate_trios": 69,
+          "races": 41,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 2.599112113051504,
+          "group_calibration_ratio": 0.7694935474145005,
+          "mean_group_market_p": 0.03766829149350006,
+          "median_effective_group_odds": 54.04783188771578
+        },
+        "2024_H2": {
+          "candidate_trios": 47,
+          "races": 26,
+          "actual_group_hits": 1,
+          "market_expected_group_hits": 1.7064524483437398,
+          "group_calibration_ratio": 0.5860110552571135,
+          "mean_group_market_p": 0.036307498900930636,
+          "median_effective_group_odds": 51.99156749153131
+        },
+        "2025_H1": {
+          "candidate_trios": 553,
+          "races": 335,
+          "actual_group_hits": 29,
+          "market_expected_group_hits": 27.72364100186116,
+          "group_calibration_ratio": 1.0460386497593572,
+          "mean_group_market_p": 0.050133166368645864,
+          "median_effective_group_odds": 43.48722101300177
+        },
+        "2025_H2": {
+          "candidate_trios": 346,
+          "races": 221,
+          "actual_group_hits": 25,
+          "market_expected_group_hits": 16.244992401081454,
+          "group_calibration_ratio": 1.5389357768081018,
+          "mean_group_market_p": 0.046950845089830794,
+          "median_effective_group_odds": 50.24194588877977
+        },
+        "2026_H1": {
+          "candidate_trios": 63,
+          "races": 34,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 1.265338608896942,
+          "group_calibration_ratio": 1.580604579625922,
+          "mean_group_market_p": 0.020084739823760984,
+          "median_effective_group_odds": 77.84069339445753
+        }
+      },
+      "within_six_order_conditional_on_group_hit": {
+        "group_hits": 59,
+        "actual_winner_mean_odds_rank": 2.2033898305084745,
+        "actual_winner_median_odds_rank": 2.0,
+        "uniform_random_expected_mean_rank": 3.5,
+        "ranks": {
+          "RANK_1": {
+            "actual_winning_orders": 28,
+            "conditional_market_expected_wins": 23.441637087393183,
+            "actual_over_conditional_market": 1.1944558264259746,
+            "actual_share_of_group_hits_pct": 47.45762711864407,
+            "market_expected_share_pct": 39.73158828371726,
+            "median_exact_odds": 15.8
+          },
+          "RANK_2": {
+            "actual_winning_orders": 10,
+            "conditional_market_expected_wins": 14.013423944489336,
+            "actual_over_conditional_market": 0.7136014752434874,
+            "actual_share_of_group_hits_pct": 16.949152542372882,
+            "market_expected_share_pct": 23.751566007609046,
+            "median_exact_odds": 26.5
+          },
+          "RANK_3": {
+            "actual_winning_orders": 9,
+            "conditional_market_expected_wins": 8.552738594720989,
+            "actual_over_conditional_market": 1.0522945253529759,
+            "actual_share_of_group_hits_pct": 15.254237288135593,
+            "market_expected_share_pct": 14.49616710969659,
+            "median_exact_odds": 40.0
+          },
+          "RANK_4": {
+            "actual_winning_orders": 8,
+            "conditional_market_expected_wins": 5.529114537098962,
+            "actual_over_conditional_market": 1.446886286460883,
+            "actual_share_of_group_hits_pct": 13.559322033898304,
+            "market_expected_share_pct": 9.371380571354171,
+            "median_exact_odds": 61.8
+          },
+          "RANK_5": {
+            "actual_winning_orders": 1,
+            "conditional_market_expected_wins": 4.127281882766224,
+            "actual_over_conditional_market": 0.24229021142839197,
+            "actual_share_of_group_hits_pct": 1.694915254237288,
+            "market_expected_share_pct": 6.995393021637667,
+            "median_exact_odds": 99.0
+          },
+          "RANK_6": {
+            "actual_winning_orders": 3,
+            "conditional_market_expected_wins": 3.3358039535313093,
+            "actual_over_conditional_market": 0.8993334266014571,
+            "actual_share_of_group_hits_pct": 5.084745762711864,
+            "market_expected_share_pct": 5.65390500598527,
+            "median_exact_odds": 117.5
+          }
+        }
+      }
+    },
+    "TOP40_SCORE_SUM": {
+      "group_level_all": {
+        "candidate_trios": 924,
+        "races": 590,
+        "actual_group_hits": 57,
+        "market_expected_group_hits": 47.073887864801605,
+        "group_calibration_ratio": 1.2108623822129723,
+        "mean_group_market_p": 0.05094576608744762,
+        "median_effective_group_odds": 44.07780274883267
+      },
+      "group_level_by_effective_odds": {
+        "LT_5": {
+          "candidate_trios": 41,
+          "races": 40,
+          "actual_group_hits": 19,
+          "market_expected_group_hits": 12.604802693078323,
+          "group_calibration_ratio": 1.5073619526336157,
+          "mean_group_market_p": 0.30743421202630056,
+          "median_effective_group_odds": 3.8555382919860577
+        },
+        "5_TO_10": {
+          "candidate_trios": 92,
+          "races": 90,
+          "actual_group_hits": 18,
+          "market_expected_group_hits": 12.907058719966724,
+          "group_calibration_ratio": 1.3945857371946941,
+          "mean_group_market_p": 0.14029411652137744,
+          "median_effective_group_odds": 7.397276580086101
+        },
+        "10_TO_20": {
+          "candidate_trios": 130,
+          "races": 123,
+          "actual_group_hits": 10,
+          "market_expected_group_hits": 9.366331759297477,
+          "group_calibration_ratio": 1.0676538325768263,
+          "mean_group_market_p": 0.07204870584074982,
+          "median_effective_group_odds": 14.01930548509274
+        },
+        "20_TO_30": {
+          "candidate_trios": 101,
+          "races": 96,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 4.1531123855131415,
+          "group_calibration_ratio": 0.4815665492165313,
+          "mean_group_market_p": 0.04111992460904101,
+          "median_effective_group_odds": 24.643669569427537
+        },
+        "30_TO_50": {
+          "candidate_trios": 150,
+          "races": 140,
+          "actual_group_hits": 6,
+          "market_expected_group_hits": 3.7949780514163844,
+          "group_calibration_ratio": 1.5810368119943787,
+          "mean_group_market_p": 0.025299853676109228,
+          "median_effective_group_odds": 40.73174908184282
+        },
+        "50_TO_100": {
+          "candidate_trios": 204,
+          "races": 179,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 2.956858006405194,
+          "group_calibration_ratio": 0.6763936569384013,
+          "mean_group_market_p": 0.014494401992182325,
+          "median_effective_group_odds": 70.0986557642791
+        },
+        "100_TO_200": {
+          "candidate_trios": 141,
+          "races": 131,
+          "actual_group_hits": 0,
+          "market_expected_group_hits": 1.0633008241128845,
+          "group_calibration_ratio": 0.0,
+          "mean_group_market_p": 0.00754114059654528,
+          "median_effective_group_odds": 132.25416465217285
+        },
+        "GE_200": {
+          "candidate_trios": 65,
+          "races": 54,
+          "actual_group_hits": 0,
+          "market_expected_group_hits": 0.22744542501148038,
+          "group_calibration_ratio": 0.0,
+          "mean_group_market_p": 0.003499160384792006,
+          "median_effective_group_odds": 277.7593496468937
+        }
+      },
+      "group_level_by_period": {
+        "2024_H1": {
+          "candidate_trios": 61,
+          "races": 39,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 2.523083847807309,
+          "group_calibration_ratio": 0.7926807512711493,
+          "mean_group_market_p": 0.0413620302919231,
+          "median_effective_group_odds": 50.15101448206961
+        },
+        "2024_H2": {
+          "candidate_trios": 42,
+          "races": 25,
+          "actual_group_hits": 1,
+          "market_expected_group_hits": 1.6093403262456083,
+          "group_calibration_ratio": 0.6213726106850725,
+          "mean_group_market_p": 0.038317626815371625,
+          "median_effective_group_odds": 48.41026349289545
+        },
+        "2025_H1": {
+          "candidate_trios": 468,
+          "races": 297,
+          "actual_group_hits": 29,
+          "market_expected_group_hits": 26.277619791429853,
+          "group_calibration_ratio": 1.1036007153683691,
+          "mean_group_market_p": 0.05614876023809798,
+          "median_effective_group_odds": 36.81484642419284
+        },
+        "2025_H2": {
+          "candidate_trios": 296,
+          "races": 198,
+          "actual_group_hits": 23,
+          "market_expected_group_hits": 15.453177071426314,
+          "group_calibration_ratio": 1.488367077766043,
+          "mean_group_market_p": 0.05220667929535917,
+          "median_effective_group_odds": 46.70476406275653
+        },
+        "2026_H1": {
+          "candidate_trios": 57,
+          "races": 31,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 1.2106668278925237,
+          "group_calibration_ratio": 1.6519821588582826,
+          "mean_group_market_p": 0.02123976891039515,
+          "median_effective_group_odds": 65.29179182872699
+        }
+      },
+      "within_six_order_conditional_on_group_hit": {
+        "group_hits": 57,
+        "actual_winner_mean_odds_rank": 2.245614035087719,
+        "actual_winner_median_odds_rank": 2.0,
+        "uniform_random_expected_mean_rank": 3.5,
+        "ranks": {
+          "RANK_1": {
+            "actual_winning_orders": 26,
+            "conditional_market_expected_wins": 22.842106407459713,
+            "actual_over_conditional_market": 1.1382487909043708,
+            "actual_share_of_group_hits_pct": 45.6140350877193,
+            "market_expected_share_pct": 40.0738708902802,
+            "median_exact_odds": 15.3
+          },
+          "RANK_2": {
+            "actual_winning_orders": 10,
+            "conditional_market_expected_wins": 13.610284312472745,
+            "actual_over_conditional_market": 0.7347385087933684,
+            "actual_share_of_group_hits_pct": 17.54385964912281,
+            "market_expected_share_pct": 23.877691776267973,
+            "median_exact_odds": 24.9
+          },
+          "RANK_3": {
+            "actual_winning_orders": 9,
+            "conditional_market_expected_wins": 8.248497107709017,
+            "actual_over_conditional_market": 1.091107856677143,
+            "actual_share_of_group_hits_pct": 15.789473684210526,
+            "market_expected_share_pct": 14.471047557384242,
+            "median_exact_odds": 39.5
+          },
+          "RANK_4": {
+            "actual_winning_orders": 8,
+            "conditional_market_expected_wins": 5.2475830512818415,
+            "actual_over_conditional_market": 1.5245113649122366,
+            "actual_share_of_group_hits_pct": 14.035087719298245,
+            "market_expected_share_pct": 9.206286054880424,
+            "median_exact_odds": 61.2
+          },
+          "RANK_5": {
+            "actual_winning_orders": 1,
+            "conditional_market_expected_wins": 3.9170787111991747,
+            "actual_over_conditional_market": 0.2552922914571354,
+            "actual_share_of_group_hits_pct": 1.7543859649122806,
+            "market_expected_share_pct": 6.872067914384517,
+            "median_exact_odds": 93.8
+          },
+          "RANK_6": {
+            "actual_winning_orders": 3,
+            "conditional_market_expected_wins": 3.134450409877513,
+            "actual_over_conditional_market": 0.9571055871696604,
+            "actual_share_of_group_hits_pct": 5.2631578947368425,
+            "market_expected_share_pct": 5.499035806802655,
+            "median_exact_odds": 115.4
+          }
+        }
+      }
+    },
+    "TOP30_SCORE_SUM": {
+      "group_level_all": {
+        "candidate_trios": 703,
+        "races": 491,
+        "actual_group_hits": 52,
+        "market_expected_group_hits": 42.07502721126827,
+        "group_calibration_ratio": 1.2358874954232635,
+        "mean_group_market_p": 0.05985067882114974,
+        "median_effective_group_odds": 33.638785066196014
+      },
+      "group_level_by_effective_odds": {
+        "LT_5": {
+          "candidate_trios": 38,
+          "races": 37,
+          "actual_group_hits": 19,
+          "market_expected_group_hits": 11.677598456575007,
+          "group_calibration_ratio": 1.627046868468247,
+          "mean_group_market_p": 0.30730522254144754,
+          "median_effective_group_odds": 3.8906438702203943
+        },
+        "5_TO_10": {
+          "candidate_trios": 88,
+          "races": 86,
+          "actual_group_hits": 15,
+          "market_expected_group_hits": 12.324431768596828,
+          "group_calibration_ratio": 1.2170946524464221,
+          "mean_group_market_p": 0.14005036100678214,
+          "median_effective_group_odds": 7.397276580086101
+        },
+        "10_TO_20": {
+          "candidate_trios": 120,
+          "races": 114,
+          "actual_group_hits": 10,
+          "market_expected_group_hits": 8.630673368108567,
+          "group_calibration_ratio": 1.1586581456032468,
+          "mean_group_market_p": 0.0719222780675714,
+          "median_effective_group_odds": 14.078145047423392
+        },
+        "20_TO_30": {
+          "candidate_trios": 86,
+          "races": 83,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 3.555315327990946,
+          "group_calibration_ratio": 0.562538007319359,
+          "mean_group_market_p": 0.041340875906871466,
+          "median_effective_group_odds": 24.369262795795297
+        },
+        "30_TO_50": {
+          "candidate_trios": 122,
+          "races": 115,
+          "actual_group_hits": 4,
+          "market_expected_group_hits": 3.1048313786510082,
+          "group_calibration_ratio": 1.2883147302311555,
+          "mean_group_market_p": 0.025449437529926296,
+          "median_effective_group_odds": 39.763510207743685
+        },
+        "50_TO_100": {
+          "candidate_trios": 144,
+          "races": 133,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 2.1262795745584357,
+          "group_calibration_ratio": 0.9406100796577231,
+          "mean_group_market_p": 0.014765830378878027,
+          "median_effective_group_odds": 69.07848481759807
+        },
+        "100_TO_200": {
+          "candidate_trios": 72,
+          "races": 68,
+          "actual_group_hits": 0,
+          "market_expected_group_hits": 0.5382843187267563,
+          "group_calibration_ratio": 0.0,
+          "mean_group_market_p": 0.007476171093427171,
+          "median_effective_group_odds": 134.07687840152232
+        },
+        "GE_200": {
+          "candidate_trios": 33,
+          "races": 28,
+          "actual_group_hits": 0,
+          "market_expected_group_hits": 0.11761301806071958,
+          "group_calibration_ratio": 0.0,
+          "mean_group_market_p": 0.003564030850324836,
+          "median_effective_group_odds": 268.0948344371284
+        }
+      },
+      "group_level_by_period": {
+        "2024_H1": {
+          "candidate_trios": 43,
+          "races": 33,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 2.1969731131344328,
+          "group_calibration_ratio": 0.9103434120532271,
+          "mean_group_market_p": 0.05109239797987053,
+          "median_effective_group_odds": 33.638785066196014
+        },
+        "2024_H2": {
+          "candidate_trios": 28,
+          "races": 20,
+          "actual_group_hits": 1,
+          "market_expected_group_hits": 1.3908661087300684,
+          "group_calibration_ratio": 0.7189764663351031,
+          "mean_group_market_p": 0.049673789597502446,
+          "median_effective_group_odds": 34.31774413503286
+        },
+        "2025_H1": {
+          "candidate_trios": 357,
+          "races": 245,
+          "actual_group_hits": 25,
+          "market_expected_group_hits": 23.234782011972527,
+          "group_calibration_ratio": 1.0759730815257007,
+          "mean_group_market_p": 0.06508342300272417,
+          "median_effective_group_odds": 27.85642526430668
+        },
+        "2025_H2": {
+          "candidate_trios": 233,
+          "races": 167,
+          "actual_group_hits": 22,
+          "market_expected_group_hits": 14.174717510200903,
+          "group_calibration_ratio": 1.5520591492682372,
+          "mean_group_market_p": 0.06083569746867341,
+          "median_effective_group_odds": 36.232579643368666
+        },
+        "2026_H1": {
+          "candidate_trios": 42,
+          "races": 26,
+          "actual_group_hits": 2,
+          "market_expected_group_hits": 1.0776884672303335,
+          "group_calibration_ratio": 1.8558238867861445,
+          "mean_group_market_p": 0.025659249219769847,
+          "median_effective_group_odds": 53.98086747206881
+        }
+      },
+      "within_six_order_conditional_on_group_hit": {
+        "group_hits": 52,
+        "actual_winner_mean_odds_rank": 2.1923076923076925,
+        "actual_winner_median_odds_rank": 2.0,
+        "uniform_random_expected_mean_rank": 3.5,
+        "ranks": {
+          "RANK_1": {
+            "actual_winning_orders": 24,
+            "conditional_market_expected_wins": 21.17634450250003,
+            "actual_over_conditional_market": 1.1333400812952688,
+            "actual_share_of_group_hits_pct": 46.15384615384615,
+            "market_expected_share_pct": 40.72373942788467,
+            "median_exact_odds": 12.75
+          },
+          "RANK_2": {
+            "actual_winning_orders": 9,
+            "conditional_market_expected_wins": 12.630487880005992,
+            "actual_over_conditional_market": 0.7125615483347212,
+            "actual_share_of_group_hits_pct": 17.307692307692307,
+            "market_expected_share_pct": 24.28939976924229,
+            "median_exact_odds": 24.15
+          },
+          "RANK_3": {
+            "actual_winning_orders": 9,
+            "conditional_market_expected_wins": 7.502713863109495,
+            "actual_over_conditional_market": 1.1995659389667774,
+            "actual_share_of_group_hits_pct": 17.307692307692307,
+            "market_expected_share_pct": 14.428295890595184,
+            "median_exact_odds": 39.75
+          },
+          "RANK_4": {
+            "actual_winning_orders": 7,
+            "conditional_market_expected_wins": 4.62762729688687,
+            "actual_over_conditional_market": 1.5126542288116178,
+            "actual_share_of_group_hits_pct": 13.461538461538462,
+            "market_expected_share_pct": 8.89928326324398,
+            "median_exact_odds": 61.5
+          },
+          "RANK_5": {
+            "actual_winning_orders": 1,
+            "conditional_market_expected_wins": 3.343187961995785,
+            "actual_over_conditional_market": 0.29911569776143526,
+            "actual_share_of_group_hits_pct": 1.9230769230769231,
+            "market_expected_share_pct": 6.429207619222664,
+            "median_exact_odds": 96.4
+          },
+          "RANK_6": {
+            "actual_winning_orders": 2,
+            "conditional_market_expected_wins": 2.7196384955018305,
+            "actual_over_conditional_market": 0.7353918556852013,
+            "actual_share_of_group_hits_pct": 3.8461538461538463,
+            "market_expected_share_pct": 5.230074029811212,
+            "median_exact_odds": 116.45
+          }
+        }
+      }
+    }
+  }
+}
