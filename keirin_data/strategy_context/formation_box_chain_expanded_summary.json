@@ -98,8 +98,8 @@
       "2025_07": 997,
       "2025_08": 960,
       "2025_09": 971,
-      "2025_10": 434,
-      "2025_11": 172,
+      "2025_10": 535,
+      "2025_11": 465,
       "2025_12": 77,
       "2026_01": 79,
       "2026_02": 79,
@@ -111,15 +111,15 @@
       "2026_08": 99
     },
     "skipped": {
-      "odds_board_incomplete": 2042,
-      "ordered_result_missing": 267,
+      "odds_board_incomplete": 2126,
+      "ordered_result_missing": 268,
       "base_or_odds_missing": 248
     }
   },
   "broad_group_pool": {
-    "groups": 44622,
-    "races": 3914,
-    "group_hits": 853
+    "groups": 46874,
+    "races": 4107,
+    "group_hits": 899
   },
   "variants": {
     "CURRENT_TOP50": {
@@ -128,89 +128,89 @@
         "require_top3_spread": true,
         "score_cut": 0.5
       },
-      "groups": 1188,
-      "races": 729,
-      "group_hits_total": 63,
-      "rank1_exact_hits_total": 31,
-      "spearman_log_group_odds_vs_entropy_norm": 0.30404088141363916,
-      "spearman_log_group_odds_vs_rank1_share": -0.2741928085590115,
+      "groups": 1245,
+      "races": 767,
+      "group_hits_total": 66,
+      "rank1_exact_hits_total": 32,
+      "spearman_log_group_odds_vs_entropy_norm": 0.29983545066290146,
+      "spearman_log_group_odds_vs_rank1_share": -0.2721918584828441,
       "flatness_quartiles": {
         "Q1_LEAST_FLAT": {
-          "groups": 297,
-          "races": 235,
-          "median_group_odds": 26.644318605371225,
-          "mean_entropy_norm": 0.7686993012399224,
-          "median_rank1_conditional_share_pct": 45.81720657043552,
-          "median_rank1_to_rank6_share_ratio": 12.592931937172773,
+          "groups": 312,
+          "races": 249,
+          "median_group_odds": 26.610510597925128,
+          "mean_entropy_norm": 0.770479566405187,
+          "median_rank1_conditional_share_pct": 45.59126860771874,
+          "median_rank1_to_rank6_share_ratio": 12.374605811126356,
           "rank1_conditional_calibration": {
-            "group_hits": 30,
-            "rank1_actual_wins": 18,
-            "rank1_conditional_expected_wins": 15.184559564754261,
-            "rank1_actual_over_conditional_market": 1.1854146920257613,
-            "rank1_actual_share_pct": 60.0,
-            "rank1_market_expected_share_pct": 50.61519854918087,
+            "group_hits": 31,
+            "rank1_actual_wins": 19,
+            "rank1_conditional_expected_wins": 15.636061061213054,
+            "rank1_actual_over_conditional_market": 1.2151397929195584,
+            "rank1_actual_share_pct": 61.29032258064516,
+            "rank1_market_expected_share_pct": 50.43890664907437,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.8326363934062457,
-                1.5260301623505403
+                0.8644456482954394,
+                1.5487309612649416
               ]
             }
           }
         },
         "Q2": {
-          "groups": 297,
-          "races": 246,
-          "median_group_odds": 53.98320028146941,
-          "mean_entropy_norm": 0.8839590099615224,
-          "median_rank1_conditional_share_pct": 36.02043233906992,
-          "median_rank1_to_rank6_share_ratio": 6.335899230230931,
+          "groups": 311,
+          "races": 254,
+          "median_group_odds": 50.78446171951126,
+          "mean_entropy_norm": 0.8851672689051181,
+          "median_rank1_conditional_share_pct": 35.93956503731283,
+          "median_rank1_to_rank6_share_ratio": 6.275539160045404,
           "rank1_conditional_calibration": {
-            "group_hits": 9,
+            "group_hits": 10,
             "rank1_actual_wins": 4,
-            "rank1_conditional_expected_wins": 3.0655243655046887,
-            "rank1_actual_over_conditional_market": 1.304833863012361,
-            "rank1_actual_share_pct": 44.44444444444444,
-            "rank1_market_expected_share_pct": 34.06138183894099,
+            "rank1_conditional_expected_wins": 3.456735284635511,
+            "rank1_actual_over_conditional_market": 1.1571612144497123,
+            "rank1_actual_share_pct": 40.0,
+            "rank1_market_expected_share_pct": 34.56735284635511,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.32035300924974364,
-                2.316628350827909
+                0.2805151069170952,
+                2.2063179330730054
               ]
             }
           }
         },
         "Q3": {
-          "groups": 297,
-          "races": 248,
+          "groups": 311,
+          "races": 260,
           "median_group_odds": 51.991567491530084,
-          "mean_entropy_norm": 0.9368508377850313,
-          "median_rank1_conditional_share_pct": 30.058552688058114,
-          "median_rank1_to_rank6_share_ratio": 3.8495260663507107,
+          "mean_entropy_norm": 0.9375373487943547,
+          "median_rank1_conditional_share_pct": 29.897756594480164,
+          "median_rank1_to_rank6_share_ratio": 3.81198003327787,
           "rank1_conditional_calibration": {
-            "group_hits": 12,
+            "group_hits": 13,
             "rank1_actual_wins": 7,
-            "rank1_conditional_expected_wins": 3.6417515162635095,
-            "rank1_actual_over_conditional_market": 1.922152010849467,
-            "rank1_actual_share_pct": 58.333333333333336,
-            "rank1_market_expected_share_pct": 30.34792930219591,
+            "rank1_conditional_expected_wins": 3.920798888669659,
+            "rank1_actual_over_conditional_market": 1.7853504346342857,
+            "rank1_actual_share_pct": 53.84615384615385,
+            "rank1_market_expected_share_pct": 30.15999145130507,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.9057318828549361,
-                2.883824579446268
+                0.8265975001722593,
+                2.758923332711505
               ]
             }
           }
         },
         "Q4_MOST_FLAT": {
-          "groups": 297,
-          "races": 239,
-          "median_group_odds": 70.0849175481709,
-          "mean_entropy_norm": 0.976220829949351,
-          "median_rank1_conditional_share_pct": 24.07172938787656,
-          "median_rank1_to_rank6_share_ratio": 2.2282809611829943,
+          "groups": 311,
+          "races": 250,
+          "median_group_odds": 68.51945222184128,
+          "mean_entropy_norm": 0.9763329435165716,
+          "median_rank1_conditional_share_pct": 23.960862285829183,
+          "median_rank1_to_rank6_share_ratio": 2.226502311248074,
           "rank1_conditional_calibration": {
             "group_hits": 12,
             "rank1_actual_wins": 2,
@@ -222,7 +222,7 @@
               "bootstrap_reps": 4000,
               "ratio_ci95": [
                 0.0,
-                1.6147550567758637
+                1.6291207274955015
               ]
             }
           }
@@ -231,10 +231,10 @@
       "q4_vs_q1_bootstrap": {
         "bootstrap_reps": 4000,
         "q4_minus_q1_ratio_diff_ci95": [
-          -1.3227887277407437,
-          0.502048215178719
+          -1.3827520981539656,
+          0.4160967124081346
         ],
-        "prob_q4_ratio_gt_q1_pct": 13.200000000000001
+        "prob_q4_ratio_gt_q1_pct": 12.8
       }
     },
     "CURRENT_STRUCTURAL": {
@@ -243,43 +243,43 @@
         "require_top3_spread": true,
         "score_cut": 1.0
       },
-      "groups": 2161,
-      "races": 1017,
-      "group_hits_total": 67,
-      "rank1_exact_hits_total": 32,
-      "spearman_log_group_odds_vs_entropy_norm": 0.4089537015355847,
-      "spearman_log_group_odds_vs_rank1_share": -0.36782094030979,
+      "groups": 2266,
+      "races": 1071,
+      "group_hits_total": 71,
+      "rank1_exact_hits_total": 33,
+      "spearman_log_group_odds_vs_entropy_norm": 0.40494359294068905,
+      "spearman_log_group_odds_vs_rank1_share": -0.3653686833029741,
       "flatness_quartiles": {
         "Q1_LEAST_FLAT": {
-          "groups": 541,
-          "races": 385,
-          "median_group_odds": 39.407230299098806,
-          "mean_entropy_norm": 0.7876823440560565,
-          "median_rank1_conditional_share_pct": 44.216584069825124,
-          "median_rank1_to_rank6_share_ratio": 11.152542372881355,
+          "groups": 567,
+          "races": 407,
+          "median_group_odds": 38.897130825599646,
+          "mean_entropy_norm": 0.7892508044249554,
+          "median_rank1_conditional_share_pct": 44.075677554426754,
+          "median_rank1_to_rank6_share_ratio": 10.983673469387755,
           "rank1_conditional_calibration": {
-            "group_hits": 34,
-            "rank1_actual_wins": 20,
-            "rank1_conditional_expected_wins": 16.99263406809264,
-            "rank1_actual_over_conditional_market": 1.1769805622751768,
-            "rank1_actual_share_pct": 58.8235294117647,
-            "rank1_market_expected_share_pct": 49.97833549439012,
+            "group_hits": 36,
+            "rank1_actual_wins": 21,
+            "rank1_conditional_expected_wins": 17.83534648368225,
+            "rank1_actual_over_conditional_market": 1.1774371761834357,
+            "rank1_actual_share_pct": 58.333333333333336,
+            "rank1_market_expected_share_pct": 49.54262912133959,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.8506165179432662,
-                1.5037294594261532
+                0.8575299218852728,
+                1.5003492623946437
               ]
             }
           }
         },
         "Q2": {
-          "groups": 540,
-          "races": 400,
-          "median_group_odds": 82.65363988304266,
-          "mean_entropy_norm": 0.9005296171534188,
-          "median_rank1_conditional_share_pct": 34.372606750209926,
-          "median_rank1_to_rank6_share_ratio": 5.434358825436274,
+          "groups": 566,
+          "races": 418,
+          "median_group_odds": 82.5546418653588,
+          "mean_entropy_norm": 0.9020560417848089,
+          "median_rank1_conditional_share_pct": 34.20651499269254,
+          "median_rank1_to_rank6_share_ratio": 5.368399675553383,
           "rank1_conditional_calibration": {
             "group_hits": 12,
             "rank1_actual_wins": 7,
@@ -290,42 +290,42 @@
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.8608392903837843,
-                2.7936192848906605
+                0.8570414446425796,
+                2.8395324134671562
               ]
             }
           }
         },
         "Q3": {
-          "groups": 540,
-          "races": 413,
-          "median_group_odds": 108.59928096897872,
-          "mean_entropy_norm": 0.9487692783047991,
-          "median_rank1_conditional_share_pct": 28.436227906297706,
-          "median_rank1_to_rank6_share_ratio": 3.3453847630942413,
+          "groups": 566,
+          "races": 432,
+          "median_group_odds": 105.65390878906811,
+          "mean_entropy_norm": 0.9494199310800825,
+          "median_rank1_conditional_share_pct": 28.182991486962162,
+          "median_rank1_to_rank6_share_ratio": 3.316553505338552,
           "rank1_conditional_calibration": {
-            "group_hits": 13,
+            "group_hits": 15,
             "rank1_actual_wins": 5,
-            "rank1_conditional_expected_wins": 3.8312061248179172,
-            "rank1_actual_over_conditional_market": 1.305072041833205,
-            "rank1_actual_share_pct": 38.46153846153846,
-            "rank1_market_expected_share_pct": 29.47081634475321,
+            "rank1_conditional_expected_wins": 4.374482148665316,
+            "rank1_actual_over_conditional_market": 1.142992434321748,
+            "rank1_actual_share_pct": 33.333333333333336,
+            "rank1_market_expected_share_pct": 29.16321432443544,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.37033506832289703,
-                2.2966527863725954
+                0.3289379325737565,
+                2.015393295384848
               ]
             }
           }
         },
         "Q4_MOST_FLAT": {
-          "groups": 540,
-          "races": 395,
-          "median_group_odds": 172.0505351721231,
-          "mean_entropy_norm": 0.982239906154152,
-          "median_rank1_conditional_share_pct": 22.9528648805501,
-          "median_rank1_to_rank6_share_ratio": 2.0265132326542608,
+          "groups": 567,
+          "races": 415,
+          "median_group_odds": 171.24689694345514,
+          "mean_entropy_norm": 0.9824191706172593,
+          "median_rank1_conditional_share_pct": 22.92154049625921,
+          "median_rank1_to_rank6_share_ratio": 2.020823692734845,
           "rank1_conditional_calibration": {
             "group_hits": 8,
             "rank1_actual_wins": 0,
@@ -334,7 +334,7 @@
             "rank1_actual_share_pct": 0.0,
             "rank1_market_expected_share_pct": 22.95107126748396,
             "race_bootstrap": {
-              "bootstrap_reps": 4000,
+              "bootstrap_reps": 3999,
               "ratio_ci95": [
                 0.0,
                 0.0
@@ -344,10 +344,10 @@
         }
       },
       "q4_vs_q1_bootstrap": {
-        "bootstrap_reps": 3997,
+        "bootstrap_reps": 3999,
         "q4_minus_q1_ratio_diff_ci95": [
-          -1.497376747561408,
-          -0.8392854267682701
+          -1.4971989110737818,
+          -0.8584053773931724
         ],
         "prob_q4_ratio_gt_q1_pct": 0.0
       }
@@ -358,101 +358,101 @@
         "require_top3_spread": false,
         "score_cut": 0.5
       },
-      "groups": 4777,
-      "races": 2865,
-      "group_hits_total": 155,
-      "rank1_exact_hits_total": 72,
-      "spearman_log_group_odds_vs_entropy_norm": 0.251797765108367,
-      "spearman_log_group_odds_vs_rank1_share": -0.22732381123461498,
+      "groups": 5000,
+      "races": 3003,
+      "group_hits_total": 165,
+      "rank1_exact_hits_total": 75,
+      "spearman_log_group_odds_vs_entropy_norm": 0.24723865027354597,
+      "spearman_log_group_odds_vs_rank1_share": -0.22343276919331073,
       "flatness_quartiles": {
         "Q1_LEAST_FLAT": {
-          "groups": 1195,
-          "races": 958,
-          "median_group_odds": 38.95779045534935,
-          "mean_entropy_norm": 0.7775643464413596,
-          "median_rank1_conditional_share_pct": 44.48372335226847,
-          "median_rank1_to_rank6_share_ratio": 12.152019002375297,
+          "groups": 1250,
+          "races": 999,
+          "median_group_odds": 38.99488443340504,
+          "mean_entropy_norm": 0.7782730884103921,
+          "median_rank1_conditional_share_pct": 44.31435929822729,
+          "median_rank1_to_rank6_share_ratio": 12.060378592423838,
           "rank1_conditional_calibration": {
-            "group_hits": 69,
-            "rank1_actual_wins": 41,
-            "rank1_conditional_expected_wins": 34.0161920331138,
-            "rank1_actual_over_conditional_market": 1.2053083413948174,
-            "rank1_actual_share_pct": 59.42028985507246,
-            "rank1_market_expected_share_pct": 49.298829033498265,
+            "group_hits": 73,
+            "rank1_actual_wins": 44,
+            "rank1_conditional_expected_wins": 35.65829708000482,
+            "rank1_actual_over_conditional_market": 1.2339344164775816,
+            "rank1_actual_share_pct": 60.273972602739725,
+            "rank1_market_expected_share_pct": 48.84698230137647,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.9675862837426122,
-                1.4340616147785654
+                1.0088645701667251,
+                1.4580787127879737
               ]
             }
           }
         },
         "Q2": {
-          "groups": 1194,
-          "races": 987,
-          "median_group_odds": 78.88506320766251,
-          "mean_entropy_norm": 0.8876678237309378,
-          "median_rank1_conditional_share_pct": 35.35456705239169,
-          "median_rank1_to_rank6_share_ratio": 6.013095781640322,
+          "groups": 1250,
+          "races": 1033,
+          "median_group_odds": 78.05345393842245,
+          "mean_entropy_norm": 0.888146173896901,
+          "median_rank1_conditional_share_pct": 35.25785897286272,
+          "median_rank1_to_rank6_share_ratio": 5.977546593498047,
           "rank1_conditional_calibration": {
-            "group_hits": 25,
+            "group_hits": 26,
             "rank1_actual_wins": 8,
-            "rank1_conditional_expected_wins": 8.715193050281583,
-            "rank1_actual_over_conditional_market": 0.9179372107817537,
-            "rank1_actual_share_pct": 32.0,
-            "rank1_market_expected_share_pct": 34.86077220112633,
+            "rank1_conditional_expected_wins": 9.106403969412405,
+            "rank1_actual_over_conditional_market": 0.87850264790265,
+            "rank1_actual_share_pct": 30.76923076923077,
+            "rank1_market_expected_share_pct": 35.02463065158617,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.397849621055168,
-                1.463457421517167
+                0.3846020951581602,
+                1.424806302821671
               ]
             }
           }
         },
         "Q3": {
-          "groups": 1194,
-          "races": 998,
-          "median_group_odds": 80.73848022402548,
-          "mean_entropy_norm": 0.9364446478899939,
-          "median_rank1_conditional_share_pct": 30.041406821671156,
-          "median_rank1_to_rank6_share_ratio": 3.8360382784248306,
+          "groups": 1250,
+          "races": 1049,
+          "median_group_odds": 80.01813151642612,
+          "mean_entropy_norm": 0.9365699370784368,
+          "median_rank1_conditional_share_pct": 30.02724134220902,
+          "median_rank1_to_rank6_share_ratio": 3.836923972182948,
           "rank1_conditional_calibration": {
-            "group_hits": 34,
+            "group_hits": 36,
             "rank1_actual_wins": 15,
-            "rank1_conditional_expected_wins": 10.242063470906887,
-            "rank1_actual_over_conditional_market": 1.4645486275893798,
-            "rank1_actual_share_pct": 44.11764705882353,
-            "rank1_market_expected_share_pct": 30.123716090902608,
+            "rank1_conditional_expected_wins": 10.797497639227732,
+            "rank1_actual_over_conditional_market": 1.389210769123432,
+            "rank1_actual_share_pct": 41.666666666666664,
+            "rank1_market_expected_share_pct": 29.99304899785481,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.9021101554410556,
-                2.052855633140095
+                0.8350388172892153,
+                1.958661360100283
               ]
             }
           }
         },
         "Q4_MOST_FLAT": {
-          "groups": 1194,
-          "races": 958,
-          "median_group_odds": 85.27793429479559,
-          "mean_entropy_norm": 0.9756769718153647,
-          "median_rank1_conditional_share_pct": 24.25963092354274,
-          "median_rank1_to_rank6_share_ratio": 2.293729319008129,
+          "groups": 1250,
+          "races": 1005,
+          "median_group_odds": 83.19128569021366,
+          "mean_entropy_norm": 0.9758122410490468,
+          "median_rank1_conditional_share_pct": 24.19730335808303,
+          "median_rank1_to_rank6_share_ratio": 2.291068135770711,
           "rank1_conditional_calibration": {
-            "group_hits": 27,
+            "group_hits": 30,
             "rank1_actual_wins": 8,
-            "rank1_conditional_expected_wins": 6.751979192306001,
-            "rank1_actual_over_conditional_market": 1.184837774547075,
-            "rank1_actual_share_pct": 29.62962962962963,
-            "rank1_market_expected_share_pct": 25.007330341874077,
+            "rank1_conditional_expected_wins": 7.3799314772866635,
+            "rank1_actual_over_conditional_market": 1.0840209051563325,
+            "rank1_actual_share_pct": 26.666666666666668,
+            "rank1_market_expected_share_pct": 24.599771590955545,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.5207169314044986,
-                1.9010178454640876
+                0.47049719321598044,
+                1.760761461959901
               ]
             }
           }
@@ -461,10 +461,10 @@
       "q4_vs_q1_bootstrap": {
         "bootstrap_reps": 4000,
         "q4_minus_q1_ratio_diff_ci95": [
-          -0.7260766863664232,
-          0.7255268848384263
+          -0.824643418634476,
+          0.5488956306906024
         ],
-        "prob_q4_ratio_gt_q1_pct": 48.075
+        "prob_q4_ratio_gt_q1_pct": 32.375
       }
     },
     "NO_TOP3_SPREAD_STRUCTURAL": {
@@ -473,101 +473,101 @@
         "require_top3_spread": false,
         "score_cut": 1.0
       },
-      "groups": 8431,
-      "races": 3914,
-      "group_hits_total": 174,
-      "rank1_exact_hits_total": 76,
-      "spearman_log_group_odds_vs_entropy_norm": 0.34190929251347685,
-      "spearman_log_group_odds_vs_rank1_share": -0.3069664216818196,
+      "groups": 8819,
+      "races": 4107,
+      "group_hits_total": 186,
+      "rank1_exact_hits_total": 80,
+      "spearman_log_group_odds_vs_entropy_norm": 0.33922095697653226,
+      "spearman_log_group_odds_vs_rank1_share": -0.30425923043239356,
       "flatness_quartiles": {
         "Q1_LEAST_FLAT": {
-          "groups": 2108,
-          "races": 1511,
-          "median_group_odds": 55.85222091332845,
-          "mean_entropy_norm": 0.7929991317455419,
-          "median_rank1_conditional_share_pct": 42.83642987242189,
-          "median_rank1_to_rank6_share_ratio": 10.634418901660283,
+          "groups": 2205,
+          "races": 1584,
+          "median_group_odds": 56.7108017523759,
+          "mean_entropy_norm": 0.7937412252204691,
+          "median_rank1_conditional_share_pct": 42.66505614419079,
+          "median_rank1_to_rank6_share_ratio": 10.563514467184191,
           "rank1_conditional_calibration": {
-            "group_hits": 80,
-            "rank1_actual_wins": 46,
-            "rank1_conditional_expected_wins": 38.69218699485927,
-            "rank1_actual_over_conditional_market": 1.1888705077878297,
-            "rank1_actual_share_pct": 57.5,
-            "rank1_market_expected_share_pct": 48.36523374357409,
+            "group_hits": 87,
+            "rank1_actual_wins": 51,
+            "rank1_conditional_expected_wins": 41.49930418235862,
+            "rank1_actual_over_conditional_market": 1.228936267844224,
+            "rank1_actual_share_pct": 58.62068965517241,
+            "rank1_market_expected_share_pct": 47.70034963489496,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.9703119269358274,
-                1.404677550046259
+                1.0149434882856347,
+                1.4425545636568253
               ]
             }
           }
         },
         "Q2": {
-          "groups": 2108,
-          "races": 1582,
-          "median_group_odds": 114.5854485953887,
-          "mean_entropy_norm": 0.9012422597361451,
-          "median_rank1_conditional_share_pct": 34.11048906889499,
-          "median_rank1_to_rank6_share_ratio": 5.326349652768741,
+          "groups": 2205,
+          "races": 1644,
+          "median_group_odds": 112.57453614656858,
+          "mean_entropy_norm": 0.9018966210535354,
+          "median_rank1_conditional_share_pct": 34.014514515586136,
+          "median_rank1_to_rank6_share_ratio": 5.292520247737017,
           "rank1_conditional_calibration": {
             "group_hits": 38,
             "rank1_actual_wins": 14,
-            "rank1_conditional_expected_wins": 12.637593629902167,
-            "rank1_actual_over_conditional_market": 1.1078058378831082,
+            "rank1_conditional_expected_wins": 12.626875541487614,
+            "rank1_actual_over_conditional_market": 1.1087461782608663,
             "rank1_actual_share_pct": 36.8421052631579,
-            "rank1_market_expected_share_pct": 33.25682534184781,
+            "rank1_market_expected_share_pct": 33.22861984602004,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.6475452077072217,
-                1.588152842881754
+                0.6632837089518094,
+                1.6125657353615952
               ]
             }
           }
         },
         "Q3": {
-          "groups": 2107,
-          "races": 1609,
-          "median_group_odds": 139.58522216929921,
-          "mean_entropy_norm": 0.9458832971657775,
-          "median_rank1_conditional_share_pct": 28.800470117665828,
-          "median_rank1_to_rank6_share_ratio": 3.4203418442709435,
+          "groups": 2204,
+          "races": 1691,
+          "median_group_odds": 140.67021348198514,
+          "mean_entropy_norm": 0.946159772942975,
+          "median_rank1_conditional_share_pct": 28.775101267483915,
+          "median_rank1_to_rank6_share_ratio": 3.4083134592333075,
           "rank1_conditional_calibration": {
-            "group_hits": 35,
-            "rank1_actual_wins": 11,
-            "rank1_conditional_expected_wins": 10.206456541552308,
-            "rank1_actual_over_conditional_market": 1.077749163504203,
-            "rank1_actual_share_pct": 31.428571428571427,
-            "rank1_market_expected_share_pct": 29.161304404435164,
+            "group_hits": 36,
+            "rank1_actual_wins": 10,
+            "rank1_conditional_expected_wins": 10.44281071044912,
+            "rank1_actual_over_conditional_market": 0.9575965970535076,
+            "rank1_actual_share_pct": 27.77777777777778,
+            "rank1_market_expected_share_pct": 29.007807529025328,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.5488015453698025,
-                1.6542869118851813
+                0.4944663318324019,
+                1.4608606753034028
               ]
             }
           }
         },
         "Q4_MOST_FLAT": {
-          "groups": 2108,
-          "races": 1488,
-          "median_group_odds": 169.16886917273314,
-          "mean_entropy_norm": 0.9800407436266919,
-          "median_rank1_conditional_share_pct": 23.386361944881457,
-          "median_rank1_to_rank6_share_ratio": 2.1258507753139084,
+          "groups": 2205,
+          "races": 1561,
+          "median_group_odds": 168.4483282418266,
+          "mean_entropy_norm": 0.9801064148776384,
+          "median_rank1_conditional_share_pct": 23.363419932018978,
+          "median_rank1_to_rank6_share_ratio": 2.1227292866637124,
           "rank1_conditional_calibration": {
-            "group_hits": 21,
+            "group_hits": 25,
             "rank1_actual_wins": 5,
-            "rank1_conditional_expected_wins": 5.000203574747825,
-            "rank1_actual_over_conditional_market": 0.9999592867080745,
-            "rank1_actual_share_pct": 23.80952380952381,
-            "rank1_market_expected_share_pct": 23.810493213084882,
+            "rank1_conditional_expected_wins": 5.892384511169737,
+            "rank1_actual_over_conditional_market": 0.8485529059622445,
+            "rank1_actual_share_pct": 20.0,
+            "rank1_market_expected_share_pct": 23.569538044678946,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.2638829738673481,
-                1.7871320026880144
+                0.2037381448013608,
+                1.5455873212613662
               ]
             }
           }
@@ -576,10 +576,10 @@
       "q4_vs_q1_bootstrap": {
         "bootstrap_reps": 4000,
         "q4_minus_q1_ratio_diff_ci95": [
-          -0.9507709871780806,
-          0.6377985478911943
+          -1.038619840437755,
+          0.3353903232585215
         ],
-        "prob_q4_ratio_gt_q1_pct": 30.025000000000002
+        "prob_q4_ratio_gt_q1_pct": 13.8
       }
     },
     "ANY_ROLE_TOP50": {
@@ -588,101 +588,101 @@
         "require_top3_spread": false,
         "score_cut": 0.5
       },
-      "groups": 21705,
-      "races": 3914,
-      "group_hits_total": 701,
-      "rank1_exact_hits_total": 283,
-      "spearman_log_group_odds_vs_entropy_norm": 0.24691501327579415,
-      "spearman_log_group_odds_vs_rank1_share": -0.22569868928080683,
+      "groups": 22803,
+      "races": 4107,
+      "group_hits_total": 740,
+      "rank1_exact_hits_total": 295,
+      "spearman_log_group_odds_vs_entropy_norm": 0.2416683185839086,
+      "spearman_log_group_odds_vs_rank1_share": -0.22145983574670774,
       "flatness_quartiles": {
         "Q1_LEAST_FLAT": {
-          "groups": 5427,
-          "races": 2404,
-          "median_group_odds": 41.094476708001984,
-          "mean_entropy_norm": 0.7440879735860872,
-          "median_rank1_conditional_share_pct": 47.215569951449325,
-          "median_rank1_to_rank6_share_ratio": 14.683309557774606,
+          "groups": 5701,
+          "races": 2521,
+          "median_group_odds": 41.05052203408106,
+          "mean_entropy_norm": 0.7449549659936527,
+          "median_rank1_conditional_share_pct": 47.10730489619189,
+          "median_rank1_to_rank6_share_ratio": 14.64922480620155,
           "rank1_conditional_calibration": {
-            "group_hits": 269,
-            "rank1_actual_wins": 149,
-            "rank1_conditional_expected_wins": 134.73447982647204,
-            "rank1_actual_over_conditional_market": 1.1058787638613434,
-            "rank1_actual_share_pct": 55.39033457249071,
-            "rank1_market_expected_share_pct": 50.08716722173681,
+            "group_hits": 286,
+            "rank1_actual_wins": 159,
+            "rank1_conditional_expected_wins": 142.44438878712103,
+            "rank1_actual_over_conditional_market": 1.116225085128631,
+            "rank1_actual_share_pct": 55.59440559440559,
+            "rank1_market_expected_share_pct": 49.80573034514721,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.9873988815144894,
-                1.2191139482279645
+                1.0086892509749423,
+                1.2277649269259352
               ]
             }
           }
         },
         "Q2": {
-          "groups": 5426,
-          "races": 2798,
-          "median_group_odds": 67.5633707314893,
-          "mean_entropy_norm": 0.8686596321486241,
-          "median_rank1_conditional_share_pct": 37.239925081593704,
-          "median_rank1_to_rank6_share_ratio": 6.964389149320363,
+          "groups": 5701,
+          "races": 2935,
+          "median_group_odds": 68.20110040818672,
+          "mean_entropy_norm": 0.8694895394204835,
+          "median_rank1_conditional_share_pct": 37.12198256804147,
+          "median_rank1_to_rank6_share_ratio": 6.914384748700171,
           "rank1_conditional_calibration": {
-            "group_hits": 165,
-            "rank1_actual_wins": 66,
-            "rank1_conditional_expected_wins": 61.47924127489006,
-            "rank1_actual_over_conditional_market": 1.0735330923310589,
-            "rank1_actual_share_pct": 40.0,
-            "rank1_market_expected_share_pct": 37.26014622720609,
+            "group_hits": 166,
+            "rank1_actual_wins": 64,
+            "rank1_conditional_expected_wins": 61.61234326191823,
+            "rank1_actual_over_conditional_market": 1.0387528961190728,
+            "rank1_actual_share_pct": 38.55421686746988,
+            "rank1_market_expected_share_pct": 37.1158694348905,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.879992340111171,
-                1.2692523974051888
+                0.8356098782619525,
+                1.2419071788750287
               ]
             }
           }
         },
         "Q3": {
-          "groups": 5426,
-          "races": 2874,
-          "median_group_odds": 77.10627596953006,
-          "mean_entropy_norm": 0.9270179671560461,
-          "median_rank1_conditional_share_pct": 31.07400334921841,
-          "median_rank1_to_rank6_share_ratio": 4.197504561907077,
+          "groups": 5700,
+          "races": 3016,
+          "median_group_odds": 76.29123890403652,
+          "mean_entropy_norm": 0.9274755987760078,
+          "median_rank1_conditional_share_pct": 31.008130940499434,
+          "median_rank1_to_rank6_share_ratio": 4.17905658784322,
           "rank1_conditional_calibration": {
-            "group_hits": 149,
-            "rank1_actual_wins": 40,
-            "rank1_conditional_expected_wins": 46.29063580964744,
-            "rank1_actual_over_conditional_market": 0.8641056511836372,
-            "rank1_actual_share_pct": 26.845637583892618,
-            "rank1_market_expected_share_pct": 31.06754081184392,
+            "group_hits": 159,
+            "rank1_actual_wins": 43,
+            "rank1_conditional_expected_wins": 49.41216157761754,
+            "rank1_actual_over_conditional_market": 0.8702311056045343,
+            "rank1_actual_share_pct": 27.044025157232703,
+            "rank1_market_expected_share_pct": 31.07683118089153,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.6288027548421627,
-                1.0993539379131443
+                0.6581347442998194,
+                1.0987492498963325
               ]
             }
           }
         },
         "Q4_MOST_FLAT": {
-          "groups": 5426,
-          "races": 2691,
-          "median_group_odds": 83.373076058453,
-          "mean_entropy_norm": 0.9731067744679218,
-          "median_rank1_conditional_share_pct": 24.700787710013326,
-          "median_rank1_to_rank6_share_ratio": 2.4023363028519076,
+          "groups": 5701,
+          "races": 2828,
+          "median_group_odds": 82.37033830616406,
+          "mean_entropy_norm": 0.9733020484072389,
+          "median_rank1_conditional_share_pct": 24.663315881070645,
+          "median_rank1_to_rank6_share_ratio": 2.398310698906923,
           "rank1_conditional_calibration": {
-            "group_hits": 118,
-            "rank1_actual_wins": 28,
-            "rank1_conditional_expected_wins": 29.18307165544434,
-            "rank1_actual_over_conditional_market": 0.9594603450448086,
-            "rank1_actual_share_pct": 23.728813559322035,
-            "rank1_market_expected_share_pct": 24.73141665715622,
+            "group_hits": 129,
+            "rank1_actual_wins": 29,
+            "rank1_conditional_expected_wins": 31.765105781402095,
+            "rank1_actual_over_conditional_market": 0.9129514694384864,
+            "rank1_actual_share_pct": 22.48062015503876,
+            "rank1_market_expected_share_pct": 24.624113008838833,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.665519649058816,
-                1.2744441858001891
+                0.6324092628223502,
+                1.2150363389155783
               ]
             }
           }
@@ -691,10 +691,10 @@
       "q4_vs_q1_bootstrap": {
         "bootstrap_reps": 4000,
         "q4_minus_q1_ratio_diff_ci95": [
-          -0.47471441844616796,
-          0.19932750451477768
+          -0.5044103112125764,
+          0.11433599700883369
         ],
-        "prob_q4_ratio_gt_q1_pct": 19.525000000000002
+        "prob_q4_ratio_gt_q1_pct": 9.6
       }
     },
     "ANY_ROLE_STRUCTURAL": {
@@ -703,101 +703,101 @@
         "require_top3_spread": false,
         "score_cut": 1.0
       },
-      "groups": 44622,
-      "races": 3914,
-      "group_hits_total": 853,
-      "rank1_exact_hits_total": 344,
-      "spearman_log_group_odds_vs_entropy_norm": 0.3823941253482205,
-      "spearman_log_group_odds_vs_rank1_share": -0.3478542216258432,
+      "groups": 46874,
+      "races": 4107,
+      "group_hits_total": 899,
+      "rank1_exact_hits_total": 359,
+      "spearman_log_group_odds_vs_entropy_norm": 0.37924945237192087,
+      "spearman_log_group_odds_vs_rank1_share": -0.34516821630402433,
       "flatness_quartiles": {
         "Q1_LEAST_FLAT": {
-          "groups": 11156,
-          "races": 3173,
-          "median_group_odds": 63.03962492942945,
-          "mean_entropy_norm": 0.7724703390901123,
-          "median_rank1_conditional_share_pct": 44.729698957450644,
-          "median_rank1_to_rank6_share_ratio": 11.974259552680966,
+          "groups": 11719,
+          "races": 3330,
+          "median_group_odds": 63.08372675393002,
+          "mean_entropy_norm": 0.7733740045103773,
+          "median_rank1_conditional_share_pct": 44.63767948693304,
+          "median_rank1_to_rank6_share_ratio": 11.902173913043478,
           "rank1_conditional_calibration": {
-            "group_hits": 380,
-            "rank1_actual_wins": 212,
-            "rank1_conditional_expected_wins": 182.917023510871,
-            "rank1_actual_over_conditional_market": 1.158995461061614,
-            "rank1_actual_share_pct": 55.78947368421053,
-            "rank1_market_expected_share_pct": 48.13605881865026,
+            "group_hits": 398,
+            "rank1_actual_wins": 223,
+            "rank1_conditional_expected_wins": 191.46163607329305,
+            "rank1_actual_over_conditional_market": 1.1647241952671594,
+            "rank1_actual_share_pct": 56.030150753768844,
+            "rank1_market_expected_share_pct": 48.10593871188267,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                1.0582955994635197,
-                1.2613462546727847
+                1.0637457082455022,
+                1.2645192369435587
               ]
             }
           }
         },
         "Q2": {
-          "groups": 11155,
-          "races": 3548,
-          "median_group_odds": 121.41770230018378,
-          "mean_entropy_norm": 0.8923477775863657,
-          "median_rank1_conditional_share_pct": 34.97353022608321,
-          "median_rank1_to_rank6_share_ratio": 5.674074074074074,
+          "groups": 11718,
+          "races": 3723,
+          "median_group_odds": 121.45376714134261,
+          "mean_entropy_norm": 0.892922946213896,
+          "median_rank1_conditional_share_pct": 34.91932092136695,
+          "median_rank1_to_rank6_share_ratio": 5.650014615534187,
           "rank1_conditional_calibration": {
-            "group_hits": 200,
-            "rank1_actual_wins": 68,
-            "rank1_conditional_expected_wins": 69.7746197747619,
-            "rank1_actual_over_conditional_market": 0.9745663999246357,
-            "rank1_actual_share_pct": 34.0,
-            "rank1_market_expected_share_pct": 34.88730988738095,
+            "group_hits": 212,
+            "rank1_actual_wins": 70,
+            "rank1_conditional_expected_wins": 73.79502581086997,
+            "rank1_actual_over_conditional_market": 0.9485734198318965,
+            "rank1_actual_share_pct": 33.0188679245283,
+            "rank1_market_expected_share_pct": 34.80897443908961,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.7842562642371982,
-                1.1665052736804844
+                0.7702478319463222,
+                1.133940281241342
               ]
             }
           }
         },
         "Q3": {
-          "groups": 11155,
-          "races": 3667,
-          "median_group_odds": 164.39261918838423,
-          "mean_entropy_norm": 0.9431632244678552,
-          "median_rank1_conditional_share_pct": 29.208994628805513,
-          "median_rank1_to_rank6_share_ratio": 3.5193957336977157,
+          "groups": 11718,
+          "races": 3848,
+          "median_group_odds": 164.18486035163681,
+          "mean_entropy_norm": 0.9434047334632167,
+          "median_rank1_conditional_share_pct": 29.16347968736963,
+          "median_rank1_to_rank6_share_ratio": 3.511946605025015,
           "rank1_conditional_calibration": {
-            "group_hits": 167,
-            "rank1_actual_wins": 40,
-            "rank1_conditional_expected_wins": 49.43880297338822,
-            "rank1_actual_over_conditional_market": 0.8090810779041533,
-            "rank1_actual_share_pct": 23.952095808383234,
-            "rank1_market_expected_share_pct": 29.604073636759413,
+            "group_hits": 174,
+            "rank1_actual_wins": 42,
+            "rank1_conditional_expected_wins": 51.42012290627063,
+            "rank1_actual_over_conditional_market": 0.816800848114623,
+            "rank1_actual_share_pct": 24.137931034482758,
+            "rank1_market_expected_share_pct": 29.55179477371875,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.5927997539482814,
-                1.0302580401183639
+                0.6075256570533003,
+                1.0398895034945974
               ]
             }
           }
         },
         "Q4_MOST_FLAT": {
-          "groups": 11156,
-          "races": 3512,
-          "median_group_odds": 214.9701212686714,
-          "mean_entropy_norm": 0.9801913697163308,
-          "median_rank1_conditional_share_pct": 23.41786400724096,
-          "median_rank1_to_rank6_share_ratio": 2.120013643716838,
+          "groups": 11719,
+          "races": 3696,
+          "median_group_odds": 212.81037590894604,
+          "mean_entropy_norm": 0.9802301347676315,
+          "median_rank1_conditional_share_pct": 23.410857844700157,
+          "median_rank1_to_rank6_share_ratio": 2.1176470588235294,
           "rank1_conditional_calibration": {
-            "group_hits": 106,
+            "group_hits": 115,
             "rank1_actual_wins": 24,
-            "rank1_conditional_expected_wins": 24.825770359962394,
-            "rank1_actual_over_conditional_market": 0.9667373721745952,
-            "rank1_actual_share_pct": 22.641509433962263,
-            "rank1_market_expected_share_pct": 23.42053807543622,
+            "rank1_conditional_expected_wins": 26.87311191526477,
+            "rank1_actual_over_conditional_market": 0.893085998959698,
+            "rank1_actual_share_pct": 20.869565217391305,
+            "rank1_market_expected_share_pct": 23.367923404578058,
             "race_bootstrap": {
               "bootstrap_reps": 4000,
               "ratio_ci95": [
-                0.6402547962663545,
-                1.3147811367661018
+                0.5958923203908484,
+                1.2331190002023673
               ]
             }
           }
@@ -806,10 +806,10 @@
       "q4_vs_q1_bootstrap": {
         "bootstrap_reps": 4000,
         "q4_minus_q1_ratio_diff_ci95": [
-          -0.5426945662785365,
-          0.1520994985398787
+          -0.6043304954452583,
+          0.06495596538546003
         ],
-        "prob_q4_ratio_gt_q1_pct": 14.099999999999998
+        "prob_q4_ratio_gt_q1_pct": 6.225
       }
     }
   },
