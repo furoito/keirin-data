@@ -1,0 +1,34 @@
+name: Analyze long-history core 20-40 top3 spread
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - experiment/popular-head-skip-v01
+    paths:
+      - 'scripts/analyze_core_20_40_top3spread_long_history.py'
+      - '.github/workflows/analyze_core_20_40_top3spread_long_history.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - run: python scripts/analyze_core_20_40_top3spread_long_history.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add keirin_data/strategy_context/core_20_40_top3spread_long_history_summary.json
+          git add keirin_data/strategy_context/core_20_40_top3spread_long_history_tickets.csv
+          git diff --cached --quiet || git commit -m 'Add long-history 20-40 top3-spread results'
+          git push
