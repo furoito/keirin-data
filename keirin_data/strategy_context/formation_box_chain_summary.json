@@ -1,0 +1,552 @@
+{
+  "status": "exploratory_formation_to_box_chain_test",
+  "hypothesis_chain": {
+    "A_formation_omission_proxy": "At similar pre-race group-score strength within the same race, three-line groups should carry longer effective group odds than two-line groups.",
+    "B_box_flattening_proxy": "As effective group odds rise, conditional market shares across the six exact orders should become flatter: entropy rises, HHI falls, rank1 share falls, rank1/rank6 ratio falls.",
+    "C_practical_consequence": "If BOX-like flattening overweights unlikely orderings, the lowest-odds exact order should become relatively underweighted, especially in flatter groups."
+  },
+  "predeclared_support_pattern": {
+    "A": "median 3-line/2-line matched odds ratio > 1 and a majority of paired race-band cells > 1",
+    "B": "positive odds-vs-entropy correlation together with negative odds-vs-HHI/rank1-share/rank1-to-rank6 correlations, preferably repeated across role sets",
+    "C": "rank1 actual/conditional-market ratio higher in the flattest quartile than the least-flat quartile; group-odds-band version is secondary because hit counts become sparse in longshot tails"
+  },
+  "formation_omission_proxy": {
+    "overall": {
+      "paired_race_band_cells": 13085,
+      "median_3line_over_2line_odds_ratio": 1.5201858275887166,
+      "share_cells_3line_longer_pct": 65.7776079480321
+    },
+    "score_bands": {
+      "TOP10": {
+        "paired_races": 2735,
+        "median_3line_over_2line_odds_ratio": 1.7404082595533517,
+        "mean_log_odds_ratio": 0.4390006105969884,
+        "share_races_3line_longer_pct": 66.06946983546618,
+        "median_3line_group_odds": 21.66109712276326,
+        "median_2line_group_odds": 12.620857245889358
+      },
+      "10_TO_25": {
+        "paired_races": 4603,
+        "median_3line_over_2line_odds_ratio": 1.6443640090086717,
+        "mean_log_odds_ratio": 0.41134781496815515,
+        "share_races_3line_longer_pct": 67.60808168585704,
+        "median_3line_group_odds": 48.94614465159664,
+        "median_2line_group_odds": 30.46974938519054
+      },
+      "25_TO_50": {
+        "paired_races": 5747,
+        "median_3line_over_2line_odds_ratio": 1.3896497376868853,
+        "mean_log_odds_ratio": 0.2774948638723636,
+        "share_races_3line_longer_pct": 64.17261179745954,
+        "median_3line_group_odds": 95.98402294443159,
+        "median_2line_group_odds": 70.57683719344948
+      }
+    }
+  },
+  "formation_omission_source_coverage": {
+    "months": [
+      "2024_01",
+      "2024_02",
+      "2024_03",
+      "2024_04",
+      "2024_05",
+      "2024_06",
+      "2024_07",
+      "2024_08",
+      "2024_09",
+      "2024_10",
+      "2024_11",
+      "2024_12",
+      "2025_01",
+      "2025_02",
+      "2025_03",
+      "2025_04",
+      "2025_05",
+      "2025_06",
+      "2025_07",
+      "2025_08",
+      "2025_09",
+      "2025_10",
+      "2025_11",
+      "2025_12",
+      "2026_01",
+      "2026_02",
+      "2026_03",
+      "2026_04",
+      "2026_05",
+      "2026_06"
+    ],
+    "skipped": {
+      "odds_board_incomplete": 2000,
+      "result_missing": 104,
+      "base_or_odds_missing": 248
+    }
+  },
+  "box_flattening_primary_TOP50": {
+    "groups": 1078,
+    "correlations": {
+      "spearman_log_group_odds_vs_entropy_norm": 0.30003867710923554,
+      "spearman_log_group_odds_vs_hhi": -0.29414434179535176,
+      "spearman_log_group_odds_vs_rank1_share": -0.2710819353865873,
+      "spearman_log_group_odds_vs_rank1_to_rank6_ratio": -0.32501386971875373
+    },
+    "flatness_by_group_odds": {
+      "LT_10": {
+        "groups": 134,
+        "races": 128,
+        "median_group_odds": 6.203745040178638,
+        "mean_entropy_norm": 0.8310492385689697,
+        "median_entropy_norm": 0.8655583263175871,
+        "mean_hhi": 0.27857055327057073,
+        "median_rank1_conditional_share_pct": 39.485096022868426,
+        "median_rank1_to_rank6_share_ratio": 7.82099009900993
+      },
+      "10_TO_20": {
+        "groups": 138,
+        "races": 129,
+        "median_group_odds": 14.336816202357586,
+        "mean_entropy_norm": 0.8628347431303866,
+        "median_entropy_norm": 0.8834170493062764,
+        "mean_hhi": 0.2558561786127256,
+        "median_rank1_conditional_share_pct": 34.97189361240759,
+        "median_rank1_to_rank6_share_ratio": 6.67124322402928
+      },
+      "20_TO_30": {
+        "groups": 112,
+        "races": 106,
+        "median_group_odds": 24.79589122403017,
+        "mean_entropy_norm": 0.8839795983137803,
+        "median_entropy_norm": 0.908819931574228,
+        "mean_hhi": 0.24081474908080183,
+        "median_rank1_conditional_share_pct": 32.76664687149524,
+        "median_rank1_to_rank6_share_ratio": 5.38262083061905
+      },
+      "30_TO_50": {
+        "groups": 167,
+        "races": 155,
+        "median_group_odds": 41.03778245520838,
+        "mean_entropy_norm": 0.8870981549389458,
+        "median_entropy_norm": 0.9039537473625353,
+        "mean_hhi": 0.23845371492135436,
+        "median_rank1_conditional_share_pct": 33.42401532504039,
+        "median_rank1_to_rank6_share_ratio": 5.690561529271297
+      },
+      "50_TO_100": {
+        "groups": 249,
+        "races": 215,
+        "median_group_odds": 70.70768369032275,
+        "mean_entropy_norm": 0.9147884369153549,
+        "median_entropy_norm": 0.9338529665280302,
+        "mean_hhi": 0.2211605802261253,
+        "median_rank1_conditional_share_pct": 30.286672106088925,
+        "median_rank1_to_rank6_share_ratio": 4.0786593707250445
+      },
+      "100_TO_200": {
+        "groups": 184,
+        "races": 167,
+        "median_group_odds": 133.46876155669128,
+        "mean_entropy_norm": 0.9094499236121879,
+        "median_entropy_norm": 0.9178035969998204,
+        "mean_hhi": 0.22415235478580786,
+        "median_rank1_conditional_share_pct": 31.781440214413525,
+        "median_rank1_to_rank6_share_ratio": 4.5177201696351865
+      },
+      "GE_200": {
+        "groups": 94,
+        "races": 80,
+        "median_group_odds": 282.21229080378424,
+        "mean_entropy_norm": 0.9385372350848221,
+        "median_entropy_norm": 0.952322050646124,
+        "mean_hhi": 0.20581166896839836,
+        "median_rank1_conditional_share_pct": 28.522789172394646,
+        "median_rank1_to_rank6_share_ratio": 3.1674723061432433
+      }
+    },
+    "rank1_conditional_calibration_by_group_odds": {
+      "LT_10": {
+        "group_hits": 37,
+        "rank1_actual_wins": 17,
+        "rank1_conditional_expected_wins": 15.796293464501487,
+        "rank1_actual_over_conditional_market": 1.07620183419633,
+        "rank1_actual_share_pct": 45.945945945945944,
+        "rank1_market_expected_share_pct": 42.69268503919321
+      },
+      "10_TO_20": {
+        "group_hits": 10,
+        "rank1_actual_wins": 4,
+        "rank1_conditional_expected_wins": 3.448237884481657,
+        "rank1_actual_over_conditional_market": 1.1600127758010768,
+        "rank1_actual_share_pct": 40.0,
+        "rank1_market_expected_share_pct": 34.48237884481657
+      },
+      "20_TO_30": {
+        "group_hits": 2,
+        "rank1_actual_wins": 2,
+        "rank1_conditional_expected_wins": 0.6422872631435519,
+        "rank1_actual_over_conditional_market": 3.1138714945262707,
+        "rank1_actual_share_pct": 100.0,
+        "rank1_market_expected_share_pct": 32.11436315717759
+      },
+      "30_TO_50": {
+        "group_hits": 6,
+        "rank1_actual_wins": 3,
+        "rank1_conditional_expected_wins": 2.2863847634985426,
+        "rank1_actual_over_conditional_market": 1.3121151119855738,
+        "rank1_actual_share_pct": 50.0,
+        "rank1_market_expected_share_pct": 38.10641272497571
+      },
+      "50_TO_100": {
+        "group_hits": 3,
+        "rank1_actual_wins": 1,
+        "rank1_conditional_expected_wins": 0.9739188805283242,
+        "rank1_actual_over_conditional_market": 1.0267795603854888,
+        "rank1_actual_share_pct": 33.333333333333336,
+        "rank1_market_expected_share_pct": 32.46396268427747
+      },
+      "100_TO_200": {
+        "group_hits": 0,
+        "rank1_actual_wins": 0,
+        "rank1_conditional_expected_wins": 0.0,
+        "rank1_actual_over_conditional_market": null
+      },
+      "GE_200": {
+        "group_hits": 1,
+        "rank1_actual_wins": 1,
+        "rank1_conditional_expected_wins": 0.2945148312396206,
+        "rank1_actual_over_conditional_market": 3.3954147429213464,
+        "rank1_actual_share_pct": 100.0,
+        "rank1_market_expected_share_pct": 29.451483123962056
+      }
+    },
+    "flatness_quartiles": {
+      "Q1_LEAST_FLAT": {
+        "groups": 270,
+        "races": 215,
+        "median_group_odds": 26.506810105729485,
+        "mean_entropy_norm": 0.7686341856705237,
+        "median_entropy_norm": 0.7901952773287451,
+        "mean_hhi": 0.320906019697641,
+        "median_rank1_conditional_share_pct": 45.68738371794092,
+        "median_rank1_to_rank6_share_ratio": 12.61933786933801,
+        "rank1_conditional_calibration": {
+          "group_hits": 29,
+          "rank1_actual_wins": 17,
+          "rank1_conditional_expected_wins": 14.684257151009662,
+          "rank1_actual_over_conditional_market": 1.1577024173014507,
+          "rank1_actual_share_pct": 58.62068965517241,
+          "rank1_market_expected_share_pct": 50.635369486240215
+        }
+      },
+      "Q2": {
+        "groups": 269,
+        "races": 222,
+        "median_group_odds": 53.983200281470005,
+        "mean_entropy_norm": 0.8840431288174988,
+        "median_entropy_norm": 0.885796795457092,
+        "mean_hhi": 0.2390526069607891,
+        "median_rank1_conditional_share_pct": 36.057019697239475,
+        "median_rank1_to_rank6_share_ratio": 6.339130434782609,
+        "rank1_conditional_calibration": {
+          "group_hits": 7,
+          "rank1_actual_wins": 3,
+          "rank1_conditional_expected_wins": 2.3857693868875725,
+          "rank1_actual_over_conditional_market": 1.2574559873591724,
+          "rank1_actual_share_pct": 42.857142857142854,
+          "rank1_market_expected_share_pct": 34.08241981267961
+        }
+      },
+      "Q3": {
+        "groups": 269,
+        "races": 223,
+        "median_group_odds": 52.494531342490134,
+        "mean_entropy_norm": 0.9368858252949925,
+        "median_entropy_norm": 0.9376820395792993,
+        "mean_hhi": 0.20535401121443633,
+        "median_rank1_conditional_share_pct": 30.11550452502698,
+        "median_rank1_to_rank6_share_ratio": 3.8405797101449632,
+        "rank1_conditional_calibration": {
+          "group_hits": 11,
+          "rank1_actual_wins": 6,
+          "rank1_conditional_expected_wins": 3.3786589252663677,
+          "rank1_actual_over_conditional_market": 1.7758525298693684,
+          "rank1_actual_share_pct": 54.54545454545455,
+          "rank1_market_expected_share_pct": 30.71508113878516
+        }
+      },
+      "Q4_MOST_FLAT": {
+        "groups": 270,
+        "races": 216,
+        "median_group_odds": 70.0986557642791,
+        "mean_entropy_norm": 0.9761681016793343,
+        "median_entropy_norm": 0.976738342166253,
+        "mean_hhi": 0.18110717817834512,
+        "median_rank1_conditional_share_pct": 24.077349021125936,
+        "median_rank1_to_rank6_share_ratio": 2.2317059048579795,
+        "rank1_conditional_calibration": {
+          "group_hits": 12,
+          "rank1_actual_wins": 2,
+          "rank1_conditional_expected_wins": 2.992951624229582,
+          "rank1_actual_over_conditional_market": 0.66823666103017,
+          "rank1_actual_share_pct": 16.666666666666668,
+          "rank1_market_expected_share_pct": 24.941263535246517
+        }
+      }
+    },
+    "role_set_sensitivity": {
+      "BANTE+BANTE+BANTE": {
+        "groups": 278,
+        "spearman_log_group_odds_vs_entropy_norm": 0.3812709469084799,
+        "spearman_log_group_odds_vs_rank1_share": -0.3392884620916286
+      },
+      "BANTE+BANTE+RYO": {
+        "groups": 477,
+        "spearman_log_group_odds_vs_entropy_norm": 0.2986236098607754,
+        "spearman_log_group_odds_vs_rank1_share": -0.2682917013019781
+      },
+      "BANTE+RYO+RYO": {
+        "groups": 268,
+        "spearman_log_group_odds_vs_entropy_norm": 0.2550704561649378,
+        "spearman_log_group_odds_vs_rank1_share": -0.2342923866944048
+      },
+      "RYO+RYO+RYO": {
+        "groups": 55,
+        "spearman_log_group_odds_vs_entropy_norm": 0.18997113997114,
+        "spearman_log_group_odds_vs_rank1_share": -0.23290043290043294
+      }
+    }
+  },
+  "box_flattening_sensitivity_STRUCTURAL": {
+    "groups": 1907,
+    "correlations": {
+      "spearman_log_group_odds_vs_entropy_norm": 0.3997856859989982,
+      "spearman_log_group_odds_vs_hhi": -0.39122892042385543,
+      "spearman_log_group_odds_vs_rank1_share": -0.3576677190576785,
+      "spearman_log_group_odds_vs_rank1_to_rank6_ratio": -0.4194087928983628
+    },
+    "flatness_by_group_odds": {
+      "LT_10": {
+        "groups": 144,
+        "races": 135,
+        "median_group_odds": 6.337359409427959,
+        "mean_entropy_norm": 0.8272690030513075,
+        "median_entropy_norm": 0.8576469750958537,
+        "mean_hhi": 0.28067069537049755,
+        "median_rank1_conditional_share_pct": 39.6454243283031,
+        "median_rank1_to_rank6_share_ratio": 8.334656693517491
+      },
+      "10_TO_20": {
+        "groups": 153,
+        "races": 142,
+        "median_group_odds": 14.560248099144989,
+        "mean_entropy_norm": 0.8560443114541608,
+        "median_entropy_norm": 0.8662213853825715,
+        "mean_hhi": 0.26064897696587386,
+        "median_rank1_conditional_share_pct": 36.054680669856594,
+        "median_rank1_to_rank6_share_ratio": 6.961538461538469
+      },
+      "20_TO_30": {
+        "groups": 124,
+        "races": 114,
+        "median_group_odds": 24.82036239335583,
+        "mean_entropy_norm": 0.8776601649363426,
+        "median_entropy_norm": 0.8997165641959735,
+        "mean_hhi": 0.2457000025810864,
+        "median_rank1_conditional_share_pct": 33.14269759263948,
+        "median_rank1_to_rank6_share_ratio": 5.661958926640064
+      },
+      "30_TO_50": {
+        "groups": 214,
+        "races": 193,
+        "median_group_odds": 40.731749081842814,
+        "mean_entropy_norm": 0.8845332320992183,
+        "median_entropy_norm": 0.8997069493979348,
+        "mean_hhi": 0.2402373517225618,
+        "median_rank1_conditional_share_pct": 34.479382755841634,
+        "median_rank1_to_rank6_share_ratio": 5.8005809979496075
+      },
+      "50_TO_100": {
+        "groups": 392,
+        "races": 313,
+        "median_group_odds": 71.71613018537252,
+        "mean_entropy_norm": 0.9092784358682007,
+        "median_entropy_norm": 0.9270340283000577,
+        "mean_hhi": 0.22485376548427724,
+        "median_rank1_conditional_share_pct": 31.235515719106626,
+        "median_rank1_to_rank6_share_ratio": 4.291728237234305
+      },
+      "100_TO_200": {
+        "groups": 401,
+        "races": 315,
+        "median_group_odds": 140.84290602974002,
+        "mean_entropy_norm": 0.916271366662326,
+        "median_entropy_norm": 0.9341158732974943,
+        "mean_hhi": 0.22000631705668425,
+        "median_rank1_conditional_share_pct": 30.184958076768687,
+        "median_rank1_to_rank6_share_ratio": 3.8881232265913077
+      },
+      "GE_200": {
+        "groups": 479,
+        "races": 332,
+        "median_group_odds": 326.19411807626886,
+        "mean_entropy_norm": 0.9452065766928278,
+        "median_entropy_norm": 0.9602876637176785,
+        "mean_hhi": 0.2014156017957726,
+        "median_rank1_conditional_share_pct": 26.992255234381425,
+        "median_rank1_to_rank6_share_ratio": 2.852062416838318
+      }
+    },
+    "rank1_conditional_calibration_by_group_odds": {
+      "LT_10": {
+        "group_hits": 37,
+        "rank1_actual_wins": 17,
+        "rank1_conditional_expected_wins": 15.796293464501487,
+        "rank1_actual_over_conditional_market": 1.07620183419633,
+        "rank1_actual_share_pct": 45.945945945945944,
+        "rank1_market_expected_share_pct": 42.69268503919321
+      },
+      "10_TO_20": {
+        "group_hits": 11,
+        "rank1_actual_wins": 4,
+        "rank1_conditional_expected_wins": 3.6598118917245186,
+        "rank1_actual_over_conditional_market": 1.0929523479184018,
+        "rank1_actual_share_pct": 36.36363636363637,
+        "rank1_market_expected_share_pct": 33.271017197495624
+      },
+      "20_TO_30": {
+        "group_hits": 2,
+        "rank1_actual_wins": 2,
+        "rank1_conditional_expected_wins": 0.6422872631435519,
+        "rank1_actual_over_conditional_market": 3.1138714945262707,
+        "rank1_actual_share_pct": 100.0,
+        "rank1_market_expected_share_pct": 32.11436315717759
+      },
+      "30_TO_50": {
+        "group_hits": 6,
+        "rank1_actual_wins": 3,
+        "rank1_conditional_expected_wins": 2.2863847634985426,
+        "rank1_actual_over_conditional_market": 1.3121151119855738,
+        "rank1_actual_share_pct": 50.0,
+        "rank1_market_expected_share_pct": 38.10641272497571
+      },
+      "50_TO_100": {
+        "group_hits": 3,
+        "rank1_actual_wins": 1,
+        "rank1_conditional_expected_wins": 0.9739188805283242,
+        "rank1_actual_over_conditional_market": 1.0267795603854888,
+        "rank1_actual_share_pct": 33.333333333333336,
+        "rank1_market_expected_share_pct": 32.46396268427747
+      },
+      "100_TO_200": {
+        "group_hits": 0,
+        "rank1_actual_wins": 0,
+        "rank1_conditional_expected_wins": 0.0,
+        "rank1_actual_over_conditional_market": null
+      },
+      "GE_200": {
+        "group_hits": 2,
+        "rank1_actual_wins": 1,
+        "rank1_conditional_expected_wins": 0.6661086586168632,
+        "rank1_actual_over_conditional_market": 1.501256569876217,
+        "rank1_actual_share_pct": 50.0,
+        "rank1_market_expected_share_pct": 33.30543293084316
+      }
+    },
+    "flatness_quartiles": {
+      "Q1_LEAST_FLAT": {
+        "groups": 477,
+        "races": 339,
+        "median_group_odds": 40.47333737584761,
+        "mean_entropy_norm": 0.7883219500076268,
+        "median_entropy_norm": 0.809541995031084,
+        "mean_hhi": 0.306963766601171,
+        "median_rank1_conditional_share_pct": 44.20207526819752,
+        "median_rank1_to_rank6_share_ratio": 11.155629139072953,
+        "rank1_conditional_calibration": {
+          "group_hits": 31,
+          "rank1_actual_wins": 17,
+          "rank1_conditional_expected_wins": 15.421823000335232,
+          "rank1_actual_over_conditional_market": 1.1023340106828137,
+          "rank1_actual_share_pct": 54.83870967741935,
+          "rank1_market_expected_share_pct": 49.747816130113655
+        }
+      },
+      "Q2": {
+        "groups": 477,
+        "races": 358,
+        "median_group_odds": 78.98504201564286,
+        "mean_entropy_norm": 0.8995644503142757,
+        "median_entropy_norm": 0.8990802839197642,
+        "mean_hhi": 0.22943242555495,
+        "median_rank1_conditional_share_pct": 34.47280522725555,
+        "median_rank1_to_rank6_share_ratio": 5.556992724333152,
+        "rank1_conditional_calibration": {
+          "group_hits": 10,
+          "rank1_actual_wins": 6,
+          "rank1_conditional_expected_wins": 3.2659564207450673,
+          "rank1_actual_over_conditional_market": 1.8371341276596738,
+          "rank1_actual_share_pct": 60.0,
+          "rank1_market_expected_share_pct": 32.65956420745067
+        }
+      },
+      "Q3": {
+        "groups": 476,
+        "races": 356,
+        "median_group_odds": 108.59928096898277,
+        "mean_entropy_norm": 0.9481488105506941,
+        "median_entropy_norm": 0.9480430583099346,
+        "mean_hhi": 0.19846036500421393,
+        "median_rank1_conditional_share_pct": 28.47711659169714,
+        "median_rank1_to_rank6_share_ratio": 3.371700609798255,
+        "rank1_conditional_calibration": {
+          "group_hits": 10,
+          "rank1_actual_wins": 4,
+          "rank1_conditional_expected_wins": 2.9453098851485433,
+          "rank1_actual_over_conditional_market": 1.358091391391322,
+          "rank1_actual_share_pct": 40.0,
+          "rank1_market_expected_share_pct": 29.453098851485436
+        }
+      },
+      "Q4_MOST_FLAT": {
+        "groups": 477,
+        "races": 344,
+        "median_group_odds": 169.60140561317112,
+        "mean_entropy_norm": 0.981963850241778,
+        "median_entropy_norm": 0.9819531531289976,
+        "mean_hhi": 0.17754430244670832,
+        "median_rank1_conditional_share_pct": 23.064212266007246,
+        "median_rank1_to_rank6_share_ratio": 2.0303664295537924,
+        "rank1_conditional_calibration": {
+          "group_hits": 10,
+          "rank1_actual_wins": 1,
+          "rank1_conditional_expected_wins": 2.3917156157844435,
+          "rank1_actual_over_conditional_market": 0.41810990963991196,
+          "rank1_actual_share_pct": 10.0,
+          "rank1_market_expected_share_pct": 23.917156157844435
+        }
+      }
+    },
+    "role_set_sensitivity": {
+      "BANTE+BANTE+BANTE": {
+        "groups": 461,
+        "spearman_log_group_odds_vs_entropy_norm": 0.4159815097662877,
+        "spearman_log_group_odds_vs_rank1_share": -0.3716966896161464
+      },
+      "BANTE+BANTE+RYO": {
+        "groups": 843,
+        "spearman_log_group_odds_vs_entropy_norm": 0.4324382245930545,
+        "spearman_log_group_odds_vs_rank1_share": -0.3892713265635242
+      },
+      "BANTE+RYO+RYO": {
+        "groups": 501,
+        "spearman_log_group_odds_vs_entropy_norm": 0.3478651621060668,
+        "spearman_log_group_odds_vs_rank1_share": -0.3095748264427321
+      },
+      "RYO+RYO+RYO": {
+        "groups": 102,
+        "spearman_log_group_odds_vs_entropy_norm": 0.32527381807284095,
+        "spearman_log_group_odds_vs_rank1_share": -0.304476649835172
+      }
+    }
+  },
+  "warning": "We do not observe actual bettor betslips, so formation and BOX behavior remain mechanism interpretations. These are market-shape proxies on previously explored historical data, not fresh OOS evidence."
+}
