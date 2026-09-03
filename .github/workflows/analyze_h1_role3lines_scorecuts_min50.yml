@@ -1,0 +1,18 @@
+name: Analyze H1 role3lines score cuts min50
+on:
+  push:
+    branches: [experiment/popular-head-skip-v01]
+    paths:
+      - 'scripts/analyze_h1_role3lines_scorecuts_min50.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
