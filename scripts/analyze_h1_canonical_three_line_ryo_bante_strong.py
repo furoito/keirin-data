@@ -4,8 +4,9 @@
 
 Hypothesis:
   Pick one rider from each of three distinct multi-rider lines; every selected rider
-  is either running_style='両' or line_pos=2 (bante); prefer trios that are strong
-  relative to all unordered trios in the same race.
+  is either running_style='両' or line_pos=2 (bante); the race's three highest
+  race_score riders must themselves be spread across three distinct true_line IDs;
+  then prefer trios that are strong relative to all unordered trios in the race.
 
 Candidate discovery is unordered. Evaluation expands each trio into all six exact
 trifecta orders and uses normalized exact-board market probabilities.
@@ -216,6 +217,14 @@ def main():
                 skipped['score_missing'] += 1
                 continue
 
+            # Added canonical race-level condition: the three strongest riders in
+            # the race must be distributed across three different true lines.
+            score_order = sorted(frames, key=lambda x: (-score[x], x))
+            top3_score_riders = score_order[:3]
+            if len(top3_score_riders) < 3 or len({line_of[x] for x in top3_score_riders}) != 3:
+                skipped['top3_scores_not_spread_across_3_lines'] += 1
+                continue
+
             all_groups = list(itertools.combinations(frames, 3))
             score_sums = {g: float(sum(score[x] for x in g)) for g in all_groups}
             ordered = sorted(all_groups, key=lambda g: (-score_sums[g], g))
@@ -277,15 +286,17 @@ def main():
         }
 
     payload = {
-        'status': 'exploratory_canonical_three_line_ryo_bante_strong',
-        'hypothesis': 'Choose three riders from three distinct multi-rider lines; each rider is running_style=両 or line_pos=2; stronger trio score-sum should improve value if the structural hypothesis is real.',
+        'status': 'exploratory_canonical_three_line_ryo_bante_strong_with_top_score_dispersion',
+        'hypothesis': 'Choose three riders from three distinct multi-rider lines; each is running_style=両 or line_pos=2; require the race three highest race_score riders to be on three distinct lines; then test whether stronger candidate trio score-sum improves value.',
         'candidate_generation': {
             'unordered_discovery_then_all_6_exact_orders': True,
             'exactly_three_distinct_true_lines': True,
             'selected_lines_must_be_multi_rider': True,
             "selected_role": "running_style='両' OR line_pos=2",
+            'strong_riders_spread_condition': 'top 3 riders by race_score in the race occupy 3 distinct true_line IDs',
             'strength_ladder': CUTS,
             'odds_used_for_candidate_selection': False,
+            'not_added': ['bante>head condition', 'head-bante score-gap condition'],
         },
         'primary_metrics': ['actual_over_normalized_market', 'gross_roi_pct'],
         'stability_checks': ['2025_H1', '2025_H2', '2026_H1', 'race-level bootstrap 95% CI'],
