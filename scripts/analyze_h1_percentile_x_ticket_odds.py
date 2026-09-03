@@ -63,6 +63,7 @@ ODDS_BINS = [
     ('500-1000', 500.0, 1000.0),
     ('1000+', 1000.0, float('inf')),
 ]
+# Trigger marker: evaluate percentile independently from quoted ticket odds.
 
 
 def actual_ordered_top3(pre: pd.DataFrame):
