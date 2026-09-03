@@ -36,5 +36,6 @@ jobs:
             echo 'No result changes'
           else
             git commit -m 'Add three-line structural conditions results'
+            git pull --rebase origin experiment/popular-head-skip-v01
             git push origin HEAD:experiment/popular-head-skip-v01
           fi
