@@ -1,0 +1,39 @@
+name: Analyze core TOP40 cheapest-order robustness
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - experiment/popular-head-skip-v01
+    paths:
+      - scripts/analyze_core_top40_rank1_robustness.py
+      - .github/workflows/analyze_core_top40_rank1_robustness.yml
+      - keirin_data/strategy_context/formation_box_chain_expanded_groups.csv
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/popular-head-skip-v01
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install pandas numpy scipy
+      - name: Run robustness probe
+        run: python scripts/analyze_core_top40_rank1_robustness.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add keirin_data/strategy_context/core_top40_rank1_robustness_summary.json keirin_data/strategy_context/core_top40_rank1_tickets.csv
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Add TOP40 cheapest-order robustness results"
+          git push origin HEAD:experiment/popular-head-skip-v01
