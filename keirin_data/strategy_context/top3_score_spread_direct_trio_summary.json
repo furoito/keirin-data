@@ -1,0 +1,871 @@
+{
+  "status": "exploratory_direct_top3_score_spread_trio",
+  "candidate_rule": {
+    "selected_riders": "the three highest race_score riders in the race",
+    "require_three_distinct_true_lines": true,
+    "role_or_running_style_filter": null,
+    "escape_allowed": true
+  },
+  "unordered_trio_result": {
+    "qualifying_races": 1335,
+    "top3_score_trio_finished_as_top3_unordered_hits": 160,
+    "unordered_hit_rate_pct": 11.985018726591761
+  },
+  "all_six_exact_orders_equal_stake": {
+    "tickets": 8010,
+    "races": 1335,
+    "actual_hits": 160,
+    "normalized_market_expected_hits": 166.76702384616863,
+    "actual_over_normalized_market": 0.9594222905098387,
+    "gross_return_units": 4788.900000000001,
+    "gross_roi_pct": 59.78651685393259,
+    "avg_odds": 138.5263670411985,
+    "median_odds": 69.2,
+    "race_bootstrap": {
+      "bootstrap_reps": 2000,
+      "calibration_ratio_ci95": [
+        0.8346267911306132,
+        1.089813730037114
+      ],
+      "gross_roi_pct_ci95": [
+        45.376747815230964,
+        76.67793383270909
+      ]
+    }
+  },
+  "lowest_odds_cumulative_equal_stake": {
+    "LOWEST_1": {
+      "all": {
+        "tickets": 1335,
+        "races": 1335,
+        "actual_hits": 59,
+        "normalized_market_expected_hits": 68.37518324652488,
+        "actual_over_normalized_market": 0.8628861700783614,
+        "gross_return_units": 646.9,
+        "gross_roi_pct": 48.45692883895131,
+        "avg_odds": 48.67640449438202,
+        "median_odds": 21.9,
+        "race_bootstrap": {
+          "bootstrap_reps": 2000,
+          "calibration_ratio_ci95": [
+            0.6636552506580231,
+            1.0667456965478639
+          ],
+          "gross_roi_pct_ci95": [
+            32.459925093632954,
+            65.80636704119853
+          ]
+        }
+      },
+      "periods": {
+        "2025_H1": {
+          "tickets": 780,
+          "races": 780,
+          "actual_hits": 36,
+          "normalized_market_expected_hits": 42.10822204790914,
+          "actual_over_normalized_market": 0.8549399202616669,
+          "gross_return_units": 376.0,
+          "gross_roi_pct": 48.205128205128204,
+          "avg_odds": 43.63410256410257,
+          "median_odds": 19.55,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.6054405368795261,
+              1.1105390943218763
+            ],
+            "gross_roi_pct_ci95": [
+              27.769230769230763,
+              73.86378205128197
+            ]
+          }
+        },
+        "2025_H2": {
+          "tickets": 498,
+          "races": 498,
+          "actual_hits": 22,
+          "normalized_market_expected_hits": 24.94632632310651,
+          "actual_over_normalized_market": 0.8818933784098912,
+          "gross_return_units": 257.90000000000003,
+          "gross_roi_pct": 51.78714859437752,
+          "avg_odds": 53.23674698795181,
+          "median_odds": 23.700000000000003,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.5490264083515511,
+              1.2572214690120465
+            ],
+            "gross_roi_pct_ci95": [
+              28.28965863453815,
+              80.74598393574297
+            ]
+          }
+        },
+        "2026_H1": {
+          "tickets": 57,
+          "races": 57,
+          "actual_hits": 1,
+          "normalized_market_expected_hits": 1.3206348755092316,
+          "actual_over_normalized_market": 0.7572115643352247,
+          "gross_return_units": 13.0,
+          "gross_roi_pct": 22.80701754385965,
+          "avg_odds": 77.83333333333333,
+          "median_odds": 41.9,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.0,
+              2.533300126232067
+            ],
+            "gross_roi_pct_ci95": [
+              0.0,
+              68.42105263157895
+            ]
+          }
+        }
+      }
+    },
+    "LOWEST_2": {
+      "all": {
+        "tickets": 2670,
+        "races": 1335,
+        "actual_hits": 109,
+        "normalized_market_expected_hits": 108.51309681267205,
+        "actual_over_normalized_market": 1.0044870453579304,
+        "gross_return_units": 1866.9999999999998,
+        "gross_roi_pct": 69.92509363295879,
+        "avg_odds": 57.563932584269665,
+        "median_odds": 27.9,
+        "race_bootstrap": {
+          "bootstrap_reps": 2000,
+          "calibration_ratio_ci95": [
+            0.8447257484233026,
+            1.1762708574139105
+          ],
+          "gross_roi_pct_ci95": [
+            50.78174157303372,
+            91.74765917602993
+          ]
+        }
+      },
+      "periods": {
+        "2025_H1": {
+          "tickets": 1560,
+          "races": 780,
+          "actual_hits": 62,
+          "normalized_market_expected_hits": 67.07143804242838,
+          "actual_over_normalized_market": 0.9243875159017723,
+          "gross_return_units": 893.0,
+          "gross_roi_pct": 57.243589743589745,
+          "avg_odds": 51.377307692307696,
+          "median_odds": 25.1,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.7240011227070338,
+              1.1340615881547957
+            ],
+            "gross_roi_pct_ci95": [
+              38.77932692307693,
+              78.93766025641025
+            ]
+          }
+        },
+        "2025_H2": {
+          "tickets": 996,
+          "races": 498,
+          "actual_hits": 44,
+          "normalized_market_expected_hits": 39.158748520143995,
+          "actual_over_normalized_market": 1.1236314147620314,
+          "gross_return_units": 892.8000000000001,
+          "gross_roi_pct": 89.63855421686748,
+          "avg_odds": 63.72469879518073,
+          "median_odds": 30.2,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.8257496719305495,
+              1.4213756433182383
+            ],
+            "gross_roi_pct_ci95": [
+              50.14683734939758,
+              141.42595381526104
+            ]
+          }
+        },
+        "2026_H1": {
+          "tickets": 114,
+          "races": 57,
+          "actual_hits": 3,
+          "normalized_market_expected_hits": 2.282910250099649,
+          "actual_over_normalized_market": 1.314112107503591,
+          "gross_return_units": 81.19999999999999,
+          "gross_roi_pct": 71.22807017543859,
+          "avg_odds": 88.39736842105265,
+          "median_odds": 48.349999999999994,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.0,
+              2.9611868393382332
+            ],
+            "gross_roi_pct_ci95": [
+              0.0,
+              171.31578947368422
+            ]
+          }
+        }
+      }
+    },
+    "LOWEST_3": {
+      "all": {
+        "tickets": 4005,
+        "races": 1335,
+        "actual_hits": 131,
+        "normalized_market_expected_hits": 132.23488503840963,
+        "actual_over_normalized_market": 0.9906614276705353,
+        "gross_return_units": 2633.2,
+        "gross_roi_pct": 65.7478152309613,
+        "avg_odds": 72.17518102372034,
+        "median_odds": 36.0,
+        "race_bootstrap": {
+          "bootstrap_reps": 2000,
+          "calibration_ratio_ci95": [
+            0.8444267124132547,
+            1.1401009386496161
+          ],
+          "gross_roi_pct_ci95": [
+            50.98202247191011,
+            82.7709737827715
+          ]
+        }
+      },
+      "periods": {
+        "2025_H1": {
+          "tickets": 2340,
+          "races": 780,
+          "actual_hits": 76,
+          "normalized_market_expected_hits": 81.7585567614462,
+          "actual_over_normalized_market": 0.9295663109826116,
+          "gross_return_units": 1385.9999999999998,
+          "gross_roi_pct": 59.23076923076922,
+          "avg_odds": 64.1540170940171,
+          "median_odds": 33.0,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.7445117398703629,
+              1.123186039822903
+            ],
+            "gross_roi_pct_ci95": [
+              41.59978632478632,
+              77.57061965811965
+            ]
+          }
+        },
+        "2025_H2": {
+          "tickets": 1494,
+          "races": 498,
+          "actual_hits": 52,
+          "normalized_market_expected_hits": 47.53647765701306,
+          "actual_over_normalized_market": 1.0938967833332607,
+          "gross_return_units": 1166.0,
+          "gross_roi_pct": 78.04551539491298,
+          "avg_odds": 81.0214859437751,
+          "median_odds": 40.05,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.8464425375188438,
+              1.3670246566789614
+            ],
+            "gross_roi_pct_ci95": [
+              49.40076974564925,
+              114.02409638554211
+            ]
+          }
+        },
+        "2026_H1": {
+          "tickets": 171,
+          "races": 57,
+          "actual_hits": 3,
+          "normalized_market_expected_hits": 2.9398506199503567,
+          "actual_over_normalized_market": 1.0204600123698322,
+          "gross_return_units": 81.19999999999999,
+          "gross_roi_pct": 47.48538011695906,
+          "avg_odds": 104.64970760233918,
+          "median_odds": 59.5,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.0,
+              2.247324443207255
+            ],
+            "gross_roi_pct_ci95": [
+              0.0,
+              110.17543859649123
+            ]
+          }
+        }
+      }
+    },
+    "LOWEST_4": {
+      "all": {
+        "tickets": 5340,
+        "races": 1335,
+        "actual_hits": 144,
+        "normalized_market_expected_hits": 147.2898128840725,
+        "actual_over_normalized_market": 0.9776643556016884,
+        "gross_return_units": 3437.7,
+        "gross_roi_pct": 64.37640449438203,
+        "avg_odds": 91.81522471910112,
+        "median_odds": 45.849999999999994,
+        "race_bootstrap": {
+          "bootstrap_reps": 2000,
+          "calibration_ratio_ci95": [
+            0.8310731207063142,
+            1.123242131529323
+          ],
+          "gross_roi_pct_ci95": [
+            49.107116104868936,
+            81.67593632958796
+          ]
+        }
+      },
+      "periods": {
+        "2025_H1": {
+          "tickets": 3120,
+          "races": 780,
+          "actual_hits": 86,
+          "normalized_market_expected_hits": 91.22672951461425,
+          "actual_over_normalized_market": 0.9427061614241368,
+          "gross_return_units": 1945.6999999999998,
+          "gross_roi_pct": 62.362179487179475,
+          "avg_odds": 81.3263141025641,
+          "median_odds": 41.2,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.7633206309929518,
+              1.1111688412623284
+            ],
+            "gross_roi_pct_ci95": [
+              44.31586538461539,
+              83.78036858974355
+            ]
+          }
+        },
+        "2025_H2": {
+          "tickets": 1992,
+          "races": 498,
+          "actual_hits": 55,
+          "normalized_market_expected_hits": 52.66499664831609,
+          "actual_over_normalized_market": 1.0443369125659778,
+          "gross_return_units": 1410.8000000000004,
+          "gross_roi_pct": 70.82329317269078,
+          "avg_odds": 104.41917670682732,
+          "median_odds": 52.0,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.8131010769098688,
+              1.299814096512331
+            ],
+            "gross_roi_pct_ci95": [
+              44.914407630522064,
+              103.92570281124496
+            ]
+          }
+        },
+        "2026_H1": {
+          "tickets": 228,
+          "races": 57,
+          "actual_hits": 3,
+          "normalized_market_expected_hits": 3.3980867211421595,
+          "actual_over_normalized_market": 0.8828497463983629,
+          "gross_return_units": 81.19999999999999,
+          "gross_roi_pct": 35.614035087719294,
+          "avg_odds": 125.22894736842106,
+          "median_odds": 68.65,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.0,
+              1.8658530189955642
+            ],
+            "gross_roi_pct_ci95": [
+              0.0,
+              84.60855263157893
+            ]
+          }
+        }
+      }
+    },
+    "LOWEST_5": {
+      "all": {
+        "tickets": 6675,
+        "races": 1335,
+        "actual_hits": 151,
+        "normalized_market_expected_hits": 158.132828120382,
+        "actual_over_normalized_market": 0.9548934386037037,
+        "gross_return_units": 3860.4,
+        "gross_roi_pct": 57.83370786516854,
+        "avg_odds": 115.57008239700376,
+        "median_odds": 57.6,
+        "race_bootstrap": {
+          "bootstrap_reps": 2000,
+          "calibration_ratio_ci95": [
+            0.8244099555178293,
+            1.0845389267653927
+          ],
+          "gross_roi_pct_ci95": [
+            44.26318352059924,
+            73.29363295880147
+          ]
+        }
+      },
+      "periods": {
+        "2025_H1": {
+          "tickets": 3900,
+          "races": 780,
+          "actual_hits": 90,
+          "normalized_market_expected_hits": 97.97284572493638,
+          "actual_over_normalized_market": 0.9186218827682057,
+          "gross_return_units": 2087.6,
+          "gross_roi_pct": 53.52820512820513,
+          "avg_odds": 102.30689743589744,
+          "median_odds": 51.3,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.7468577452036632,
+              1.0889459068245801
+            ],
+            "gross_roi_pct_ci95": [
+              37.488589743589756,
+              72.28461538461535
+            ]
+          }
+        },
+        "2025_H2": {
+          "tickets": 2490,
+          "races": 498,
+          "actual_hits": 58,
+          "normalized_market_expected_hits": 56.39678106906344,
+          "actual_over_normalized_market": 1.0284274900188588,
+          "gross_return_units": 1691.6000000000001,
+          "gross_roi_pct": 67.93574297188755,
+          "avg_odds": 131.9268674698795,
+          "median_odds": 64.45,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.8022504104162838,
+              1.2548999851845477
+            ],
+            "gross_roi_pct_ci95": [
+              41.9386546184739,
+              99.68273092369476
+            ]
+          }
+        },
+        "2026_H1": {
+          "tickets": 285,
+          "races": 57,
+          "actual_hits": 3,
+          "normalized_market_expected_hits": 3.763201326382186,
+          "actual_over_normalized_market": 0.7971935965711667,
+          "gross_return_units": 81.19999999999999,
+          "gross_roi_pct": 28.491228070175435,
+          "avg_odds": 154.15964912280702,
+          "median_odds": 81.7,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.0,
+              1.6555243954327006
+            ],
+            "gross_roi_pct_ci95": [
+              0.0,
+              63.96491228070175
+            ]
+          }
+        }
+      }
+    },
+    "LOWEST_6": {
+      "all": {
+        "tickets": 8010,
+        "races": 1335,
+        "actual_hits": 160,
+        "normalized_market_expected_hits": 166.76702384616863,
+        "actual_over_normalized_market": 0.9594222905098387,
+        "gross_return_units": 4788.900000000001,
+        "gross_roi_pct": 59.78651685393259,
+        "avg_odds": 138.5263670411985,
+        "median_odds": 69.2,
+        "race_bootstrap": {
+          "bootstrap_reps": 2000,
+          "calibration_ratio_ci95": [
+            0.8346267911306132,
+            1.089813730037114
+          ],
+          "gross_roi_pct_ci95": [
+            45.376747815230964,
+            76.67793383270909
+          ]
+        }
+      },
+      "periods": {
+        "2025_H1": {
+          "tickets": 4680,
+          "races": 780,
+          "actual_hits": 95,
+          "normalized_market_expected_hits": 103.39314676215658,
+          "actual_over_normalized_market": 0.9188229875480626,
+          "gross_return_units": 2792.9000000000005,
+          "gross_roi_pct": 59.67735042735044,
+          "avg_odds": 122.59912393162396,
+          "median_odds": 62.7,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.7612980203860988,
+              1.0779108702195042
+            ],
+            "gross_roi_pct_ci95": [
+              40.200587606837615,
+              81.94091880341881
+            ]
+          }
+        },
+        "2025_H2": {
+          "tickets": 2988,
+          "races": 498,
+          "actual_hits": 61,
+          "normalized_market_expected_hits": 59.309291035958225,
+          "actual_over_normalized_market": 1.028506645999473,
+          "gross_return_units": 1850.6999999999998,
+          "gross_roi_pct": 61.93775100401606,
+          "avg_odds": 158.62305890227577,
+          "median_odds": 76.85,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.8106480303038188,
+              1.2635100497367822
+            ],
+            "gross_roi_pct_ci95": [
+              39.92988621151272,
+              87.21209839357424
+            ]
+          }
+        },
+        "2026_H1": {
+          "tickets": 342,
+          "races": 57,
+          "actual_hits": 4,
+          "normalized_market_expected_hits": 4.064586048053814,
+          "actual_over_normalized_market": 0.9841100551716113,
+          "gross_return_units": 145.3,
+          "gross_roi_pct": 42.48538011695907,
+          "avg_odds": 180.89649122807018,
+          "median_odds": 94.15,
+          "race_bootstrap": {
+            "bootstrap_reps": 2000,
+            "calibration_ratio_ci95": [
+              0.23994553279642872,
+              1.9080215747483276
+            ],
+            "gross_roi_pct_ci95": [
+              3.801169590643275,
+              95.4269005847952
+            ]
+          }
+        }
+      }
+    }
+  },
+  "unordered_role_sets": {
+    "BANTE+BANTE+BANTE": {
+      "races": 87,
+      "unordered_top3_finish_hits": 12,
+      "unordered_top3_finish_hit_rate_pct": 13.793103448275861
+    },
+    "BANTE+BANTE+ESCAPE_HEAD": {
+      "races": 110,
+      "unordered_top3_finish_hits": 11,
+      "unordered_top3_finish_hit_rate_pct": 10.0
+    },
+    "BANTE+BANTE+OTHER_HEAD": {
+      "races": 106,
+      "unordered_top3_finish_hits": 10,
+      "unordered_top3_finish_hit_rate_pct": 9.433962264150944
+    },
+    "BANTE+BANTE+RYO_HEAD": {
+      "races": 54,
+      "unordered_top3_finish_hits": 6,
+      "unordered_top3_finish_hit_rate_pct": 11.11111111111111
+    },
+    "BANTE+BANTE+SOLO": {
+      "races": 79,
+      "unordered_top3_finish_hits": 10,
+      "unordered_top3_finish_hit_rate_pct": 12.658227848101266
+    },
+    "BANTE+BANTE+THIRD_PLUS": {
+      "races": 16,
+      "unordered_top3_finish_hits": 2,
+      "unordered_top3_finish_hit_rate_pct": 12.5
+    },
+    "BANTE+ESCAPE_HEAD+ESCAPE_HEAD": {
+      "races": 26,
+      "unordered_top3_finish_hits": 2,
+      "unordered_top3_finish_hit_rate_pct": 7.6923076923076925
+    },
+    "BANTE+ESCAPE_HEAD+OTHER_HEAD": {
+      "races": 61,
+      "unordered_top3_finish_hits": 4,
+      "unordered_top3_finish_hit_rate_pct": 6.557377049180328
+    },
+    "BANTE+ESCAPE_HEAD+RYO_HEAD": {
+      "races": 42,
+      "unordered_top3_finish_hits": 2,
+      "unordered_top3_finish_hit_rate_pct": 4.761904761904762
+    },
+    "BANTE+ESCAPE_HEAD+SOLO": {
+      "races": 52,
+      "unordered_top3_finish_hits": 6,
+      "unordered_top3_finish_hit_rate_pct": 11.538461538461538
+    },
+    "BANTE+ESCAPE_HEAD+THIRD_PLUS": {
+      "races": 14,
+      "unordered_top3_finish_hits": 3,
+      "unordered_top3_finish_hit_rate_pct": 21.428571428571427
+    },
+    "BANTE+OTHER_HEAD+OTHER_HEAD": {
+      "races": 28,
+      "unordered_top3_finish_hits": 1,
+      "unordered_top3_finish_hit_rate_pct": 3.571428571428571
+    },
+    "BANTE+OTHER_HEAD+RYO_HEAD": {
+      "races": 38,
+      "unordered_top3_finish_hits": 5,
+      "unordered_top3_finish_hit_rate_pct": 13.157894736842104
+    },
+    "BANTE+OTHER_HEAD+SOLO": {
+      "races": 55,
+      "unordered_top3_finish_hits": 5,
+      "unordered_top3_finish_hit_rate_pct": 9.090909090909092
+    },
+    "BANTE+OTHER_HEAD+THIRD_PLUS": {
+      "races": 22,
+      "unordered_top3_finish_hits": 3,
+      "unordered_top3_finish_hit_rate_pct": 13.636363636363635
+    },
+    "BANTE+RYO_HEAD+RYO_HEAD": {
+      "races": 16,
+      "unordered_top3_finish_hits": 1,
+      "unordered_top3_finish_hit_rate_pct": 6.25
+    },
+    "BANTE+RYO_HEAD+SOLO": {
+      "races": 25,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "BANTE+RYO_HEAD+THIRD_PLUS": {
+      "races": 8,
+      "unordered_top3_finish_hits": 3,
+      "unordered_top3_finish_hit_rate_pct": 37.5
+    },
+    "BANTE+SOLO+SOLO": {
+      "races": 26,
+      "unordered_top3_finish_hits": 2,
+      "unordered_top3_finish_hit_rate_pct": 7.6923076923076925
+    },
+    "BANTE+SOLO+THIRD_PLUS": {
+      "races": 22,
+      "unordered_top3_finish_hits": 1,
+      "unordered_top3_finish_hit_rate_pct": 4.545454545454546
+    },
+    "ESCAPE_HEAD+ESCAPE_HEAD+ESCAPE_HEAD": {
+      "races": 10,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "ESCAPE_HEAD+ESCAPE_HEAD+OTHER_HEAD": {
+      "races": 10,
+      "unordered_top3_finish_hits": 3,
+      "unordered_top3_finish_hit_rate_pct": 30.0
+    },
+    "ESCAPE_HEAD+ESCAPE_HEAD+RYO_HEAD": {
+      "races": 11,
+      "unordered_top3_finish_hits": 1,
+      "unordered_top3_finish_hit_rate_pct": 9.090909090909092
+    },
+    "ESCAPE_HEAD+ESCAPE_HEAD+SOLO": {
+      "races": 11,
+      "unordered_top3_finish_hits": 2,
+      "unordered_top3_finish_hit_rate_pct": 18.181818181818183
+    },
+    "ESCAPE_HEAD+ESCAPE_HEAD+THIRD_PLUS": {
+      "races": 1,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "ESCAPE_HEAD+OTHER_HEAD+OTHER_HEAD": {
+      "races": 22,
+      "unordered_top3_finish_hits": 3,
+      "unordered_top3_finish_hit_rate_pct": 13.636363636363635
+    },
+    "ESCAPE_HEAD+OTHER_HEAD+RYO_HEAD": {
+      "races": 14,
+      "unordered_top3_finish_hits": 4,
+      "unordered_top3_finish_hit_rate_pct": 28.57142857142857
+    },
+    "ESCAPE_HEAD+OTHER_HEAD+SOLO": {
+      "races": 23,
+      "unordered_top3_finish_hits": 3,
+      "unordered_top3_finish_hit_rate_pct": 13.043478260869565
+    },
+    "ESCAPE_HEAD+OTHER_HEAD+THIRD_PLUS": {
+      "races": 5,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "ESCAPE_HEAD+RYO_HEAD+RYO_HEAD": {
+      "races": 2,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "ESCAPE_HEAD+RYO_HEAD+SOLO": {
+      "races": 15,
+      "unordered_top3_finish_hits": 2,
+      "unordered_top3_finish_hit_rate_pct": 13.333333333333334
+    },
+    "ESCAPE_HEAD+RYO_HEAD+THIRD_PLUS": {
+      "races": 3,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "ESCAPE_HEAD+SOLO+SOLO": {
+      "races": 10,
+      "unordered_top3_finish_hits": 2,
+      "unordered_top3_finish_hit_rate_pct": 20.0
+    },
+    "ESCAPE_HEAD+SOLO+THIRD_PLUS": {
+      "races": 12,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "OTHER_HEAD+OTHER_HEAD+OTHER_HEAD": {
+      "races": 2,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "OTHER_HEAD+OTHER_HEAD+RYO_HEAD": {
+      "races": 8,
+      "unordered_top3_finish_hits": 4,
+      "unordered_top3_finish_hit_rate_pct": 50.0
+    },
+    "OTHER_HEAD+OTHER_HEAD+SOLO": {
+      "races": 15,
+      "unordered_top3_finish_hits": 2,
+      "unordered_top3_finish_hit_rate_pct": 13.333333333333334
+    },
+    "OTHER_HEAD+OTHER_HEAD+THIRD_PLUS": {
+      "races": 2,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "OTHER_HEAD+RYO_HEAD+RYO_HEAD": {
+      "races": 4,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "OTHER_HEAD+RYO_HEAD+SOLO": {
+      "races": 9,
+      "unordered_top3_finish_hits": 1,
+      "unordered_top3_finish_hit_rate_pct": 11.11111111111111
+    },
+    "OTHER_HEAD+RYO_HEAD+THIRD_PLUS": {
+      "races": 6,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "OTHER_HEAD+SOLO+SOLO": {
+      "races": 14,
+      "unordered_top3_finish_hits": 4,
+      "unordered_top3_finish_hit_rate_pct": 28.57142857142857
+    },
+    "OTHER_HEAD+SOLO+THIRD_PLUS": {
+      "races": 13,
+      "unordered_top3_finish_hits": 4,
+      "unordered_top3_finish_hit_rate_pct": 30.76923076923077
+    },
+    "RYO_HEAD+RYO_HEAD+RYO_HEAD": {
+      "races": 3,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "RYO_HEAD+RYO_HEAD+SOLO": {
+      "races": 4,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "RYO_HEAD+SOLO+SOLO": {
+      "races": 10,
+      "unordered_top3_finish_hits": 1,
+      "unordered_top3_finish_hit_rate_pct": 10.0
+    },
+    "RYO_HEAD+SOLO+THIRD_PLUS": {
+      "races": 4,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "SOLO+SOLO+SOLO": {
+      "races": 201,
+      "unordered_top3_finish_hits": 35,
+      "unordered_top3_finish_hit_rate_pct": 17.412935323383085
+    },
+    "SOLO+SOLO+THIRD_PLUS": {
+      "races": 3,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    },
+    "SOLO+THIRD_PLUS+THIRD_PLUS": {
+      "races": 1,
+      "unordered_top3_finish_hits": 0,
+      "unordered_top3_finish_hit_rate_pct": 0.0
+    }
+  },
+  "coverage": {
+    "usable_races_by_month": {
+      "2025_01": 983,
+      "2025_02": 724,
+      "2025_03": 679,
+      "2025_04": 374,
+      "2025_05": 548,
+      "2025_06": 972,
+      "2025_07": 997,
+      "2025_08": 960,
+      "2025_09": 611,
+      "2025_10": 62,
+      "2025_11": 78,
+      "2025_12": 77,
+      "2026_01": 79,
+      "2026_02": 79,
+      "2026_03": 79,
+      "2026_04": 78,
+      "2026_05": 65,
+      "2026_06": 75
+    },
+    "skipped": {
+      "top3_scores_not_spread_across_3_lines": 4240,
+      "odds_board_incomplete": 1622,
+      "ordered_result_missing": 127,
+      "base_or_odds_missing": 196
+    }
+  },
+  "warning": "Same-data exploratory diagnostic. LOWEST_k is a pre-race odds rule, but the hypothesis was formed after prior exploration. Period splits are stability diagnostics, not fresh OOS."
+}
