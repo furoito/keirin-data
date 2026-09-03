@@ -232,7 +232,6 @@ def analyze_3rentan():
             n_groups = len(ordered_groups)
 
             for trio_u in all_groups:
-                # Base is structural only: 3 distinct multi-rider lines, each rider is 両 or position 2.
                 if len({line_of.get(x) for x in trio_u}) != 3:
                     continue
                 if any(line_size_of.get(x, 0) <= 1 for x in trio_u):
@@ -285,3 +284,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# trigger: compare lower-tail exclusion against score-sum filter
